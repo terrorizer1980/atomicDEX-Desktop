@@ -5,7 +5,7 @@ set(DEX_COMPANY "SmartFi")
 set(DEX_WEBSITE "https://smartportal.smartfi.com")
 set(DEX_SUPPORT_PAGE "https://support.komodoplatform.com/support/home")
 set(DEX_DISCORD "https://komodoplatform.com/discord")
-set(DEX_TWITTER "https://twitter.com/AtomicDEX")
+set(DEX_TWITTER "https://twitter.com/smartfiportal")
 option(DISABLE_GEOBLOCKING "Enable to disable geoblocking (for dev purpose)" OFF)
 
 if (UNIX AND NOT APPLE)
