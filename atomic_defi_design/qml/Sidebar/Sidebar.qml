@@ -130,7 +130,7 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
             y: parent.width * 0.25
             transformOrigin: Item.Center
-            height: 85
+            height: 70
         }
 
         Separator {
