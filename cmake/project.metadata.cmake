@@ -1,8 +1,8 @@
 # Default project values
-set(DEX_PROJECT_NAME "atomicdex-desktop")
-set(DEX_DISPLAY_NAME "AtomicDEX Desktop")
-set(DEX_COMPANY "KomodoPlatform")
-set(DEX_WEBSITE "https://atomicdex.io/")
+set(DEX_PROJECT_NAME "smartdex-desktop")
+set(DEX_DISPLAY_NAME "SmartDEX")
+set(DEX_COMPANY "SmartFi")
+set(DEX_WEBSITE "https://smartportal.smartfi.com")
 option(DISABLE_GEOBLOCKING "Enable to disable geoblocking (for dev purpose)" OFF)
 
 if (UNIX AND NOT APPLE)
