@@ -148,7 +148,7 @@
     "currently_enabled": false
   },
   "BCH": {
-    "active": false,
+    "active": true,
     "coin": "BCH",
     "coingecko_id": "bitcoin-cash",
     "coinpaprika_id": "bch-bitcoin-cash",
@@ -632,7 +632,7 @@
     "currently_enabled": false
   },
   "LTC": {
-    "active": false,
+    "active": true,
     "coin": "LTC",
     "coingecko_id": "litecoin",
     "coinpaprika_id": "ltc-litecoin",
@@ -718,7 +718,7 @@
     "currently_enabled": false
   },
   "ETH": {
-    "active": false,
+    "active": true,
     "coin": "ETH",
     "coingecko_id": "ethereum",
     "coinpaprika_id": "eth-ethereum",
@@ -735,7 +735,7 @@
     "name": "Ethereum"
   },
   "USDC": {
-    "active": false,
+    "active": true,
     "coin": "USDC",
     "coingecko_id": "usd-coin",
     "coinpaprika_id": "usdc-usd-coin",
@@ -1731,7 +1731,7 @@
       "https://explorer.pbc.kmd.sh/"
     ],
     "type": "UTXO",
-    "active": false,
+    "active": true,
     "currently_enabled": false
   },
   "AAVE": {
