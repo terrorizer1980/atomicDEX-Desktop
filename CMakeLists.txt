@@ -195,6 +195,7 @@ target_sources(${PROJECT_NAME}_shared_deps PRIVATE
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/price/coinpaprika/coinpaprika.provider.cpp
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/price/coingecko/coingecko.provider.cpp
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/price/oracle/band.provider.cpp
+        ${CMAKE_SOURCE_DIR}/src/atomicdex/services/price/smartfi/smartfi.provider.cpp
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/update/update.checker.service.cpp
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/ohlc/ohlc.provider.cpp
         ${CMAKE_SOURCE_DIR}/src/atomicdex/services/mm2/mm2.service.cpp

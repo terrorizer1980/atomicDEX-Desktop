@@ -4,6 +4,7 @@
 #include "atomicdex/services/price/coingecko/coingecko.provider.hpp"
 #include "atomicdex/services/price/global.provider.hpp"
 #include "atomicdex/services/price/oracle/band.provider.hpp"
+#include "atomicdex/services/price/smartfi/smartfi.provider.hpp"
 
 namespace
 {
@@ -153,10 +154,14 @@ namespace atomic_dex
         //! FIXME: fix zatJum crash report, frontend QML try to retrieve price before program is even launched
         if (ticker.empty())
             return "0";
+        if (fiat == ticker)
+        {
+            return "1";
+        }
         auto&       coingecko       = m_system_manager.get_system<coingecko_provider>();
-        auto&       band_service    = m_system_manager.get_system<band_oracle_price_service>();
-        std::string current_price   = band_service.retrieve_if_this_ticker_supported(ticker);
-        const bool  is_oracle_ready = band_service.is_oracle_ready();
+        auto&       smartfi_service = m_system_manager.get_system<smartfi_price_service>();
+        std::string current_price   = smartfi_service.retrieve_if_this_ticker_supported(ticker);
+        // const bool  is_oracle_ready = band_service.is_oracle_ready();
 
         if (current_price.empty())
         {
@@ -179,16 +184,21 @@ namespace atomic_dex
         }
         else
         {
-            //! We use oracle
-            if (fiat != "KMD" && fiat != "BTC" && fiat != "USD")
+            //! We use smartfi
+            if (is_this_currency_a_fiat(m_cfg, fiat) && fiat != "USD")
             {
                 t_float_50 tmp_current_price = t_float_50(current_price) * m_other_fiats_rates->at("rates").at(fiat).get<double>();
                 current_price                = tmp_current_price.str();
             }
 
-            else if ((fiat == "BTC" || fiat == "KMD") && is_oracle_ready)
+            else if (!is_this_currency_a_fiat(m_cfg, fiat))
             {
-                t_float_50 tmp_current_price = (t_float_50(current_price)) * band_service.retrieve_rates(fiat);
+                t_float_50 rate(1);
+                {
+                    std::shared_lock lock(m_coin_rate_mutex);
+                    rate = t_float_50(m_coin_rate_providers.at(fiat)); ///< Retrieve BTC or KMD rate let's say for USD
+                }
+                t_float_50 tmp_current_price = t_float_50(current_price) * rate;
                 current_price                = tmp_current_price.str();
             }
         }
