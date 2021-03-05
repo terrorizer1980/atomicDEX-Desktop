@@ -371,18 +371,6 @@ ColumnLayout {
 
             }
 
-            DefaultImage {
-                visible: API.app.portfolio_pg.oracle_price_supported_pairs.join(",").indexOf(ticker) !== -1
-                source: General.coinIcon('BAND')
-                width: 12
-                height: width
-                anchors.top: price_value.top
-                anchors.left: price_value.right
-                anchors.leftMargin: 5
-
-                CexInfoTrigger {}
-            }
-
             // 7d Trend
             ChartView {
                 property var historical: trend_7d
