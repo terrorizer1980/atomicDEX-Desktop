@@ -259,12 +259,13 @@ QtObject {
     }
 
     function getCoinColor(ticker) {
-        const c = colorCoin[ticker]
+        const c = colorCoin[atomic_qt_utilities.retrieve_main_ticker(ticker)]
         return c || Style.colorTheme2
     }
 
     readonly property var colorCoin: ({
                                           "ARPA": "#CCD9E2",
+                                          "BNB": "#F3BA2F",
                                           "BCH": "#8DC351",
                                           "BTC": "#F7931A",
                                           "CLC": "#0970DC",
@@ -315,7 +316,9 @@ QtObject {
                                           "BUSD": "#EDB70B",
                                           "DAI": "#B68900",
                                           "USDC": "#317BCB",
+                                          "USDT": "#26A17B",
                                           "PAX": "#EDE70A",
+                                          "PAXG": "#E5CB22",
                                           "SUSHI": "#E25DA8",
                                           "TUSD": "#2E3181",
                                           "AWC": "#31A5F6",
@@ -370,6 +373,7 @@ QtObject {
                                           "VRM": "#586A7A",
                                           "WSB": "#FEBB84",
                                           "WBTC": "#CCCCCC",
+                                          "XRP": "#2E353D",
                                           "YFI": "#006BE6",
                                           "ZRX": "#302C2C",
                                           "UNI": "#FF007A"
