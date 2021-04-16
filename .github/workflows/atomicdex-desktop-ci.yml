@@ -11,7 +11,7 @@ on:
 
 env:
   DEX_PROJECT_NAME: "DogeDEX"
-  DEX_DISPLAY_NAME: "DogeDex"
+  DEX_DISPLAY_NAME: "DogeDEX"
   DEX_COMPANY: "Dogecoin"
   DEX_WEBSITE: "https://dogecoin.com/"
 
