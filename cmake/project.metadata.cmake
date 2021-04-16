@@ -1,5 +1,5 @@
 # Default project values
-set(DEX_PROJECT_NAME "DogeDex")
+set(DEX_PROJECT_NAME "DogeDEX")
 set(DEX_DISPLAY_NAME "DogeDEX")
 set(DEX_COMPANY "DogeDEX")
 set(DEX_WEBSITE "https://dogecoin.com/")
