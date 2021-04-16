@@ -16,7 +16,7 @@ set(DEX_CHECKSUM_API_URL "https://komodo.live/static/checksum.json")
 if (APPLE)
     set(DEX_APPDATA_FOLDER "DogeDEX")
 else ()
-    set(DEX_APPDATA_FOLDER "DogeDex")
+    set(DEX_APPDATA_FOLDER "DogeDEX")
 endif ()
 message(STATUS "APPDATA folder is ${DEX_APPDATA_FOLDER}")
 
