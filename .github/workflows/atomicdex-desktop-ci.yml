@@ -12,7 +12,7 @@ on:
 env:
   DEX_PROJECT_NAME: "DogeDEX"
   DEX_DISPLAY_NAME: "DogeDEX"
-  DEX_COMPANY: "Dogecoin"
+  DEX_COMPANY: "DogeDEX"
   DEX_WEBSITE: "https://dogedex.xyz/"
 
 jobs:
