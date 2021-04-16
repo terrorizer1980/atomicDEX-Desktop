@@ -1,7 +1,7 @@
 # Default project values
 set(DEX_PROJECT_NAME "DogeDex")
 set(DEX_DISPLAY_NAME "DogeDex")
-set(DEX_COMPANY "Dogecoin")
+set(DEX_COMPANY "DogeDEX")
 set(DEX_WEBSITE "https://dogecoin.com/")
 set(DEX_SUPPORT_PAGE "https://support.komodoplatform.com/support/home")
 set(DEX_DISCORD "")
