@@ -11,6 +11,7 @@
     "buttonColorTextEnabled": "#080707",
     "buttonColorTextHovered": "#000000",
     "chartTheme": "light",
+    "chartGridLineColor":"#707070",
     "chartTradingLineBackgroundColor": "#e3f2fd",
     "chartTradingLineColor": "#37a6ef",
     "colorInnerShadowBottom": "#dddddd",
