@@ -258,6 +258,10 @@ namespace atomic_dex
                                : false;
         t_float_50 base_min_trade = safe_float(get_orderbook_wrapper()->get_base_min_taker_vol().toStdString());
         t_float_50 cur_min_trade  = safe_float(get_min_trade_vol().toStdString());
+        t_float_50 delta          = (cur_min_trade * 100) / safe_float(m_max_volume.toStdString());
+        t_float_50 delta_cur      = (cur_min_trade * 100) / safe_float(m_volume.toStdString());
+        SPDLOG_INFO("delta min_vol compare to max volume is: {}", utils::format_float(delta));
+        SPDLOG_INFO("delta min_vol compare to current volume is: {}", utils::format_float(delta_cur));
 
         t_sell_request req{
             .base             = base.toStdString(),
@@ -445,8 +449,19 @@ namespace atomic_dex
                     {
                         const auto base_max_taker_vol = safe_float(wrapper->get_base_max_taker_vol().toJsonObject()["decimal"].toString().toStdString());
                         const auto rel_max_taker_vol  = safe_float(wrapper->get_rel_max_taker_vol().toJsonObject()["decimal"].toString().toStdString());
-                        auto       adjust_functor     = [this, wrapper]() { this->set_min_trade_vol(wrapper->get_current_min_taker_vol()); };
-                        if ((m_market_mode == MarketMode::Buy && rel_max_taker_vol > 0) || (m_market_mode == MarketMode::Sell && base_max_taker_vol > 0))
+                        t_float_50 min_vol            = safe_float(m_minimal_trading_amount.toStdString());
+                        auto       adjust_functor     = [this, wrapper]()
+                        {
+                            if (m_post_clear_forms)
+                            {
+                                this->determine_max_volume();
+                                this->set_volume(get_max_volume());
+                                this->set_min_trade_vol(wrapper->get_current_min_taker_vol());
+                                m_post_clear_forms = false;
+                            }
+                        };
+                        if ((m_market_mode == MarketMode::Buy && rel_max_taker_vol > 0 && min_vol <= 0) ||
+                            (m_market_mode == MarketMode::Sell && base_max_taker_vol > 0 && min_vol <= 0))
                         {
                             adjust_functor();
                         }
@@ -603,9 +618,10 @@ namespace atomic_dex
         this->set_max_volume("0");
         this->set_total_amount("0");
         this->set_trading_error(TradingError::None);
-        this->m_preffered_order = std::nullopt;
-        this->m_fees            = QVariantMap();
-        this->m_cex_price       = "0";
+        this->m_preffered_order  = std::nullopt;
+        this->m_fees             = QVariantMap();
+        this->m_cex_price        = "0";
+        this->m_post_clear_forms = true;
         emit cexPriceChanged();
         emit invalidCexPriceChanged();
         emit cexPriceReversedChanged();
@@ -629,7 +645,7 @@ namespace atomic_dex
                 volume = "0";
             }
             m_volume = std::move(volume);
-            // SPDLOG_INFO("volume is : [{}]", m_volume.toStdString());
+            SPDLOG_INFO("volume is : [{}]", m_volume.toStdString());
             if (m_current_trading_mode != TradingMode::Simple)
             {
                 this->determine_total_amount();
@@ -651,7 +667,7 @@ namespace atomic_dex
         if (m_max_volume != max_volume)
         {
             m_max_volume = std::move(max_volume);
-            // SPDLOG_DEBUG("max_volume is [{}]", m_max_volume.toStdString());
+            SPDLOG_DEBUG("max_volume is [{}]", m_max_volume.toStdString());
             emit maxVolumeChanged();
         }
     }
@@ -791,6 +807,18 @@ namespace atomic_dex
                 break;
             case TradingErrorGadget::ReceiveVolumeIsLowerThanTheMinimum:
                 SPDLOG_WARN("last_trading_error is ReceiveVolumeIsLowerThanTheMinimum");
+                break;
+            case TradingErrorGadget::LeftParentChainNotEnabled:
+                SPDLOG_WARN("last_trading_error is LeftParentChainNotEnabled");
+                break;
+            case TradingErrorGadget::LeftParentChainNotEnoughBalance:
+                SPDLOG_WARN("last_trading_error is LeftParentChainNotEnoughBalance");
+                break;
+            case TradingErrorGadget::RightParentChainNotEnoughBalance:
+                SPDLOG_WARN("last_trading_error is RightParentChainNotEnoughBalance");
+                break;
+            case TradingErrorGadget::RightParentChainNotEnabled:
+                SPDLOG_WARN("last_trading_error is RightParentChainNotEnabled");
                 break;
             }
             emit tradingErrorChanged();
@@ -1070,12 +1098,41 @@ namespace atomic_dex
 
         //! Check minimal trading amount
         const std::string base                     = this->get_market_pairs_mdl()->get_base_selected_coin().toStdString();
+        const std::string left                     = this->get_market_pairs_mdl()->get_left_selected_coin().toStdString();
+        const std::string right                    = this->get_market_pairs_mdl()->get_right_selected_coin().toStdString();
         t_float_50        max_balance_without_dust = this->get_max_balance_without_dust();
         const auto&       rel_min_taker_vol        = get_orderbook_wrapper()->get_rel_min_taker_vol().toStdString();
-        //const auto&       base_min_taker_vol        = get_orderbook_wrapper()->get_base_min_taker_vol().toStdString();
-        const auto&       cur_min_taker_vol        = m_market_mode == MarketMode::Sell ? get_min_trade_vol().toStdString() : rel_min_taker_vol;
+        // const auto&       base_min_taker_vol        = get_orderbook_wrapper()->get_base_min_taker_vol().toStdString();
+        const auto& cur_min_taker_vol = m_market_mode == MarketMode::Sell ? get_min_trade_vol().toStdString() : rel_min_taker_vol;
+        const auto& mm2               = m_system_manager.get_system<mm2_service>();
 
-        if (max_balance_without_dust < safe_float(cur_min_taker_vol)) //<! Checking balance < minimal_trading_amount
+        const auto left_cfg  = mm2.get_coin_info(left);
+        const auto right_cfg = mm2.get_coin_info(right);
+        if (left_cfg.has_parent_fees_ticker && left_cfg.ticker != "QTUM")
+        {
+            const auto left_fee_cfg = mm2.get_coin_info(left_cfg.fees_ticker);
+            if (!left_fee_cfg.currently_enabled)
+            {
+                current_trading_error = TradingError::LeftParentChainNotEnabled;
+            }
+            else if (mm2.get_balance(left_fee_cfg.ticker) <= 0)
+            {
+                current_trading_error = TradingError::LeftParentChainNotEnoughBalance;
+            }
+        }
+        else if (right_cfg.has_parent_fees_ticker && right_cfg.ticker != "QTUM")
+        {
+            const auto right_fee_cfg = mm2.get_coin_info(right_cfg.fees_ticker);
+            if (!right_fee_cfg.currently_enabled)
+            {
+                current_trading_error = TradingError::RightParentChainNotEnabled;
+            }
+            else if (mm2.get_balance(right_fee_cfg.ticker) <= 0)
+            {
+                current_trading_error = TradingError::RightParentChainNotEnoughBalance;
+            }
+        }
+        else if (max_balance_without_dust < safe_float(cur_min_taker_vol)) //<! Checking balance < minimal_trading_amount
         {
             current_trading_error = TradingError::BalanceIsLessThanTheMinimalTradingAmount;
         }
@@ -1089,7 +1146,7 @@ namespace atomic_dex
         }
         else if (safe_float(get_base_amount().toStdString()) < safe_float(cur_min_taker_vol))
         {
-            //SPDLOG_INFO("base_amount: {}, cur_min_taker_vol: {}, price: {}", get_base_amount().toStdString(), cur_min_taker_vol, get_price().toStdString());
+            // SPDLOG_INFO("base_amount: {}, cur_min_taker_vol: {}, price: {}", get_base_amount().toStdString(), cur_min_taker_vol, get_price().toStdString());
             current_trading_error = TradingError::VolumeIsLowerThanTheMinimum;
         }
         /*else if (safe_float(get_rel_amount().toStdString()) < safe_float(m_market_mode == Sell ? rel_min_taker_vol : base_min_taker_vol))
@@ -1323,10 +1380,7 @@ namespace atomic_dex
                 (m_market_mode == MarketMode::Sell) ? t_float_50(cex_price + (cex_price * percent)) : t_float_50(cex_price - (cex_price * percent));
 
             this->set_price(QString::fromStdString(utils::format_float(target_price)));
-            if (m_market_mode == MarketMode::Buy)
-            {
-                this->determine_max_volume();
-            }
+            this->determine_max_volume();
             this->set_volume(get_max_volume());
             t_float_50 volume     = safe_float(get_volume().toStdString());
             t_float_50 min_volume = volume * min_volume_percent;
@@ -1336,5 +1390,11 @@ namespace atomic_dex
         {
             SPDLOG_WARN("{}/{} doesn't have any trading settings - skipping", left.toStdString(), right.toStdString());
         }
+    }
+
+    std::optional<nlohmann::json>
+    trading_page::get_raw_preffered_order() const
+    {
+        return m_preffered_order;
     }
 } // namespace atomic_dex
