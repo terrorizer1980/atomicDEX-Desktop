@@ -41,6 +41,7 @@
 
 
 //! Deps
+#include <QSslSocket>
 #include <sodium/core.h>
 #include <wally.hpp>
 
@@ -54,6 +55,7 @@
 
 //! Project Headers
 #include "app.hpp"
+#include "atomicdex/constants/qt.wallet.enums.hpp"
 #include "atomicdex/models/qt.portfolio.model.hpp"
 #include "atomicdex/utilities/kill.hpp"
 #include "atomicdex/utilities/qt.utilities.hpp"
@@ -135,7 +137,7 @@ static void
 signal_handler(int signal)
 {
     SPDLOG_ERROR("sigabort received, cleaning mm2");
-    atomic_dex::kill_executable("mm2.service");
+    atomic_dex::kill_executable("mm2");
 #if defined(linux) || defined(__APPLE__)
     boost::stacktrace::safe_dump_to("./backtrace.dump");
     std::ifstream                 ifs("./backtrace.dump");
@@ -317,7 +319,8 @@ check_settings_reconfiguration(const fs::path& path)
 static void
 handle_settings(QSettings& settings)
 {
-    auto create_settings_functor = [&settings](QString settings_name, QVariant value) {
+    auto create_settings_functor = [&settings](QString settings_name, QVariant value)
+    {
         if (!settings.contains(settings_name))
         {
             SPDLOG_INFO("Settings {} doesn't exist yet for this application, creating now", settings_name.toStdString());
@@ -331,16 +334,17 @@ handle_settings(QSettings& settings)
     SPDLOG_INFO("file name settings: {}", settings.fileName().toStdString());
     create_settings_functor("CurrentTheme", QString("Dark.json"));
     create_settings_functor("ThemePath", QString::fromStdString(atomic_dex::utils::get_themes_path().string()));
-    create_settings_functor("SecondSecuritySending", QVariant(false));
+    create_settings_functor("AutomaticUpdateOrderBot", QVariant(false));
+    create_settings_functor("WalletChartsCategory", qint32(WalletChartsCategories::OneMonth));
+    create_settings_functor("AvailableLang", QStringList{"en", "fr", "tr", "ru"});
+    create_settings_functor("CurrentLang", QString("en"));
+    create_settings_functor("2FA", 0);
 #ifdef __APPLE__
     create_settings_functor("FontMode", QQuickWindow::TextRenderType::NativeTextRendering);
     QQuickWindow::setTextRenderType(static_cast<QQuickWindow::TextRenderType>(settings.value("FontMode").toInt()));
 #else
     create_settings_functor("FontMode", QQuickWindow::TextRenderType::QtTextRendering);
 #endif
-    /*settings.beginGroup("BestOrders");
-    create_settings_functor("show_affordable_offers", QVariant(true));
-    settings.endGroup();*/
 }
 
 inline int
@@ -350,7 +354,26 @@ run_app(int argc, char** argv)
     SPDLOG_INFO("Installing qt_message_handler");
     qInstallMessageHandler(&qt_message_handler);
 #endif
+    SPDLOG_INFO(
+        "SSL: {} {} {}", QSslSocket::supportsSsl(), QSslSocket::sslLibraryBuildVersionString().toStdString(),
+        QSslSocket::sslLibraryVersionString().toStdString());
 
+#if defined(Q_OS_MACOS)
+    fs::path old_path    = fs::path(std::getenv("HOME")) / ".atomic_qt";
+    fs::path target_path = atomic_dex::utils::get_atomic_dex_data_folder();
+    SPDLOG_INFO("{} exists -> {}", old_path.string(), fs::exists(old_path));
+    SPDLOG_INFO("{} exists -> {}", target_path.string(), fs::exists(target_path));
+    if (fs::exists(old_path) && !fs::exists(target_path))
+    {
+        SPDLOG_INFO("Renaming: {} to {}", old_path.string(), target_path.string());
+        QDir dir;
+        if (!dir.rename(QString::fromStdString(old_path.string()), QString::fromStdString(target_path.string())))
+        {
+            SPDLOG_ERROR("Cannot rename directory {} to {} - aborting", old_path.string(), target_path.string());
+            exit(1);
+        }
+    }
+#endif
     init_logging();
     connect_signals_handler();
     init_timezone_db();
@@ -366,6 +389,7 @@ run_app(int argc, char** argv)
     atomic_dex::application atomic_app;
     QSettings&              settings = atomic_app.get_registry().ctx<QSettings>();
     handle_settings(settings);
+    atomic_app.post_handle_settings();
 
     int res = 0;
 
@@ -389,6 +413,9 @@ run_app(int argc, char** argv)
     qmlRegisterUncreatableType<atomic_dex::MarketModeGadget>("AtomicDEX.MarketMode", 1, 0, "MarketMode", "Not creatable as it is an enum type");
     qRegisterMetaType<TradingMode>("TradingMode");
     qmlRegisterUncreatableType<atomic_dex::TradingModeGadget>("AtomicDEX.TradingMode", 1, 0, "TradingMode", "Not creatable as it is an enum type");
+    qRegisterMetaType<TradingMode>("WalletChartsCategories");
+    qmlRegisterUncreatableType<atomic_dex::WalletChartsCategoriesGadget>(
+        "AtomicDEX.WalletChartsCategories", 1, 0, "WalletChartsCategories", "Not creatable as it is an enum type");
     qRegisterMetaType<TradingError>("TradingError");
     qmlRegisterUncreatableType<atomic_dex::TradingErrorGadget>("AtomicDEX.TradingError", 1, 0, "TradingError", "Not creatable as it is an enum type");
     qRegisterMetaType<CoinType>("CoinType");
@@ -406,10 +433,15 @@ run_app(int argc, char** argv)
     engine.rootContext()->setContextProperty("atomic_cfg_file", QString::fromStdString((atomic_dex::utils::get_current_configs_path() / "cfg.ini").string()));
     engine.rootContext()->setContextProperty("atomic_logo_path", QString::fromStdString((atomic_dex::utils::get_atomic_dex_data_folder() / "logo").string()));
     engine.rootContext()->setContextProperty("atomic_settings", &settings);
+    engine.rootContext()->setContextProperty("dex_current_version", QString::fromStdString(atomic_dex::get_version()));
+    engine.rootContext()->setContextProperty("qtversion", QString(qVersion()));
     // Load Qaterial.
 
     qaterial::loadQmlResources(false);
-    // qaterial::registerQmlTypes("Qaterial", 1, 0);
+    qaterial::registerQmlTypes("Qaterial", 1, 0);
+    // QQuickStyle::setStyle(QStringLiteral("Qaterial"));
+    //  SPDLOG_INFO("{}",  QQuickStyle::ge))
+
     engine.addImportPath("qrc:/atomic_defi_design/imports");
     engine.addImportPath("qrc:/atomic_defi_design/Constants");
     qmlRegisterSingletonType(QUrl("qrc:/atomic_defi_design/qml/Constants/General.qml"), "App", 1, 0, "General");
@@ -432,7 +464,8 @@ run_app(int argc, char** argv)
     const QUrl url(QStringLiteral("qrc:/atomic_defi_design/qml/main.qml"));
     QObject::connect(
         &engine, &QQmlApplicationEngine::objectCreated, app.get(),
-        [url](QObject* obj, const QUrl& objUrl) {
+        [url](QObject* obj, const QUrl& objUrl)
+        {
             if ((obj == nullptr) && url == objUrl)
             {
                 QCoreApplication::exit(-1);

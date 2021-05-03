@@ -15,10 +15,35 @@
  ******************************************************************************/
 
 //! Project headers
+#include "qt.orderbook.hpp"
 #include "atomicdex/pages/qt.trading.page.hpp"
 #include "atomicdex/services/mm2/mm2.service.hpp"
 #include "atomicdex/services/price/orderbook.scanner.service.hpp"
-#include "qt.orderbook.hpp"
+
+namespace
+{
+    void
+    adjust_vol(atomic_dex::trading_page& trading_pg, atomic_dex::qt_orderbook_wrapper& wrapper)
+    {
+        t_float_50 price_f = safe_float(trading_pg.get_price().toStdString());
+        if (price_f > 0)
+        {
+            t_float_50 base_min_f             = safe_float(wrapper.get_base_min_taker_vol().toStdString());
+            t_float_50 base_min_by_rel        = safe_float(wrapper.get_rel_min_taker_vol().toStdString()) / price_f;
+            t_float_50 base_min_vol_threshold = boost::multiprecision::max(base_min_by_rel, base_min_f);
+            base_min_vol_threshold += t_float_50("1e-8");
+            t_float_50 cur_min_volume_f = safe_float(trading_pg.get_min_trade_vol().toStdString());
+            QString    cur_taker_vol    = QString::fromStdString(atomic_dex::utils::format_float(base_min_vol_threshold));
+
+            // If cur_min_volume in the UI < base_min_vol_threshold override
+            if (cur_min_volume_f < base_min_vol_threshold)
+            {
+                // SPDLOG_INFO("cur_min_taker_vol: {}", cur_taker_vol.toStdString());
+                trading_pg.set_min_trade_vol(cur_taker_vol);
+            }
+        }
+    }
+} // namespace
 
 namespace atomic_dex
 {
@@ -31,25 +56,25 @@ namespace atomic_dex
     }
 
     bool
-    atomic_dex::qt_orderbook_wrapper::is_best_orders_busy() const 
+    atomic_dex::qt_orderbook_wrapper::is_best_orders_busy() const
     {
         return this->m_system_manager.get_system<orderbook_scanner_service>().is_best_orders_busy();
     }
 
     atomic_dex::orderbook_model*
-    atomic_dex::qt_orderbook_wrapper::get_asks() const 
+    atomic_dex::qt_orderbook_wrapper::get_asks() const
     {
         return m_asks;
     }
 
     orderbook_model*
-    qt_orderbook_wrapper::get_bids() const 
+    qt_orderbook_wrapper::get_bids() const
     {
         return m_bids;
     }
 
     atomic_dex::orderbook_model*
-    atomic_dex::qt_orderbook_wrapper::get_best_orders() const 
+    atomic_dex::qt_orderbook_wrapper::get_best_orders() const
     {
         return m_best_orders;
     }
@@ -100,13 +125,13 @@ namespace atomic_dex
     }
 
     QVariant
-    qt_orderbook_wrapper::get_base_max_taker_vol() const 
+    qt_orderbook_wrapper::get_base_max_taker_vol() const
     {
         return m_base_max_taker_vol;
     }
 
     QVariant
-    qt_orderbook_wrapper::get_rel_max_taker_vol() const 
+    qt_orderbook_wrapper::get_rel_max_taker_vol() const
     {
         return m_rel_max_taker_vol;
     }
@@ -121,6 +146,14 @@ namespace atomic_dex
         this->m_rel_max_taker_vol = QJsonObject{
             {"denom", QString::fromStdString(rel.denom)}, {"numer", QString::fromStdString(rel.numer)}, {"decimal", QString::fromStdString(rel.decimal)}};
         emit relMaxTakerVolChanged();
+
+        auto&& [min_base, min_rel] = m_system_manager.get_system<mm2_service>().get_min_vol();
+        this->m_base_min_taker_vol = QString::fromStdString(min_base.min_trading_vol);
+        emit baseMinTakerVolChanged();
+        this->m_rel_min_taker_vol = QString::fromStdString(min_rel.min_trading_vol);
+        emit relMinTakerVolChanged();
+
+        emit currentMinTakerVolChanged();
     }
 } // namespace atomic_dex
 
@@ -128,17 +161,24 @@ namespace atomic_dex
 namespace atomic_dex
 {
     void
-    qt_orderbook_wrapper::refresh_best_orders() 
+    qt_orderbook_wrapper::refresh_best_orders()
     {
-        this->m_system_manager.get_system<orderbook_scanner_service>().process_best_orders();
+        if (safe_float(m_system_manager.get_system<trading_page>().get_volume().toStdString()) > 0)
+        {
+            this->m_system_manager.get_system<orderbook_scanner_service>().process_best_orders();
+        }
+        else
+        {
+            get_best_orders()->clear_orderbook();
+        }
     }
 
     void
-    qt_orderbook_wrapper::select_best_order(const QString& order_uuid) 
+    qt_orderbook_wrapper::select_best_order(const QString& order_uuid)
     {
         QVariantMap out;
-        const bool is_buy = m_system_manager.get_system<trading_page>().get_market_mode() == MarketMode::Buy;
-        const auto  res = m_best_orders->match(m_best_orders->index(0, 0), orderbook_model::UUIDRole, order_uuid, 1, Qt::MatchFlag::MatchExactly);
+        const bool  is_buy = m_system_manager.get_system<trading_page>().get_market_mode() == MarketMode::Buy;
+        const auto  res    = m_best_orders->match(m_best_orders->index(0, 0), orderbook_model::UUIDRole, order_uuid, 1, Qt::MatchFlag::MatchExactly);
         if (!res.empty())
         {
             const QModelIndex& idx   = res.at(0);
@@ -159,5 +199,59 @@ namespace atomic_dex
                 m_selected_best_order = std::nullopt;
             }
         }
+    }
+    QString
+    qt_orderbook_wrapper::get_base_min_taker_vol() const
+    {
+        return m_base_min_taker_vol.isEmpty() ? "0" : m_base_min_taker_vol;
+    }
+
+    QString
+    qt_orderbook_wrapper::get_rel_min_taker_vol() const
+    {
+        return m_rel_min_taker_vol.isEmpty() ? "0" : m_rel_min_taker_vol;
+    }
+
+    void
+    qt_orderbook_wrapper::adjust_min_vol()
+    {
+        adjust_vol(m_system_manager.get_system<trading_page>(), *this);
+    }
+
+    QString
+    qt_orderbook_wrapper::get_current_min_taker_vol() const
+    {
+        QString    cur_taker_vol   = get_base_min_taker_vol();
+        auto&      trading_pg      = m_system_manager.get_system<trading_page>();
+        auto       preffered_order = trading_pg.get_raw_preffered_order();
+        t_float_50 price_f         = safe_float(trading_pg.get_price().toStdString());
+        if (preffered_order.has_value())
+        {
+            price_f = safe_float(preffered_order->at("price").get<std::string>());
+        }
+        // if (trading_pg.)
+        if (price_f <= 0)
+        {
+            //! Price is not set yet in the UI in this particular case return the min volume calculated by mm2
+            return cur_taker_vol;
+        }
+
+        t_float_50 base_min_f             = safe_float(get_base_min_taker_vol().toStdString());
+        t_float_50 base_min_by_rel        = safe_float(get_rel_min_taker_vol().toStdString()) / price_f;
+        t_float_50 base_min_vol_threshold = boost::multiprecision::max(base_min_by_rel, base_min_f);
+        base_min_vol_threshold += t_float_50("1e-8");
+        // t_float_50 cur_min_volume_f       = safe_float(trading_pg.get_min_trade_vol().toStdString());
+        cur_taker_vol = QString::fromStdString(utils::format_float(base_min_vol_threshold));
+
+        if (preffered_order.has_value())
+        {
+            if (trading_pg.get_market_mode() == MarketMode::Sell)
+            {
+                cur_taker_vol = QString::fromStdString(preffered_order->at("base_min_volume").get<std::string>());
+                //SPDLOG_INFO("cur_taker_vol: {}", cur_taker_vol.toStdString());
+            }
+        }
+
+        return cur_taker_vol;
     }
 } // namespace atomic_dex

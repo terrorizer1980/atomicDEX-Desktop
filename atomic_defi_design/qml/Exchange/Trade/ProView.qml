@@ -33,7 +33,7 @@ import "./" as Here
 
 ColumnLayout {
     id: form
-    function selectOrder(is_asks, coin, price, quantity, price_denom, price_numer, quantity_denom, quantity_numer) {
+    function selectOrder(is_asks, coin, price, quantity, price_denom, price_numer, quantity_denom, quantity_numer, min_volume, base_min_volume) {
         setMarketMode(!is_asks ? MarketMode.Sell : MarketMode.Buy)
 
         API.app.trading_pg.preffered_order = {
@@ -43,7 +43,9 @@ ColumnLayout {
             "price_denom": price_denom,
             "price_numer": price_numer,
             "quantity_denom": quantity_denom,
-            "quantity_numer": quantity_numer
+            "quantity_numer": quantity_numer,
+            "min_volume": min_volume,
+            "base_min_volume": base_min_volume
         }
 
         form_base.focusVolumeField()
@@ -81,7 +83,7 @@ ColumnLayout {
     }
 
     spacing: 10
-    anchors.topMargin: 40
+    anchors.topMargin: 5
     anchors.leftMargin: 10
     anchors.fill: parent
 
@@ -469,7 +471,7 @@ ColumnLayout {
                             DefaultText {
                                 anchors.centerIn: parent
                                 opacity: !sell_mode ? 1 : .5
-                                text: "Buy "+left_ticker
+                                text: "Buy "+atomic_qt_utilities.retrieve_main_ticker(left_ticker)
                                 color: !sell_mode? Qaterial.Colors.white : theme.foregroundColor
                             }
                             DefaultMouseArea {
@@ -504,7 +506,7 @@ ColumnLayout {
                                 anchors.centerIn: parent
 
                                 opacity: sell_mode ? 1 : .5
-                                text: "Sell "+left_ticker
+                                text: "Sell "+atomic_qt_utilities.retrieve_main_ticker(left_ticker)
                                 color: sell_mode? Qaterial.Colors.white : theme.foregroundColor
 
                             }
@@ -520,7 +522,7 @@ ColumnLayout {
                     expandedVert: true
                     hideHeader: true
                     title: "Form"
-                    minimumHeight: 300
+                    minimumHeight: 350
                     ColumnLayout {
                         property int space: 10
                         anchors.fill: parent
@@ -633,10 +635,8 @@ ColumnLayout {
                     visible: !isUltraLarge
                     SplitView.fillWidth: true
                     SplitView.fillHeight: true
-                    defaultHeight: 250
-                    minimumHeight: 130
-                    //clip: true
-                    //smooth: true
+                    defaultHeight: 140
+                    minimumHeight: 80
                     title: "Best Orders"
                     reloadable: true
                     onReload: {

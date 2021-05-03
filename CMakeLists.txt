@@ -11,7 +11,7 @@ include(vcpkg_prerequisites)
 include(qt_prerequisites)
 include(cfg_hash)
 
-project(${DEX_PROJECT_NAME} LANGUAGES CXX VERSION 0.4.0)
+project(${DEX_PROJECT_NAME} LANGUAGES CXX VERSION 0.4.2)
 message(STATUS "${PROJECT_NAME} is version ${PROJECT_VERSION}")
 
 include(cmake_default_options)
@@ -20,6 +20,24 @@ include(ipo_prerequisites)
 ##! Options
 option(PREFER_BOOST_FILESYSTEM "Enable to use boost filesystem instead of std::filesystem" OFF)
 option(WITH_HOTRELOAD "Enable to use qml Hot reload" OFF)
+
+if (NOT WITH_HOTRELOAD)
+    message(STATUS "Hot Reload is not active download SortFilterProxyModel")
+    include(FetchContent)
+
+    set(SFPM_REPOSITORY "https://github.com/OlivierLDff/SortFilterProxyModel.git" CACHE STRING "SortFilterProxyModel repository url")
+    set(SFPM_TAG master CACHE STRING "SortFilterProxyModel git tag")
+
+    FetchContent_Declare(
+            SortFilterProxyModel
+            GIT_REPOSITORY ${SFPM_REPOSITORY}
+            GIT_TAG        ${SFPM_TAG}
+            GIT_SHALLOW    1
+    )
+
+    set(SFPM_FOLDER_PREFIX "Dependencies" CACHE STRING "Prefix folder for all SortFilterProxyModel generated targets in generated project (only decorative)")
+    FetchContent_MakeAvailable(SortFilterProxyModel)
+endif()
 
 ##! Antara
 include(antara)
@@ -43,16 +61,16 @@ endif ()
 ##! We fetch our dependencies
 if (APPLE)
     FetchContent_Declare(mm2
-            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3226/mm2-fdc44f512-Darwin-Release.zip)
+            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3358/mm2-2b3db4f49-Darwin-Release.zip)
 elseif (UNIX AND NOT APPLE)
     FetchContent_Declare(mm2
-            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3226/mm2-fdc44f512-Linux-Release.zip)
+            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3358/mm2-2b3db4f49-Linux-Release.zip)
 else ()
     FetchContent_Declare(mm2
-            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3226/mm2-fdc44f512-Windows_NT-Release.zip)
+            URL https://github.com/KomodoPlatform/atomicDEX-API/releases/download/beta-2.1.3358/mm2-2b3db4f49-Windows_NT-Release.zip)
 endif ()
 
-FetchContent_Declare(qmaterial URL https://github.com/KomodoPlatform/Qaterial/archive/master.zip)
+FetchContent_Declare(qmaterial URL https://github.com/KomodoPlatform/Qaterial/archive/last-clang-working-2.zip)
 
 FetchContent_Declare(jl777-coins
         URL https://github.com/KomodoPlatform/coins/archive/master.zip)
@@ -106,9 +124,11 @@ if (WITH_HOTRELOAD)
 
     target_link_libraries(${QATERIALHOTRELOAD_LIB} PUBLIC
             Qaterial
-            SortFilterProxyModel)
+            SortFilterProxyModel
+            )
     target_link_libraries(${QATERIALHOTRELOAD_LIB} PRIVATE
             Qaterial::HotReload::Ui
+            spdlog::spdlog
             )
 
     function(target_link_quiet_libraries TARGET)

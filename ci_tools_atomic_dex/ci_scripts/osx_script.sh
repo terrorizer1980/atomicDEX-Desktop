@@ -1,5 +1,6 @@
 #!/bin/bash
 
+brew update
 brew install autoconf \
             automake \
             libtool \
@@ -7,8 +8,12 @@ brew install autoconf \
             wget \
             nim \
             ninja \
-            gnu-sed
+            gnu-sed \
+            coreutils \
+            llvm \
+            gnu-getopt
 
+pip3 install yq
 export CC=clang
 export CXX=clang++
 export MACOSX_DEPLOYMENT_TARGET=10.14
