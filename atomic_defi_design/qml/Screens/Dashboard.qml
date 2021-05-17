@@ -230,7 +230,7 @@ Item {
         height: width
         z: 1
 
-        x: sidebar.app_logo.x + sidebar.app_logo.width - 20
+        x: sidebar.app_logo.x + sidebar.app_logo.width - 40
         y: sidebar.app_logo.y
         color: Qt.lighter(notifications_list.length > 0 ? Style.colorRed : theme.backgroundColor, notifications_modal_button.containsMouse ? Style.hoverLightMultiplier : 1)
 
