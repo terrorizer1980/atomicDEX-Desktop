@@ -15,6 +15,7 @@ import "../Support"
 import "../Sidebar"
 import "../Fiat"
 import "../Settings" as SettingsPage
+import Qaterial 1.0 as Qaterial
 
 
 Item {
@@ -36,6 +37,7 @@ Item {
     readonly property int idx_exchange_trade: 0
     readonly property int idx_exchange_orders: 1
     readonly property int idx_exchange_history: 2
+
 
     property var current_ticker
 
@@ -297,7 +299,37 @@ Item {
         id: restart_modal
         sourceComponent: RestartModal {}
     }
+    Tour {
+        id: tour
+        //Component.onCompleted: open()
+    }
+    Qaterial.Dialog {
 
+
+        width: app.width
+        height: app.height
+        anchors.centerIn: parent
+        dim: true
+        modal: true
+        title: "Settings"
+        header: Item{}
+        Overlay.modal: Item {
+            Rectangle {
+                anchors.fill: parent
+                color: theme.surfaceColor
+                opacity: .7
+            }
+        }
+        background: Item {}
+        Qaterial.DebugRectangle {
+            radius: 5
+            anchors.right: parent.right 
+            anchors.rightMargin: 20
+            height: 80
+            width: 300
+        }
+        //Component.onCompleted: open()
+    }
     NotificationsModal {
         id: notifications_modal
     }
