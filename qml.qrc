@@ -264,6 +264,9 @@
         <file>atomic_defi_design/assets/languages/atomic_defi_fr.qm</file>
         <file>atomic_defi_design/assets/languages/atomic_defi_ru.qm</file>
         <file>atomic_defi_design/assets/languages/atomic_defi_tr.qm</file>
+        <file>atomic_defi_design/assets/images/tutorial/step1.png</file>
+        <file>atomic_defi_design/assets/images/tutorial/step2.png</file>
+        <file>atomic_defi_design/assets/images/tutorial/step3.png</file>
         <file>atomic_defi_design/qml/App.qml</file>
         <file>atomic_defi_design/qml/Components/AddressField.qml</file>
         <file>atomic_defi_design/qml/Components/AddressFieldWithTitle.qml</file>
@@ -388,6 +391,7 @@
         <file>atomic_defi_design/qml/Constants</file>
         <file>atomic_defi_design/qml/Constants/API.qml</file>
         <file>atomic_defi_design/qml/Constants/General.qml</file>
+        <file>atomic_defi_design/qml/Constants/Images.qml</file>
         <file>atomic_defi_design/qml/Constants/Style.qml</file>
         <file>atomic_defi_design/qml/Dashboard/FatalErrorModal.qml</file>
         <file>atomic_defi_design/qml/Dashboard/NewUpdateModal.qml</file>

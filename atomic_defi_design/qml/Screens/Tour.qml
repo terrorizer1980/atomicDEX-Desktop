@@ -4,7 +4,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.0
 import Qt.labs.settings 1.0
-import QtQml 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls.Universal 2.12
 
@@ -66,35 +65,40 @@ Qaterial.Dialog {
             visible: false
         }
     }
+    ListModel {
+        id: tour_model
+        Component.onCompleted: {
+            append({
+                name: "WELCOME TO ATOMICDEX",
+                description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+                image: Images.tour_step1,
+                reverse: true
+            })
+            append({
+                name: "LOT OF CRYPTO 200+",
+                description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+                image: Images.tour_step2,
+                reverse: false
+            })
+            append({
+                name: "SMART PORTFOLIO",
+                description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+                image: Images.tour_step1,
+                reverse: false
+            })
+        }
+    }
     Item {
         width: parent.width
         height: parent.height-110
         y:60
+
         SwipeView {
             id: swipeTour
             anchors.fill: parent
             clip: true
             Repeater {
-                model: ListModel {
-                    ListElement {
-                        name: "Welcome to AtomicDex"
-                        description: "kdnskqsdfdhdfj fkqdlf"
-                        image: "https://komodoplatform.com/en/blog/content/images/size/w2000/2021/03/default_komodo_960x480-47.jpg"
-                        reverse: false
-                    }
-                    ListElement {
-                        name: "Lets Make a tour"
-                        description: "kdnskqsdfdhdfj fkqdlf"
-                        image: "https://coin-ratgeber.de/wp-content/uploads/2021/02/Screenshot-2021-02-28-at-23.22.49.png"
-                        reverse: true
-                    }
-                    ListElement {
-                        name: "Welcome to AtomicDex"
-                        description: "kdnskqsdfdhdfj fkqdlf"
-                        image: "https://komodoplatform.com/assets/img/illustration/komodo-official-wallet-AtomicDEX.png"
-                        reverse: false
-                    }
-                }
+                model: tour_model
                 delegate: Item {
                     Image {
                         width: parent.width-50
@@ -107,22 +111,26 @@ Qaterial.Dialog {
                     Column {
                         anchors.fill: parent
                         padding: 20
+                        spacing: 20
                         DexLabel {
                             horizontalAlignment: reverse? Text.AlignRight : Text.AlignLeft 
                             width: parent.width-20
                             leftPadding: 20
                             rightPadding: 20
                             wrapMode: Label.Wrap
-                            font: _font.head4
+                            font: _font.head3
                             text: name
                         }
                         DexLabel {
                             horizontalAlignment: reverse?  Text.AlignRight : Text.AlignLeft 
                             width: parent.width-20
-                            leftPadding: 20
-                            rightPadding: 20
+                            leftPadding: reverse? 365 : 0
+                            rightPadding: reverse? 20 : 365
                             wrapMode: Label.Wrap
+                            font: _font.head6
                             text: description
+                            opacity: .4
+                            scale: 0.91
                         }
                     }
                     

@@ -301,7 +301,7 @@ Item {
     }
     Tour {
         id: tour
-        //Component.onCompleted: open()
+        Component.onCompleted: open()
     }
     Qaterial.Dialog {
 
