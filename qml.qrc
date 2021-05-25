@@ -265,9 +265,9 @@
         <file>atomic_defi_design/assets/languages/atomic_defi_fr.qm</file>
         <file>atomic_defi_design/assets/languages/atomic_defi_ru.qm</file>
         <file>atomic_defi_design/assets/languages/atomic_defi_tr.qm</file>
-        <file>atomic_defi_design/assets/images/tutorial/step1.png</file>
-        <file>atomic_defi_design/assets/images/tutorial/step2.png</file>
-        <file>atomic_defi_design/assets/images/tutorial/step3.png</file>
+        <file>atomic_defi_design/assets/images/tutorial/step_1.png</file>
+        <file>atomic_defi_design/assets/images/tutorial/step_2.png</file>
+        <file>atomic_defi_design/assets/images/tutorial/step_3.png</file>
         <file>atomic_defi_design/qml/App.qml</file>
         <file>atomic_defi_design/qml/Components/AddressField.qml</file>
         <file>atomic_defi_design/qml/Components/AddressFieldWithTitle.qml</file>
