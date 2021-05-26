@@ -18,6 +18,7 @@ import "../Settings" as SettingsPage
 import Qaterial 1.0 as Qaterial
 
 
+
 Item {
     id: dashboard
 
@@ -39,7 +40,10 @@ Item {
     readonly property int idx_exchange_history: 2
     signal showTutorial()
     onShowTutorial: {
-        console.log("TUTO FOR PAGE "+current_page)
+        if(current_page==0) {
+            help_box.model = Tutorials.portfolio_help
+            help_box.open()
+        }
     }
 
     property var current_ticker
@@ -302,13 +306,10 @@ Item {
         id: restart_modal
         sourceComponent: RestartModal {}
     }
-    Tour {
-        id: tour
-        Component.onCompleted: open()
+    DexHelpBox {
+        id: help_box
     }
     Qaterial.Dialog {
-
-
         width: app.width
         height: app.height
         anchors.centerIn: parent
