@@ -442,7 +442,6 @@
         <file>atomic_defi_design/qml/Screens/FirstLaunch.qml</file>
         <file>atomic_defi_design/qml/Screens/InitialLoading.qml</file>
         <file>atomic_defi_design/qml/Screens/Login.qml</file>
-        <file>atomic_defi_design/qml/Screens/Tour.qml</file>
         <file>atomic_defi_design/qml/Screens/NewUser.qml</file>
         <file>atomic_defi_design/qml/Screens/RecoverSeed.qml</file>
         <file>atomic_defi_design/qml/Settings/AddCustomCoinModal.qml</file>
