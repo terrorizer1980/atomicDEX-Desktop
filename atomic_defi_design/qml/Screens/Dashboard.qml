@@ -38,10 +38,32 @@ Item {
     readonly property int idx_exchange_trade: 0
     readonly property int idx_exchange_orders: 1
     readonly property int idx_exchange_history: 2
+
+    readonly property var page_list: [
+        {
+            id: idx_dashboard_portfolio,
+            name: "portfolio"
+        },
+        {
+            id: idx_dashboard_wallet,
+            name: "wallet"
+        },
+        {
+            id: idx_dashboard_exchange,
+            name: "exchange"
+        },
+        {
+            id: idx_dashboard_addressbook,
+            name: "address"
+        }
+    ]
+
     signal showTutorial()
+
     onShowTutorial: {
-        if(current_page==0) {
-            help_box.model = Tutorials.portfolio_help
+        let info = Tutorials.getTutorial(page_list[current_page].name)
+        if(info!==-1) {
+            help_box.model = info 
             help_box.show()
         }
     }
