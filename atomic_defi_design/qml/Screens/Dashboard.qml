@@ -37,7 +37,10 @@ Item {
     readonly property int idx_exchange_trade: 0
     readonly property int idx_exchange_orders: 1
     readonly property int idx_exchange_history: 2
-
+    signal showTutorial()
+    onShowTutorial: {
+        console.log("TUTO FOR PAGE "+current_page)
+    }
 
     property var current_ticker
 
