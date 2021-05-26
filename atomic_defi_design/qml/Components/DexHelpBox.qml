@@ -22,7 +22,7 @@ Qaterial.Dialog {
     anchors.centerIn: parent
     dim: true
     modal: true
-    title: "Tour"
+    title: "Tutorial"
     property var model
 
     function show() {
@@ -65,7 +65,7 @@ Qaterial.Dialog {
             leftPadding: 20
             DexLabel {
                 anchors.verticalCenter: parent.verticalCenter
-                text: qsTr("Tour of App")
+                text: qsTr("How its work?")
                 font: theme.textType.head6
             }
         }
@@ -114,13 +114,16 @@ Qaterial.Dialog {
                         DexLabel {
                             horizontalAlignment: reverse?  Text.AlignRight : Text.AlignLeft 
                             width: parent.width-20
-                            leftPadding: reverse? 365 : 0
+                            leftPadding: reverse? 290 : 0
                             rightPadding: reverse? 20 : 365
                             wrapMode: Label.Wrap
                             font: _font.head6
                             text: description
                             opacity: .4
-                            scale: 0.91
+                            linkColor: theme.accentColor
+                            Component.onCompleted: {
+                                font.weight = Font.Normal
+                            }
                         }
                     }
                     
