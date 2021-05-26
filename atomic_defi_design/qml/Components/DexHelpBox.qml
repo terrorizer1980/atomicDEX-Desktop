@@ -16,7 +16,6 @@ import "../Constants"
 
 Qaterial.Dialog {
 
-
     id: help_box
     width: 850
     height: 650
@@ -25,6 +24,16 @@ Qaterial.Dialog {
     modal: true
     title: "Tour"
     property var model
+
+    function show() {
+        tour_model.clear()
+        for(var i in help_box.model) {
+            let data = help_box.model[i]
+            tour_model.append(data)
+        }
+        swipeTour.currentIndex = 0
+        open()
+    }
     header: Item{}
     Overlay.modal: Item {
         Rectangle {
@@ -49,7 +58,7 @@ Qaterial.Dialog {
             foregroundColor: theme.foregroundColor
             icon.source: Qaterial.Icons.close
             anchors.verticalCenter: parent.verticalCenter
-            onClicked: setting_modal.close()
+            onClicked: help_box.close()
         }
         Row {
             anchors.verticalCenter: parent.verticalCenter
@@ -68,13 +77,6 @@ Qaterial.Dialog {
     }
     ListModel {
         id: tour_model
-        Component.onCompleted: {
-            for(var i in help_box.model) {
-                let data = help_box.model[i]
-                append(data)
-            }
-            swipeTour.currentIndex = 0
-        }
     }
     Item {
         width: parent.width

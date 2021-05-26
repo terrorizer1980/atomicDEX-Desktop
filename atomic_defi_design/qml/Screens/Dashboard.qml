@@ -42,7 +42,7 @@ Item {
     onShowTutorial: {
         if(current_page==0) {
             help_box.model = Tutorials.portfolio_help
-            help_box.open()
+            help_box.show()
         }
     }
 
