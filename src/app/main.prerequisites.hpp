@@ -31,6 +31,7 @@
 #include <QtGlobal>
 #include <QtQml>
 #include <QFontDatabase>
+#include <QtWebView>
 #include <QtWebEngine>
 
 //! Qaterial
@@ -425,7 +426,8 @@ run_app(int argc, char** argv)
 
     //! QT
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
-    QtWebEngine::initialize();
+    //QtWebEngine::initialize();
+    QtWebView::initialize();
     std::shared_ptr<QApplication> app = std::make_shared<QApplication>(argc, argv);
 
     app->setOrganizationName("KomodoPlatform");

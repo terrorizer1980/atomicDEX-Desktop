@@ -75,7 +75,7 @@ else ()
 endif ()
 add_library(komodo-date::date ALIAS komodo-date)
 
-find_package(Qt5 5.15 COMPONENTS Core Quick LinguistTools Svg Charts WebEngine WebEngineCore WebEngineWidgets Widgets REQUIRED)
+find_package(Qt5 5.15 COMPONENTS Core Quick LinguistTools Svg Charts WebEngine WebEngineCore WebEngineWidgets WebView Widgets REQUIRED)
 
 #find_package(Qt5)
 
