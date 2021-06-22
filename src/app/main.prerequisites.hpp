@@ -25,6 +25,7 @@
 #include <QDebug>
 #include <QDesktopWidget>
 #include <QQmlApplicationEngine>
+#include <QQuickWindow>
 #include <QScreen>
 #include <QSettings>
 #include <QWindow>
@@ -32,7 +33,7 @@
 #include <QtQml>
 #include <QFontDatabase>
 #include <QtWebView>
-#include <QtWebEngine>
+//#include <QtWebEngine>
 
 //! Qaterial
 #include <Qaterial/Qaterial.hpp>

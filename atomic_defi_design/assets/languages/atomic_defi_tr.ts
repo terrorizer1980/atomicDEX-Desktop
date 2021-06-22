@@ -441,7 +441,7 @@
 <context>
     <name>AmountChart</name>
     <message>
-        <location filename="../../qml/Portfolio/AmountChart.qml" line="335"/>
+        <location filename="../../qml/Portfolio/AmountChart.qml" line="333"/>
         <source>Work in progress</source>
         <translation type="unfinished"></translation>
     </message>
@@ -449,7 +449,7 @@
 <context>
     <name>AssetPieChart</name>
     <message>
-        <location filename="../../qml/Portfolio/AssetPieChart.qml" line="126"/>
+        <location filename="../../qml/Portfolio/AssetPieChart.qml" line="124"/>
         <source>Assets</source>
         <translation>Varlıklar</translation>
     </message>
@@ -551,12 +551,12 @@
 <context>
     <name>CandleStickChart</name>
     <message>
-        <location filename="../../qml/Exchange/Trade/CandleStickChart.qml" line="43"/>
+        <location filename="../../qml/Exchange/Trade/CandleStickChart.qml" line="42"/>
         <source>Loading market data</source>
         <translation>Borsa bilgisi yükleniyor</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/CandleStickChart.qml" line="52"/>
+        <location filename="../../qml/Exchange/Trade/CandleStickChart.qml" line="51"/>
         <source>There is no chart data for this pair yet</source>
         <translation>Bu parite için henüz grafik verisi yok</translation>
     </message>
@@ -1159,17 +1159,17 @@
 <context>
     <name>DexRangeSlider</name>
     <message>
-        <location filename="../../qml/Components/DexRangeSlider.qml" line="98"/>
+        <location filename="../../qml/Components/DexRangeSlider.qml" line="97"/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/DexRangeSlider.qml" line="105"/>
+        <location filename="../../qml/Components/DexRangeSlider.qml" line="104"/>
         <source>Half</source>
         <translation>Yarısı</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/DexRangeSlider.qml" line="112"/>
+        <location filename="../../qml/Components/DexRangeSlider.qml" line="111"/>
         <source>Max</source>
         <translation>Maks</translation>
     </message>
@@ -2318,22 +2318,22 @@
 <context>
     <name>Portfolio</name>
     <message>
-        <location filename="../../qml/Portfolio/Portfolio.qml" line="185"/>
+        <location filename="../../qml/Portfolio/Portfolio.qml" line="183"/>
         <source>Search</source>
         <translation>Ara</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/Portfolio.qml" line="166"/>
+        <location filename="../../qml/Portfolio/Portfolio.qml" line="164"/>
         <source>Show only coins with balance</source>
         <translation>Sadece bakiyesi olan koinleri göster</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/Portfolio.qml" line="218"/>
+        <location filename="../../qml/Portfolio/Portfolio.qml" line="216"/>
         <source>Portfolio</source>
         <translation>Portföy</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/Portfolio.qml" line="239"/>
+        <location filename="../../qml/Portfolio/Portfolio.qml" line="237"/>
         <source>Add asset</source>
         <translation>Varlık ekle</translation>
     </message>
@@ -3476,27 +3476,27 @@ Network fees can vary greatly depending on your selected trading pair.</source>
 <context>
     <name>TableDex</name>
     <message>
-        <location filename="../../qml/Portfolio/TableDex.qml" line="42"/>
+        <location filename="../../qml/Portfolio/TableDex.qml" line="40"/>
         <source>Asset</source>
         <translation>Varlık</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/TableDex.qml" line="64"/>
+        <location filename="../../qml/Portfolio/TableDex.qml" line="62"/>
         <source>Balance</source>
         <translation>Bakiye</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/TableDex.qml" line="83"/>
+        <location filename="../../qml/Portfolio/TableDex.qml" line="81"/>
         <source>Change 24h</source>
         <translation>Değişim 24sa</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/TableDex.qml" line="108"/>
+        <location filename="../../qml/Portfolio/TableDex.qml" line="106"/>
         <source>Trend 7d</source>
         <translation>Trend 7g</translation>
     </message>
     <message>
-        <location filename="../../qml/Portfolio/TableDex.qml" line="123"/>
+        <location filename="../../qml/Portfolio/TableDex.qml" line="121"/>
         <source>Price</source>
         <translation>Fiyat</translation>
     </message>

@@ -3,7 +3,7 @@ include(DEX_NEW_LIB)
 # Core target
 DEX_NEW_LIB(core INTERFACE
         INTERFACE_DEPS
-            cpprestsdk::cpprest Qt::Core Qt::Quick Qt::Svg Qt::Charts Qt::WebEngine Qt::WebEngineCore Qt::WebEngineWidgets Qt::WebView
+            cpprestsdk::cpprest Qt::Core Qt::Quick Qt::Svg Qt::Charts Qt::WebView #Qt::WebEngineCore Qt::WebEngineWidgets Qt::WebEngine
             Qt::Widgets nlohmann_json::nlohmann_json antara_qrcode spdlog::spdlog antara::world
             unofficial-btc::bitcoin komodo-date::date komodo-taskflow::taskflow
             Boost::random Boost::filesystem komodo-sodium::sodium antara::app::net
