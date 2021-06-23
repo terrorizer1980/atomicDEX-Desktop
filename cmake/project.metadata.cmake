@@ -7,7 +7,7 @@ set(DEX_MAINTENANCE_TOOL_NAME "AtomicDEX Maintenance Tool")
 set(DEX_SUPPORT_PAGE "https://support.komodoplatform.com/support/home")
 set(DEX_DISCORD "https://komodoplatform.com/discord")
 set(DEX_TWITTER "https://twitter.com/smartfiportal")
-set(DEX_PRIMARY_COIN "KMD") ## Main coin of the DEX, will enable it by default and will be the default left ticker for trading
+set(DEX_PRIMARY_COIN "SFUSD") ## Main coin of the DEX, will enable it by default and will be the default left ticker for trading
 set(DEX_SECOND_PRIMARY_COIN "LTC")  ## Second main coin of the DEX, will enable it by default and will be the default right ticker for trading
 option(DISABLE_GEOBLOCKING "Enable to disable geoblocking (for dev purpose)" ON)
 set(DEX_REPOSITORY_OWNER ${DEX_COMPANY})
