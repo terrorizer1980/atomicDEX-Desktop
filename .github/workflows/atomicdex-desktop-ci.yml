@@ -13,7 +13,7 @@ env:
   DEX_PROJECT_NAME: "smartdex-desktop"
   DEX_DISPLAY_NAME: "SmartDEX"
   DEX_COMPANY: "SmartFi"
-  DEX_WEBSITE: "https://smartportal.smartfi.com"
+  DEX_WEBSITE: "https://smartfi.com/"
 
 jobs:
 
