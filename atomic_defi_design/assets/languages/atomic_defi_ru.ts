@@ -2,6 +2,21 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
+    <name>QPlatformTheme</name>
+    <message>
+        <source>&amp;Yes</source>
+        <translation>&amp;Да</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation>&amp;Нет</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Отменить</translation>
+    </message>
+</context>
+<context>
     <name>AddCustomCoinModal</name>
     <message>
         <location filename="../../qml/Settings/AddCustomCoinModal.qml" line="117"/>
@@ -452,9 +467,17 @@
     </message>
 </context>
 <context>
+    <name>App</name>
+    <message>
+        <location filename="../../qml/App.qml" line="258"/>
+        <source>Recover Funds Result</source>
+        <translation>Результат восстановления средств</translation>
+    </message>
+</context>
+<context>
     <name>AssetPieChart</name>
     <message>
-        <location filename="../../qml/Portfolio/AssetPieChart.qml" line="134"/>
+        <location filename="../../qml/Portfolio/AssetPieChart.qml" line="132"/>
         <source>Assets</source>
         <translation>Активы</translation>
     </message>
@@ -598,8 +621,8 @@
     </message>
     <message>
         <location filename="../../qml/Components/CexInfoModal.qml" line="19"/>
-        <source>Market data (prices, charts, etc.) marked with the ⓘ icon originates from third-party sources.&lt;br&gt;&lt;br&gt;Data is sourced via &lt;a href=&quot;https://smartportal.smartfi.com&quot;&gt;SmartFi&lt;/a&gt; and &lt;a href=&quot;https://coingecko.com&quot;&gt;CoinGecko&lt;/a&gt;.&lt;br&gt;&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>Market data (prices, charts, etc.) marked with the ⓘ icon originates from third-party sources.&lt;br&gt;&lt;br&gt;Data is sourced via &lt;a href=&quot;https://bandprotocol.com/&quot;&gt;Band Decentralized Oracle&lt;/a&gt; and &lt;a href=&quot;https://coingecko.com&quot;&gt;CoinGecko&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Oracle Supported Pairs:&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;&lt;br&gt;&lt;b&gt;Last reference (Band Oracle):&lt;/b&gt;&lt;br&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;</source>
+        <translation>Рыночные данные (цены, графики, и тд.) отмеченные ⓘ иконкой получены от &lt;a href=&quot;https://bandprotocol.com/&quot;&gt;Band Decentralized Oracle&lt;/a&gt; и &lt;a href=&quot;https://coingecko.com&quot;&gt;CoinGecko&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;b&gt;Oracle Supported Pairs:&lt;/b&gt;&lt;br&gt;%1&lt;br&gt;&lt;br&gt;&lt;b&gt;Last reference (Band Oracle):&lt;/b&gt;&lt;br&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -1162,40 +1185,48 @@
     </message>
 </context>
 <context>
+    <name>DexAppPasswordField</name>
+    <message>
+        <location filename="../../qml/Components/DexAppPasswordField.qml" line="28"/>
+        <source>Type password</source>
+        <translation>Введите пароль</translation>
+    </message>
+</context>
+<context>
     <name>DexKeyChecker</name>
     <message>
-        <location filename="../../qml/Components/DexKeyChecker.qml" line="64"/>
+        <location filename="../../qml/Components/DexKeyChecker.qml" line="66"/>
         <source>At least 1 lowercase alphabetical character</source>
-        <translation type="unfinished">Как минимум 1 строчная буква</translation>
+        <translation>Как минимум 1 строчная буква</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/DexKeyChecker.qml" line="70"/>
+        <location filename="../../qml/Components/DexKeyChecker.qml" line="74"/>
         <source>At least 1 uppercase alphabetical character</source>
-        <translation type="unfinished">Как минимум 1 заглавная буква</translation>
-    </message>
-    <message>
-        <location filename="../../qml/Components/DexKeyChecker.qml" line="76"/>
-        <source>At least 1 numeric character</source>
-        <translation type="unfinished">Как минимум 1 цифра</translation>
+        <translation>Как минимум 1 заглавная буква</translation>
     </message>
     <message>
         <location filename="../../qml/Components/DexKeyChecker.qml" line="82"/>
+        <source>At least 1 numeric character</source>
+        <translation>Как минимум 1 цифра</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Components/DexKeyChecker.qml" line="90"/>
         <source>At least 1 special character (eg. !@#$%)</source>
-        <translation type="unfinished">Как минимум 1 специальный символ (!@#$%)</translation>
+        <translation>Как минимум 1 специальный символ (!@#$%)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../qml/Components/DexKeyChecker.qml" line="87"/>
+        <location filename="../../qml/Components/DexKeyChecker.qml" line="97"/>
         <source>At least %n character(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Не менее %n символов</numerusform>
             <numerusform>Не менее %n символов</numerusform>
             <numerusform>Не менее %n символов</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../qml/Components/DexKeyChecker.qml" line="92"/>
+        <location filename="../../qml/Components/DexKeyChecker.qml" line="104"/>
         <source>Password and Confirm Password have to be same</source>
-        <translation type="unfinished">Пароль и подтверждение пароля должны совпадать</translation>
+        <translation>Пароль и подтверждение пароля должны совпадать</translation>
     </message>
 </context>
 <context>
@@ -1203,7 +1234,7 @@
     <message>
         <location filename="../../qml/Components/DexPaginator.qml" line="61"/>
         <source>items per page</source>
-        <translation type="unfinished">элементов на странице</translation>
+        <translation>элементов на странице</translation>
     </message>
 </context>
 <context>
@@ -1288,620 +1319,67 @@
         <translation>Дисклеймер и условия использования</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="49"/>
+        <location filename="../../qml/Components/EulaModal.qml" line="48"/>
         <source>Accept EULA</source>
         <translation>Принять EULA</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="55"/>
+        <location filename="../../qml/Components/EulaModal.qml" line="54"/>
         <source>Accept Terms and Conditions</source>
         <translation>Принять Terms of Service</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="61"/>
+        <location filename="../../qml/Components/EulaModal.qml" line="60"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="61"/>
+        <location filename="../../qml/Components/EulaModal.qml" line="60"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="68"/>
+        <location filename="../../qml/Components/EulaModal.qml" line="67"/>
         <source>Confirm</source>
         <translation>Подтвердить</translation>
     </message>
     <message>
-        <location filename="../../qml/Components/EulaModal.qml" line="80"/>
-        <source>**SmartFi Non-Custodial Wallet**<byte value="xd"/>
-<byte value="xd"/>
-**Terms of Service**<byte value="xd"/>
-<byte value="xd"/>
-**February 16 2021**<byte value="xd"/>
-<byte value="xd"/>
-Power Block Coin LLC, doing business as c, (**&quot;SmartFi&quot;** or **&quot;we&quot;** or<byte value="xd"/>
-**&quot;us&quot;** or **&quot;our&quot;**) makes available to users certain software<byte value="xd"/>
-services accessible via desktop application a mobile device application<byte value="xd"/>
-and or website, including the SmartFi Wallet (the&#xa0;**&quot;Wallet<byte value="xd"/>
-Application&quot;**&#xa0;or&#xa0;**&quot;App&quot;**). The Wallet Application enables users to<byte value="xd"/>
-(i) self custody digital assets; (ii) access a digital asset browser and<byte value="xd"/>
-link to decentralized applications and decentralized exchanges<byte value="xd"/>
-(**&quot;Dapp(s)&quot;**); (iii) view addresses and information that are part of<byte value="xd"/>
-digital asset networks and broadcast transactions; and (iv) additional<byte value="xd"/>
-functionality as SmartFi may add to the App from time to time<byte value="xd"/>
-(collectively the **&quot;Services&quot;**). SmartFi developed these Terms of<byte value="xd"/>
-Service (these&#xa0;**&quot;Terms&quot;**) to describe the terms that govern your use<byte value="xd"/>
-of all versions of the Wallet Application. These terms and additional<byte value="xd"/>
-information about the Wallet Application can be found on the SmartFi<byte value="xd"/>
-website located at www.smartfi.com (the **&quot;Site&quot;**).<byte value="xd"/>
-<byte value="xd"/>
-**Agreement to Terms**<byte value="xd"/>
-<byte value="xd"/>
-By clicking &quot;I Agree&quot; or by accessing the Wallet Application or using<byte value="xd"/>
-any or all of the Services, you agree to be bound by these Terms. If you<byte value="xd"/>
-don&apos;t agree to be bound by these Terms, you may not access or use the<byte value="xd"/>
-Services.<byte value="xd"/>
-<byte value="xd"/>
-**Privacy Policy**<byte value="xd"/>
-<byte value="xd"/>
-Please refer to our SmartFi Wallet Privacy Policy for information on how<byte value="xd"/>
-we collect, use and disclose information from our users. You acknowledge<byte value="xd"/>
-and agree that your use of the Services is subject to, and that we can<byte value="xd"/>
-collect, use and/or disclose your information (including any personal<byte value="xd"/>
-data you provide to us) in accordance with, our Privacy Policy.<byte value="xd"/>
-<byte value="xd"/>
-**Changes to Terms or Services**<byte value="xd"/>
-<byte value="xd"/>
-We may modify the Terms at any time at our sole discretion. If we do so,<byte value="xd"/>
-we&apos;ll let you know either by posting the modified Terms on the Site, by<byte value="xd"/>
-providing you a notice through the App, or through other methods of<byte value="xd"/>
-communication which we deem reasonable. The modified Terms will be<byte value="xd"/>
-effective at the time they are posted on the Site. It&apos;s important that<byte value="xd"/>
-you review the Terms whenever we modify them because if you continue to<byte value="xd"/>
-use the Services after we have modified the Terms, you are agreeing to<byte value="xd"/>
-be bound by the modified Terms. If you don&apos;t agree to be bound by the<byte value="xd"/>
-modified Terms, then you may not use the Services. Because our Services<byte value="xd"/>
-are evolving over time we may change or discontinue all or any part of<byte value="xd"/>
-the Services, at any time and without notice, at our sole discretion.<byte value="xd"/>
-<byte value="xd"/>
-**ARBITRATION NOTICE: THESE TERMS CONTAIN AN ARBITRATION CLAUSE FOR<byte value="xd"/>
-USERS IN CERTAIN JURISDICTIONS. IF YOU ARE A USER LOCATED IN THE UNITED<byte value="xd"/>
-STATES YOU AGREE THAT DISPUTES BETWEEN YOU AND SMARTFI WILL BE RESOLVED<byte value="xd"/>
-BY BINDING, INDIVIDUAL ARBITRATION IN THE UNITED STATES, AND YOU ARE<byte value="xd"/>
-WAIVING YOUR RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE AS A PLAINTIFF<byte value="xd"/>
-OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION OR REPRESENTATIVE<byte value="xd"/>
-PROCEEDING.**<byte value="xd"/>
-<byte value="xd"/>
-**Who May Use the Services**<byte value="xd"/>
-<byte value="xd"/>
-**Eligibility**<byte value="xd"/>
-<byte value="xd"/>
-You may use the Services if you are 18 years or older and are not barred<byte value="xd"/>
-from using the Services under applicable law.<byte value="xd"/>
-<byte value="xd"/>
-**Registration and Your Information**<byte value="xd"/>
-<byte value="xd"/>
-If you want to use the Services you&apos;ll have to create an account<byte value="xd"/>
-(**&quot;Account&quot;**) via the App. You agree that you won&apos;t disclose your<byte value="xd"/>
-Account credentials to anyone and you&apos;ll notify us immediately of any<byte value="xd"/>
-unauthorized use of your Account. You&apos;re responsible for all activities<byte value="xd"/>
-that occur under your Account, or are otherwise referable to your<byte value="xd"/>
-Account credentials, whether or not you know about them. We reserve the<byte value="xd"/>
-right to suspend or terminate your Account if you provide inaccurate,<byte value="xd"/>
-untrue, or incomplete information, or if you fail to comply with the<byte value="xd"/>
-Account registration requirements or these terms.<byte value="xd"/>
-<byte value="xd"/>
-You are solely responsible for the retention and security of your twelve<byte value="xd"/>
-word recovery phrase (**&quot;Recovery Phrase&quot;**). Your Recovery Phrase is<byte value="xd"/>
-the only way to access the cryptocurrency associated with your Account.<byte value="xd"/>
-Anyone that has access to your Recovery Phrase can access your<byte value="xd"/>
-cryptocurrency. If you lose your Recovery Phrase, you will not be able<byte value="xd"/>
-to access your cryptocurrency. You acknowledge that SmartFi does not<byte value="xd"/>
-store and is not responsible in any way for the security of your<byte value="xd"/>
-Recovery Phrase and you agree to hold SmartFi harmless and that SmartFi<byte value="xd"/>
-shall not be liable in any way in the event you lose your Recovery<byte value="xd"/>
-Phrase and cannot access your cryptocurrency.<byte value="xd"/>
-<byte value="xd"/>
-**Feedback**<byte value="xd"/>
-<byte value="xd"/>
-We welcome feedback, comments, ideas, and suggestions for improvements<byte value="xd"/>
-to the Services (**&quot;Feedback&quot;**). You can submit Feedback by contacting<byte value="xd"/>
-us support@smartfi.com. You grant to us a non-exclusive, worldwide,<byte value="xd"/>
-perpetual, irrevocable, fully-paid, royalty-free, sublicensable and<byte value="xd"/>
-transferable license under any and all intellectual property rights that<byte value="xd"/>
-you own or control to use, copy, modify, create derivative works based<byte value="xd"/>
-upon and otherwise exploit the Feedback for any purpose.&#xa0;**If you lose<byte value="xd"/>
-your Recovery Phrase, you will not be able to access your<byte value="xd"/>
-cryptocurrency. You acknowledge that SmartFi does not store and is not<byte value="xd"/>
-responsible in any way for the security of your Recovery Phrase and you<byte value="xd"/>
-agree to hold SmartFi harmless and that SmartFi shall not be liable in<byte value="xd"/>
-any way in the event you lose your Recovery Phrase and cannot access<byte value="xd"/>
-your cryptocurrency.**<byte value="xd"/>
-<byte value="xd"/>
-**Content Ownership, Responsibility and Removal**<byte value="xd"/>
-<byte value="xd"/>
-For purposes of these Terms: (i) **&quot;Content&quot;** means text, graphics,<byte value="xd"/>
-images, music, software, audio, video, works of authorship of any kind,<byte value="xd"/>
-and information or other materials that are posted, generated, provided<byte value="xd"/>
-or otherwise made available through the Services; and (ii)&#xa0;**&quot;User<byte value="xd"/>
-Content&quot;**&#xa0;means any Content that Account holders (including you) make<byte value="xd"/>
-available through the Services. Content includes without limitation User<byte value="xd"/>
-Content.<byte value="xd"/>
-<byte value="xd"/>
-We do not claim any ownership rights in any User Content and nothing in<byte value="xd"/>
-these Terms will be deemed to restrict any rights that you may have to<byte value="xd"/>
-use and exploit your User Content.<byte value="xd"/>
-<byte value="xd"/>
-Subject to the foregoing, SmartFi and its licensors exclusively own all<byte value="xd"/>
-right, title and interest in and to the Services and Content, including<byte value="xd"/>
-all associated intellectual property rights. You acknowledge that the<byte value="xd"/>
-Services and Content are protected by copyright, trademark, and other<byte value="xd"/>
-laws of the United States and foreign countries. You agree not to<byte value="xd"/>
-remove, alter or obscure any copyright, trademark, service mark or other<byte value="xd"/>
-proprietary rights notices incorporated in or accompanying the Services<byte value="xd"/>
-or Content.<byte value="xd"/>
-<byte value="xd"/>
-**Rights in User Content Granted by You**<byte value="xd"/>
-<byte value="xd"/>
-In order to operate and provide our Services, you grant us a worldwide,<byte value="xd"/>
-non-exclusive, royalty-free, sublicensable, and transferable license to<byte value="xd"/>
-use, copy, distribute, create derivative works of, display, and perform<byte value="xd"/>
-the User Content that you upload, submit, store, send, or receive on the<byte value="xd"/>
-App or through our Services. The rights you grant in this license are<byte value="xd"/>
-for the limited purpose of operating and providing our Services.<byte value="xd"/>
-Additional information about your privacy and how we use User Content is<byte value="xd"/>
-available in the Privacy Policy.<byte value="xd"/>
-<byte value="xd"/>
-You warrant and represent that you have the right and authority to<byte value="xd"/>
-submit your User Content and that the User Content or any part thereof<byte value="xd"/>
-does not infringe the intellectual property rights or any other rights<byte value="xd"/>
-of any third party.<byte value="xd"/>
-<byte value="xd"/>
-You acknowledge that, in certain instances, where you have removed your<byte value="xd"/>
-User Content by specifically deleting it, some of your User Content<byte value="xd"/>
-(such as posts or comments you make) may not be completely removed and<byte value="xd"/>
-copies of your User Content may continue to exist on the Services. We<byte value="xd"/>
-are not responsible or liable for the removal or deletion of (or the<byte value="xd"/>
-failure to remove or delete) any of your User Content.<byte value="xd"/>
-<byte value="xd"/>
-**Rights in Content Granted by SmartFi**<byte value="xd"/>
-<byte value="xd"/>
-Subject to your compliance with these Terms, we grant you a limited,<byte value="xd"/>
-non-exclusive, non-transferable, non-sublicensable license to download,<byte value="xd"/>
-view, copy, display and print the Content solely in connection with your<byte value="xd"/>
-permitted use of the Services.<byte value="xd"/>
-<byte value="xd"/>
-**Rights in App, Site and Services Granted by SmartFi**<byte value="xd"/>
-<byte value="xd"/>
-The App, Site and Services are proprietary to SmartFi and its licensors<byte value="xd"/>
-and must not be used other than strictly in accordance with these Terms.<byte value="xd"/>
-SmartFi grants to you a limited, non-exclusive, non-transferable,<byte value="xd"/>
-non-sublicensable right to use the App and Site for the purposes of<byte value="xd"/>
-accessing and using the Services in accordance with these Terms.<byte value="xd"/>
-<byte value="xd"/>
-**Fees**<byte value="xd"/>
-<byte value="xd"/>
-We may charge fees for some or part of the Services we make available to<byte value="xd"/>
-you. We reserve the right to change those fees at our discretion with<byte value="xd"/>
-notice. We will disclose the amount of fees we will charge you for the<byte value="xd"/>
-applicable Service at the time that you access the Service.<byte value="xd"/>
-<byte value="xd"/>
-You may incur charges from third parties for use of linked services. For<byte value="xd"/>
-example, you may be charged fees via the Dapps and/or decentralized<byte value="xd"/>
-exchanges (&quot;**DEXs**&quot;) that you may access via the App. You may also be<byte value="xd"/>
-charged fees by SmartFi if you elect to link the Wallet App to your<byte value="xd"/>
-SmartFi exchange account and transact in your SmartFi exchange account.<byte value="xd"/>
-Third party fees are not charged by SmartFi and are not paid to SmartFi.<byte value="xd"/>
-<byte value="xd"/>
-**Acceptable Use and SmartFi Wallet Holding&apos;s Enforcement Rights**<byte value="xd"/>
-<byte value="xd"/>
-You agree not to use the Services in ways that:<byte value="xd"/>
-<byte value="xd"/>
--   Violate, misappropriate, or infringe the rights of SmartFi, our<byte value="xd"/>
-    users, or others, including privacy, publicity, intellectual<byte value="xd"/>
-    property, or other proprietary rights;<byte value="xd"/>
-<byte value="xd"/>
--   Are illegal, obscene, defamatory, threatening, intimidating,<byte value="xd"/>
-    harassing, hateful, racially, or ethnically offensive, or instigate<byte value="xd"/>
-    or encourage conduct that would be illegal, or otherwise<byte value="xd"/>
-    inappropriate, including promoting violent crimes;<byte value="xd"/>
-<byte value="xd"/>
--   Involve publishing falsehoods, misrepresentations, or misleading<byte value="xd"/>
-    statements, including impersonating someone;<byte value="xd"/>
-<byte value="xd"/>
--   Breach any duty toward or rights of any person or entity, including<byte value="xd"/>
-    rights of publicity, privacy, or trademark;<byte value="xd"/>
-<byte value="xd"/>
--   Involve sending illegal or impermissible communications such as bulk<byte value="xd"/>
-    messaging, auto-messaging, auto-dialing, and the like;<byte value="xd"/>
-<byte value="xd"/>
--   Avoid, bypass, remove, deactivate, impair, descramble or otherwise<byte value="xd"/>
-    circumvent any technological measure implemented by us or any of our<byte value="xd"/>
-    service providers or any other third party (including another user)<byte value="xd"/>
-    to protect the Services or Content;<byte value="xd"/>
-<byte value="xd"/>
--   Disguise your location through IP proxying or other methods;<byte value="xd"/>
-<byte value="xd"/>
--   Interfere with, or attempt to interfere with, the access of any<byte value="xd"/>
-    user, host or network, including, without limitation, sending a<byte value="xd"/>
-    virus, overloading, flooding, spamming, or mail-bombing the<byte value="xd"/>
-    Services;<byte value="xd"/>
-<byte value="xd"/>
--   Violate any applicable law or regulation; or<byte value="xd"/>
-<byte value="xd"/>
--   Encourage or enable any other individual to do any of the foregoing.<byte value="xd"/>
-<byte value="xd"/>
-Although we have no obligation to monitor any User Content, we have<byte value="xd"/>
-absolute discretion to remove User Content at any time and for any<byte value="xd"/>
-reason without notice. You understand that by using the Services, you<byte value="xd"/>
-may be exposed to User Content that is offensive, indecent, or<byte value="xd"/>
-objectionable. We take no responsibility and assume no liability for any<byte value="xd"/>
-User Content, including any loss or damage to any of your User Content.<byte value="xd"/>
-<byte value="xd"/>
-You agree to comply with all applicable U.S. and non-U.S. export control<byte value="xd"/>
-and trade sanctions laws (**&quot;Export Laws&quot;**). Without limiting the<byte value="xd"/>
-foregoing, you may not download the App or use the Services if 1) you<byte value="xd"/>
-are in, under the control of, or a national or resident of Cuba, Iran,<byte value="xd"/>
-North Korea, Sudan, or Syria or any other country subject to United<byte value="xd"/>
-States embargo, UN Security Council Resolutions (&quot;UNSCR&quot;), HM<byte value="xd"/>
-Treasury&apos;s financial sanctions regime, or if you are on the U.S.<byte value="xd"/>
-Treasury Department&apos;s Specially Designated Nationals List or the U.S.<byte value="xd"/>
-Commerce Department&apos;s Denied Persons List, Unverified List, Entity List<byte value="xd"/>
-HM Treasury&apos;s financial sanctions regime; or (2) you intend to supply<byte value="xd"/>
-any Services to Cuba, Iran, North Korea, Sudan or Syria or any other<byte value="xd"/>
-country subject to United States embargo or HM Treasury&apos;s financial<byte value="xd"/>
-sanctions regime (or a national or resident of one of these countries),<byte value="xd"/>
-or to a person on the Specially Designated Nationals List, Denied<byte value="xd"/>
-Persons List, Unverified List, Entity List, or HM Treasury&apos;s financial<byte value="xd"/>
-sanctions regime.<byte value="xd"/>
-<byte value="xd"/>
-**Third Party Materials**<byte value="xd"/>
-<byte value="xd"/>
-The Services and App may contain links to third-party services and/or<byte value="xd"/>
-Dapps (**&quot;Third Party Materials&quot;**). The Services enable you to access<byte value="xd"/>
-Dapps via a Dapp browser and Wallet Link by navigating away from the App<byte value="xd"/>
-to the Dapp or by enabling a native frontend software link within the<byte value="xd"/>
-App. When using a Dapp or other Third Party Materials, you understand<byte value="xd"/>
-that you are at no time transferring your assets to us. We provide<byte value="xd"/>
-access to Third Party Materials only as a convenience, do not have<byte value="xd"/>
-control over their content, do not warrant or endorse, and are not<byte value="xd"/>
-responsible for the availability or legitimacy of, the content, products<byte value="xd"/>
-or services on or accessible from those Third Party Materials (including<byte value="xd"/>
-any related websites, resources or links displayed therein). We make no<byte value="xd"/>
-warranties or representations, express or implied, about such linked<byte value="xd"/>
-Third Party Materials, the third parties they are owned and operated by,<byte value="xd"/>
-the information contained on them or the suitability of their products<byte value="xd"/>
-or services. You acknowledge sole responsibility for and assume all risk<byte value="xd"/>
-arising from your use of any third-party websites, applications, or<byte value="xd"/>
-resources.<byte value="xd"/>
-<byte value="xd"/>
-You may be able to link Wallet to your SmartFi exchange account to<byte value="xd"/>
-enable access to your SmartFi account from Wallet. In doing so, you<byte value="xd"/>
-understand and agree that all transactions made when accessing your<byte value="xd"/>
-SmartFi exchange account from the Smartfi Wallet is subject to the terms<byte value="xd"/>
-of use for the SmartFi exchange account and the SmartFi exchange privacy<byte value="xd"/>
-policy.<byte value="xd"/>
-<byte value="xd"/>
-**Termination**<byte value="xd"/>
-<byte value="xd"/>
-We may terminate your access to and use of the Services, at our sole<byte value="xd"/>
-discretion, at any time and without notice to you. You may cancel your<byte value="xd"/>
-Account at any time by following the account closure instructions in the<byte value="xd"/>
-App. Upon any termination, discontinuation or cancellation of Services<byte value="xd"/>
-or your Account, (i) all rights and/or licences granted to you under<byte value="xd"/>
-these Terms shall immediately cease and terminate and you shall<byte value="xd"/>
-forthwith cease the use and/or access of the App, Site, Services and<byte value="xd"/>
-Content in any way whatsoever; and (ii) notwithstanding the foregoing,<byte value="xd"/>
-the following provisions will survive: Feedback, Content and Content<byte value="xd"/>
-Rights, Content Ownership, Responsibility and Removal (save for the<byte value="xd"/>
-subsection &quot;Rights in Content Granted by SmartFi&quot;), Termination,<byte value="xd"/>
-Warranty Disclaimers, Indemnity, Limitation of Liability, Dispute<byte value="xd"/>
-Resolution, and General Terms.<byte value="xd"/>
-<byte value="xd"/>
-**Warranty Disclaimers**<byte value="xd"/>
-<byte value="xd"/>
-YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE SERVICES (INCLUDING<byte value="xd"/>
-ANY PRIVATE KEY STORAGE SERVICE OFFERED AS PART OF THE SERVICES, WHETHER<byte value="xd"/>
-CLOUD OR HARDWARE-BASED) AND CONTENT IS AT YOUR SOLE RISK AND THAT THE<byte value="xd"/>
-ENTIRE RISK AS TO SATISFACTORY QUALITY, PERFORMANCE, ACCURACY AND EFFORT<byte value="xd"/>
-IS WITH YOU. THE APP, SITE AND SERVICES ARE PROVIDED ON AN &quot;AS IS&quot; AND<byte value="xd"/>
-&quot;AS AVAILABLE&quot; BASIS WITHOUT ANY REPRESENTATION OR WARRANTY, WHETHER<byte value="xd"/>
-EXPRESS, IMPLIED OR STATUTORY. TO THE MAXIMUM EXTENT PERMITTED BY<byte value="xd"/>
-APPLICABLE LAW, SMARTFI SPECIFICALLY DISCLAIMS ANY EXPRESS OR IMPLIED<byte value="xd"/>
-WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE<byte value="xd"/>
-AND/OR NON-INFRINGEMENT. SMARTFI DOES NOT MAKE ANY REPRESENTATIONS OR<byte value="xd"/>
-WARRANTIES THAT ACCESS TO THE SERVICES OR ANY OF THE MATERIALS CONTAINED<byte value="xd"/>
-THEREIN WILL BE CONTINUOUS, UNINTERRUPTED, TIMELY, OR ERROR-FREE.<byte value="xd"/>
-<byte value="xd"/>
-USE OF ANY PRIVATE KEY STORAGE SERVICE INCLUDED AS PART OF THE SERVICES<byte value="xd"/>
-IS OFFERED TO YOU AS A CONVENIENCE, SUBJECT TO THE LIMITATIONS ABOVE. TO<byte value="xd"/>
-BE SAFE, YOU SHOULD ALWAYS BACKUP YOUR PRIVATE ACCESS KEY VIA SECONDARY<byte value="xd"/>
-MEANS.<byte value="xd"/>
-<byte value="xd"/>
-**Disclaimers; Risks**<byte value="xd"/>
-<byte value="xd"/>
-**Warranty disclaimer**<byte value="xd"/>
-<byte value="xd"/>
-You expressly understand and agree that your use of the Services is at<byte value="xd"/>
-your sole risk. The Services (including the Site, the App and the<byte value="xd"/>
-Content) are provided on an &quot;as is&quot; and &quot;as available&quot; basis, without<byte value="xd"/>
-warranties of any kind, either express or implied, including, without<byte value="xd"/>
-limitation, implied warranties of merchantability, fitness for a<byte value="xd"/>
-particular purpose or non-infringement. You acknowledge that SmartFi has<byte value="xd"/>
-no control over, and no duty to take any action regarding: which users<byte value="xd"/>
-gain access to or use the Services; what effects the Content may have on<byte value="xd"/>
-you; how you may interpret or use the Content; or what actions you may<byte value="xd"/>
-take as a result of having been exposed to the Content. You release<byte value="xd"/>
-SmartFi from all liability for you having acquired or not acquired<byte value="xd"/>
-Content through the Services. SmartFi makes no representations<byte value="xd"/>
-concerning any Content contained in or accessed through the Services,<byte value="xd"/>
-and SmartFi will not be responsible or liable for the accuracy,<byte value="xd"/>
-copyright compliance, legality or decency of material contained in or<byte value="xd"/>
-accessed through the Services.<byte value="xd"/>
-<byte value="xd"/>
-We do not represent or warrant that access to the Services will be<byte value="xd"/>
-continuous, uninterrupted, timely or secure. You acknowledge and accept<byte value="xd"/>
-that the Services (a) may contain bugs, errors and defects, (b) may<byte value="xd"/>
-function improperly or be subject to periods of downtime and<byte value="xd"/>
-unavailability, (c) may result in total or partial loss or corruption of<byte value="xd"/>
-data and (d) may be modified at any time, including through the release<byte value="xd"/>
-of subsequent versions, all with or without notice to you.<byte value="xd"/>
-<byte value="xd"/>
-You acknowledge that SmartFi is not responsible for transferring,<byte value="xd"/>
-safeguarding, or maintaining your private keys or any digital currency<byte value="xd"/>
-associated therewith. If you lose, mishandle or have stolen associated<byte value="xd"/>
-digital currency private keys, you acknowledge that you may not be able<byte value="xd"/>
-to recover associated digital currency, and that SmartFi is not<byte value="xd"/>
-responsible for such loss. You acknowledge that SmartFi is not<byte value="xd"/>
-responsible for any loss, damage or liability arising from your failure<byte value="xd"/>
-to comply with the terms hereunder.<byte value="xd"/>
-<byte value="xd"/>
-**Sophistication and Risk of Cryptographic Systems**<byte value="xd"/>
-<byte value="xd"/>
-By utilizing the Services or interacting with the Content or platform in<byte value="xd"/>
-any way, you represent that you understand the inherent risks associated<byte value="xd"/>
-with cryptographic systems; and warrant that you have an understanding<byte value="xd"/>
-of the usage and intricacies of native cryptographic tokens such as<byte value="xd"/>
-Ether (ETH) and Bitcoin (BTC), smart contract based tokens such as those<byte value="xd"/>
-that follow an Ethereum token standard (e.g.<byte value="xd"/>
-&lt;https://github.com/ethereum/EIPs/issues/20&gt;), and blockchain-based<byte value="xd"/>
-software systems.<byte value="xd"/>
-<byte value="xd"/>
-**Risk of Regulatory Actions in One or More Jurisdictions**<byte value="xd"/>
-<byte value="xd"/>
-SmartFi and any supported cryptographic token and blockchain could be<byte value="xd"/>
-impacted by one or more regulatory inquiries or regulatory action, which<byte value="xd"/>
-could impede or limit the ability of SmartFi to continue to develop, or<byte value="xd"/>
-which could impede or limit your ability to access or use the Services<byte value="xd"/>
-or the underlying blockchain network.<byte value="xd"/>
-<byte value="xd"/>
-**Risk of Weaknesses or Exploits in the Field of Cryptography**<byte value="xd"/>
-<byte value="xd"/>
-You acknowledge and understand that Cryptography is a progressing field.<byte value="xd"/>
-Advances in code cracking or technical advances such as the development<byte value="xd"/>
-of quantum computers may present risks to cryptocurrencies and Services<byte value="xd"/>
-of Content, which could result in the theft or loss of your<byte value="xd"/>
-cryptographic tokens or property. To the extent possible, SmartFi<byte value="xd"/>
-intends to update the protocol underlying Services to account for any<byte value="xd"/>
-advances in cryptography and to incorporate additional security<byte value="xd"/>
-measures, but does not guarantee or otherwise represent full security of<byte value="xd"/>
-the system. By using the Services or accessing Content, you acknowledge<byte value="xd"/>
-these inherent risks.<byte value="xd"/>
-<byte value="xd"/>
-**Volatility of Cryptocurrencies**<byte value="xd"/>
-<byte value="xd"/>
-You understand that Ethereum and other blockchain technologies and<byte value="xd"/>
-associated cryptographic tokens are highly volatile due to many factors<byte value="xd"/>
-including but not limited to adoption, speculation, technology and<byte value="xd"/>
-security risks. You also acknowledge that the cost of transacting on<byte value="xd"/>
-such technologies is variable and may increase at any time causing<byte value="xd"/>
-impact to any activities taking place on the blockchain network. You<byte value="xd"/>
-acknowledge these risks and agree that SmartFi cannot be held liable for<byte value="xd"/>
-such fluctuations or increased costs.<byte value="xd"/>
-<byte value="xd"/>
-**Application Security**<byte value="xd"/>
-<byte value="xd"/>
-You further acknowledge that blockchain applications are code subject to<byte value="xd"/>
-flaws and acknowledge that you are solely responsible for evaluating any<byte value="xd"/>
-code provided by the Services or Content and the trustworthiness of any<byte value="xd"/>
-third-party websites, products, smart-contracts, or Content you access<byte value="xd"/>
-or use through the Services. You further expressly acknowledge and<byte value="xd"/>
-represent that blockchain applications can be written maliciously or<byte value="xd"/>
-negligently, that SmartFi cannot be held liable for your interaction<byte value="xd"/>
-with such applications and that such applications may cause the loss of<byte value="xd"/>
-property or even identity. This warning and others later provided by<byte value="xd"/>
-SmartFi in no way evidence or represent an on-going duty to alert you to<byte value="xd"/>
-all of the potential risks of utilizing the Services or Content.<byte value="xd"/>
-<byte value="xd"/>
-**Other Affiliated Services and Third Party Services**<byte value="xd"/>
-<byte value="xd"/>
-Software and services provided by our affiliates (&quot;**Affiliated<byte value="xd"/>
-Services**&quot;) and third party software and services (&quot;**Third Party<byte value="xd"/>
-Services**&quot; and, together with Affiliated Services, &quot;**Additional<byte value="xd"/>
-Services**&quot;) included in, integrated into, or made accessible through,<byte value="xd"/>
-the Services, including through the Snap System, are made available to<byte value="xd"/>
-you under the terms of use of such service providers (collectively,<byte value="xd"/>
-&quot;**Service Providers**&quot;) (for example, Komodo). Please review the<byte value="xd"/>
-applicable terms of use on their websites prior to using or accessing<byte value="xd"/>
-their services or see appendix A hereto.<byte value="xd"/>
-<byte value="xd"/>
-Service Providers may charge you a fee for use of, or access to, such<byte value="xd"/>
-Additional Services. You acknowledge that SmartFi may earn fees from<byte value="xd"/>
-Service Providers in connection with your use of such Additional<byte value="xd"/>
-Services.<byte value="xd"/>
-<byte value="xd"/>
-You agree that SmartFi and its affiliates are not in any way associated<byte value="xd"/>
-with the owner or operator of any Third Party Services or responsible or<byte value="xd"/>
-liable for the software and services offered by them or for anything in<byte value="xd"/>
-connection with such Third Party Services. SmartFi does not endorse or<byte value="xd"/>
-approve and makes no warranties, representations or undertakings<byte value="xd"/>
-relating to the software, service or content of any Third Party<byte value="xd"/>
-Services.<byte value="xd"/>
-<byte value="xd"/>
-In addition, SmartFi disclaims liability for any loss, damage and any<byte value="xd"/>
-other consequence resulting directly or indirectly from or relating to<byte value="xd"/>
-your use or access of Third Party Services or any information that you<byte value="xd"/>
-may provide or any transaction conducted with or through the Third Party<byte value="xd"/>
-Services or the failure of any information, software or services posted<byte value="xd"/>
-or offered by such Service Providers or any error, omission or<byte value="xd"/>
-misrepresentation by such Service Providers or any computer virus<byte value="xd"/>
-arising from or system failure associated with the Third Party Services.<byte value="xd"/>
-<byte value="xd"/>
-In the event of any inconsistency between the terms herein and the terms<byte value="xd"/>
-of the Additional Services, the terms herein will prevail.<byte value="xd"/>
-<byte value="xd"/>
-**Indemnity**<byte value="xd"/>
-<byte value="xd"/>
-You will indemnify and hold harmless SmartFi and its officers,<byte value="xd"/>
-directors, employees and agents, from and against any claims, disputes,<byte value="xd"/>
-demands, liabilities, damages, losses, and costs and expenses,<byte value="xd"/>
-including, without limitation, reasonable legal and accounting fees<byte value="xd"/>
-arising out of or in any way connected with (i) your access to or use of<byte value="xd"/>
-the Services or Content, (ii) your User Content, (iii) Third Party<byte value="xd"/>
-Materials, or (iv) your violation of these Terms.<byte value="xd"/>
-<byte value="xd"/>
-**Limitation of Liability**<byte value="xd"/>
-<byte value="xd"/>
-TO THE MAXIMUM EXTENT NOT PROHIBITED BY LAW, SMARTFI SHALL NOT BE LIABLE<byte value="xd"/>
-FOR DAMAGES OF ANY TYPE, WHETHER DIRECT OR INDIRECT, ARISING OUT OF OR<byte value="xd"/>
-IN ANY WAY RELATED TO YOUR USE OR INABILITY TO USE THE SERVICES,<byte value="xd"/>
-INCLUDING BUT NOT LIMITED TO DAMAGES ALLEGEDLY ARISING FROM THE<byte value="xd"/>
-COMPROMISE OR LOSS OF YOUR LOGIN CREDENTIALS OR FUNDS, OR LOSS OF OR<byte value="xd"/>
-INABILITY TO RESTORE ACCESS FROM YOUR BACKUP PHRASE, OR FOR MISTAKES,<byte value="xd"/>
-OMISSIONS, INTERRUPTIONS, DELAYS, DEFECTS AND/OR ERRORS IN THE<byte value="xd"/>
-TRANSMISSION OF TRANSACTIONS OR MESSAGES TO THE ETHEREUM NETWORK, OR THE<byte value="xd"/>
-FAILURE OF ANY MESSAGE TO SEND OR BE RECEIVED BY THE INTENDED RECIPIENT<byte value="xd"/>
-IN THE INTENDED FORM, OR FOR DIMINUTION OF VALUE OF ETHER OR ANY OTHER<byte value="xd"/>
-DIGITAL TOKEN OR DIGITAL ASSET ON THE ETHEREUM NETWORK. SMARTFI SHALL<byte value="xd"/>
-NOT BE LIABLE UNDER ANY CIRCUMSTANCES FOR ANY LOST PROFITS OR ANY<byte value="xd"/>
-SPECIAL, INCIDENTAL, INDIRECT, INTANGIBLE, OR CONSEQUENTIAL DAMAGES,<byte value="xd"/>
-WHETHER BASED IN CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR<byte value="xd"/>
-OTHERWISE, ARISING OUT OF OR IN CONNECTION WITH AUTHORIZED OR<byte value="xd"/>
-UNAUTHORIZED USE OF THE SERVICES, EVEN IF AN AUTHORIZED REPRESENTATIVE<byte value="xd"/>
-OF SMARTFI HAS BEEN ADVISED OF OR KNEW OR SHOULD HAVE KNOWN OF THE<byte value="xd"/>
-POSSIBILITY OF SUCH DAMAGES. SMARTFI SHALL NOT BE LIABLE UNDER ANY<byte value="xd"/>
-CIRCUMSTANCES FOR DAMAGES ARISING OUT OF OR IN ANY WAY RELATED TO<byte value="xd"/>
-SOFTWARE, PRODUCTS, SERVICES, AND/OR INFORMATION OFFERED OR PROVIDED BY<byte value="xd"/>
-THIRD-PARTIES AND ACCESSED THROUGH THE APP, SITE OR SERVICES.<byte value="xd"/>
-<byte value="xd"/>
-SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OF LIABILITY FOR PERSONAL<byte value="xd"/>
-INJURY, OR OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION<byte value="xd"/>
-MAY NOT APPLY TO YOU. IN NO EVENT SHALL SMARTFI&apos; TOTAL LIABILITY TO YOU<byte value="xd"/>
-FOR ALL DAMAGES (OTHER THAN AS MAY BE REQUIRED BY APPLICABLE LAW IN<byte value="xd"/>
-CASES INVOLVING PERSONAL INJURY) EXCEED THE AMOUNT OF ONE HUNDRED U.S.<byte value="xd"/>
-DOLLARS ($USD100.00) OR ITS EQUIVALENT IN THE LOCAL CURRENCY OF THE<byte value="xd"/>
-APPLICABLE JURISDICTION.<byte value="xd"/>
-<byte value="xd"/>
-**Dispute Resolution**<byte value="xd"/>
-<byte value="xd"/>
-**Governing Law, Forum and Venue**<byte value="xd"/>
-<byte value="xd"/>
-These Terms and any action related thereto will be governed by the laws<byte value="xd"/>
-of the state of Delaware in the United States, without regard to its<byte value="xd"/>
-conflict of laws provisions, If you are a user located in the United<byte value="xd"/>
-States, the terms in the &quot;Special Arbitration Provision for United<byte value="xd"/>
-States&quot; section below apply to you.<byte value="xd"/>
-<byte value="xd"/>
-If you are not located in the United States, you agree that you will<byte value="xd"/>
-resolve any claim you have with us relating to, arising out of, or in<byte value="xd"/>
-any way in connection with our Terms, us, or our Services (each, a<byte value="xd"/>
-&quot;Dispute,&quot; and together, &quot;Disputes&quot;) exclusively in the state courts<byte value="xd"/>
-located in Delaware, or federal court for Delaware and you agree to<byte value="xd"/>
-submit to the personal jurisdiction of such courts for the purpose of<byte value="xd"/>
-litigating all such Disputes.<byte value="xd"/>
-<byte value="xd"/>
-**Special Arbitration Provision for United States Users**<byte value="xd"/>
-<byte value="xd"/>
-If you are a user located in the United States, you and SmartFi agree<byte value="xd"/>
-that any Dispute **shall be finally settled in binding arbitration, on<byte value="xd"/>
-an individual basis, in accordance with the American Arbitration<byte value="xd"/>
-Association&apos;s rules for arbitration of consumer-related disputes<byte value="xd"/>
-(accessible at &lt;https://www.adr.org/aaa/faces/rules&gt;) and you and<byte value="xd"/>
-SmartFi hereby expressly waive trial by jury and right to participate in<byte value="xd"/>
-a class action lawsuit, private attorney general actions, or class-wide<byte value="xd"/>
-arbitration,**&#xa0;except that each party retains the right: (i) to bring an<byte value="xd"/>
-individual action in small claims court and (ii) to seek injunctive or<byte value="xd"/>
-other equitable relief in a court of competent jurisdiction to prevent<byte value="xd"/>
-the actual or threatened infringement, misappropriation or violation of<byte value="xd"/>
-a party&apos;s copyrights, trademarks, trade secrets, patents or other<byte value="xd"/>
-intellectual property rights (the action described in the foregoing<byte value="xd"/>
-clause (ii), an &quot;IP Protection Action&quot;). The exclusive jurisdiction of<byte value="xd"/>
-an IP Protection Action shall be the courts of Delaware and you agree to<byte value="xd"/>
-submit to the personal jurisdiction of such courts for the purpose of<byte value="xd"/>
-litigating IP Protection Actions.<byte value="xd"/>
-<byte value="xd"/>
-The Federal Arbitration Act, 9 U.S.C. §§ 1-16, fully applies to the<byte value="xd"/>
-arbitration. The arbitration will be conducted by a single, neutral<byte value="xd"/>
-arbitrator and shall take place in the county or parish in which you<byte value="xd"/>
-reside, or another mutually agreeable location, in the English language.<byte value="xd"/>
-The arbitrator may award any relief that a court of competent<byte value="xd"/>
-jurisdiction could award, including attorneys&apos; fees when authorized by<byte value="xd"/>
-law, and the arbitral decision may be entered as a judgement and<byte value="xd"/>
-enforced in any court of law. At your request, hearings may be conducted<byte value="xd"/>
-in person or by telephone and the arbitrator may provide for submitting<byte value="xd"/>
-and determining motions on briefs, without oral hearings. The prevailing<byte value="xd"/>
-party in any action or proceeding to enforce this agreement shall be<byte value="xd"/>
-entitled to costs and attorneys&apos; fees.<byte value="xd"/>
-<byte value="xd"/>
-If the arbitrator(s) or arbitration administrator would impose filing<byte value="xd"/>
-fees or other administrative costs on you, we will reimburse you, upon<byte value="xd"/>
-request, to the extent such fees or costs would exceed those that you<byte value="xd"/>
-would otherwise have to pay if you were proceeding instead in a court.<byte value="xd"/>
-We will also pay additional fees or costs if required to do so by the<byte value="xd"/>
-arbitration administrator&apos;s rules or applicable law. Apart from the<byte value="xd"/>
-foregoing, each Party will be responsible for any other fees or costs,<byte value="xd"/>
-such as attorney fees that the Party may incur. If a court decides that<byte value="xd"/>
-any provision of this Special Arbitration Provision is invalid or<byte value="xd"/>
-unenforceable, that provision shall be severed and the other parts of<byte value="xd"/>
-this Special Arbitration Provision shall still apply. In any case, the<byte value="xd"/>
-remainder of this User Agreement, will continue to apply.<byte value="xd"/>
-<byte value="xd"/>
-**General Terms**<byte value="xd"/>
-<byte value="xd"/>
-These Terms constitute the entire and exclusive understanding and<byte value="xd"/>
-agreement between SmartFi and you regarding the Services and Content,<byte value="xd"/>
-and these Terms supersede and replace any and all prior oral or written<byte value="xd"/>
-understandings or agreements between SmartFi and you regarding the<byte value="xd"/>
-Services and Content. If any provision of these Terms is held invalid or<byte value="xd"/>
-unenforceable (either by an arbitrator appointed pursuant to the terms<byte value="xd"/>
-of the &quot;Special Arbitration Provision&quot; section above or by a court of<byte value="xd"/>
-competent jurisdiction, that provision will be enforced to the maximum<byte value="xd"/>
-extent permissible and the other provisions of these Terms will remain<byte value="xd"/>
-in full force and effect. You may not assign or transfer these Terms, by<byte value="xd"/>
-operation of law or otherwise, without our prior written consent. Any<byte value="xd"/>
-attempt by you to assign or transfer these Terms, without such consent,<byte value="xd"/>
-will be null. We may freely assign or transfer these Terms without<byte value="xd"/>
-restriction. Subject to the foregoing, these Terms will bind and inure<byte value="xd"/>
-to the benefit of the parties, their successors and permitted assigns.<byte value="xd"/>
-<byte value="xd"/>
-Any notices or other communications provided by us under these Terms,<byte value="xd"/>
-including those regarding modifications to these Terms, will be given by<byte value="xd"/>
-posting to the Services and/or through other electronic communication.<byte value="xd"/>
-You agree and consent to receive electronically all communications,<byte value="xd"/>
-agreements, documents, notices and disclosures (collectively,<byte value="xd"/>
-&quot;Communications&quot;) that we provide in connection with your Account and<byte value="xd"/>
-your use of the Services.<byte value="xd"/>
-<byte value="xd"/>
-**Our failure to enforce any right or provision of these Terms will not<byte value="xd"/>
-be considered a waiver of such right or provision. The waiver of any<byte value="xd"/>
-such right or provision will be effective only if in writing and signed<byte value="xd"/>
-by a duly authorized representative of SmartFi. Except as expressly set<byte value="xd"/>
-forth in these Terms, the exercise by either party of any of its<byte value="xd"/>
-remedies under these Terms will be without prejudice to its other<byte value="xd"/>
-remedies under these Terms or otherwise.**<byte value="xd"/>
-<byte value="xd"/>
-**These Terms are written in English (U.S.). Any translated version is<byte value="xd"/>
-provided solely for your convenience. To the extent any translated<byte value="xd"/>
-version of our Terms conflicts with the English version, the English<byte value="xd"/>
-version controls.**<byte value="xd"/>
-<byte value="xd"/>
-**Contact Information**<byte value="xd"/>
-<byte value="xd"/>
-If you have any questions about these Terms or the Services, please<byte value="xd"/>
-contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
-</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../qml/Components/EulaModal.qml" line="79"/>
+        <source>&lt;h2&gt;This End-User License Agreement (&apos;EULA&apos;) is a legal agreement between you and Komodo Platform.&lt;/h2&gt;
+
+&lt;p&gt;This EULA agreement governs your acquisition and use of our %1 software (&apos;Software&apos;, &apos;Mobile Application&apos;, &apos;Application&apos; or &apos;App&apos;) directly from Komodo Platform or indirectly through a Komodo Platform authorized entity, reseller or distributor (a &apos;Distributor&apos;).&lt;/p&gt;
+&lt;p&gt;Please read this EULA agreement carefully before completing the installation process and using the %1 software. It provides a license to use the %1 software and contains warranty information and liability disclaimers.&lt;/p&gt;
+&lt;p&gt;If you register for the beta program of the %1 software, this EULA agreement will also govern that trial. By clicking &apos;accept&apos; or installing and/or using the %1 software, you are confirming your acceptance of the Software and agreeing to become bound by the terms of this EULA agreement.&lt;/p&gt;
+&lt;p&gt;If you are entering into this EULA agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity and its affiliates to these terms and conditions. If you do not have such authority or if you do not agree with the terms and conditions of this EULA agreement, do not install or use the Software, and you must not accept this EULA agreement.&lt;/p&gt;
+&lt;p&gt;This EULA agreement shall apply only to the Software supplied by Komodo Platform herewith regardless of whether other software is referred to or described herein. The terms also apply to any Komodo Platform updates, supplements, Internet-based services, and support services for the Software, unless other terms accompany those items on delivery. If so, those terms apply.&lt;/p&gt;
+
+&lt;h3&gt;License Grant&lt;/h3&gt;
+&lt;p&gt;Komodo Platform hereby grants you a personal, non-transferable, non-exclusive licence to use the %1 software on your devices in accordance with the terms of this EULA agreement.&lt;/p&gt;
+
+&lt;p&gt;You are permitted to load the %1 software (for example a PC, laptop, mobile or tablet) under your control. You are responsible for ensuring your device meets the minimum security and resource requirements of the %1 software.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;You are not permitted to:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor permit the whole or any part of the Software to be combined with or become incorporated in any other software, nor decompile, disassemble or reverse engineer the Software or attempt to do any such things&lt;/li&gt;
+&lt;li&gt;Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose&lt;/li&gt;
+&lt;li&gt;Use the Software in any way which breaches any applicable local, national or international law&lt;/li&gt;
+&lt;li&gt;Use the Software for any purpose that Komodo Platform considers is a breach of this EULA agreement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Intellectual Property and Ownership&lt;/h3&gt;
+&lt;p&gt;Komodo Platform shall at all times retain ownership of the Software as originally downloaded by you and all subsequent downloads of the Software by you. The Software (and the copyright, and other intellectual property rights of whatever nature in the Software, including any modifications made thereto) are and shall remain the property of Komodo Platform.&lt;/p&gt;
+
+&lt;p&gt;Komodo Platform reserves the right to grant licences to use the Software to third parties.&lt;/p&gt;
+
+&lt;h3&gt;Termination&lt;/h3&gt;
+&lt;p&gt;This EULA agreement is effective from the date you first use the Software and shall continue until terminated. You may terminate it at any time upon written notice to Komodo Platform.&lt;/p&gt;
+&lt;p&gt;It will also terminate immediately if you fail to comply with any term of this EULA agreement. Upon such termination, the licenses granted by this EULA agreement will immediately terminate and you agree to stop all access and use of the Software. The provisions that by their nature continue and survive will survive any termination of this EULA agreement.&lt;/p&gt;
+
+&lt;h3&gt;Governing Law&lt;/h3&gt;
+&lt;p&gt;This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of Vietnam.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;This document was last updated on January 31st, 2020&lt;/b&gt;&lt;/p&gt;</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -1938,72 +1416,75 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
 <context>
     <name>FirstLaunch</name>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="93"/>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="346"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="313"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите пароль</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="145"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="112"/>
         <source>connect</source>
-        <translation type="unfinished"></translation>
+        <translation>подключиться</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="181"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="151"/>
         <source>Welcome</source>
         <translation>Добро пожаловать</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="200"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="170"/>
         <source>New Wallet</source>
         <translation>Новый кошелек</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="208"/>
         <source>Recover Wallet</source>
-        <translation>Восстановить кошелек</translation>
+        <translation type="vanished">Восстановить кошелек</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="226"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="178"/>
+        <source>Import wallet</source>
+        <translation>Импортировать кошелек</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="195"/>
         <source>My Wallets</source>
         <translation>Мои кошельки</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="339"/>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="347"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="306"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="314"/>
         <source>Delete</source>
-        <translation type="unfinished">Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="340"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="307"/>
         <source>Enter password to confirm deletion of</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите пароль чтобы подтвердить удаление</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="340"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="307"/>
         <source>wallet</source>
-        <translation type="unfinished"></translation>
+        <translation>кошелек</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="348"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="315"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="353"/>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="360"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="320"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="327"/>
         <source>Wallet status</source>
-        <translation type="unfinished"></translation>
+        <translation>Статус кошелька</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="354"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="321"/>
         <source>wallet deleted successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>кошелек успешно удален</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/FirstLaunch.qml" line="361"/>
+        <location filename="../../qml/Screens/FirstLaunch.qml" line="328"/>
         <source>wallet password entered is incorrect</source>
-        <translation type="unfinished"></translation>
+        <translation>введен неверный пароль к кошельку</translation>
     </message>
 </context>
 <context>
@@ -2272,7 +1753,7 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
     <message>
         <location filename="../../qml/Screens/Login.qml" line="131"/>
         <source>Type password</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите пароль</translation>
     </message>
     <message>
         <location filename="../../qml/Screens/Login.qml" line="188"/>
@@ -2282,7 +1763,7 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
     <message>
         <location filename="../../qml/Screens/Login.qml" line="209"/>
         <source>Connect</source>
-        <translation type="unfinished"></translation>
+        <translation>Подключиться</translation>
     </message>
 </context>
 <context>
@@ -2343,17 +1824,17 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
         <translation>Получить вознаграждение</translation>
     </message>
     <message>
-        <location filename="../../qml/Wallet/Main.qml" line="345"/>
+        <location filename="../../qml/Wallet/Main.qml" line="344"/>
         <source>Faucet</source>
         <translation>Фаусет</translation>
     </message>
     <message>
-        <location filename="../../qml/Wallet/Main.qml" line="476"/>
+        <location filename="../../qml/Wallet/Main.qml" line="475"/>
         <source>Loading market data</source>
         <translation>Загрузка рыночных данных</translation>
     </message>
     <message>
-        <location filename="../../qml/Wallet/Main.qml" line="482"/>
+        <location filename="../../qml/Wallet/Main.qml" line="481"/>
         <source>There is no chart data for this ticker yet</source>
         <translation>Для данного актива пока еще нет графиков данных</translation>
     </message>
@@ -2388,24 +1869,19 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
         <translation>Получение данных о транзакциях</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="103"/>
+        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="99"/>
         <source>Trade</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="121"/>
+        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="117"/>
         <source>Orders</source>
         <translation>Ордеры</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="139"/>
+        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="135"/>
         <source>History</source>
         <translation>История</translation>
-    </message>
-    <message>
-        <location filename="../../qml/Exchange/Trade/SimpleView/Main.qml" line="215"/>
-        <source>Recover Funds Result</source>
-        <translation>Результат восстановления средств</translation>
     </message>
 </context>
 <context>
@@ -2540,35 +2016,25 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
     <message>
         <location filename="../../qml/Screens/NewUser.qml" line="173"/>
         <source>Choose Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте пароль</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="312"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="310"/>
         <source>Generated Seed</source>
         <translation>Сгенерированный seed ключ</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="542"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="540"/>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="578"/>
-        <source>Type password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="636"/>
-        <source>Confirm password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="288"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="286"/>
         <source>Important: Back up your seed phrase before proceeding!</source>
         <translation>Важно: убедитесь, что вы сохранили ваш seed ключ, прежде чем продолжить!</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="295"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="293"/>
         <source>We recommend storing it offline.</source>
         <translation>Мы рекумендуем хранить его офлайн.</translation>
     </message>
@@ -2578,32 +2044,32 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
         <translation>Подтвердить seed ключ</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="700"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="614"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="428"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="426"/>
         <source>Let&apos;s double check your seed phrase</source>
         <translation>Давайте перепроверим ваш seed ключ</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="323"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="321"/>
         <source>Copied to Clipboard</source>
-        <translation type="unfinished">Скопировано в буфер обмена</translation>
+        <translation>Скопировано в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="386"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="384"/>
         <source>Next</source>
-        <translation type="unfinished">Далее</translation>
+        <translation>Далее</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/NewUser.qml" line="433"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="431"/>
         <source>Your seed phrase is important - that&apos;s why we like to make sure it&apos;s correct. We&apos;ll ask you three different questions about your seed phrase to make sure you&apos;ll be able to easily restore your wallet whenever you want.</source>
         <translation>Ваш seed ключ важен, и поэтому мы хотим убедиться, что вы его сохранили. Мы зададим вам три разных вопроса о вашем seed ключе, чтобы убедиться, что вы сможете легко восстановить свой кошелек, когда захотите.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../qml/Screens/NewUser.qml" line="494"/>
+        <location filename="../../qml/Screens/NewUser.qml" line="493"/>
         <source>Enter the %n. word</source>
         <translation>
             <numerusform>Введите %nе слово</numerusform>
@@ -2769,34 +2235,36 @@ contact us at &lt;support@smartfi.com&gt;.<byte value="xd"/>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="177"/>
         <source>Minimum volume: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Минимальный объем: %1</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="179"/>
         <source>Volume: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Объем: %1</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="207"/>
         <source>How it works ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Как это работает?</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="219"/>
         <source>How to use the pro-view slider ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Как использовать pro-view слайдер?</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="220"/>
         <source>This slider is used to setup the order requirements you need.
 Left slider: Sets the minimum amount required to process a trade.
 Right slider: Sets the volume you want to trade.</source>
-        <translation type="unfinished"></translation>
+        <translation>Этот слайдер используется для настройки желаемых параметров сделки.
+Левый слайдер: Задает минимальный объем для начала обмена.
+Правый слайдер: Задает объем который вы хотите обменять.</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/TradeBox/OrderForm.qml" line="233"/>
         <source>Use custom minimum trade amount</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать минимальный объем сделки</translation>
     </message>
 </context>
 <context>
@@ -2880,22 +2348,27 @@ Right slider: Sets the volume you want to trade.</source>
         <translation>Лог ошибки</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="166"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="168"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="176"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="179"/>
         <source>Cancel Order</source>
         <translation>Отменить ордер</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="185"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="190"/>
         <source>Recover Funds</source>
         <translation>Восстановить средства</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="190"/>
+        <source>Refunding...</source>
+        <translation>Возмещается...</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Exchange/Trade/Orders/OrderModal.qml" line="196"/>
         <source>View on Explorer</source>
         <translation>Показать в эксплорере</translation>
     </message>
@@ -2929,45 +2402,40 @@ Right slider: Sets the volume you want to trade.</source>
 <context>
     <name>OrdersPage</name>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="202"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="193"/>
         <source>From</source>
         <translation>От</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="214"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="205"/>
         <source>To</source>
         <translation>Кому</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="127"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="118"/>
         <source>Export CSV</source>
         <translation>Скачать CSV</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="103"/>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="114"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="94"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="105"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="117"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="108"/>
         <source>Date</source>
-        <translation type="unfinished">Дата</translation>
+        <translation>Дата</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="143"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="134"/>
         <source>Apply Filter</source>
         <translation>Применить фильтр</translation>
     </message>
     <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="249"/>
+        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="240"/>
         <source>Please choose the CSV export name and location</source>
         <translation>Выберите название и расположение загружаемого файла</translation>
-    </message>
-    <message>
-        <location filename="../../qml/Exchange/Trade/Orders/OrdersPage.qml" line="273"/>
-        <source>Recover Funds Result</source>
-        <translation>Результат восстановления средств</translation>
     </message>
 </context>
 <context>
@@ -3053,7 +2521,7 @@ Right slider: Sets the volume you want to trade.</source>
     <message>
         <location filename="../../qml/Portfolio/Portfolio.qml" line="180"/>
         <source>(%1/%2)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../qml/Portfolio/Portfolio.qml" line="236"/>
@@ -3200,59 +2668,62 @@ Right slider: Sets the volume you want to trade.</source>
 <context>
     <name>RecoverSeed</name>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="30"/>
         <source>Failed to recover the seed</source>
-        <translation>Ошибка при восстановлении seed ключа</translation>
+        <translation type="vanished">Ошибка при восстановлении seed ключа</translation>
+    </message>
+    <message>
+        <source>Recover wallet - Setup</source>
+        <translation type="vanished">Импорт кошелька - Настройка</translation>
+    </message>
+    <message>
+        <source>Recover wallet - Choose password</source>
+        <translation type="vanished">Импорт кошелька - Задайте пароль</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="30"/>
+        <source>Failed to Import the wallet</source>
+        <translation>Не удалось импортировать кошелек</translation>
     </message>
     <message>
         <location filename="../../qml/Screens/RecoverSeed.qml" line="69"/>
-        <source>Recover wallet - Setup</source>
-        <translation type="unfinished"></translation>
+        <source>Import wallet - Setup</source>
+        <translation>Импорт кошелька - Введите данные</translation>
     </message>
     <message>
         <location filename="../../qml/Screens/RecoverSeed.qml" line="71"/>
-        <source>Recover wallet - Choose password</source>
-        <translation type="unfinished"></translation>
+        <source>Import wallet - Choose password</source>
+        <translation>Импорт кошелька - Задайте пароль</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="132"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="134"/>
         <source>Wallet Name</source>
-        <translation type="unfinished">Название кошелька</translation>
+        <translation>Название кошелька</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="154"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="155"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="164"/>
         <source>Enter seed</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите сид-фразу</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="179"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="183"/>
         <source>BIP39 seed validation failed, try again or select &apos;Allow custom seed&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>BIP39 валидация сид-фразы неуспешна, пожалуйста попробуйте снова или выберите &apos;Разрешить пользовательский формат сид-фразы&apos;</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="219"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="223"/>
         <source>Next</source>
-        <translation type="unfinished">Далее</translation>
+        <translation>Далее</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="257"/>
-        <source>Type password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="315"/>
-        <source>Cofirm password</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="381"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="299"/>
         <source>Continue</source>
-        <translation type="unfinished">Продолжить</translation>
+        <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="../../qml/Screens/RecoverSeed.qml" line="188"/>
+        <location filename="../../qml/Screens/RecoverSeed.qml" line="192"/>
         <source>Allow custom seed</source>
-        <translation>Разрешить пользовательский формат seed ключа</translation>
+        <translation>Разрешить пользовательский формат сид-фразы</translation>
     </message>
 </context>
 <context>
@@ -3601,116 +3072,126 @@ Right slider: Sets the volume you want to trade.</source>
     <message>
         <location filename="../../qml/Settings/SettingModal.qml" line="22"/>
         <source>Confirm Logout</source>
-        <translation></translation>
+        <translation>Подтвердите выход</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="22"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="23"/>
         <source>Are you sure you want to log out?</source>
         <translation>Вы действительно хотите выйти?</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
-        <location filename="../../qml/Settings/SettingModal.qml" line="242"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="29"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Settings/SettingModal.qml" line="30"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="256"/>
         <source>Language</source>
         <translation>Язык</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
         <source>User Interface</source>
         <translation>Интерфейс</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
         <source>Security</source>
         <translation>Приватность</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
         <source>About</source>
         <translation>Дисклеймер</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
         <source>General</source>
         <translation>Общие</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="113"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="127"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="158"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="172"/>
         <source>Enable Desktop Notifications</source>
         <translation>Включить уведомления для рабочего стола</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="173"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="187"/>
         <source>Maximum number of enabled coins</source>
         <translation>Макс. количество активированных монет</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="199"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="213"/>
         <source>Logs</source>
         <translation>Логи</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="202"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="216"/>
         <source>Open Folder</source>
         <translation>Открыть папку с логами</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="216"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="230"/>
         <source>Reset assets configuration</source>
         <translation>Сбросить конфигурацию ассетов</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="219"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="233"/>
         <source>Reset</source>
         <translation>Сбросить</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="268"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="282"/>
         <source>Current Font</source>
         <translation>Текущий шрифт</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="288"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="302"/>
         <source>Theme</source>
         <translation>Тема</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="311"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="325"/>
         <source>Apply Changes</source>
         <translation>Применить изменения</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="355"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="369"/>
         <source>Ask system&apos;s password before sending coins ? (2FA)</source>
         <translation>Спрашивать системный пароль перед отправкой монет? (2FA)</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="461"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="455"/>
         <source>Application version</source>
         <translation>Версия приложения</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="475"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="469"/>
         <source>MM2 version</source>
         <translation>Версия MM2</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="489"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="483"/>
         <source>Qt version</source>
         <translation>Версия Qt</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="529"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="523"/>
         <source>Search Update</source>
         <translation>Проверить на обновления</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="557"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="551"/>
         <source>Logout</source>
         <translation>Выход</translation>
     </message>
@@ -3720,33 +3201,28 @@ Right slider: Sets the volume you want to trade.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="377"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="391"/>
         <source>View seed and private keys</source>
         <translation>Показать seed-фразу и приватные ключи</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="380"/>
-        <location filename="../../qml/Settings/SettingModal.qml" line="442"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="394"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="436"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="393"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="407"/>
         <source>Setup Camouflage Password</source>
         <translation>Установить камуфляжный пароль</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="396"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="410"/>
         <source>Open</source>
         <translation>Установить</translation>
     </message>
     <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="414"/>
-        <source>Delete Wallet</source>
-        <translation>Удалить кошелек</translation>
-    </message>
-    <message>
-        <location filename="../../qml/Settings/SettingModal.qml" line="439"/>
+        <location filename="../../qml/Settings/SettingModal.qml" line="433"/>
         <source>Disclaimer and ToS</source>
         <translation>Дисклеймер и Условия Использования</translation>
     </message>
@@ -3960,22 +3436,22 @@ Right slider: Sets the volume you want to trade.</source>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubHistory.qml" line="84"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubHistory.qml" line="87"/>
         <source>Date</source>
-        <translation type="unfinished">Дата</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubHistory.qml" line="107"/>
         <source>Close filtering options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрыть настройки фильтра.</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubHistory.qml" line="107"/>
         <source>Open filering options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть настройки фильтра.</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubHistory.qml" line="149"/>
@@ -4034,22 +3510,22 @@ Right slider: Sets the volume you want to trade.</source>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubOrders.qml" line="107"/>
         <source>Close filtering options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрыть настройки фильтра.</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubOrders.qml" line="84"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubOrders.qml" line="87"/>
         <source>Date</source>
-        <translation type="unfinished">Дата</translation>
+        <translation>Дата</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubOrders.qml" line="107"/>
         <source>Open filering options.</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть настройки фильтра.</translation>
     </message>
     <message>
         <location filename="../../qml/Exchange/Trade/SimpleView/SubOrders.qml" line="150"/>
@@ -4150,17 +3626,21 @@ The atomic swap protocol requires both participants to stay online and monitor t
 If you go offline, so will your orders, and any that are in progress will fail, leading to potential loss of trade / transaction fees, and a wait for the swap to timeout and issue a refund. It may also negatively affect your wallet&apos;s reputation score for future trade matching.
 When you come back online, your orders will begin to broadcast again at the price you set before you went offline. If there has been significant price movement in the meantime, you might unintentionally offer someone a bargain!
 For this reason, we recommend cancelling orders before closing %1, or reviewing and revising your prices when restarting %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Да. Вы должны оставаться подключенным к Интернету и иметь работающее приложение для успешного завершения каждого атомарного свопа (очень короткие перерывы в подключении обычно допустимы). В противном случае существует риск отмены сделки, если вы - мейкер, и риск потери средств, если вы - тейкер.
+Протокол атомарных свопов требует, чтобы оба участника обмена оставались в сети для наблюдения за блокчейнами, чтобы процесс оставался атомарным.
+Если вы перейдете в оффлайн режим, ваши ордеры не будут доступны, и все обмены в процессе закончатся неуспешно, что приведет к потенциальной потере комиссий за торговлю / транзакции, а также к ожиданию отмены свопа и возврата средств. Это также может негативно повлиять на рейтинг репутации вашего кошелька для будущих сделок.
+Когда вы вернетесь в онлайн, ваши ордеры снова начнут транслироваться по цене, которую вы установили до выхода в офлайн. Если тем временем произошло значительное движение цены, вы можете непреднамеренно предложить кому-то сделку!
+По этой причине мы рекомендуем отменять заказы перед закрытием%1 или проверять и корректировать свои цены при перезапуске%1.</translation>
     </message>
     <message>
         <location filename="../../qml/Support/Support.qml" line="152"/>
         <source>Yes! %1 offers support through the &lt;a href=&quot;%2&quot;&gt;%1 Discord server&lt;/a&gt;. The team and the community are always happy to help!</source>
-        <translation type="unfinished"></translation>
+        <translation>Да! %1 предоставляет саппорт через &lt;a href=&quot;%2&quot;&gt;%1 Discord сервер&lt;/a&gt;. Команда и сообщество проекта всегда рады помочь!</translation>
     </message>
     <message>
         <location filename="../../qml/Support/Support.qml" line="167"/>
         <source>%1 is available for mobile on both &lt;a href=&quot;%2&quot;&gt;Android and iPhone, and for desktop on Windows, Mac, and Linux&lt;/a&gt; operating systems.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 доступен для Android и iOS мобильных устройв &lt;a href=&quot;%2&quot;&gt;, и для операционных систем Windows, Mac и Linux&lt;/a&gt; на PC.</translation>
     </message>
     <message>
         <location filename="../../qml/Support/Support.qml" line="156"/>
@@ -4525,11 +4005,6 @@ Network fees can vary greatly depending on your selected trading pair.</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../../qml/Wallet/TransactionDetailsModal.qml" line="119"/>
-        <source>Refund</source>
-        <translation>Рефанд</translation>
-    </message>
-    <message>
         <location filename="../../qml/Wallet/TransactionDetailsModal.qml" line="132"/>
         <source>View on Explorer</source>
         <translation>Смотреть в эксплорере</translation>
@@ -4626,22 +4101,32 @@ Network fees can vary greatly depending on your selected trading pair.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../qml/main.qml" line="93"/>
+        <location filename="../../qml/main.qml" line="101"/>
         <source>Logout</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="../../qml/main.qml" line="101"/>
+        <location filename="../../qml/main.qml" line="110"/>
         <source>Confirm Logout</source>
         <translation>Подтверждение выхода</translation>
     </message>
     <message>
-        <location filename="../../qml/main.qml" line="101"/>
+        <location filename="../../qml/main.qml" line="111"/>
         <source>Are you sure you want to log out?</source>
         <translation>Вы действительно хотите выйти?</translation>
     </message>
     <message>
-        <location filename="../../qml/main.qml" line="235"/>
+        <location filename="../../qml/main.qml" line="117"/>
+        <source>Yes</source>
+        <translation>Да</translation>
+    </message>
+    <message>
+        <location filename="../../qml/main.qml" line="118"/>
+        <source>Cancel</source>
+        <translation>Отменить</translation>
+    </message>
+    <message>
+        <location filename="../../qml/main.qml" line="258"/>
         <source>Balance</source>
         <translation>Баланс</translation>
     </message>
