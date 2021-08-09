@@ -19,18 +19,20 @@ BasicModal {
 
     function filterWallets(text)
     {
-        _qrc20Expandable.model.setFilterFixedString(text)
-        _erc20Expandable.model.setFilterFixedString(text)
-        _bep20Expandable.model.setFilterFixedString(text)
-        _scExpandable.model.setFilterFixedString(text)
-        _utxoExpandable.model.setFilterFixedString(text)
+        _qrc20Expandable.model.setFilterFixedString(text);
+        _erc20Expandable.model.setFilterFixedString(text);
+        _bep20Expandable.model.setFilterFixedString(text);
+        _scExpandable.model.setFilterFixedString(text);
+        _utxoExpandable.model.setFilterFixedString(text);
+        _slpExpandable.model.setFilterFixedString(text);
 
         // Expands type lists if searchbar is not empty
-        _qrc20Expandable.expanded = text !== ""
-        _erc20Expandable.expanded = text !== ""
-        _bep20Expandable.expanded = text !== ""
-        _scExpandable.expanded = text !== ""
-        _utxoExpandable.expanded = text !== ""
+        _qrc20Expandable.expanded = text !== "";
+        _erc20Expandable.expanded = text !== "";
+        _bep20Expandable.expanded = text !== "";
+        _scExpandable.expanded = text !== "";
+        _utxoExpandable.expanded = text !== "";
+        _slpExpandable.expanded = text !== "";
     }
 
     function onTypeSelect(type_or_ticker)
