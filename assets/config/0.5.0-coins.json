@@ -644,6 +644,37 @@
     "type": "UTXO",
     "name": "Bitcoin Cash"
   },
+  "tBCH": {
+    "coin": "tBCH",
+    "active": false,
+    "is_testnet": true,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "currently_enabled": false,
+    "electrum": [
+      {
+        "url": "tbch.loping.net:60002",
+        "protocol": "SSL"
+      },
+      {
+        "url": "electroncash.de:50004",
+        "protocol": "SSL"
+      },
+      {
+        "url": "testnet.bitcoincash.network:60002",
+        "protocol": "SSL"
+      },
+      {
+        "url": "electrs.electroncash.de:60002",
+        "protocol": "SSL"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.bitcoin.com/tbch/"
+    ],
+    "type": "UTXO",
+    "name": "Bitcoin Cash (Testnet)"
+  },
   "BET": {
     "coin": "BET",
     "name": "BET",
