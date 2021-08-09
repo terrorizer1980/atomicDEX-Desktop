@@ -28,8 +28,18 @@ namespace mm2::api
     to_json(nlohmann::json& j, const electrum_request& cfg)
     {
         j["coin"]       = cfg.coin_name;
-        j["servers"]    = cfg.servers;
+        if (!cfg.servers.empty())
+        {
+            j["servers"] = cfg.servers;
+        }
         j["tx_history"] = cfg.with_tx_history;
+
+        if (cfg.coin_type == CoinType::SLP)
+        {
+            SPDLOG_INFO("Disabling coins history because coin type is SLP");
+            j["tx_history"] = false;
+        }
+
         if (cfg.coin_type == CoinType::QRC20)
         {
             j["swap_contract_address"] = cfg.is_testnet ? cfg.testnet_qrc_swap_contract_address : cfg.mainnet_qrc_swap_contract_address;

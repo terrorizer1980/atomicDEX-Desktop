@@ -92,7 +92,8 @@ namespace atomic_dex
 
         for (auto&& extra_coin : extra_coins)
         {
-            coins_std.push_back(extra_coin);
+            coins_std.insert(coins_std.begin(), extra_coin);
+            //coins_std.push_back(extra_coin);
         }
         mm2.enable_multiple_coins(coins_std);
 

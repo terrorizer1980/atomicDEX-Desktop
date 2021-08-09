@@ -644,6 +644,19 @@
     "type": "UTXO",
     "name": "Bitcoin Cash"
   },
+  "USDF": {
+    "coin": "USDF",
+    "active": false,
+    "is_testnet": true,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://explorer.bitcoin.com/tbch/"
+    ],
+    "type": "SLP",
+    "name": "Fake USD (Testnet)"
+  },
   "tBCH": {
     "coin": "tBCH",
     "active": false,
