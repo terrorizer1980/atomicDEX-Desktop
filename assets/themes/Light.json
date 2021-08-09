@@ -43,5 +43,6 @@
     "textPlaceHolderColor": "#8e9293",
     "textSelectedColor": "#848486",
     "textSelectionColor": "#14bca6",
-    "whiteblack": "#000000"
+    "whiteblack": "#000000",
+    "theme":"light"
 }
