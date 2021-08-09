@@ -22,6 +22,7 @@ BasicModal {
             model: coin_type == "QRC-20" ? API.app.portfolio_pg.global_cfg_mdl.all_qrc20_proxy :
                    coin_type == "ERC-20" ? API.app.portfolio_pg.global_cfg_mdl.all_erc20_proxy :
                    coin_type == "BEP-20" ? API.app.portfolio_pg.global_cfg_mdl.all_bep20_proxy :
+                   coin_type == "SLP"    ? API.app.portfolio_pg.global_cfg_mdl.all_slp_proxy :
                                            API.app.portfolio_pg.global_cfg_mdl.all_smartchains_proxy
 
             delegate: AddressBookWalletTypeListRow {

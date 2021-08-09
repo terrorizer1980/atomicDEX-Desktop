@@ -120,6 +120,20 @@ BasicModal {
 
         AddressBookWalletTypeList
         {
+            id: _slpExpandable
+            Layout.rightMargin: 10
+            Layout.fillWidth: true
+
+            title: "SLP tokens"
+            type_title: "SLP"
+            type: "SLP"
+            typeIcon: "SLP"
+
+            model: glbCoinsCfgModel.all_slp_proxy
+        }
+
+        AddressBookWalletTypeList
+        {
             id: _utxoExpandable
 
             Layout.rightMargin: 10
