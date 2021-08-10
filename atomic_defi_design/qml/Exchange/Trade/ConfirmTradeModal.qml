@@ -126,7 +126,7 @@ BasicModal {
                   model: fees.total_fees
                   delegate: DefaultText {
                     visible: true
-                    text: qsTr("Total %1 fees: %2 (%3)").arg(modelData.coin).arg(parseFloat(modelData.required_balance).toFixed(8) / 1).arg(General.getFiatText(modelData.required_balance, modelData.coin, false))
+                    text: qsTr("Total %1 fees: %2 (%3)").arg(modelData.coin).arg(parseFloat(modelData.required_balance).toFixed(8)).arg(General.getFiatText(modelData.required_balance, modelData.coin, false))
                   }
                   anchors.horizontalCenter: parent.horizontalCenter
                 }
