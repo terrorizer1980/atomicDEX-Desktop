@@ -174,10 +174,10 @@ namespace atomic_dex
         bool enable_default_coins();
 
         //! Batch Enable coins
-        void batch_enable_coins(const std::vector<std::string>& tickers, bool first_time = false);
+        void batch_enable_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers = std::vector<std::string>{}, bool first_time = false);
 
         //! Enable multiple coins
-        void enable_multiple_coins(const std::vector<std::string>& tickers);
+        void enable_multiple_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers = std::vector<std::string>{});
 
         //! Add a new coin in the coin_info cfg add_new_coin(normal_cfg, mm2_cfg)
         void               add_new_coin(const nlohmann::json& coin_cfg_json, const nlohmann::json& raw_coin_cfg_json);

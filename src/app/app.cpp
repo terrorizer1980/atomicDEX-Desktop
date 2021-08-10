@@ -90,12 +90,19 @@ namespace atomic_dex
             coins_std.push_back(coin.toStdString());
         }
 
+        std::vector<std::string> extra_coins_vec{};
         for (auto&& extra_coin : extra_coins)
         {
-            coins_std.insert(coins_std.begin(), extra_coin);
+            extra_coins_vec.push_back(extra_coin);
+            //coins_std.insert(coins_std.begin(), extra_coin);
             //coins_std.push_back(extra_coin);
         }
-        mm2.enable_multiple_coins(coins_std);
+        if (extra_coins.empty())
+        {
+            mm2.enable_multiple_coins(coins_std, extra_coins_vec);
+        } else {
+            mm2.enable_multiple_coins(extra_coins_vec, coins_std);
+        }
 
         return true;
     }

@@ -18,9 +18,9 @@
 #include <unordered_set>
 
 ///! Qt
+#include <QException>
 #include <QFile>
 #include <QProcess>
-#include <QException>
 
 //! Project Headers
 #include "atomicdex/api/mm2/mm2.constants.hpp"
@@ -69,7 +69,7 @@ namespace
                 //! New cfg to ifs
                 fs::path actual_version_filepath = cfg_path / (std::string(atomic_dex::get_raw_version()) + "-coins."s + wallet_name + ".json"s);
                 LOG_PATH("opening file: {}", actual_version_filepath);
-                QFile    actual_version_ifs;
+                QFile actual_version_ifs;
                 actual_version_ifs.setFileName(atomic_dex::std_path_to_qstring(actual_version_filepath));
                 actual_version_ifs.open(QIODevice::Text | QIODevice::ReadOnly);
                 nlohmann::json actual_config_data = nlohmann::json::parse(QString(actual_version_ifs.readAll()).toStdString());
@@ -428,15 +428,25 @@ namespace atomic_dex
         std::atomic<std::size_t> result{1};
         auto                     coins = get_active_coins();
 
-        std::vector<std::string> tickers;
-        tickers.reserve(coins.size());
+        std::vector<std::string>        second_tickers;
+        std::vector<std::string>        tickers;
+        std::unordered_set<std::string> extra_coins;
         for (auto&& current_coin: coins)
         {
             SPDLOG_INFO("current_coin: {} is a default coin", current_coin.ticker);
-            tickers.push_back(current_coin.ticker);
+            auto coin_info = get_coin_info(current_coin.ticker);
+            //! Need to verify if there is a parent
+            if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
+            {
+                second_tickers.push_back(current_coin.ticker);
+            }
+            else
+            {
+                tickers.push_back(current_coin.ticker);
+            }
         }
 
-        batch_enable_coins(tickers, true);
+        batch_enable_coins(tickers, second_tickers, true);
 
         batch_fetch_orders_and_swap();
 
@@ -583,7 +593,7 @@ namespace atomic_dex
     }
 
     void
-    mm2_service::batch_enable_coins(const std::vector<std::string>& tickers, bool first_time)
+    mm2_service::batch_enable_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers, bool first_time)
     {
         nlohmann::json btc_kmd_batch = nlohmann::json::array();
         if (first_time)
@@ -655,11 +665,11 @@ namespace atomic_dex
         }
 
         // SPDLOG_DEBUG("{}", batch_array.dump(4));
-        auto functor = [this](nlohmann::json batch_array, std::vector<std::string> tickers)
+        auto functor = [this, second_tickers](nlohmann::json batch_array, std::vector<std::string> tickers, bool check_second_tickers = false)
         {
             m_mm2_client.async_rpc_batch_standalone(batch_array)
                 .then(
-                    [this, tickers](web::http::http_response resp) mutable
+                    [this, tickers, check_second_tickers, second_tickers](web::http::http_response resp) mutable
                     {
                         try
                         {
@@ -696,6 +706,10 @@ namespace atomic_dex
                                     batch_balance_and_tx(false, tickers, true);
                                 }
                             }
+                            if (check_second_tickers && !second_tickers.empty())
+                            {
+                                batch_enable_coins(second_tickers, {}, false);
+                            }
                         }
                         catch (const std::exception& error)
                         {
@@ -716,15 +730,17 @@ namespace atomic_dex
 
         if (not batch_array.empty())
         {
-            functor(batch_array, copy_tickers);
+            functor(batch_array, copy_tickers, true);
         }
     }
 
     void
-    mm2_service::enable_multiple_coins(const std::vector<std::string>& tickers)
+    mm2_service::enable_multiple_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers)
     {
-        batch_enable_coins(tickers);
-        update_coin_status(this->m_current_wallet_name, tickers, true, m_coins_informations, m_coin_cfg_mutex);
+        batch_enable_coins(tickers, second_tickers);
+        std::vector<std::string> copy_coins = tickers;
+        for (auto&& cur: second_tickers) { copy_coins.push_back(cur); }
+        update_coin_status(this->m_current_wallet_name, copy_coins, true, m_coins_informations, m_coin_cfg_mutex);
     }
 
     coin_config
@@ -804,18 +820,18 @@ namespace atomic_dex
                     auto base_max_taker_vol_answer = ::mm2::api::rpc_process_answer_batch<::mm2::api::max_taker_vol_answer>(answer[1], "max_taker_vol");
                     if (base_max_taker_vol_answer.rpc_result_code == 200)
                     {
-                        this->m_synchronized_max_taker_vol->first         = base_max_taker_vol_answer.result.value();
-                        //t_float_50 base_res                               = t_float_50(this->m_synchronized_max_taker_vol->first.decimal) * m_balance_factor;
-                        //this->m_synchronized_max_taker_vol->first.decimal = base_res.str(8);
-                        //SPDLOG_INFO("max_taker_vol: {}", answer[1].dump(4));
+                        this->m_synchronized_max_taker_vol->first = base_max_taker_vol_answer.result.value();
+                        // t_float_50 base_res                               = t_float_50(this->m_synchronized_max_taker_vol->first.decimal) * m_balance_factor;
+                        // this->m_synchronized_max_taker_vol->first.decimal = base_res.str(8);
+                        // SPDLOG_INFO("max_taker_vol: {}", answer[1].dump(4));
                     }
 
                     auto rel_max_taker_vol_answer = ::mm2::api::rpc_process_answer_batch<::mm2::api::max_taker_vol_answer>(answer[2], "max_taker_vol");
                     if (rel_max_taker_vol_answer.rpc_result_code == 200)
                     {
-                        this->m_synchronized_max_taker_vol->second         = rel_max_taker_vol_answer.result.value();
-                        //t_float_50 rel_res                                 = t_float_50(this->m_synchronized_max_taker_vol->second.decimal) * m_balance_factor;
-                        //this->m_synchronized_max_taker_vol->second.decimal = rel_res.str(8);
+                        this->m_synchronized_max_taker_vol->second = rel_max_taker_vol_answer.result.value();
+                        // t_float_50 rel_res                                 = t_float_50(this->m_synchronized_max_taker_vol->second.decimal) *
+                        // m_balance_factor; this->m_synchronized_max_taker_vol->second.decimal = rel_res.str(8);
                     }
 
                     auto base_min_taker_vol_answer = ::mm2::api::rpc_process_answer_batch<t_min_volume_answer>(answer[3], "min_trading_vol");
