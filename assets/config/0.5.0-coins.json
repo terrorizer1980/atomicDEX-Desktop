@@ -652,8 +652,10 @@
     "coinpaprika_id": "test-coin",
     "currently_enabled": false,
     "explorer_url": [
-      "https://explorer.bitcoin.com/tbch/"
+      "https://testnet.simpleledger.info/"
+
     ],
+    "explorer_tx_url": "#tx/",
     "type": "SLP",
     "name": "Fake USD (Testnet)"
   },
