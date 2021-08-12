@@ -644,6 +644,21 @@
     "type": "UTXO",
     "name": "Bitcoin Cash"
   },
+  "sTST": {
+    "coin": "sTST",
+    "active": false,
+    "is_testnet": true,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://testnet.simpleledger.info/"
+
+    ],
+    "explorer_tx_url": "#tx/",
+    "type": "SLP",
+    "name": "sTST"
+  },
   "USDF": {
     "coin": "USDF",
     "active": false,
