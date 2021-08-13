@@ -59,6 +59,7 @@ if (UNIX AND NOT APPLE)
 endif ()
 
 ##! We fetch our dependencies
+FetchContent_Declare(arrr-cache-db URL http://195.201.0.6/ARRR_CACHE.db DOWNLOAD_NO_EXTRACT TRUE)
 if (APPLE)
     FetchContent_Declare(mm2
             URL http://195.201.0.6/mm2.1-slp-swap/mm2-8bb893d6e-Darwin-Release.zip)
@@ -84,17 +85,19 @@ FetchContent_Declare(jl777-coins
 #FetchContent_Declare(adex-generics-coins
 #        URL https://github.com/KomodoPlatform/atomicdex-desktop-generics/archive/main.zip)
 
-FetchContent_MakeAvailable(mm2 jl777-coins qmaterial)
+FetchContent_MakeAvailable(mm2 arrr-cache-db jl777-coins qmaterial)
 
 ##! Configure our needs.
 if (UNIX)
     configure_file(assets/config/${PROJECT_VERSION}-coins.json ${CMAKE_CURRENT_SOURCE_DIR}/assets/config/${PROJECT_VERSION}-coins.json COPYONLY)
     configure_file(${jl777-coins_SOURCE_DIR}/coins ${CMAKE_CURRENT_SOURCE_DIR}/assets/tools/mm2/coins COPYONLY)
+    configure_file(${arrr-cache-db_SOURCE_DIR}/ARRR_CACHE.db ${CMAKE_CURRENT_SOURCE_DIR}/assets/tools/mm2/ARRR_CACHE.db COPYONLY)
     configure_file(${mm2_SOURCE_DIR}/mm2 ${CMAKE_CURRENT_SOURCE_DIR}/assets/tools/mm2/mm2 COPYONLY)
 else ()
     configure_file(assets/config/${PROJECT_VERSION}-coins.json ${CMAKE_BINARY_DIR}/bin/assets/config/${PROJECT_VERSION}-coins.json COPYONLY)
     configure_file(${jl777-coins_SOURCE_DIR}/coins ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/coins COPYONLY)
     configure_file(${mm2_SOURCE_DIR}/mm2.exe ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/mm2.exe COPYONLY)
+    configure_file(${arrr-cache-db_SOURCE_DIR}/ARRR_CACHE.db ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/ARRR_CACHE.db COPYONLY)
     configure_file(${mm2_SOURCE_DIR}/msvcp140.dll ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/msvcp140.dll COPYONLY)
     configure_file(${mm2_SOURCE_DIR}/msvcr100.dll ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/msvcr100.dll COPYONLY)
     configure_file(${mm2_SOURCE_DIR}/vcruntime140.dll ${CMAKE_BINARY_DIR}/bin/assets/tools/mm2/vcruntime140.dll COPYONLY)
