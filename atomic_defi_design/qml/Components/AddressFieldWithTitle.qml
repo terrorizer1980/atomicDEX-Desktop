@@ -1,7 +1,7 @@
 import QtQuick 2.15
 
 TextFieldWithTitle {
-    readonly property int max_length: 60
+    readonly property int max_length: 120
 
 
     field.onTextChanged: {
