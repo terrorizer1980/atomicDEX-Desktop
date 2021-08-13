@@ -659,6 +659,20 @@
     "type": "SLP",
     "name": "sTST"
   },
+  "ARRR": {
+    "coin": "ARRR",
+    "active": false,
+    "is_testnet": true,
+    "coingecko_id": "pirate-chain",
+    "coinpaprika_id": "arrr-pirate",
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://pirate.explorer.dexstats.info/"
+
+    ],
+    "type": "ZHTLC",
+    "name": "Pirate"
+  },
   "USDF": {
     "coin": "USDF",
     "active": false,

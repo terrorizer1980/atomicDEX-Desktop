@@ -626,7 +626,7 @@ namespace atomic_dex
                 continue;
             }
 
-            if (coin_info.coin_type != CoinType::ERC20 && coin_info.coin_type != CoinType::BEP20)
+            if (coin_info.coin_type != CoinType::ERC20 && coin_info.coin_type != CoinType::BEP20 && coin_info.coin_type != CoinType::ZHTLC)
             {
                 t_electrum_request request{
                     .coin_name       = coin_info.ticker,
