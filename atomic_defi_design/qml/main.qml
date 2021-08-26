@@ -348,17 +348,28 @@ DexWindow
 				}
 			}
 
+			DexLabel {
+				text: " | "
+				opacity: .1
+				font.family: 'Montserrat'
+				font.weight: Font.Medium
+				visible: _label.visible && DexTheme.theme !== "undefined"
+				color:  DexTheme.foregroundColor
+				anchors.verticalCenter: parent.verticalCenter
+				leftPadding: 2
+			}
+
 			Settings {
 		        id: atomic_settings0
 		        fileName: atomic_cfg_file
 		    }
 
-            DexIconButton {
+			DexIconButton {
 				opacity: containsMouse ? 1 : .8
 				anchors.verticalCenter: parent.verticalCenter
                 iconSize: 22
-                icon: DexTheme.theme !== "dark" ? Qaterial.Icons.moonWaxingCrescent : Qaterial.Icons.whiteBalanceSunny
-                visible: false
+				icon: DexTheme.theme !== "dark" ? Qaterial.Icons.moonWaxingCrescent : Qaterial.Icons.whiteBalanceSunny
+				visible: _label.visible && DexTheme.theme !== "undefined"
 				active: app.notification_modal.opened
 				onClicked: {
 					let themeList = API.qt_utilities.get_themes_list()
