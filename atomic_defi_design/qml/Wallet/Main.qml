@@ -85,7 +85,7 @@ Item {
                 }
 
                 ColumnLayout {
-                    visible: false //current_ticker_infos.segwit_supported
+                    visible: current_ticker_infos.segwit_supported
                     Layout.alignment: Qt.AlignHCenter
                     spacing: 3
                     DexLabel {
