@@ -960,6 +960,7 @@ namespace atomic_dex
                   auto&       mm2_system = m_system_manager.get_system<mm2_service>();
                   mm2_system.change_segwit_status(ticker, is_segwit);
                   mm2_system.fetch_infos_thread(true, false);
+                  m_transactions_mdl->reset();
                   SPDLOG_INFO("Switching address mode success");
               }
             };
