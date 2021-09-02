@@ -39,8 +39,7 @@
     "HUF": "Ft",
     "SEK": "kr",
     "BTC": "₿",
-    "BTC_ALT": "฿",
-    "LTC": "Ł"
+    "BTC_ALT": "฿"
   },
   "available_fiat": [
     "USD",
@@ -79,7 +78,6 @@
   ],
   "possible_currencies": [
     "USD",
-    "BTC",
-    "LTC"
+    "BTC"
   ]
 }
