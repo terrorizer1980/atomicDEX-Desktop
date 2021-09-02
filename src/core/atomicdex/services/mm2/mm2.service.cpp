@@ -28,9 +28,9 @@
 #include "atomicdex/api/mm2/rpc.enable.hpp"
 #include "atomicdex/api/mm2/rpc.min.volume.hpp"
 #include "atomicdex/api/mm2/rpc.tx.history.hpp"
-#include "atomicdex/pages/qt.portfolio.page.hpp"
 #include "atomicdex/config/mm2.cfg.hpp"
 #include "atomicdex/managers/qt.wallet.manager.hpp"
+#include "atomicdex/pages/qt.portfolio.page.hpp"
 #include "atomicdex/services/internet/internet.checker.service.hpp"
 #include "atomicdex/services/mm2/mm2.service.hpp"
 #include "atomicdex/utilities/kill.hpp" ///< no delete
@@ -478,14 +478,13 @@ namespace atomic_dex
         auto&& [batch_array, tickers_idx, tokens_to_fetch] = prepare_batch_balance_and_tx(only_tx);
         return m_mm2_client.async_rpc_batch_standalone(batch_array)
             .then(
-                [this, tickers_idx = tickers_idx, tokens_to_fetch = tokens_to_fetch, is_a_reset, tickers, is_during_enabling](web::http::http_response resp)
+                [this, tokens_to_fetch = tokens_to_fetch, is_a_reset, tickers](web::http::http_response resp)
                 {
                     try
                     {
                         auto answers = ::mm2::api::basic_batch_answer(resp);
                         if (not answers.contains("error"))
                         {
-                            std::size_t idx = 0;
                             for (auto&& answer: answers)
                             {
                                 if (answer.contains("balance"))
@@ -507,15 +506,9 @@ namespace atomic_dex
                                         //! Emit error for UI Change
                                     }
                                 }
-                                ++idx;
                             }
 
                             for (auto&& coin: tokens_to_fetch) { process_tx_tokenscan(coin, is_a_reset); }
-                            this->dispatcher_.trigger<ticker_balance_updated>(tickers_idx);
-                            if (is_during_enabling)
-                            {
-                                dispatcher_.trigger<coin_enabled>(tickers);
-                            }
                         }
                     }
                     catch (const std::exception& error)
@@ -752,15 +745,16 @@ namespace atomic_dex
                         catch (const std::exception& error)
                         {
                             SPDLOG_ERROR("exception caught in batch_enable_coins: {}", error.what());
-                            //update_coin_status(this->m_current_wallet_name, tickers, false, m_coins_informations, m_coin_cfg_mutex);
+                            // update_coin_status(this->m_current_wallet_name, tickers, false, m_coins_informations, m_coin_cfg_mutex);
                             //! Emit event here
                         }
                     })
-                .then([this, tickers, batch_array](pplx::task<void> previous_task)
-                      {
-                          this->handle_exception_pplx_task(previous_task, "batch_enable_coins", batch_array);
-                          //update_coin_status(this->m_current_wallet_name, tickers, false, m_coins_informations, m_coin_cfg_mutex);
-                      });
+                .then(
+                    [this, tickers, batch_array](pplx::task<void> previous_task)
+                    {
+                        this->handle_exception_pplx_task(previous_task, "batch_enable_coins", batch_array);
+                        // update_coin_status(this->m_current_wallet_name, tickers, false, m_coins_informations, m_coin_cfg_mutex);
+                    });
         };
 
         SPDLOG_DEBUG("starting async enabling coin");
@@ -1548,12 +1542,12 @@ namespace atomic_dex
 
         t_float_50 result = t_float_50(answer_r.balance) * m_balance_factor;
         answer_r.balance  = result.str(8, std::ios_base::fixed);
-        //auto copy_coin = answer_r.coin;
+        // auto copy_coin = answer_r.coin;
         {
             std::unique_lock lock(m_balance_mutex);
             m_balance_informations[answer_r.coin] = std::move(answer_r);
         }
-        //m_system_manager.get_system<portfolio_page>().get_portfolio()->update_balance_values({copy_coin});
+        // m_system_manager.get_system<portfolio_page>().get_portfolio()->update_balance_values({copy_coin});
     }
 
     mm2_client&
@@ -1773,11 +1767,11 @@ namespace atomic_dex
             }
             for (auto&& cur: request) cur["userpass"] = "";
             SPDLOG_ERROR("pplx task error: {} from: {}, request: {}", e.what(), from, request.dump(4));
-            //this->dispatcher_.trigger<batch_failed>(from, e.what());
+            // this->dispatcher_.trigger<batch_failed>(from, e.what());
 
-//#if defined(linux) || defined(__APPLE__)
-            //SPDLOG_ERROR("stacktrace: {}", boost::stacktrace::to_string(boost::stacktrace::stacktrace()));
-//#endif
+            //#if defined(linux) || defined(__APPLE__)
+            // SPDLOG_ERROR("stacktrace: {}", boost::stacktrace::to_string(boost::stacktrace::stacktrace()));
+            //#endif
             if (std::string(e.what()).find("Failed to read HTTP status line") != std::string::npos ||
                 std::string(e.what()).find("WinHttpReceiveResponse: 12002: The operation timed out") != std::string::npos)
             {
