@@ -18,9 +18,9 @@
 #include <unordered_set>
 
 ///! Qt
+#include <QException>
 #include <QFile>
 #include <QProcess>
-#include <QException>
 
 //! Project Headers
 #include "atomicdex/api/mm2/mm2.constants.hpp"
@@ -69,7 +69,7 @@ namespace
                 //! New cfg to ifs
                 fs::path actual_version_filepath = cfg_path / (std::string(atomic_dex::get_raw_version()) + "-coins."s + wallet_name + ".json"s);
                 LOG_PATH("opening file: {}", actual_version_filepath);
-                QFile    actual_version_ifs;
+                QFile actual_version_ifs;
                 actual_version_ifs.setFileName(atomic_dex::std_path_to_qstring(actual_version_filepath));
                 actual_version_ifs.open(QIODevice::Text | QIODevice::ReadOnly);
                 nlohmann::json actual_config_data = nlohmann::json::parse(QString(actual_version_ifs.readAll()).toStdString());
@@ -165,7 +165,9 @@ namespace
                 if (field_name == "active")
                 {
                     registry[ticker].active = status;
-                } else if (field_name == "is_segwit_on") {
+                }
+                else if (field_name == "is_segwit_on")
+                {
                     registry[ticker].is_segwit_on = status;
                 }
             }
@@ -593,18 +595,35 @@ namespace atomic_dex
         nlohmann::json btc_kmd_batch = nlohmann::json::array();
         if (first_time)
         {
-            coin_config        coin_info = get_coin_info(g_second_primary_dex_coin);
-            t_electrum_request request{.coin_name = coin_info.ticker, .servers = coin_info.electrum_urls.value(), .with_tx_history = true};
-            if (coin_info.segwit && coin_info.is_segwit_on) {
-                request.address_format = nlohmann::json::object();
-                request.address_format.value()["format"] = "segwit";
+            coin_config coin_info = get_coin_info(g_second_primary_dex_coin);
+            if (coin_info.coin_type != CoinType::ERC20 && coin_info.coin_type != CoinType::BEP20)
+            {
+                t_electrum_request request{.coin_name = coin_info.ticker, .servers = coin_info.electrum_urls.value(), .with_tx_history = true};
+                if (coin_info.segwit && coin_info.is_segwit_on)
+                {
+                    request.address_format                   = nlohmann::json::object();
+                    request.address_format.value()["format"] = "segwit";
+                }
+                nlohmann::json j = ::mm2::api::template_request("electrum");
+                ::mm2::api::to_json(j, request);
+                btc_kmd_batch.push_back(j);
             }
-            nlohmann::json     j = ::mm2::api::template_request("electrum");
-            ::mm2::api::to_json(j, request);
-            btc_kmd_batch.push_back(j);
+            else
+            {
+                t_enable_request request{
+                    .coin_name       = coin_info.ticker,
+                    .urls            = coin_info.urls.value_or(std::vector<std::string>{}),
+                    .coin_type       = coin_info.coin_type,
+                    .is_testnet      = coin_info.is_testnet.value_or(false),
+                    .with_tx_history = false};
+                nlohmann::json j = ::mm2::api::template_request("enable");
+                ::mm2::api::to_json(j, request);
+                // SPDLOG_INFO("enable request: {}", j.dump(4));
+                btc_kmd_batch.push_back(j);
+            }
             coin_info = get_coin_info(g_primary_dex_coin);
             t_electrum_request request_kmd{.coin_name = coin_info.ticker, .servers = coin_info.electrum_urls.value(), .with_tx_history = true};
-            j = ::mm2::api::template_request("electrum");
+            nlohmann::json j = ::mm2::api::template_request("electrum");
             ::mm2::api::to_json(j, request_kmd);
             btc_kmd_batch.push_back(j);
         }
@@ -633,8 +652,9 @@ namespace atomic_dex
                     .coin_type       = coin_info.coin_type,
                     .is_testnet      = coin_info.is_testnet.value_or(false),
                     .with_tx_history = true};
-                if (coin_info.segwit && coin_info.is_segwit_on) {
-                    request.address_format = nlohmann::json::object();
+                if (coin_info.segwit && coin_info.is_segwit_on)
+                {
+                    request.address_format                   = nlohmann::json::object();
                     request.address_format.value()["format"] = "segwit";
                 }
                 nlohmann::json j = ::mm2::api::template_request("electrum");
@@ -773,7 +793,7 @@ namespace atomic_dex
     nlohmann::json
     mm2_service::prepare_batch_orderbook(bool is_a_reset)
     {
-        //SPDLOG_INFO("is_a_reset: {}", is_a_reset);
+        // SPDLOG_INFO("is_a_reset: {}", is_a_reset);
         auto&& [base, rel] = m_synchronized_ticker_pair.get();
         if (rel.empty())
             return nlohmann::json::array();
@@ -794,7 +814,7 @@ namespace atomic_dex
             generate_req("min_trading_vol", t_min_volume_request{.coin = base});
             generate_req("min_trading_vol", t_min_volume_request{.coin = rel});
         }
-        //SPDLOG_INFO("batch max: {}", batch.dump(4));
+        // SPDLOG_INFO("batch max: {}", batch.dump(4));
         return batch;
     }
 
@@ -805,12 +825,12 @@ namespace atomic_dex
         if (batch.empty())
             return;
         // SPDLOG_DEBUG("batch request: {}", batch.dump(4));
-        //auto&& [base, rel] = m_synchronized_ticker_pair.get();
+        // auto&& [base, rel] = m_synchronized_ticker_pair.get();
 
         auto answer_functor = [this, is_a_reset](web::http::http_response resp)
         {
             auto&& [base, rel] = m_synchronized_ticker_pair.get();
-            auto answer = ::mm2::api::basic_batch_answer(resp);
+            auto answer        = ::mm2::api::basic_batch_answer(resp);
             if (answer.is_array())
             {
                 auto orderbook_answer = ::mm2::api::rpc_process_answer_batch<t_orderbook_answer>(answer[0], "orderbook");
@@ -824,9 +844,9 @@ namespace atomic_dex
                         {
                             this->m_synchronized_max_taker_vol->first = base_max_taker_vol_answer.result.value();
                         }
-                        //t_float_50 base_res                               = t_float_50(this->m_synchronized_max_taker_vol->first.decimal) * m_balance_factor;
-                        //this->m_synchronized_max_taker_vol->first.decimal = base_res.str(8);
-                        //SPDLOG_INFO("max_taker_vol: {}", answer[1].dump(4));
+                        // t_float_50 base_res                               = t_float_50(this->m_synchronized_max_taker_vol->first.decimal) * m_balance_factor;
+                        // this->m_synchronized_max_taker_vol->first.decimal = base_res.str(8);
+                        // SPDLOG_INFO("max_taker_vol: {}", answer[1].dump(4));
                     }
 
                     auto rel_max_taker_vol_answer = ::mm2::api::rpc_process_answer_batch<::mm2::api::max_taker_vol_answer>(answer[2], "max_taker_vol");
@@ -836,8 +856,8 @@ namespace atomic_dex
                         {
                             this->m_synchronized_max_taker_vol->second = rel_max_taker_vol_answer.result.value();
                         }
-                        //t_float_50 rel_res                                 = t_float_50(this->m_synchronized_max_taker_vol->second.decimal) * m_balance_factor;
-                        //this->m_synchronized_max_taker_vol->second.decimal = rel_res.str(8);
+                        // t_float_50 rel_res                                 = t_float_50(this->m_synchronized_max_taker_vol->second.decimal) *
+                        // m_balance_factor; this->m_synchronized_max_taker_vol->second.decimal = rel_res.str(8);
                     }
 
                     auto base_min_taker_vol_answer = ::mm2::api::rpc_process_answer_batch<t_min_volume_answer>(answer[3], "min_trading_vol");
@@ -1673,7 +1693,8 @@ namespace atomic_dex
         }
         catch (const std::exception& e)
         {
-            if (std::string(e.what()).find("mutex lock failed") != std::string::npos) {
+            if (std::string(e.what()).find("mutex lock failed") != std::string::npos)
+            {
                 return;
             }
             for (auto&& cur: request) cur["userpass"] = "";

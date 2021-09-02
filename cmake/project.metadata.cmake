@@ -8,7 +8,7 @@ set(DEX_SUPPORT_PAGE "https://help.smartfi.com/hc/en-us")
 set(DEX_DISCORD "https://discord.gg/yrYDtEnsfg")
 set(DEX_TWITTER "https://twitter.com/smartfiportal")
 set(DEX_PRIMARY_COIN "SFUSD") ## Main coin of the DEX, will enable it by default and will be the default left ticker for trading
-set(DEX_SECOND_PRIMARY_COIN "LTC")  ## Second main coin of the DEX, will enable it by default and will be the default right ticker for trading
+set(DEX_SECOND_PRIMARY_COIN "BNB")  ## Second main coin of the DEX, will enable it by default and will be the default right ticker for trading
 option(DISABLE_GEOBLOCKING "Enable to disable geoblocking (for dev purpose)" ON)
 set(DEX_REPOSITORY_OWNER ${DEX_COMPANY})
 set(DEX_REPOSITORY_NAME "atomicDEX-Desktop")
