@@ -122,7 +122,7 @@ BasicModal {
             Layout.fillWidth: true
             title: qsTr("Type")
             textRole: "text"
-            model: type_model//, "UTXO", "Komodo chain"]
+            model: type_model//, "UTXO", "Komodo Chain"]
             currentIndex: 0
         }
 

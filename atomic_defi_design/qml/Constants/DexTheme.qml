@@ -453,7 +453,7 @@ QtObject {
     function getCoinTypeColor(type) {
         return getCoinColor(type === "ERC-20" ? "ETH" :
                             type === "QRC-20" ? "QTUM" :
-                            type === "Komodo chain" ? "KMD" :
+                            type === "Komodo Chain" ? "KMD" :
                                                      "BTC")
     }
 
