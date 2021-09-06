@@ -154,7 +154,7 @@ Item {
                 anchors.fill: parent
                 spacing: 0
                 DexLabel {
-                    text: "Simple"
+                    text: "SmartSwap"
                     Layout.preferredWidth: 70
                     Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
@@ -172,7 +172,7 @@ Item {
                     }
                 }
                 DexLabel {
-                    text: "Pro"
+                    text: "SmartDEX"
                     Layout.preferredWidth: 70
                     Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
