@@ -932,7 +932,7 @@
       {
         "url": "woolloomooloo.ecoincore.com:34333",
         "protocol": "SSL",
-        "disable_cert_verification": false
+        "disable_cert_verification": true
       },
       {
         "url": "lenoir.ecoincore.com:34333",
@@ -1700,6 +1700,26 @@
       "https://gleechain.com/"
     ],
     "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "GRMS": {
+    "coin": "GRMS",
+    "type": "Smart Chain",
+    "name": "GRMS",
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "grms-grms",
+    "electrum": [
+      {
+        "url": "89.108.102.188:17485"
+      },
+      {
+        "url": "31.31.199.13:17485"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.grms.pw/"
+    ],
     "active": false,
     "currently_enabled": false
   },
@@ -3588,7 +3608,7 @@
   "TKL": {
     "coin": "TKL",
     "name": "Tokel",
-    "coinpaprika_id": "test-coin",
+    "coinpaprika_id": "tkl-tokel",
     "coingecko_id": "test-coin",
     "electrum": [
       
