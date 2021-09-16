@@ -20,7 +20,7 @@
 #include "atomicdex/pages/qt.settings.page.hpp"
 #include "atomicdex/services/price/smartfi/smartfi.provider.hpp"
 #include "atomicdex/services/price/komodo_prices/komodo.prices.provider.hpp"
-#include "atomicdex/services/price/oracle/band.provider.hpp"
+//#include "atomicdex/services/price/oracle/band.provider.hpp"
 
 namespace
 {
@@ -204,8 +204,8 @@ namespace atomic_dex
             auto&       smartfi_service = m_system_manager.get_system<smartfi_price_service>();
             std::string current_price   = smartfi_service.retrieve_if_this_ticker_supported(ticker);
             // const bool  is_oracle_ready = band_service.is_oracle_ready();   
-            auto&       band_service    = m_system_manager.get_system<band_oracle_price_service>();
-            std::string current_price   = band_service.retrieve_if_this_ticker_supported(ticker);
+            //auto&       band_service    = m_system_manager.get_system<band_oracle_price_service>();
+            //std::string current_price   = band_service.retrieve_if_this_ticker_supported(ticker);
             //const bool  is_oracle_ready = band_service.is_oracle_ready();
 
             if (current_price.empty())
