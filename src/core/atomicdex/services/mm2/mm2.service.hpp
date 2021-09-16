@@ -88,7 +88,7 @@ namespace atomic_dex
         mm2_client m_mm2_client;
 
         //! Process
-        //reproc::process m_mm2_instance;
+        // reproc::process m_mm2_instance;
 
         //! Current ticker
         t_synchronized_ticker m_current_ticker{g_primary_dex_coin};
@@ -135,6 +135,7 @@ namespace atomic_dex
         void process_balance_answer(const nlohmann::json& answer);
         void process_tx_answer(const nlohmann::json& answer_json);
         void process_tx_tokenscan(const std::string& ticker, bool is_a_refresh);
+        void fetch_single_balance(const coin_config& cfg_infos);
 
         //!
         std::pair<bool, std::string>                        process_batch_enable_answer(const nlohmann::json& answer);
@@ -174,7 +175,7 @@ namespace atomic_dex
         bool enable_default_coins();
 
         //! Batch Enable coins
-        void batch_enable_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers = std::vector<std::string>{}, bool first_time = false);
+        void batch_enable_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers, bool first_time = false);
 
         //! Enable multiple coins
         void enable_multiple_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers = std::vector<std::string>{});

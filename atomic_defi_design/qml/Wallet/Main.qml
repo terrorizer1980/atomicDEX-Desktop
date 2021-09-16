@@ -439,6 +439,20 @@ Item {
         // Price Graph
         InnerBackground {
             id: price_graph_bg
+
+            Connections
+            {
+                enabled: true
+                target: dashboard.webEngineView
+                function onLoadingChanged()
+                {
+                    if (dashboard.webEngineView.loading === false)
+                        dashboard.webEngineView.visible = true;
+                    else
+                        dashboard.webEngineView.visible = false;
+                }
+            }
+
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.leftMargin: layout_margin
@@ -448,9 +462,21 @@ Item {
             shadowOff: true
             color: DexTheme.contentColorTop
 
+            Component.onCompleted:
+            {
+                dashboard.webEngineView.parent = price_graph_bg
+                dashboard.webEngineView.anchors.fill = price_graph_bg
+            }
+
+            Component.onDestruction:
+            {
+                dashboard.webEngineView.visible = false;
+                dashboard.webEngineView.stop();
+            }
+
             content: Item {
                 property bool ticker_supported: false
-                readonly property bool is_fetching: chart.loadProgress < 100
+                readonly property bool is_fetching: dashboard.webEngineView.loadProgress < 100
                 readonly property string chartTheme: DexTheme.theme ?? "dark"
                 property color backgroundColor: DexTheme.contentColorTop
                 property var ticker: api_wallet_page.ticker
@@ -466,38 +492,39 @@ Item {
                     // Normal pair
                     let symbol = General.supported_pairs[pair]
                     if (!symbol) {
-                        console.log("Symbol not found for", pair)
+                        console.warn("Symbol not found for", pair)
                         symbol = General.supported_pairs[pair_reversed]
                     }
 
                     // Reversed pair
                     if (!symbol) {
-                        console.log("Symbol not found for", pair_reversed)
+                        console.warn("Symbol not found for", pair_reversed)
                         symbol = General.supported_pairs[pair_usd]
                     }
 
                     // Pair with USD
                     if (!symbol) {
-                        console.log("Symbol not found for", pair_usd)
+                        console.warn("Symbol not found for", pair_usd)
                         symbol = General.supported_pairs[pair_usd_reversed]
                     }
 
                     // Reversed pair with USD
                     if (!symbol) {
-                        console.log("Symbol not found for", pair_usd_reversed)
+                        console.warn("Symbol not found for", pair_usd_reversed)
                         symbol = General.supported_pairs[pair_busd]
                     }
 
                     // Pair with BUSD
                     if (!symbol) {
-                        console.log("Symbol not found for", pair_busd)
+                        console.warn("Symbol not found for", pair_busd)
                         symbol = General.supported_pairs[pair_busd_reversed]
                     }
 
                     // Reversed pair with BUSD
                     if (!symbol) {
-                        console.log("Symbol not found for", pair_busd_reversed)
+                        console.warn("Symbol not found for", pair_busd_reversed)
                         ticker_supported = false
+                        dashboard.webEngineView.visible = false;
                         return
                     }
 
@@ -505,7 +532,7 @@ Item {
 
                     console.debug("Wallet: Loading chart for %1".arg(symbol))
 
-                    chart.loadHtml(`
+                    dashboard.webEngineView.loadHtml(`
                         <style>
                         body { margin: 0; background: %1 }
                         </style>
@@ -529,7 +556,9 @@ Item {
                           </script>
                         </div>
                         <!-- TradingView Widget END -->`.arg(DexTheme.theme === "dark" ? DexTheme.backgroundColor : DexTheme.contentColorTopBold).arg(DexTheme.chartTradingLineColor).arg(DexTheme.chartTradingLineBackgroundColor))
-                                    }
+
+                    dashboard.webEngineView.visible = true;
+                }
 
                 width: price_graph_bg.width
                 height: price_graph_bg.height
@@ -546,7 +575,7 @@ Item {
                 }
 
                 RowLayout {
-                    visible: ticker_supported && !chart.visible
+                    visible: ticker_supported && !dashboard.webEngineView.visible
                     anchors.centerIn: parent
 
                     DefaultBusyIndicator {
@@ -565,14 +594,6 @@ Item {
                     visible: !ticker_supported
                     text_value: qsTr("There is no chart data for this ticker yet")
                     anchors.centerIn: parent
-                }
-
-                WebEngineView {
-                    id: chart
-                    anchors.fill: parent
-                    anchors.margins: -1
-                    backgroundColor: DexTheme.contentColorTop
-                    visible: !is_fetching && ticker_supported
                 }
             }
         }
