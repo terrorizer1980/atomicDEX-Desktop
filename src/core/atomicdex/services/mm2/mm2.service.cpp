@@ -447,7 +447,11 @@ namespace atomic_dex
             //! Need to verify if there is a parent
             if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
             {
-                second_tickers.push_back(current_coin.ticker);
+                if (!extra_coins.contains(current_coin.ticker))
+                {
+                    extra_coins.emplace(current_coin.ticker);
+                    second_tickers.push_back(current_coin.ticker);
+                }
             }
             else
             {
@@ -679,11 +683,11 @@ namespace atomic_dex
         }
 
         // SPDLOG_DEBUG("{}", batch_array.dump(4));
-        auto functor = [this, second_tickers](nlohmann::json batch_array, std::vector<std::string> tickers)
+        auto functor = [this, second_tickers](nlohmann::json batch_array, std::vector<std::string> tickers, bool force_second_ticker_enabling = false)
         {
             m_mm2_client.async_rpc_batch_standalone(batch_array)
                 .then(
-                    [this, second_tickers, tickers](web::http::http_response resp) mutable
+                    [this, second_tickers, tickers, force_second_ticker_enabling](web::http::http_response resp) mutable
                     {
                         try
                         {
@@ -735,7 +739,7 @@ namespace atomic_dex
                                     // batch_balance_and_tx(false, tickers, true);
                                 }
                             }
-                            if (!second_tickers.empty())
+                            if (!second_tickers.empty() && force_second_ticker_enabling)
                             {
                                 batch_enable_coins(second_tickers, {}, false);
                             }
@@ -759,7 +763,7 @@ namespace atomic_dex
 
         if (not btc_kmd_batch.empty() && first_time)
         {
-            functor(btc_kmd_batch, g_default_coins);
+            functor(btc_kmd_batch, g_default_coins, false);
         }
 
         if (!batch_array.empty())
@@ -768,7 +772,7 @@ namespace atomic_dex
             {
                 nlohmann::json single_batch = nlohmann::json::array();
                 single_batch.push_back(batch_array.at(idx));
-                functor(single_batch, {copy_tickers[idx]});
+                functor(single_batch, {copy_tickers[idx]}, idx == 0);
             }
             // functor(batch_array, copy_tickers);
         }
