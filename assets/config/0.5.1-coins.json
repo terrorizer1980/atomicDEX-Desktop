@@ -756,6 +756,32 @@
     "type": "ZHTLC",
     "name": "Pirate"
   },
+  "HONK": {
+    "coin": "HONK",
+    "active": false,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://simpleledger.info/"
+    ],
+    "explorer_tx_url": "#tx/",
+    "type": "SLP",
+    "name": "HONK HONK"
+  },
+  "ASLP": {
+    "coin": "ASLP",
+    "active": false,
+    "coingecko_id": "test-coin",
+    "coinpaprika_id": "test-coin",
+    "currently_enabled": false,
+    "explorer_url": [
+      "https://simpleledger.info/"
+    ],
+    "explorer_tx_url": "#tx/",
+    "type": "SLP",
+    "name": "AtomicSLP"
+  },
   "USDF": {
     "coin": "USDF",
     "active": false,
