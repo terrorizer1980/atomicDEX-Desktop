@@ -143,55 +143,55 @@
     "currently_enabled": false
   },
   "ARRR-BEP20": {
-      "coin": "ARRR-BEP20",
-      "name": "Pirate",
-      "coinpaprika_id": "arrr-pirate",
-      "coingecko_id": "pirate-chain",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "ARRR-BEP20",
+    "name": "Pirate",
+    "coinpaprika_id": "arrr-pirate",
+    "coingecko_id": "pirate-chain",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "AXS-BEP20": {
-      "coin": "AXS-BEP20",
-      "name": "Axie Infinity",
-      "coinpaprika_id": "axs-axie-infinity",
-      "coingecko_id": "axie-infinity",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AXS-BEP20",
+    "name": "Axie Infinity",
+    "coinpaprika_id": "axs-axie-infinity",
+    "coingecko_id": "axie-infinity",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "AXS-ERC20": {
-      "coin": "AXS-ERC20",
-      "name": "Axie Infinity",
-      "coinpaprika_id": "axs-axie-infinity",
-      "coingecko_id": "axie-infinity",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AXS-ERC20",
+    "name": "Axie Infinity",
+    "coinpaprika_id": "axs-axie-infinity",
+    "coingecko_id": "axie-infinity",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BNB": {
     "coin": "BNB",
@@ -261,38 +261,38 @@
     "currently_enabled": false
   },
   "ARPA-BEP20": {
-      "coin": "ARPA-BEP20",
-      "name": "ARPA Chain",
-      "coinpaprika_id": "arpa-arpa-chain",
-      "coingecko_id": "arpa-chain",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "ARPA-BEP20",
+    "name": "ARPA Chain",
+    "coinpaprika_id": "arpa-arpa-chain",
+    "coingecko_id": "arpa-chain",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "ARPA-ERC20": {
-      "coin": "ARPA-ERC20",
-      "name": "ARPA Chain",
-      "coinpaprika_id": "arpa-arpa-chain",
-      "coingecko_id": "arpa-chain",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "ARPA-ERC20",
+    "name": "ARPA Chain",
+    "coinpaprika_id": "arpa-arpa-chain",
+    "coingecko_id": "arpa-chain",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "ATOM-BEP20": {
     "coin": "ATOM-BEP20",
@@ -1924,38 +1924,38 @@
     "wallet_only": true
   },
   "KNC-BEP20": {
-      "coin": "KNC-BEP20",
-      "name": "Kyber Network",
-      "coinpaprika_id": "knc-kyber-network",
-      "coingecko_id": "kyber-network-crystal",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "KNC-BEP20",
+    "name": "Kyber Network",
+    "coinpaprika_id": "knc-kyber-network",
+    "coingecko_id": "kyber-network-crystal",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "KNC-ERC20": {
-      "coin": "KNC-ERC20",
-      "name": "Kyber Network",
-      "coinpaprika_id": "knc-kyber-network",
-      "coingecko_id": "kyber-network-crystal",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "KNC-ERC20",
+    "name": "Kyber Network",
+    "coinpaprika_id": "knc-kyber-network",
+    "coingecko_id": "kyber-network-crystal",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "KOIN": {
     "coin": "KOIN",
@@ -2460,38 +2460,38 @@
     "currently_enabled": false
   },
   "USDC-BEP20": {
-      "coin": "USDC-BEP20",
-      "name": "USD Coin",
-      "coinpaprika_id": "usdc-usd-coin",
-      "coingecko_id": "usd-coin",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": true,
-      "currently_enabled": false
+    "coin": "USDC-BEP20",
+    "name": "USD Coin",
+    "coinpaprika_id": "usdc-usd-coin",
+    "coingecko_id": "usd-coin",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": true,
+    "currently_enabled": false
   },
   "USDC-ERC20": {
-      "coin": "USDC-ERC20",
-      "name": "USD Coin",
-      "coinpaprika_id": "usdc-usd-coin",
-      "coingecko_id": "usd-coin",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": true,
-      "currently_enabled": false
+    "coin": "USDC-ERC20",
+    "name": "USD Coin",
+    "coinpaprika_id": "usdc-usd-coin",
+    "coingecko_id": "usd-coin",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": true,
+    "currently_enabled": false
   },
   "USDT-BEP20": {
     "coin": "USDT-BEP20",
@@ -2859,7 +2859,7 @@
     "currently_enabled": false,
     "wallet_only": true
   },
-    "PIC": {
+  "PIC": {
     "coin": "PIC",
     "name": "Picacoin",
     "coinpaprika_id": "pic-picacoin",
@@ -2931,21 +2931,21 @@
     "wallet_only": true
   },
   "SMTF": {
-      "coin": "SMTF",
-      "name": "SmartFi",
-      "coinpaprika_id": "test-coin",
-      "coingecko_id": "test-coin",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": true,
-      "currently_enabled": false
+    "coin": "SMTF",
+    "name": "SmartFi",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "test-coin",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": true,
+    "currently_enabled": false
   },
   "SOULJA": {
     "coin": "SOULJA",
@@ -3410,33 +3410,33 @@
     "wallet_only": true
   },
   "NVC-BEP20": {
-      "coin": "NVC-BEP20",
-      "name": "Novacoin",
-      "coinpaprika_id": "nvc-novacoin",
-      "coingecko_id": "novacoin",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "NVC-BEP20",
+    "name": "Novacoin",
+    "coinpaprika_id": "nvc-novacoin",
+    "coingecko_id": "novacoin",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "NVC-QRC20": {
-      "coin": "NVC-QRC20",
-      "name": "Novacoin",
-      "coinpaprika_id": "nvc-novacoin",
-      "coingecko_id": "novacoin",
-      "explorer_url": [
-        "https://explorer.qtum.org/"
-      ],
-      "type": "QRC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "NVC-QRC20",
+    "name": "Novacoin",
+    "coinpaprika_id": "nvc-novacoin",
+    "coingecko_id": "novacoin",
+    "explorer_url": [
+      "https://explorer.qtum.org/"
+    ],
+    "type": "QRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "OOT": {
     "coin": "OOT",
@@ -3523,21 +3523,21 @@
     "currently_enabled": false
   },
   "QTUM-ERC20": {
-      "coin": "QTUM-ERC20",
-      "name": "Qtum",
-      "coinpaprika_id": "qtum-qtum",
-      "coingecko_id": "qtum",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "QTUM-ERC20",
+    "name": "Qtum",
+    "coinpaprika_id": "qtum-qtum",
+    "coingecko_id": "qtum",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "RVN": {
     "coin": "RVN",
@@ -3645,7 +3645,6 @@
     "coinpaprika_id": "tkl-tokel",
     "coingecko_id": "test-coin",
     "electrum": [
-      
       {
         "url": "1.eu.tokel.electrum.dexstats.info:10077"
       },
@@ -3659,7 +3658,7 @@
     "type": "Komodo Chain",
     "active": false,
     "currently_enabled": false
-  }, 
+  },
   "TRC": {
     "coin": "TRC",
     "name": "Terracoin",
@@ -3864,21 +3863,21 @@
     "currently_enabled": false
   },
   "WWCN-ERC20": {
-      "coin": "WWCN-ERC20",
-      "name": "Wrapped Widecoin",
-      "coinpaprika_id": "wwcn-wrapped-widecoin",
-      "coingecko_id": "wrapped-widecoin",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "WWCN-ERC20",
+    "name": "Wrapped Widecoin",
+    "coinpaprika_id": "wwcn-wrapped-widecoin",
+    "coingecko_id": "wrapped-widecoin",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "WLC": {
     "coin": "WLC",
@@ -4045,16 +4044,16 @@
     "currently_enabled": false
   },
   "XVC-QRC20": {
-      "coin": "XVC-QRC20",
-      "name": "Vanillacash",
-      "coinpaprika_id": "xvc-vcash",
-      "coingecko_id": "vcash",
-      "explorer_url": [
-        "https://explorer.qtum.org/"
-      ],
-      "type": "QRC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "XVC-QRC20",
+    "name": "Vanillacash",
+    "coinpaprika_id": "xvc-vcash",
+    "coingecko_id": "vcash",
+    "explorer_url": [
+      "https://explorer.qtum.org/"
+    ],
+    "type": "QRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "XVS": {
     "coin": "XVS",
