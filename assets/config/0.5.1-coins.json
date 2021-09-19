@@ -142,6 +142,23 @@
     "active": false,
     "currently_enabled": false
   },
+  "ARRR-BEP20": {
+      "coin": "ARRR-BEP20",
+      "name": "Pirate",
+      "coinpaprika_id": "arrr-pirate",
+      "coingecko_id": "pirate-chain",
+      "nodes": [
+        "http://bsc1.cipig.net:8655",
+        "http://bsc2.cipig.net:8655",
+        "http://bsc3.cipig.net:8655"
+      ],
+      "explorer_url": [
+        "https://bscscan.com/"
+      ],
+      "type": "BEP-20",
+      "active": false,
+      "currently_enabled": false
+  },
   "AXS-BEP20": {
       "coin": "AXS-BEP20",
       "name": "Axie Infinity",
@@ -1571,6 +1588,23 @@
     "explorer_tx_url": "tx/",
     "explorer_address_url": "address/",
     "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FJC-BEP20": {
+    "coin": "FJC-BEP20",
+    "name": "Fujicoin",
+    "coinpaprika_id": "fjc-fujicoin",
+    "coingecko_id": "fujicoin",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
     "active": false,
     "currently_enabled": false
   },
@@ -5265,6 +5299,30 @@
     "type": "ERC-20",
     "active": false,
     "currently_enabled": false
+  },
+  "USBL": {
+    "active": false,
+    "coin": "USBL",
+    "name": "Balanced",
+    "coingecko_id": "balanced",
+    "coinpaprika_id": "balanced-balanced",
+    "currently_enabled": false,
+    "electrum": [
+      {
+        "url": "swap.softbalanced.com:50001",
+        "protocol": "TCP"
+      },
+      {
+        "url": "swap.softbalanced.com:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": true
+      }
+    ],
+    "explorer_url": [
+      "https://softbalanced.com:3001/insight/"
+    ],
+    "explorer_tx_url": "tx/",
+    "type": "UTXO"
   },
   "UTK": {
     "coin": "UTK",
