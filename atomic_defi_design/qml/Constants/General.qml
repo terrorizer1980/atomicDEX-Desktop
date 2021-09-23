@@ -1228,6 +1228,7 @@ QtObject {
                                                 "MATIC/EURS": "COINBASE:MATICEUR",
                                                 "MATIC/TRYB": "BINANCE:MATICTRY",
                                                 "MATIC/BIDR": "BINANCE:MATICBIDR",
+                                                "MINDS": "UNISWAP:MINDSWETH",
                                                 "MKR/BTC": "BINANCE:MKRBTC",
                                                 "MKR/ETH": "BITFINEX:MKRETH",
                                                 "MKR/BNB": "BINANCE:MKRBNB",

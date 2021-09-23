@@ -340,6 +340,7 @@ QtObject {
                                           "MESH": "#0098DA",
                                           "MGW": "#854F2F",
                                           "MONA": "#DEC799",
+                                          "MINDS": "#FDD02E",
                                           "NMC": "#186C9D",
                                           "RFOX": "#D83331",
                                           "BOTS": "#F69B57",
