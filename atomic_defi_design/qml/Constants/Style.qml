@@ -274,6 +274,7 @@ QtObject {
                                           "ADX": "#1B75BC",
                                           "ANKR": "#2075E8",
                                           "ARPA": "#CCD9E2",
+                                          "ARRR": "#C7A34C",
                                           "ATOM": "#474B6C",
                                           "AUR": "#0A6C5E",
                                           "AVA": "#5B567F",
@@ -396,6 +397,7 @@ QtObject {
                                           "EURS": "#2F77ED",
                                           "FIL": "#4CCAD2",
                                           "FJC": "#00AFEC",
+                                          "FJCB": "#FFCC33",
                                           "FUN": "#EF1C70",
                                           "GNO": "#00B0CC",
                                           "HOT": "#983EFF",
@@ -448,6 +450,7 @@ QtObject {
                                           "ZET": "#155169",
                                           "ZIL": "#42BBB9",
                                           "ZRX": "#302C2C",
-                                          "UNI": "#FF007A"
+                                          "UNI": "#FF007A",
+                                          "USBL": "#279553"
                                       })
 }
