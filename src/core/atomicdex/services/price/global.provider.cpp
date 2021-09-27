@@ -203,10 +203,6 @@ namespace atomic_dex
             auto&       provider       = m_system_manager.get_system<komodo_prices_provider>();
             auto&       smartfi_service = m_system_manager.get_system<smartfi_price_service>();
             std::string current_price   = smartfi_service.retrieve_if_this_ticker_supported(ticker);
-            // const bool  is_oracle_ready = band_service.is_oracle_ready();   
-            //auto&       band_service    = m_system_manager.get_system<band_oracle_price_service>();
-            //std::string current_price   = band_service.retrieve_if_this_ticker_supported(ticker);
-            //const bool  is_oracle_ready = band_service.is_oracle_ready();
 
             if (current_price.empty())
             {
@@ -233,6 +229,11 @@ namespace atomic_dex
                 if (is_this_currency_a_fiat(m_cfg, fiat) && fiat != "USD")
                 {
                     t_float_50 tmp_current_price = t_float_50(current_price) * m_other_fiats_rates->at("rates").at(fiat).get<double>();
+                    current_price                = tmp_current_price.str();
+                }
+                else
+                {
+                    t_float_50 tmp_current_price = t_float_50(current_price) * t_float_50(m_coin_rate_providers.at(fiat));
                     current_price                = tmp_current_price.str();
                 }
 
