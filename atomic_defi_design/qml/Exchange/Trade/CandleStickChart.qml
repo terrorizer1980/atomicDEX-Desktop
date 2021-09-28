@@ -123,7 +123,8 @@ DexBox {
                 "theme": "${theme}",
                 "style": "1",
                 "enable_publishing": false,
-                "save_image": false
+                "save_image": false,
+                "hide_side_toolbar": false
                 }
                 );
                 </script>
