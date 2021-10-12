@@ -48,6 +48,10 @@ namespace mm2::api
         if (cfg.address_format.has_value()) {
             j["address_format"] = cfg.address_format.value();
         }
+        if (cfg.bchd_urls.has_value()) {
+            j["bchd_urls"] = cfg.bchd_urls.value();
+            j["allow_slp_unsafe_conf"] = cfg.allow_slp_unsafe_conf.value_or(false);
+        }
         //SPDLOG_INFO("electrum: {}", j.dump());
     }
 

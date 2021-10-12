@@ -41,6 +41,11 @@ namespace atomic_dex
         {
             cfg.urls = j.at("nodes").get<std::vector<std::string>>();
         }
+        if (j.contains("bchd_urls"))
+        {
+            cfg.bchd_urls = j.at("bchd_urls").get<std::vector<std::string>>();
+            cfg.allow_slp_unsafe_conf = j.at("allow_slp_unsafe_conf").get<bool>();
+        }
         cfg.is_claimable         = j.count("is_claimable") > 0;
         cfg.minimal_claim_amount = cfg.is_claimable ? j.at("minimal_claim_amount").get<std::string>() : "0";
         j.at("active").get_to(cfg.active);

@@ -43,6 +43,8 @@ namespace atomic_dex
         std::string                     gui_ticker; ///< Ticker displayed in the gui
         std::string                     name;       ///< nice name
         std::optional<electrum_servers> electrum_urls;
+        std::optional<nodes>            bchd_urls;
+        std::optional<bool>             allow_slp_unsafe_conf;
         std::optional<nodes>            urls;
         bool                            is_claimable{false};
         std::string                     minimal_claim_amount{"0"};

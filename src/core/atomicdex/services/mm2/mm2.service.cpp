@@ -644,11 +644,13 @@ namespace atomic_dex
             if (!coin_info.is_erc_family && coin_info.coin_type != CoinType::ZHTLC)
             {
                 t_electrum_request request{
-                    .coin_name       = coin_info.ticker,
-                    .servers         = coin_info.electrum_urls.value_or(get_electrum_server_from_token(coin_info.ticker)),
-                    .coin_type       = coin_info.coin_type,
-                    .is_testnet      = coin_info.is_testnet.value_or(false),
-                    .with_tx_history = true};
+                    .coin_name             = coin_info.ticker,
+                    .servers               = coin_info.electrum_urls.value_or(get_electrum_server_from_token(coin_info.ticker)),
+                    .coin_type             = coin_info.coin_type,
+                    .is_testnet            = coin_info.is_testnet.value_or(false),
+                    .with_tx_history       = true,
+                    .bchd_urls             = coin_info.bchd_urls,
+                    .allow_slp_unsafe_conf = coin_info.allow_slp_unsafe_conf};
                 if (coin_info.segwit && coin_info.is_segwit_on)
                 {
                     request.address_format                   = nlohmann::json::object();
@@ -668,7 +670,7 @@ namespace atomic_dex
                     .with_tx_history = false};
                 nlohmann::json j = ::mm2::api::template_request("enable");
                 ::mm2::api::to_json(j, request);
-                //SPDLOG_INFO("enable request: {}", j.dump(4));
+                // SPDLOG_INFO("enable request: {}", j.dump(4));
                 batch_array.push_back(j);
             }
             //! If the coin is a custom coin and not present, then we have a config mismatch, we re-add it to the mm2 coins cfg but this need a app restart.
