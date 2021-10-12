@@ -514,6 +514,7 @@ namespace atomic_dex
                     catch (const std::exception& error)
                     {
                         SPDLOG_ERROR("exception in batch_balance_and_tx: {}", error.what());
+                        // this->dispatcher_.trigger<tx_fetch_finished>(true);
                     }
                 })
             .then([this, batch = batch_array](pplx::task<void> previous_task)
@@ -527,8 +528,9 @@ namespace atomic_dex
         nlohmann::json           batch_array   = nlohmann::json::array();
         std::vector<std::string> tickers_idx;
         std::vector<std::string> tokens_to_fetch;
-        const auto&              ticker = get_current_ticker();
-        if (auto coin_type = get_coin_info(ticker).coin_type; coin_type != CoinType::ERC20 && coin_type != CoinType::BEP20)
+        const auto&              ticker    = get_current_ticker();
+        auto                     coin_info = get_coin_info(ticker);
+        if (!coin_info.is_erc_family)
         {
             t_tx_history_request request{.coin = ticker, .limit = 5000};
             nlohmann::json       j = ::mm2::api::template_request("my_tx_history");
@@ -641,7 +643,7 @@ namespace atomic_dex
                 continue;
             }
 
-            if (coin_info.coin_type != CoinType::ERC20 && coin_info.coin_type != CoinType::BEP20)
+            if (!coin_info.is_erc_family)
             {
                 t_electrum_request request{
                     .coin_name       = coin_info.ticker,
@@ -668,7 +670,7 @@ namespace atomic_dex
                     .with_tx_history = false};
                 nlohmann::json j = ::mm2::api::template_request("enable");
                 ::mm2::api::to_json(j, request);
-                // SPDLOG_INFO("enable request: {}", j.dump(4));
+                //SPDLOG_INFO("enable request: {}", j.dump(4));
                 batch_array.push_back(j);
             }
             //! If the coin is a custom coin and not present, then we have a config mismatch, we re-add it to the mm2 coins cfg but this need a app restart.
@@ -1060,9 +1062,8 @@ namespace atomic_dex
         const auto& ticker = get_current_ticker();
         // SPDLOG_DEBUG("asking history of ticker: {}", ticker);
         const auto underlying_tx_history_map = m_tx_informations.synchronize();
-        const auto coin_type                 = get_coin_info(ticker).coin_type;
-        const auto it                        = !(coin_type == CoinType::ERC20 || coin_type == CoinType::BEP20) ? underlying_tx_history_map->find("result")
-                                                                                                               : underlying_tx_history_map->find(ticker);
+        const auto coin_info                 = get_coin_info(ticker);
+        const auto it                        = !(coin_info.is_erc_family) ? underlying_tx_history_map->find("result") : underlying_tx_history_map->find(ticker);
         if (it == underlying_tx_history_map->cend())
         {
             ec = dextop_error::tx_history_of_a_non_enabled_coin;
@@ -1244,6 +1245,18 @@ namespace atomic_dex
                     const std::string contract_address = get_raw_mm2_ticker_cfg(ticker).at("protocol").at("protocol_data").at("contract_address");
                     out                                = "/api/v2/bep_tx_history/" + contract_address + "/" + address;
                 }
+                break;
+            case CoinTypeGadget::Matic:
+                if (ticker == "MATIC" || ticker == "MATICTEST")
+                {
+                    out = "/api/v1/plg_tx_history/" + address;
+                }
+                else
+                {
+                    const std::string contract_address = get_raw_mm2_ticker_cfg(ticker).at("protocol").at("protocol_data").at("contract_address");
+                    out                                = "/api/v2/plg_tx_history/" + contract_address + "/" + address;
+                }
+                break;
             default:
                 break;
             }
@@ -1254,6 +1267,7 @@ namespace atomic_dex
             return out;
         };
         std::string url = retrieve_api_functor(ticker, address(ticker, ec));
+        SPDLOG_INFO("url scan: {}", url);
         ::mm2::api::async_process_rpc_get(::mm2::api::g_etherscan_proxy_http_client, "tx_history", url)
             .then(
                 [this, ticker](web::http::http_response resp)
@@ -1322,7 +1336,12 @@ namespace atomic_dex
                         this->dispatcher_.trigger<tx_fetch_finished>();
                     }
                 })
-            .then([this](pplx::task<void> previous_task) { this->handle_exception_pplx_task(previous_task, "process_tx_tokenscan", {}); });
+            .then(
+                [this](pplx::task<void> previous_task)
+                {
+                    this->dispatcher_.trigger<tx_fetch_finished>();
+                    this->handle_exception_pplx_task(previous_task, "process_tx_tokenscan", {});
+                });
     }
 
     void

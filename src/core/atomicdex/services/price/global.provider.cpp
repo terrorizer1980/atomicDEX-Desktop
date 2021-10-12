@@ -231,7 +231,7 @@ namespace atomic_dex
                     t_float_50 tmp_current_price = t_float_50(current_price) * m_other_fiats_rates->at("rates").at(fiat).get<double>();
                     current_price                = tmp_current_price.str();
                 }
-                else
+                else if (!is_this_currency_a_fiat(m_cfg, fiat))
                 {
                     t_float_50 tmp_current_price = t_float_50(current_price) * t_float_50(m_coin_rate_providers.at(fiat));
                     current_price                = tmp_current_price.str();
