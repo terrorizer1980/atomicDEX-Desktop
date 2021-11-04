@@ -2985,7 +2985,6 @@
   },
   "ETHR-ARB20": {
     "active": false,
-    "wallet_only": true,
     "coin": "ETHR-ARB20",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
