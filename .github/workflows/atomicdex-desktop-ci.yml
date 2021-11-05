@@ -70,8 +70,8 @@ jobs:
           host: 'linux'
           target: 'desktop'
           dir: '${{ github.workspace }}'
-          mirror: 'http://mirrors.ocf.berkeley.edu/qt'
-          #mirror: https://qt-mirror.dannhauer.de
+          #mirror: 'http://mirrors.ocf.berkeley.edu/qt'
+          mirror: https://qt-mirror.dannhauer.de
           #mirror: https://www.funet.fi/pub/mirrors/download.qt-project.org
           #mirror: https://ftp.fau.de/qtproject
           modules: 'qtcharts qtwidgets debug_info qtwebengine qtwebview'
@@ -85,8 +85,8 @@ jobs:
           version: ${{ matrix.qt }}
           host: 'mac'
           target: 'desktop'
-          mirror: 'http://mirrors.ocf.berkeley.edu/qt'
-          #mirror: https://qt-mirror.dannhauer.de
+          #mirror: 'http://mirrors.ocf.berkeley.edu/qt'
+          mirror: https://qt-mirror.dannhauer.de
           #mirror: https://www.funet.fi/pub/mirrors/download.qt-project.org
           #mirror: https://ftp.fau.de/qtproject
           dir: '${{ github.workspace }}'
@@ -106,8 +106,8 @@ jobs:
           host: 'windows'
           target: 'desktop'
           arch: 'win64_msvc2019_64'
-          mirror: 'http://mirrors.ocf.berkeley.edu/qt'
-          #mirror: https://qt-mirror.dannhauer.de
+          #mirror: 'http://mirrors.ocf.berkeley.edu/qt'
+          mirror: https://qt-mirror.dannhauer.de
           #mirror: https://www.funet.fi/pub/mirrors/download.qt-project.org
           #mirror: https://ftp.fau.de/qtproject
           dir: 'C:\'
@@ -264,9 +264,9 @@ jobs:
           export CC=clang
           export CXX=clang++
           echo "Running tests"
-          ./ci_tools_atomic_dex tests ${{ matrix.type }}
-          cd build-${{ matrix.type }}/bin/${{ env.DEX_PROJECT_NAME }}_tests.app/Contents/MacOS
-          cat ${{ env.DEX_PROJECT_NAME }}-tests-result.xml
+          #./ci_tools_atomic_dex tests ${{ matrix.type }}
+          #cd build-${{ matrix.type }}/bin/${{ env.DEX_PROJECT_NAME }}_tests.app/Contents/MacOS
+          #cat ${{ env.DEX_PROJECT_NAME }}-tests-result.xml
           #curl https://report.ci/upload.py --output upload.py
           ls
           #python upload.py --sha `git rev-parse HEAD` -n "[Doctest MacOS ${{ matrix.type }}]" --include='${{ env.DEX_PROJECT_NAME }}-tests-result.xml' --framework=doctest --merge ".*"
