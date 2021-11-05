@@ -202,7 +202,7 @@ namespace atomic_dex
 
             auto&       provider       = m_system_manager.get_system<komodo_prices_provider>();
             auto&       smartfi_service = m_system_manager.get_system<smartfi_price_service>();
-            std::string current_price   = smartfi_service.retrieve_if_this_ticker_supported(ticker);
+            std::string current_price   = smartfi_service.retrieve_if_this_ticker_supported(utils::retrieve_main_ticker(ticker));
 
             if (current_price.empty())
             {
