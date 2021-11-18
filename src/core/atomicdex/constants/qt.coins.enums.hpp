@@ -31,26 +31,28 @@ namespace atomic_dex
       public:
         enum CoinTypeEnum
         {
-            QRC20      = 0,
-            ERC20      = 1,
-            BEP20      = 2,
-            UTXO       = 3,
-            SmartChain = 4,
-            SLP        = 5,
-            ZHTLC      = 6,
-            Matic      = 7,
-            Optimism   = 8,
-            Arbitrum   = 9,
-            AVX20      = 10,
-            FTM20      = 11,
-            HRC20      = 12,
-            Ubiq       = 13,
-            KRC20      = 14,
-            Moonriver  = 15,
-            HecoChain  = 16,
-            Disabled   = 17,
-            All        = 18,
-            Size       = 19
+            QRC20           = 0,
+            ERC20           = 1,
+            BEP20           = 2,
+            UTXO            = 3,
+            SmartChain      = 4,
+            SLP             = 5,
+            Matic           = 6,
+            Optimism        = 7,
+            Arbitrum        = 8,
+            AVX20           = 9,
+            FTM20           = 10,
+            HRC20           = 11,
+            Ubiq            = 12,
+            KRC20           = 13,
+            Moonriver       = 14,
+            HecoChain       = 15,
+            SmartBCH        = 16,
+            EthereumClassic = 17,
+            ZHTLC           = 18,
+            Disabled        = 19,
+            All             = 20,
+            Size            = 21
         };
 
         Q_ENUM(CoinTypeEnum)

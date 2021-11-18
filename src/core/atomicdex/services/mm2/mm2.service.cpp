@@ -528,11 +528,13 @@ namespace atomic_dex
                     catch (const std::exception& error)
                     {
                         SPDLOG_ERROR("exception in batch_balance_and_tx: {}", error.what());
-                        // this->dispatcher_.trigger<tx_fetch_finished>(true);
+                        this->dispatcher_.trigger<tx_fetch_finished>(true);
                     }
                 })
             .then([this, batch = batch_array](pplx::task<void> previous_task)
-                  { this->handle_exception_pplx_task(previous_task, "batch_balance_and_tx", batch); });
+                  {
+                      this->handle_exception_pplx_task(previous_task, "batch_balance_and_tx", batch);
+                  });
     }
 
     std::tuple<nlohmann::json, std::vector<std::string>, std::vector<std::string>>
@@ -1267,6 +1269,12 @@ namespace atomic_dex
                 break;
             case CoinTypeGadget::Optimism:
                 out = construct_url_functor("ETH-OPT20", "ETHK-OPT20", "optimism_tx_history", "optimism_tx_history", ticker, address);
+                break;
+            case CoinTypeGadget::EthereumClassic:
+                out = construct_url_functor("ETC", "ETCT", "etc_tx_history", "etc_tx_history", ticker, address);
+                break;
+            case CoinTypeGadget::AVX20:
+                out = construct_url_functor("AVAX", "AVAXT", "avx_tx_history", "avx_tx_history", ticker, address);
                 break;
             default:
                 break;
