@@ -39,7 +39,7 @@ SetupPage
     }
 
 
-    image_scale: 0.7
+    image_scale: 1
     backgroundColor: 'transparent'
     image_path: Dex.CurrentTheme.bigLogoPath
 
