@@ -312,6 +312,14 @@ namespace atomic_dex
     settings_page::process_qrc_20_token_add(const QString& contract_address, const QString& coingecko_id, const QString& icon_filepath)
     {
         this->set_fetching_custom_token_data_busy(true);
+        if (auto url = QUrl(icon_filepath); !url.isLocalFile() || url.scheme().contains("http")) {
+            nlohmann::json out  = nlohmann::json::object();
+            out["error_message"] = "icon_filepath has to be a local file.";
+            out["error_code"]    = web::http::status_codes::BadRequest;
+            this->set_custom_token_data(nlohmann_json_object_to_qt_json_object(out));
+            this->set_fetching_custom_token_data_busy(false);
+            return;
+        }
         using namespace std::string_literals;
         std::string url            = "/contract/"s + contract_address.toStdString();
         auto        answer_functor = [this, contract_address, coingecko_id, icon_filepath](web::http::http_response resp)
@@ -400,6 +408,15 @@ namespace atomic_dex
     {
         this->set_fetching_custom_token_data_busy(true);
         using namespace std::string_literals;
+
+        if (auto url = QUrl(icon_filepath); !url.isLocalFile() || url.scheme().contains("http")) {
+            nlohmann::json out  = nlohmann::json::object();
+            out["error_message"] = "icon_filepath has to be a local file.";
+            out["error_code"]    = web::http::status_codes::BadRequest;
+            this->set_custom_token_data(nlohmann_json_object_to_qt_json_object(out));
+            this->set_fetching_custom_token_data_busy(false);
+            return;
+        }
 
         auto retrieve_functor_url = [ coin_type, contract_address ]() -> auto
         {
