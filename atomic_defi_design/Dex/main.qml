@@ -121,6 +121,7 @@ DexWindow
                                 app.currentWalletName = ""
                                 API.app.disconnect()
                                 app.onDisconnect()
+                                window.logged = false
                                 dialog.close()
                                 dialog.destroy()
                             },
@@ -225,7 +226,7 @@ DexWindow
                     DexLabel
                     {
                         id: _label
-                        text: API.app.wallet_mgr.wallet_default_name?? ""
+                        text: API.app.wallet_mgr.wallet_default_name ?? ""
                         font.family: 'Montserrat'
                         font.weight: Font.Medium
                         opacity: .7
