@@ -4,6 +4,8 @@ import QtQuick.Controls 2.15
 import Qt.labs.platform 1.0
 import Qaterial 1.0 as Qaterial
 
+import Dex.Themes 1.0 as Dex
+
 import "../Constants"
 import App 1.0
 import "../Components"
@@ -12,8 +14,8 @@ import "../Screens"
 DexPopup {
     id: root
 
-    width: 400
-    height: 440
+    width: 406
+    height: 526
 
     property
     var notification_map: [{
@@ -26,7 +28,7 @@ DexPopup {
         icon: Qaterial.Icons.emailOutline,
         color: DexTheme.foregroundColor
     }]
-    backgroundColor: Qt.darker(DexTheme.dexBoxBackgroundColor, 0.9)
+    backgroundColor: Dex.CurrentTheme.floatingBackgroundColor
 
     function reset() {
         notifications_list = []
@@ -335,61 +337,69 @@ DexPopup {
 
     ColumnLayout {
         anchors.fill: parent
-        Item {
-            Layout.preferredHeight: 65
-            Layout.fillWidth: parent
-            RowLayout {
-                anchors.fill: parent
-                DexLabel {
-                    Layout.alignment: Qt.AlignVCenter
-                    Layout.fillWidth: true
-                    leftPadding: 15
-                    font: DexTypo.head6
-                    text: "Notifications"
-                }
-                Qaterial.AppBarButton {
-                    enabled: list.count > 0
-                    Layout.alignment: Qt.AlignVCenter
-                    foregroundColor: DexTheme.foregroundColor
-                    icon.source: Qaterial.Icons.checkAll
-                    onClicked: notifications_list = []
-                }
+        anchors.margins: 30
+        anchors.topMargin: 20
+        spacing: 24
+        DexLabel 
+        {
+            Layout.fillWidth: true
+            font {
+                pixelSize: 20
+                weight: Font.Normal
             }
-            Rectangle {
-                height: 2
-                color: DexTheme.foregroundColor
-                opacity: .05
-                width: parent.width - 20
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.bottom
-            }
+            text: "Notifications"
         }
 
-        Item {
+        Item 
+        {
             Layout.fillWidth: true
             Layout.fillHeight: true
+
+            Qaterial.Icon {
+                
+                anchors.centerIn: parent
+                icon: Qaterial.Icons.bellOutline
+                size: 166
+                opacity: 0.03
+                
+            }
 
             DefaultText {
                 anchors.centerIn: parent
                 visible: !list.visible
                 text_value: qsTr("There isn't any notification")
-                font.pixelSize: Style.textSizeSmall2
+                font.pixelSize: 14
             }
 
             DefaultListView {
                 id: list
                 visible: notifications_list.length !== 0
-                anchors.fill: parent
+                width: parent.width + 68
+                height: parent.height
+                anchors.horizontalCenter: parent.horizontalCenter
                 model: notifications_list
                 delegate: Rectangle {
-                    color: mouseArea.containsMouse ? DexTheme.dexBoxBackgroundColor : 'transparent'
+                    gradient: Gradient
+                    {
+                        orientation: Qt.Horizontal
+                        GradientStop
+                        {
+                            position: 0.1255
+                            color: mouseArea.containsMouse ? Dex.CurrentTheme.notificationItemDelegateGradientStart : Dex.CurrentTheme.notificationItemDelegateGradientEnd
+                        }
+                        GradientStop
+                        {
+                            position: 0.933
+                            color: Dex.CurrentTheme.notificationItemDelegateGradientEnd
+                        }
+                    }
                     function removeNotification() {
                         notifications_list.splice(index, 1)
                         notifications_list = notifications_list
                     }
                     height: _column.height + 10
-                    width: list.width - 10
-                    MouseArea {
+                    width: list.width
+                    DexMouseArea {
                         id: mouseArea
                         hoverEnabled: true
                         anchors.fill: parent
@@ -510,6 +520,13 @@ DexPopup {
                     }
                 }
             }
+            
+        }
+
+        OutlineButton {
+            text: qsTr('Mark all as read')
+            height: 40
+            Layout.alignment: Qt.AlignHCenter
         }
     }
 }

@@ -72,8 +72,8 @@ DexRectangle
             onLogged:
             {
                 currentWalletName = walletName;
-                _currentPage = App.ScreenType.Dashboard;
                 window.logged = true
+                _currentPage = App.ScreenType.Dashboard;
             }
         }
     }
@@ -463,7 +463,12 @@ DexRectangle
         return showText(data);
     }
 
-    Component.onCompleted: loadTheme()
+    Component.onCompleted: {
+        loadTheme()
+        if(API.app.wallet_mgr.log_status()) {
+            window.logged = true
+        }
+    }
 
     Timer
     {

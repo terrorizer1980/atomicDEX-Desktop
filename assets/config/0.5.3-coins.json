@@ -344,6 +344,7 @@
     "type": "Matic",
     "active": false,
     "currently_enabled": false
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
   },
   "ANKR-BEP20": {
     "coin": "ANKR-BEP20",
@@ -362,6 +363,64 @@
     "active": false,
     "currently_enabled": false
   },
+  "ANKR-ERC20": {
+    "coin": "ANKR-ERC20",
+    "name": "Ankr",
+    "coinpaprika_id": "ankr-ankr-network",
+    "coingecko_id": "ankr",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ARRR-BEP20": {
+    "coin": "ARRR-BEP20",
+    "name": "Pirate",
+    "coinpaprika_id": "arrr-pirate",
+    "coingecko_id": "pirate-chain",
+    "nomics_id": "ARRR",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false,
+    "wallet_only": true
+=======
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
+  },
+  "ARPA-BEP20": {
+    "coin": "ARPA-BEP20",
+    "name": "ARPA Chain",
+    "coinpaprika_id": "arpa-arpa-chain",
+    "coingecko_id": "arpa-chain",
+    "nomics_id": "ARPA",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
+=======
   "ANKR-ERC20": {
     "coin": "ANKR-ERC20",
     "name": "Ankr",
@@ -416,6 +475,7 @@
     "active": false,
     "currently_enabled": false
   },
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
   "ARPA-ERC20": {
     "coin": "ARPA-ERC20",
     "name": "ARPA Chain",
@@ -1184,6 +1244,49 @@
     "active": false,
     "currently_enabled": false
   },
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
+=======
+  "BTX": {
+    "coin": "BTX",
+    "name": "BitCore",
+    "coinpaprika_id": "btx-bitcore",
+    "coingecko_id": "bitcore",
+    "nomics_id": "BTX",
+    "electrum": [
+      {
+        "url": "btx-electrumx.coinsmunity.com:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": true
+      }
+    ],
+    "explorer_url": [
+      "https://chainz.cryptoid.info/btx/"
+    ],
+    "explorer_tx_url": "tx.dws?",
+    "explorer_address_url": "address.dws?",
+    "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "BTX-BEP20": {
+    "coin": "BTX-BEP20",
+    "name": "BitCore",
+    "coinpaprika_id": "btx-bitcore",
+    "coingecko_id": "bitcore",
+    "nomics_id": "BTX",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
   "BET": {
     "coin": "BET",
     "name": "BET",
@@ -3605,6 +3708,7 @@
     "type": "BEP-20",
     "active": false,
     "currently_enabled": false
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
   },
   "MM-ERC20": {
     "coin": "MM-ERC20",
@@ -3673,6 +3777,8 @@
     "type": "Moonriver",
     "active": false,
     "currently_enabled": false
+=======
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
   },
   "MM-PLG20": {
     "coin": "MM-PLG20",
@@ -3690,6 +3796,75 @@
     "active": false,
     "currently_enabled": false
   },
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
+=======
+  "MM-AVX20": {
+    "coin": "MM-AVX20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-BEP20": {
+    "coin": "MM-BEP20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-MVR20": {
+    "coin": "MM-MVR20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://rpc.moonriver.moonbeam.network"
+    ],
+    "explorer_url": [
+      "https://blockscout.moonriver.moonbeam.network/"
+    ],
+    "type": "Moonriver",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-PLG20": {
+    "coin": "MM-PLG20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
   "MSHARK": {
     "coin": "MSHARK",
     "name": "MiliShark",
@@ -5850,6 +6025,45 @@
     "type": "QRC-20",
     "active": false,
     "currently_enabled": false
+<<<<<<< HEAD:assets/config/0.5.3-coins.json
+=======
+  },
+  "NZDS-ERC20": {
+    "coin": "NZDS-ERC20",
+    "name": "NZD Stablecoin",
+    "forex_id": "NZD",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "nzd-stablecoin",
+    "nomics_id": "NZDS",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "NZDS-PLG20": {
+    "coin": "NZDS-PLG20",
+    "name": "NZD Stablecoin",
+    "forex_id": "NZD",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "nzd-stablecoin",
+    "nomics_id": "NZDS",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+>>>>>>> parent of 7310dbbb2 (Revert "Merge branch 'dev' into startup_remake"):assets/config/0.5.2-coins.json
   },
   "OMG-ERC20": {
     "coin": "OMG-ERC20",
@@ -6351,6 +6565,22 @@
       "https://bscscan.com/"
     ],
     "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "TRYB-PLG20": {
+    "coin": "TRYB-PLG20",
+    "name": "BiLira",
+    "forex_id": "TRY",
+    "coinpaprika_id": "tryb-bilira",
+    "coingecko_id": "bilira",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
     "active": false,
     "currently_enabled": false
   },
