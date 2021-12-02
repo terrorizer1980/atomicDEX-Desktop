@@ -54,10 +54,6 @@ namespace atomic_dex::komodo_prices::api
         {
             x = provider::coinpaprika;
         }
-        else if (j == "forex")
-        {
-            x = provider::forex;
-        }
         else if (j == "nomics")
         {
             x = provider::nomics;

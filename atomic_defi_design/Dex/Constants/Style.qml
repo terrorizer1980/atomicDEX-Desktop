@@ -255,8 +255,7 @@ QtObject {
             case 'Moonriver':   return getCoinColor("MOVR")
             case 'HecoChain':   return getCoinColor("HECO")
             case 'SmartBCH':    return getCoinColor("SBCH")
-            case 'Ethereum Classic':  return getCoinColor("ETC")
-            case 'RSK Smart Bitcoin': return getCoinColor("BTC")
+            case 'Ethereum Classic': return getCoinColor("ETC")
             default:            return getCoinColor("BTC")
         }
     }
@@ -294,7 +293,6 @@ QtObject {
                                           "BRZ": "#B5DEC3",
                                           "BSTY": "#78570D",
                                           "BTC": "#E9983C",
-                                          "RBTC": "#E9983C",
                                           "BTT": "#666666",
                                           "BTE": "#FFE201",
                                           "BTX": "#FB30A6",
@@ -304,7 +302,6 @@ QtObject {
                                           "CRV": "#517AB5",
                                           "DGC": "#BC7600",
                                           "DIMI": "#0BFBE2",
-                                          "DUST": "#6A032F",
                                           "EOS": "#4D4D4D",
                                           "FET": "#202944",
                                           "FTC": "#FFFFFF",
@@ -331,7 +328,6 @@ QtObject {
                                           "CADC": "#FF6666",
                                           "DGB": "#006AD2",
                                           "DOT": "#E80082",
-                                          "FLUX": "#2B61D1",
                                           "FIRO": "#BB2100",
                                           "LBC": "#00775C",
                                           "LTC": "#BFBBBB",
@@ -392,6 +388,8 @@ QtObject {
                                           "PAXG": "#DABE37",
                                           "REN": "#595959",
                                           "SMTF": "#F75836",
+                                          "SMTF-OLD": "#F75836",
+                                          "SMTF-v2": "#F75836",
                                           "SUSHI": "#E25DA8",
                                           "TRYB": "#0929AA",
                                           "TUSD": "#2E3181",
@@ -446,7 +444,6 @@ QtObject {
                                           "ONE": "#00BEEE",
                                           "ONT": "#2692AF",
                                           "POWR": "#05BCAA",
-                                          "PPC": "#46BC60",
                                           "QI": "#FFFFFF",
                                           "QIAIR": "#FEFEFE",
                                           "QKC": "#2175B4",

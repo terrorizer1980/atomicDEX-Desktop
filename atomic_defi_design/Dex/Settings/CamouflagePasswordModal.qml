@@ -12,7 +12,7 @@ BasicModal {
     width: 800
 
     onClosed: {
-        input_password_suffix.reset()
+        input_password.reset()
     }
 
     ModalContent {
@@ -60,12 +60,9 @@ BasicModal {
         }
 
         PasswordForm {
-            id: input_password_suffix
+            id: input_password
             Layout.fillWidth: true
-            field_title: qsTr("Password suffix")
-            confirm_field_title: qsTr("Confirm pasword suffix")
-            field.placeholderText: qsTr("Enter a password suffix")
-            confirm_field.placeholderText: qsTr("Enter the same password suffix to confirm")
+            field.placeholderText: qsTr("Enter a suffix")
             high_security: false
         }
 
@@ -86,9 +83,9 @@ BasicModal {
                 leftPadding: 40
                 rightPadding: 40
                 radius: 20
-                enabled: input_password_suffix.isValid()
+                enabled: input_password.isValid()
                 onClicked: {
-                    API.app.wallet_mgr.set_emergency_password(input_password_suffix.field.text)
+                    API.app.wallet_mgr.set_emergency_password(input_password.field.text)
                     root.close()
                 }
             }

@@ -9,7 +9,7 @@ import QtGraphicalEffects 1.0
 import "../Constants"
 import App 1.0
 
-DexComboBox {
+RoundComboBox {
     id: control
     model: API.app.settings_pg.get_available_langs()
     displayText: API.app.settings_pg.lang
@@ -53,5 +53,10 @@ DexComboBox {
             anchors.verticalCenter: parent.verticalCenter
             source: General.image_path + "lang/" + control.displayText + ".png"
         }
+    }
+
+    DexMouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.NoButton
     }
 }
