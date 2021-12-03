@@ -16,17 +16,46 @@ DexPopup {
 
     width: 406
     height: 526
-
-    property
-    var notification_map: [{
-        icon: Qaterial.Icons.arrowUpCircleOutline,
-        color: DexTheme.redColor
+    property var default_gradient: Gradient
+    {
+        orientation: Qt.Horizontal
+        GradientStop
+        {
+            position: 0.1255
+            color: Dex.CurrentTheme.gradientButtonPressedStartColor 
+        }
+        GradientStop
+        {
+            position: 0.933
+            color: Dex.CurrentTheme.gradientButtonPressedEndColor
+        }
+    }
+    property var default_red_gradient: Gradient
+    {
+        orientation: Qt.Horizontal
+        GradientStop
+        {
+            position: 0.1255
+            color: Dex.CurrentTheme.tradeSellModeSelectorBackgroundColorStart
+        }
+        GradientStop
+        {
+            position: 0.933
+            color: Dex.CurrentTheme.tradeSellModeSelectorBackgroundColorEnd
+        }
+    }
+    property var notification_map: [{
+        icon: Qaterial.Icons.arrowTopRight,
+        color: Dex.CurrentTheme.foregroundColor,
+        gradient: default_red_gradient
     }, {
-        icon: Qaterial.Icons.arrowDownCircleOutline,
-        color: DexTheme.greenColor
+        icon: Qaterial.Icons.arrowBottomRight,
+        color: Dex.CurrentTheme.foregroundColor,
+        gradient: default_gradient
     }, {
-        icon: Qaterial.Icons.emailOutline,
-        color: DexTheme.foregroundColor
+        icon: Qaterial.Icons.messageOutline,
+        color: DexTheme.foregroundColor,
+        gradient: default_gradient
     }]
     backgroundColor: Dex.CurrentTheme.floatingBackgroundColor
 
@@ -374,23 +403,28 @@ DexPopup {
             DefaultListView {
                 id: list
                 visible: notifications_list.length !== 0
-                width: parent.width + 68
+                width: parent.width + 58
                 height: parent.height
                 anchors.horizontalCenter: parent.horizontalCenter
                 model: notifications_list
-                delegate: Rectangle {
-                    gradient: Gradient
-                    {
-                        orientation: Qt.Horizontal
-                        GradientStop
+                delegate: Item {
+
+                    Rectangle {
+                        anchors.fill: parent
+                        opacity: 0.7
+                        gradient: Gradient
                         {
-                            position: 0.1255
-                            color: mouseArea.containsMouse ? Dex.CurrentTheme.notificationItemDelegateGradientStart : Dex.CurrentTheme.notificationItemDelegateGradientEnd
-                        }
-                        GradientStop
-                        {
-                            position: 0.933
-                            color: Dex.CurrentTheme.notificationItemDelegateGradientEnd
+                            orientation: Qt.Horizontal
+                            GradientStop
+                            {
+                                position: 0.1255
+                                color: mouseArea.containsMouse ? Dex.CurrentTheme.buttonColorEnabled : 'transparent'
+                            }
+                            GradientStop
+                            {
+                                position: 0.933
+                                color: 'transparent'
+                            }
                         }
                     }
                     function removeNotification() {
@@ -399,32 +433,28 @@ DexPopup {
                     }
                     height: _column.height + 10
                     width: list.width
-                    DexMouseArea {
-                        id: mouseArea
-                        hoverEnabled: true
-                        anchors.fill: parent
-                        onClicked: {
-                            performNotificationAction(notifications_list[index])
-                            removeNotification()
-                        }
-                    }
+                    
                     RowLayout {
                         anchors.fill: parent
                         Item {
                             Layout.fillHeight: true
                             Layout.preferredWidth: 60
-                            Qaterial.ColorIcon {
-                                anchors.verticalCenter: parent.verticalCenter
-                                source: notification_map[modelData.kind].icon
-                                iconSize: 32
-                                x: 10
-                                color: notification_map[modelData.kind].color
-                                opacity: .6
+                            Rectangle {
+                                width:  23
+                                height: 23
+                                radius: 12
+                                gradient: notification_map[modelData.kind].gradient
+
+                                anchors.right: parent.right 
+                                anchors.rightMargin: -5
+                                y: 13
+                                Qaterial.Icon {
+                                    anchors.centerIn: parent
+                                    size: 16
+                                    icon: notification_map[modelData.kind].icon
+                                    
+                                }
                             }
-                        }
-                        VerticalLine {
-                            Layout.preferredHeight: 50
-                            Layout.preferredWidth: 1
                         }
                         Item {
                             Layout.fillHeight: true
@@ -433,25 +463,25 @@ DexPopup {
                                 id: _column
                                 width: parent.width
                                 leftPadding: 15
-                                topPadding: 5
+                                topPadding: 10
                                 bottomPadding: 5
                                 spacing: 5
                                 DexLabel {
                                     text: modelData.title
-                                    font: DexTypo.body1
+                                    font: DexTypo.subtitle1
                                     width: parent.width
                                     wrapMode: Label.Wrap
                                 }
                                 DexLabel {
                                     text: modelData.message
                                     font: DexTypo.subtitle2
-                                    width: parent.width
+                                    width: parent.width - 20
                                     wrapMode: Label.Wrap
-                                    color: DexTheme.accentColor
                                 }
                                 DexLabel {
                                     text: modelData.human_date
                                     font: DexTypo.caption
+                                    opacity: 0.7
                                 }
 
                             }
@@ -460,8 +490,10 @@ DexPopup {
                                 scale: .6
                                 anchors.bottom: parent.bottom
                                 anchors.right: parent.right
+                                anchors.rightMargin: 5
                                 anchors.bottomMargin: -4
                                 foregroundColor: DexTheme.foregroundColor
+                                visible: modelData.event_name !== "check"
                                 icon.source: {
                                     let name
                                     switch (modelData.event_name) {
@@ -509,14 +541,15 @@ DexPopup {
                         }
                     }
 
-                    Rectangle {
-                        height: 2
-                        color: DexTheme.foregroundColor
-                        opacity: .05
-                        visible: !(list.count == index + 1)
-                        width: parent.width - 20
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.bottom: parent.bottom
+                    DexMouseArea {
+                        id: mouseArea
+                        hoverEnabled: true
+                        cursorShape: "PointingHandCursor"
+                        anchors.fill: parent
+                        onClicked: {
+                            performNotificationAction(notifications_list[index])
+                            removeNotification()
+                        }
                     }
                 }
             }
@@ -527,6 +560,7 @@ DexPopup {
             text: qsTr('Mark all as read')
             height: 40
             Layout.alignment: Qt.AlignHCenter
+            onClicked: root.reset()
         }
     }
 }
