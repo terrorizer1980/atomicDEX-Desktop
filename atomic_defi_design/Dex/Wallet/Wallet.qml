@@ -48,6 +48,8 @@ RowLayout
     Sidebar
     {
         id: sidebar
+        Layout.preferredHeight: wallet.height + 40
+        Layout.topMargin: -40
     }
 
     // Right side, main

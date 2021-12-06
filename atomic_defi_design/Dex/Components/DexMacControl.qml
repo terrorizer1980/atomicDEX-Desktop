@@ -11,19 +11,9 @@ Item
 {
     anchors.fill: parent
     Item
-    {
+    {   // Top header mouse move
         width: parent.width
-        height: 30
-
-        Rectangle
-        {
-            width: parent.width
-            height: 30
-            border.color: Dex.CurrentTheme.lineSeparatorColor
-            border.width: 1.5
-            anchors.horizontalCenter: parent.horizontalCenter
-            color: Dex.CurrentTheme.backgroundColor
-        }
+        height: 40
 
         MouseArea
         {
@@ -36,7 +26,6 @@ Item
                 else window.showMaximized()
             }
         }
-        DexMacosHeaderControl { anchors.verticalCenter: parent.verticalCenter }
     }
     Item
     {

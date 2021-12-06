@@ -21,14 +21,15 @@ Item
     property real   lineHeight: 44
     property var    currentLineType: Main.LineType.Portfolio
     property alias  _selectionCursor: _selectionCursor
-    property bool   containsMouse: mouseArea.containsMouse
+    property bool   containsMouse: mouseArea.containsMouse && mouseArea.mouseY > 30
 
     signal lineSelected(var lineType)
     signal settingsClicked()
     signal privacySwitched(var checked)
 
     width: isExpanded ? 200 : 80
-    height: parent.height
+    height: parent.height + 40
+    y: - 40
 
     // Background Rectangle
     Rectangle
@@ -87,7 +88,7 @@ Item
             height: 180
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top
-            anchors.topMargin: 16
+            anchors.topMargin: window.isOsx ? 32 : 16
         }
 
         Center
