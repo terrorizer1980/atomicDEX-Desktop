@@ -49,10 +49,11 @@ namespace atomic_dex
             HecoChain       = 15,
             SmartBCH        = 16,
             EthereumClassic = 17,
-            ZHTLC           = 18,
-            Disabled        = 19,
-            All             = 20,
-            Size            = 21
+            RSK             = 18,
+            ZHTLC           = 19,
+            Disabled        = 20,
+            All             = 21,
+            Size            = 22
         };
 
         Q_ENUM(CoinTypeEnum)
