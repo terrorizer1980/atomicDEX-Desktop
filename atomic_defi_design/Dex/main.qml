@@ -58,7 +58,6 @@ DexWindow
         {
             visible: !isOsx
         }
-
         DexMacControl
         {
             visible: isOsx
