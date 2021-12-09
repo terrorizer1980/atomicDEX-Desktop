@@ -54,10 +54,12 @@
         <file>assets/images/coins/btcz.png</file>
         <file>assets/images/coins/btt.png</file>
         <file>assets/images/coins/btu.png</file>
+        <file>assets/images/coins/btx.png</file>
         <file>assets/images/coins/busd.png</file>
         <file>assets/images/coins/bte.png</file>
         <file>assets/images/coins/cadc.png</file>
         <file>assets/images/coins/cake.png</file>
+        <file>assets/images/coins/case.png</file>
         <file>assets/images/coins/cdn.png</file>
         <file>assets/images/coins/ccl.png</file>
         <file>assets/images/coins/cel.png</file>
@@ -85,6 +87,7 @@
         <file>assets/images/coins/doge.png</file>
         <file>assets/images/coins/dot.png</file>
         <file>assets/images/coins/dp.png</file>
+        <file>assets/images/coins/dust.png</file>
         <file>assets/images/coins/dx.png</file>
         <file>assets/images/coins/eca.png</file>
         <file>assets/images/coins/efl.png</file>
@@ -99,6 +102,8 @@
         <file>assets/images/coins/ethk.png</file>
         <file>assets/images/coins/ethr.png</file>
         <file>assets/images/coins/eurs.png</file>
+        <file>assets/images/coins/fet.png</file>
+        <file>assets/images/coins/flux.png</file>
         <file>assets/images/coins/fil.png</file>
         <file>assets/images/coins/firo.png</file>
         <file>assets/images/coins/fjc.png</file>
@@ -109,6 +114,7 @@
         <file>assets/images/coins/gleec.png</file>
         <file>assets/images/coins/gno.png</file>
         <file>assets/images/coins/grms.png</file>
+        <file>assets/images/coins/gms.png</file>
         <file>assets/images/coins/grs.png</file>
         <file>assets/images/coins/grt.png</file>
         <file>assets/images/coins/hex.png</file>
@@ -124,6 +130,9 @@
         <file>assets/images/coins/ink.png</file>
         <file>assets/images/coins/iota.png</file>
         <file>assets/images/coins/iotx.png</file>
+        <file>assets/images/coins/jchf.png</file>
+        <file>assets/images/coins/jeur.png</file>
+        <file>assets/images/coins/jgbp.png</file>
         <file>assets/images/coins/jpyc.png</file>
         <file>assets/images/coins/jrt.png</file>
         <file>assets/images/coins/jstr.png</file>
@@ -140,25 +149,29 @@
         <file>assets/images/coins/lrc.png</file>
         <file>assets/images/coins/lstr.png</file>
         <file>assets/images/coins/ltc.png</file>
-        <file>assets/images/coins/lynx.png</file>
         <file>assets/images/coins/ltfn.png</file>
+        <file>assets/images/coins/luna.png</file>
+        <file>assets/images/coins/lynx.png</file>
         <file>assets/images/coins/mana.png</file>
         <file>assets/images/coins/matic.png</file>
         <file>assets/images/coins/matictest.png</file>
         <file>assets/images/coins/mcl.png</file>
         <file>assets/images/coins/mesh.png</file>
-        <file>assets/images/coins/movr.png</file>
         <file>assets/images/coins/mgw.png</file>
+        <file>assets/images/coins/mir.png</file>
         <file>assets/images/coins/mkr.png</file>
         <file>assets/images/coins/mln.png</file>
         <file>assets/images/coins/mm.png</file>
         <file>assets/images/coins/mona.png</file>
         <file>assets/images/coins/morty.png</file>
+        <file>assets/images/coins/movr.png</file>
         <file>assets/images/coins/mshark.png</file>
         <file>assets/images/coins/nav.png</file>
         <file>assets/images/coins/near.png</file>
+        <file>assets/images/coins/nexo.png</file>
         <file>assets/images/coins/nmc.png</file>
         <file>assets/images/coins/nvc.png</file>
+        <file>assets/images/coins/nzds.png</file>
         <file>assets/images/coins/oc.png</file>
         <file>assets/images/coins/ocean.png</file>
         <file>assets/images/coins/okb.png</file>
@@ -171,6 +184,7 @@
         <file>assets/images/coins/pic.png</file>
         <file>assets/images/coins/pnk.png</file>
         <file>assets/images/coins/powr.png</file>
+        <file>assets/images/coins/ppc.png</file>
         <file>assets/images/coins/put.png</file>
         <file>assets/images/coins/qbt.png</file>
         <file>assets/images/coins/qc.png</file>
@@ -181,6 +195,7 @@
         <file>assets/images/coins/qrc-20.png</file>
         <file>assets/images/coins/qrc20.png</file>
         <file>assets/images/coins/qtum.png</file>
+        <file>assets/images/coins/rbtc.png</file>
         <file>assets/images/coins/ren.png</file>
         <file>assets/images/coins/rep.png</file>
         <file>assets/images/coins/rev.png</file>
@@ -188,14 +203,15 @@
         <file>assets/images/coins/rick.png</file>
         <file>assets/images/coins/rlc.png</file>
         <file>assets/images/coins/rsr.png</file>
+        <file>assets/images/coins/rtm.png</file>
         <file>assets/images/coins/rvn.png</file>
         <file>assets/images/coins/s4f.png</file>
+        <file>assets/images/coins/sbch.png</file>
         <file>assets/images/coins/sfusd.png</file>
         <file>assets/images/coins/shr.png</file>
+        <file>assets/images/coins/sibm.png</file>
         <file>assets/images/coins/skl.png</file>
         <file>assets/images/coins/smart-chain.png</file>
-        <file>assets/images/coins/smtf-old.png</file>
-        <file>assets/images/coins/smtf-v2.png</file>
         <file>assets/images/coins/smtf.png</file>
         <file>assets/images/coins/snt.png</file>
         <file>assets/images/coins/snx.png</file>
@@ -212,6 +228,7 @@
         <file>assets/images/coins/sys.png</file>
         <file>assets/images/coins/tblk.png</file>
         <file>assets/images/coins/tbtc.png</file>
+        <file>assets/images/coins/tel.png</file>
         <file>assets/images/coins/thc.png</file>
         <file>assets/images/coins/thx.png</file>
         <file>assets/images/coins/tkl.png</file>
@@ -235,6 +252,7 @@
         <file>assets/images/coins/usbl.png</file>
         <file>assets/images/coins/usdc.png</file>
         <file>assets/images/coins/usdt.png</file>
+        <file>assets/images/coins/ust.png</file>
         <file>assets/images/coins/utk.png</file>
         <file>assets/images/coins/val.png</file>
         <file>assets/images/coins/vgx.png</file>
@@ -269,6 +287,8 @@
         <file>assets/images/providers/binance.png</file>
         <file>assets/images/providers/coingecko.png</file>
         <file>assets/images/providers/coinpaprika.png</file>
+        <file>assets/images/providers/forex.png</file>
+        <file>assets/images/providers/nomics.png</file>
         <file>assets/images/dashboard-copy.svg</file>
         <file>assets/images/dashboard-eye-hide.svg</file>
         <file>assets/images/dashboard-eye.svg</file>
@@ -277,7 +297,7 @@
         <file>assets/images/dex-tray-icon.png</file>
         <file>assets/images/exchange-exchange.svg</file>
         <file>assets/images/exchange-search.svg</file>
-        <file>assets/images/exchange-trade-complete.svg</file>
+        <file>assets/images/exchange-trade-complete.png</file>
         <file>assets/images/guide_coingecko_id.gif</file>
         <file>assets/images/guide_contract_address_erc.gif</file>
         <file>assets/images/guide_contract_address_qrc.gif</file>
@@ -445,10 +465,12 @@
         <file>Dex/Components/PrimaryButton.qml</file>
         <file>Dex/Components/RestartModal.qml</file>
         <file>Dex/Components/RightClickMenu.qml</file>
+        <file>Dex/Components/RoundComboBox.qml</file>
         <file>Dex/Components/SearchField.qml</file>
         <file>Dex/Components/Separator.qml</file>
         <file>Dex/Components/SetupPage.qml</file>
         <file>Dex/Components/SidebarPanel.qml</file>
+        <file>Dex/Components/SquareButton.qml</file>
         <file>Dex/Components/SwapIcon.qml</file>
         <file>Dex/Components/TextAreaWithTitle.qml</file>
         <file>Dex/Components/TextEditWithTitle.qml</file>
@@ -473,6 +495,7 @@
         <file>Dex/Exchange/Exchange.qml</file>
         <file>Dex/Exchange/History/History.qml</file>
         <file>Dex/Exchange/Orders/Orders.qml</file>
+        <file>Dex/Exchange/ProView/MarketModeSelector.qml</file>
         <file>Dex/Exchange/Trade/BestOrder/Header.qml</file>
         <file>Dex/Exchange/Trade/BestOrder/List.qml</file>
         <file>Dex/Exchange/Trade/BestOrder/ListDelegate.qml</file>
@@ -521,11 +544,13 @@
         <file>Dex/NoConnection.qml</file>
         <file>Dex/Portfolio/Portfolio.qml</file>
         <file>Dex/Screens/Dashboard.qml</file>
-        <file>Dex/Screens/FirstLaunch.qml</file>
-        <file>Dex/Screens/InitialLoading.qml</file>
-        <file>Dex/Screens/Login.qml</file>
-        <file>Dex/Screens/NewUser.qml</file>
-        <file>Dex/Screens/RecoverSeed.qml</file>
+        <file>Dex/Screens/qmldir</file>
+        <file>Dex/Screens/Startup/ImportWallet.qml</file>
+        <file>Dex/Screens/Startup/Logging.qml</file>
+        <file>Dex/Screens/Startup/Login.qml</file>
+        <file>Dex/Screens/Startup/Main.qml</file>
+        <file>Dex/Screens/Startup/NewWallet.qml</file>
+        <file>Dex/Screens/Startup/WalletsView.qml</file>
         <file>Dex/Settings/AddCustomCoinModal.qml</file>
         <file>Dex/Settings/CamouflagePasswordModal.qml</file>
         <file>Dex/Settings/Combo_fiat.qml</file>
@@ -578,5 +603,6 @@
         <file>Dex/Portfolio/AssetsList.qml</file>
         <file>Dex/main.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>Dex/Components/PopupManager.qml</file>
     </qresource>
 </RCC>

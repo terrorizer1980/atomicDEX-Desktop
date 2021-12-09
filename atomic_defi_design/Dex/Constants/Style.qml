@@ -99,6 +99,7 @@ QtObject {
     readonly property string colorGreen2:  dark_theme ? "#14bca6" : "#14bca6"
     readonly property string colorGreen3:  dark_theme ? "#07433b" : "#74FBEE"
 
+    readonly property string colorWhite0:  dark_theme ? "#FFFFFF" : "#FFFFFF"
     readonly property string colorWhite1:  dark_theme ? "#FFFFFF" : "#000000"
     readonly property string colorWhite2:  dark_theme ? "#F9F9F9" : "#111111"
     readonly property string colorWhite3:  dark_theme ? "#F0F0F0" : "#222222"
@@ -238,7 +239,7 @@ QtObject {
         {
             case 'ERC-20':      return getCoinColor("ETH")
             case 'QRC-20':      return getCoinColor("QTUM")
-            case 'Komodo Chain': return getCoinColor("KMD")
+            case 'Smart Chain': return getCoinColor("KMD")
             case 'UTXO':        return getCoinColor("BTC")
             case 'BEP-20':      return getCoinColor("BNB")
             case 'SLP':         return getCoinColor("BCH")
@@ -253,6 +254,9 @@ QtObject {
             case 'KRC-20':      return getCoinColor("KCS")
             case 'Moonriver':   return getCoinColor("MOVR")
             case 'HecoChain':   return getCoinColor("HECO")
+            case 'SmartBCH':    return getCoinColor("SBCH")
+            case 'Ethereum Classic':  return getCoinColor("ETC")
+            case 'RSK Smart Bitcoin': return getCoinColor("BTC")
             default:            return getCoinColor("BTC")
         }
     }
@@ -290,18 +294,25 @@ QtObject {
                                           "BRZ": "#B5DEC3",
                                           "BSTY": "#78570D",
                                           "BTC": "#E9983C",
+                                          "RBTC": "#E9983C",
                                           "BTT": "#666666",
                                           "BTE": "#FFE201",
+                                          "BTX": "#FB30A6",
                                           "CAKE": "#D1884F",
+                                          "CASE": "#FFFF12",
                                           "CDN": "#90191C",
                                           "CLC": "#0970DC",
+                                          "CRV": "#517AB5",
                                           "DGC": "#BC7600",
                                           "DIMI": "#0BFBE2",
+                                          "DUST": "#6A032F",
                                           "EOS": "#4D4D4D",
+                                          "FET": "#202944",
                                           "FTC": "#FFFFFF",
                                           "FTM": "#13B5EC",
                                           "GLEEC": "#8C41FF",
                                           "GRMS": "#12B690",
+                                          "GMS": "#0BFBE2",
                                           "GRS": "#377E96",
                                           "GRT": "#6E54DB",
                                           "IOTA": "#404040",
@@ -322,11 +333,14 @@ QtObject {
                                           "CADC": "#FF6666",
                                           "DGB": "#006AD2",
                                           "DOT": "#E80082",
+                                          "FLUX": "#2B61D1",
                                           "FIRO": "#BB2100",
                                           "LBC": "#00775C",
                                           "LTC": "#BFBBBB",
+                                          "LUNA": "#FFD83D",
                                           "LYNX": "#0071BA",
                                           "LTFN": "#0099CC",  
+                                          "MIR": "#2C9FEF",
                                           "XPM": "#A67522",
                                           "XVC": "#B50126",
                                           "ZEC": "#ECB244",
@@ -350,12 +364,16 @@ QtObject {
                                           "MONA": "#DEC799",
                                           "MOVR": "#52CCC9",
                                           "NMC": "#186C9D",
+                                          "NZDS": "#1B3044",
                                           "RFOX": "#D83331",
                                           "BOTS": "#F69B57",
                                           "MCL": "#EA0000",
                                           "MM": "#F5B700",
                                           "CCL": "#FFE400",
                                           "BET": "#F69B57",
+                                          "JCHF": "#D80027",
+                                          "JEUR": "#003399",
+                                          "JGBP": "#C8102E",
                                           "JRT": "#5EFC84",
                                           "SUPERNET": "#F69B57",
                                           "REVS": "#F69B57",
@@ -367,15 +385,15 @@ QtObject {
                                           "1INCH": "#95A7C5",
                                           "BABYDOGE": "#F3AA47",
                                           "BAT": "#FF5000",
-                                          "BUSD": "#EDB70B",
+                                          "BUSD": "#F0B90B",
+                                          "HUSD": "#0075FB",
                                           "DAI": "#B68900",
                                           "USDC": "#317BCB",
                                           "USDT": "#26A17B",
                                           "PAX": "#408C69",
                                           "PAXG": "#DABE37",
+                                          "REN": "#595959",
                                           "SMTF": "#F75836",
-                                          "SMTF-OLD": "#F75836",
-                                          "SMTF-v2": "#F75836",
                                           "SUSHI": "#E25DA8",
                                           "TRYB": "#0929AA",
                                           "TUSD": "#2E3181",
@@ -400,7 +418,7 @@ QtObject {
                                           "CVC": "#3AB03E",
                                           "CVT": "#4B0082",
                                           "PIC": "#04D9FF",
-                                          "DODO": "#FFF706",
+                                          "DODO": "#FAF621",
                                           "EFL": "#FF940B",
                                           "EGLD": "#1D4CB5",
                                           "ELF": "#2B5EBB",
@@ -418,23 +436,29 @@ QtObject {
                                           "LEO": "#F79B2C",
                                           "LINK": "#356CE4",
                                           "LRC": "#32C2F8",
+                                          "LSTR": "#7E3193",
                                           "MANA": "#FF3C6C",
                                           "MATIC": "#804EE1",
                                           "MKR": "#1BAF9F",
                                           "NEAR": "#595959",
+                                          "NEXO": "#A3B3D6",
                                           "NVC": "#FCF96D",
                                           "OCEAN": "#595959",
                                           "OMG": "#595959",
-                                          "ONE": "#33D4D3",
+                                          "ONE": "#00BEEE",
                                           "ONT": "#2692AF",
                                           "POWR": "#05BCAA",
+                                          "PPC": "#46BC60",
                                           "QI": "#FFFFFF",
                                           "QIAIR": "#FEFEFE",
                                           "QKC": "#2175B4",
-                                          "QNT": "#46DDC8",
+                                          "QNT": "#000000",
                                           "REP": "#0E0E21",
                                           "REV": "#78034D",
                                           "RLC": "#FFE100",
+                                          "RTM": "#B74427",
+                                          "SBCH": "#74dd54",
+                                          "SIBM": "#0C4855",
                                           "SFUSD": "#9881B8",
                                           "SNT": "#596BED",
                                           "SNX": "#00D1FF",
@@ -443,12 +467,14 @@ QtObject {
                                           "STORJ": "#2683FF",
                                           "SXP": "#FD5F3B",
                                           "SYS": "#0084C7",
-                                          "TKL": "#1E2835",
+                                          "TEL": "#1BD8FF",
+                                          "TKL": "#536E93",
                                           "TRC": "#096432",
                                           "TRX": "#F30031",
                                           "TSL": "#64B082",
                                           "UIS": "#008DCD",
                                           "UNO": "#2F87BB",
+                                          "UST": "#5493F7",
                                           "VAL": "#1EEC84",
                                           "VITE": "#007AFF",
                                           "VRM": "#586A7A",

@@ -1,58 +1,127 @@
 {
+  "1INCH-AVX20": {
+    "coin": "1INCH-AVX20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "1INCH-BEP20": {
-      "coin": "1INCH-BEP20",
-      "name": "1inch",
-      "coinpaprika_id": "1inch-1inch",
-      "coingecko_id": "1inch",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "1INCH-BEP20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "1INCH-ERC20": {
-      "coin": "1INCH-ERC20",
-      "name": "1inch",
-      "coinpaprika_id": "1inch-1inch",
-      "coingecko_id": "1inch",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "1INCH-ERC20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "1INCH-HRC20": {
+    "coin": "1INCH-HRC20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "1INCH-KRC20": {
+    "coin": "1INCH-KRC20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "1INCH-PLG20": {
-      "coin": "1INCH-PLG20",
-      "name": "1inch",
-      "coinpaprika_id": "1inch-1inch",
-      "coingecko_id": "1inch",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "1INCH-PLG20",
+    "name": "1inch",
+    "coinpaprika_id": "1inch-1inch",
+    "coingecko_id": "1inch",
+    "nomics_id": "1INCH",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "AAVE-AVX20": {
+    "coin": "AAVE-AVX20",
+    "name": "Aave",
+    "coinpaprika_id": "aave-new",
+    "coingecko_id": "aave",
+    "nomics_id": "AAVE",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
   },
   "AAVE-BEP20": {
     "coin": "AAVE-BEP20",
     "name": "Aave",
     "coinpaprika_id": "aave-new",
     "coingecko_id": "aave",
+    "nomics_id": "AAVE",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -70,6 +139,7 @@
     "name": "Aave",
     "coinpaprika_id": "aave-new",
     "coingecko_id": "aave",
+    "nomics_id": "AAVE",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -82,11 +152,77 @@
     "active": false,
     "currently_enabled": false
   },
+  "AAVE-FTM20": {
+    "coin": "AAVE-FTM20",
+    "name": "Aave",
+    "coinpaprika_id": "aave-new",
+    "coingecko_id": "aave",
+    "nomics_id": "AAVE",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "AAVE-HCO20": {
+    "coin": "AAVE-HCO20",
+    "name": "Aave",
+    "coinpaprika_id": "aave-new",
+    "coingecko_id": "aave",
+    "nomics_id": "AAVE",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "AAVE-HRC20": {
+    "coin": "AAVE-HRC20",
+    "name": "Aave",
+    "coinpaprika_id": "aave-new",
+    "coingecko_id": "aave",
+    "nomics_id": "AAVE",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "AAVE-KRC20": {
+    "coin": "AAVE-KRC20",
+    "name": "Aave",
+    "coinpaprika_id": "aave-new",
+    "coingecko_id": "aave",
+    "nomics_id": "AAVE",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "AAVE-PLG20": {
     "coin": "AAVE-PLG20",
     "name": "Aave",
     "coinpaprika_id": "aave-new",
     "coingecko_id": "aave",
+    "nomics_id": "AAVE",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -126,6 +262,7 @@
     "name": "Cardano",
     "coinpaprika_id": "ada-cardano",
     "coingecko_id": "cardano",
+    "nomics_id": "ADA",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -143,6 +280,7 @@
     "name": "AdEx",
     "coinpaprika_id": "adx-adex",
     "coingecko_id": "adex",
+    "nomics_id": "ADX",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -160,6 +298,7 @@
     "name": "AdEx",
     "coinpaprika_id": "adx-adex",
     "coingecko_id": "adex",
+    "nomics_id": "ADX",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -173,36 +312,38 @@
     "currently_enabled": false
   },
   "AGIX-ERC20": {
-      "coin": "AGIX-ERC20",
-      "name": "SingularityNET",
-      "coinpaprika_id": "agix-singularitynet",
-      "coingecko_id": "singularitynet",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AGIX-ERC20",
+    "name": "SingularityNET",
+    "coinpaprika_id": "agix-singularitynet",
+    "coingecko_id": "singularitynet",
+    "nomics_id": "AGIX",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "AGIX-PLG20": {
-      "coin": "AGIX-PLG20",
-      "name": "SingularityNET",
-      "coinpaprika_id": "agix-singularitynet",
-      "coingecko_id": "singularitynet",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AGIX-PLG20",
+    "name": "SingularityNET",
+    "coinpaprika_id": "agix-singularitynet",
+    "coingecko_id": "singularitynet",
+    "nomics_id": "AGIX",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "ANKR-BEP20": {
     "coin": "ANKR-BEP20",
@@ -239,28 +380,30 @@
     "currently_enabled": false
   },
   "ARRR-BEP20": {
-      "coin": "ARRR-BEP20",
-      "name": "Pirate",
-      "coinpaprika_id": "arrr-pirate",
-      "coingecko_id": "pirate-chain",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false,
-      "wallet_only": true
+    "coin": "ARRR-BEP20",
+    "name": "Pirate",
+    "coinpaprika_id": "arrr-pirate",
+    "coingecko_id": "pirate-chain",
+    "nomics_id": "ARRR",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false,
+    "wallet_only": true
   },
   "ARPA-BEP20": {
     "coin": "ARPA-BEP20",
     "name": "ARPA Chain",
     "coinpaprika_id": "arpa-arpa-chain",
     "coingecko_id": "arpa-chain",
+    "nomics_id": "ARPA",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -278,6 +421,7 @@
     "name": "ARPA Chain",
     "coinpaprika_id": "arpa-arpa-chain",
     "coingecko_id": "arpa-chain",
+    "nomics_id": "ARPA",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -312,6 +456,7 @@
     "name": "Auroracoin",
     "coinpaprika_id": "aur-auroracoin",
     "coingecko_id": "auroracoin",
+    "nomics_id": "AUR",
     "electrum": [
       {
         "url": "electrumx.aur.ewmcx.info:50002",
@@ -338,6 +483,7 @@
     "name": "Travala.com",
     "coinpaprika_id": "ava-travala",
     "coingecko_id": "concierge-io",
+    "nomics_id": "AVA",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -376,7 +522,7 @@
       "https://api.avax.network/ext/bc/C/rpc"
     ],
     "explorer_url": [
-      "https://cchain.explorer.avax.network/"
+      "https://snowtrace.io/"
     ],
     "type": "AVX-20",
     "active": false,
@@ -403,6 +549,7 @@
     "name": "Axe",
     "coinpaprika_id": "axe-axe",
     "coingecko_id": "axe",
+    "nomics_id": "AXE",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10057",
@@ -425,38 +572,38 @@
     "currently_enabled": false
   },
   "AXS-BEP20": {
-      "coin": "AXS-BEP20",
-      "name": "Axie Infinity",
-      "coinpaprika_id": "axs-axie-infinity",
-      "coingecko_id": "axie-infinity",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AXS-BEP20",
+    "name": "Axie Infinity",
+    "coinpaprika_id": "axs-axie-infinity",
+    "coingecko_id": "axie-infinity",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "AXS-ERC20": {
-      "coin": "AXS-ERC20",
-      "name": "Axie Infinity",
-      "coinpaprika_id": "axs-axie-infinity",
-      "coingecko_id": "axie-infinity",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "AXS-ERC20",
+    "name": "Axie Infinity",
+    "coinpaprika_id": "axs-axie-infinity",
+    "coingecko_id": "axie-infinity",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BABYDOGE": {
     "coin": "BABYDOGE",
@@ -480,6 +627,7 @@
     "name": "Balancer",
     "coinpaprika_id": "bal-balancer",
     "coingecko_id": "balancer",
+    "nomics_id": "BAL",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -497,6 +645,7 @@
     "name": "Balancer",
     "coinpaprika_id": "bal-balancer",
     "coingecko_id": "balancer",
+    "nomics_id": "BAL",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -509,20 +658,37 @@
     "active": false,
     "currently_enabled": false
   },
+  "BAL-KRC20": {
+    "coin": "BAL-KRC20",
+    "name": "Balancer",
+    "coinpaprika_id": "bal-balancer",
+    "coingecko_id": "balancer",
+    "nomics_id": "BAL",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "BAL-PLG20": {
     "coin": "BAL-PLG20",
     "name": "Balancer",
     "coinpaprika_id": "bal-balancer",
     "coingecko_id": "balancer",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "nomics_id": "BAL",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "BAND-BEP20": {
     "coin": "BAND-BEP20",
@@ -558,6 +724,21 @@
     "active": false,
     "currently_enabled": false
   },
+  "BAND-FTM20": {
+    "coin": "BAND-FTM20",
+    "name": "Band Protocol",
+    "coinpaprika_id": "band-band-protocol",
+    "coingecko_id": "band-protocol",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "BAND-PLG20": {
     "coin": "BAND-PLG20",
     "name": "Band Protocol",
@@ -573,9 +754,89 @@
     "active": false,
     "currently_enabled": false
   },
+  "BCH": {
+    "coin": "BCH",
+    "coingecko_id": "bitcoin-cash",
+    "coinpaprika_id": "bch-bitcoin-cash",
+    "nomics_id": "BCH",
+    "active": false,
+    "currently_enabled": false,
+    "electrum": [
+      {
+        "url": "electrum1.cipig.net:10055",
+        "ws_url": "electrum1.cipig.net:30055"
+      },
+      {
+        "url": "electrum2.cipig.net:10055",
+        "ws_url": "electrum2.cipig.net:30055"
+      },
+      {
+        "url": "electrum3.cipig.net:10055",
+        "ws_url": "electrum3.cipig.net:30055"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.bitcoin.com/bch/"
+    ],
+    "type": "UTXO",
+    "name": "Bitcoin Cash"
+  },
+  "BCH-ERC20": {
+    "coin": "BCH-ERC20",
+    "name": "Bitcoin Cash",
+    "coinpaprika_id": "bch-bitcoin-cash",
+    "coingecko_id": "bitcoin-cash",
+    "nomics_id": "BCH",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "BCH-BEP20": {
+    "coin": "BCH-BEP20",
+    "name": "Bitcoin Cash",
+    "coinpaprika_id": "bch-bitcoin-cash",
+    "coingecko_id": "bitcoin-cash",
+    "nomics_id": "BCH",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "BCH-HCO20": {
+    "coin": "BCH-HCO20",
+    "name": "Bitcoin Cash",
+    "coinpaprika_id": "bch-bitcoin-cash",
+    "coingecko_id": "bitcoin-cash",
+    "nomics_id": "BCH",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
   "BIDR-BEP20": {
     "coin": "BIDR-BEP20",
     "name": "BIDR",
+    "forex_id": "IDR",
     "coinpaprika_id": "bidr-binanceidr",
     "coingecko_id": "binanceidr",
     "nodes": [
@@ -595,6 +856,7 @@
     "name": "BlackCoin",
     "coinpaprika_id": "blk-blackcoin",
     "coingecko_id": "blackcoin",
+    "nomics_id": "BLK",
     "electrum": [
       {
         "url": "electrum1.blackcoin.nl:10002",
@@ -736,44 +998,47 @@
     "currently_enabled": false
   },
   "BRZ-BEP20": {
-      "coin": "BRZ-BEP20",
-      "name": "Brazilian Digital Token",
-      "coinpaprika_id": "brz-brazilian-digital-token",
-      "coingecko_id": "brz",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "BRZ-BEP20",
+    "name": "Brazilian Digital Token",
+    "forex_id": "BRL",
+    "coinpaprika_id": "brz-brazilian-digital-token",
+    "coingecko_id": "brz",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BRZ-ERC20": {
-      "coin": "BRZ-ERC20",
-      "name": "Brazilian Digital Token",
-      "coinpaprika_id": "brz-brazilian-digital-token",
-      "coingecko_id": "brz",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "BRZ-ERC20",
+    "name": "Brazilian Digital Token",
+    "forex_id": "BRL",
+    "coinpaprika_id": "brz-brazilian-digital-token",
+    "coingecko_id": "brz",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BSTY": {
     "coin": "BSTY",
     "name": "GlobalBoost-Y",
     "coinpaprika_id": "bsty-globalboost-y",
     "coingecko_id": "globalboost",
+    "nomics_id": "BSTY",
     "electrum": [
       {
         "url": "66.172.33.175:50001",
@@ -797,12 +1062,29 @@
     "active": false,
     "currently_enabled": false
   },
+  "RBTC": {
+    "coin": "RBTC",
+    "name": "RSK Smart Bitcoin",
+    "alias_ticker": "BTC",
+    "coinpaprika_id": "rbtc-smart-bitcoin",
+    "coingecko_id": "rootstock",
+    "nodes": [
+      "https://public-node.rsk.co"
+    ],
+    "explorer_url": [
+      "https://explorer.rsk.co"
+    ],
+    "type": "RSK Smart Bitcoin",
+    "active": false,
+    "currently_enabled": false
+  },
   "BTC": {
     "coin": "BTC",
     "name": "Bitcoin",
     "type": "UTXO",
     "coingecko_id": "bitcoin",
     "coinpaprika_id": "btc-bitcoin",
+    "nomics_id": "BTC",
     "electrum": [
       {
         "url": "electrum3.cipig.net:10000",
@@ -828,6 +1110,7 @@
     "name": "Bitcoin",
     "coinpaprika_id": "btc-bitcoin",
     "coingecko_id": "bitcoin",
+    "nomics_id": "BTC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -845,6 +1128,7 @@
     "name": "BitcoinZ",
     "coinpaprika_id": "btcz-bitcoinz",
     "coingecko_id": "bitcoinz",
+    "nomics_id": "BTCZ",
     "electrum": [
       {
         "url": "electrum1.btcz.rocks:50001"
@@ -860,36 +1144,50 @@
     "active": false,
     "currently_enabled": false
   },
-  "BCH": {
-    "active": true,
-    "coin": "BCH",
-    "coingecko_id": "bitcoin-cash",
-    "coinpaprika_id": "bch-bitcoin-cash",
-    "currently_enabled": false,
+  "BTX": {
+    "coin": "BTX",
+    "name": "BitCore",
+    "coinpaprika_id": "btx-bitcore",
+    "coingecko_id": "bitcore",
+    "nomics_id": "BTX",
     "electrum": [
       {
-        "url": "electrum1.cipig.net:10055",
-        "ws_url": "electrum1.cipig.net:30055"
-      },
-      {
-        "url": "electrum2.cipig.net:10055",
-        "ws_url": "electrum2.cipig.net:30055"
-      },
-      {
-        "url": "electrum3.cipig.net:10055",
-        "ws_url": "electrum3.cipig.net:30055"
+        "url": "btx-electrumx.coinsmunity.com:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": true
       }
     ],
     "explorer_url": [
-      "https://explorer.bitcoin.com/bch/"
+      "https://chainz.cryptoid.info/btx/"
     ],
+    "explorer_tx_url": "tx.dws?",
+    "explorer_address_url": "address.dws?",
     "type": "UTXO",
-    "name": "Bitcoin Cash"
+    "active": false,
+    "currently_enabled": false
+  },
+  "BTX-BEP20": {
+    "coin": "BTX-BEP20",
+    "name": "BitCore",
+    "coinpaprika_id": "btx-bitcore",
+    "coingecko_id": "bitcore",
+    "nomics_id": "BTX",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BET": {
     "coin": "BET",
     "name": "BET",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -916,7 +1214,7 @@
   "BOTS": {
     "coin": "BOTS",
     "name": "BOTS",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -958,36 +1256,53 @@
     "currently_enabled": false
   },
   "BTU-ERC20": {
-      "coin": "BTU-ERC20",
-      "name": "BTU Protocol",
-      "coinpaprika_id": "btu-btu-protocol",
-      "coingecko_id": "btu-protocol",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "BTU-ERC20",
+    "name": "BTU Protocol",
+    "coinpaprika_id": "btu-btu-protocol",
+    "coingecko_id": "btu-protocol",
+    "nomics_id": "BTU",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BTU-PLG20": {
-      "coin": "BTU-PLG20",
-      "name": "BTU Protocol",
-      "coinpaprika_id": "btu-btu-protocol",
-      "coingecko_id": "btu-protocol",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "BTU-PLG20",
+    "name": "BTU Protocol",
+    "coinpaprika_id": "btu-btu-protocol",
+    "coingecko_id": "btu-protocol",
+    "nomics_id": "BTU",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "BUSD-AVX20": {
+    "coin": "BUSD-AVX20",
+    "name": "Binance USD",
+    "coinpaprika_id": "busd-binance-usd",
+    "coingecko_id": "binance-usd",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BUSD-MVR20": {
     "coin": "BUSD-MVR20",
@@ -1039,19 +1354,20 @@
     "currently_enabled": false
   },
   "BUSD-HRC20": {
-      "coin": "BUSD-HRC20",
-      "name": "Binance USD",
-      "coinpaprika_id": "busd-binance-usd",
-      "coingecko_id": "binance-usd",
-      "nodes": [
-        "https://api.harmony.one"
-      ],
-      "explorer_url": [
-        "https://explorer.harmony.one"
-      ],
-      "type": "HRC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "BUSD-HRC20",
+    "name": "Binance USD",
+    "coinpaprika_id": "busd-binance-usd",
+    "coingecko_id": "binance-usd",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "BUSD-PLG20": {
     "coin": "BUSD-PLG20",
@@ -1074,6 +1390,7 @@
     "type": "UTXO",
     "coingecko_id": "bitweb",
     "coinpaprika_id": "bte-bitweb",
+    "nomics_id": "BTE3",
     "electrum": [
       {
         "url": "electrumx.bitwebcore.org:20001"
@@ -1092,36 +1409,40 @@
     "currently_enabled": false
   },
   "CADC-ERC20": {
-      "coin": "CADC-ERC20",
-      "name": "CAD Coin",
-      "coinpaprika_id": "cadc-cad-coin",
-      "coingecko_id": "test-coin",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "CADC-ERC20",
+    "name": "CAD Coin",
+    "forex_id": "CAD",
+    "coinpaprika_id": "cadc-cad-coin",
+    "coingecko_id": "cad-coin",
+    "nomics_id": "CADC",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "CADC-PLG20": {
-      "coin": "CADC-PLG20",
-      "name": "CAD Coin",
-      "coinpaprika_id": "cadc-cad-coin",
-      "coingecko_id": "test-coin",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "CADC-PLG20",
+    "name": "CAD Coin",
+    "forex_id": "CAD",
+    "coinpaprika_id": "cadc-cad-coin",
+    "coingecko_id": "cad-coin",
+    "nomics_id": "CADC",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "CAKE": {
     "coin": "CAKE",
@@ -1139,6 +1460,23 @@
     "type": "BEP-20",
     "active": false,
     "currently_enabled": false
+  },
+  "CASE": {
+      "coin": "CASE",
+      "name": "Case Token",
+      "coinpaprika_id": "test-coin",
+      "coingecko_id": "test-coin",
+      "nodes": [
+        "http://bsc1.cipig.net:8655",
+        "http://bsc2.cipig.net:8655",
+        "http://bsc3.cipig.net:8655"
+      ],
+      "explorer_url": [
+        "https://bscscan.com/"
+      ],
+      "type": "BEP-20",
+      "active": false,
+      "currently_enabled": false
   },
   "CCL": {
     "coin": "CCL",
@@ -1162,7 +1500,7 @@
     "explorer_url": [
       "https://ccl.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -1171,6 +1509,7 @@
     "name": "Canada eCoin",
     "coinpaprika_id": "cdn-canada-ecoin",
     "coingecko_id": "test-coin",
+    "nomics_id": "CDN",
     "electrum": [
       {
         "url": "mumbai.ecoincore.com:34333",
@@ -1208,59 +1547,64 @@
     "currently_enabled": false
   },
   "CELR-ERC20": {
-      "coin": "CELR-ERC20",
-      "name": "Celer Network",
-      "coinpaprika_id": "celr-celer-network",
-      "coingecko_id": "celer-network",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "CELR-ERC20",
+    "name": "Celer Network",
+    "coinpaprika_id": "celr-celer-network",
+    "coingecko_id": "celer-network",
+    "nomics_id": "CELR",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "CELR-BEP20": {
-      "coin": "CELR-BEP20",
-      "name": "Celer Network",
-      "coinpaprika_id": "celr-celer-network",
-      "coingecko_id": "celer-network",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "CELR-BEP20",
+    "name": "Celer Network",
+    "coinpaprika_id": "celr-celer-network",
+    "coingecko_id": "celer-network",
+    "nomics_id": "CELR",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "CELR-ARB20": {
-      "coin": "CELR-ARB20",
-      "name": "Celer Network",
-      "coinpaprika_id": "celr-celer-network",
-      "coingecko_id": "celer-network",
-      "nodes": [
-        "https://arb1.arbitrum.io/rpc"
-      ],
-      "explorer_url": [
-        "https://arbiscan.io/"
-      ],
-      "type": "Arbitrum",
-      "active": false,
-      "currently_enabled": false
+    "coin": "CELR-ARB20",
+    "name": "Celer Network",
+    "coinpaprika_id": "celr-celer-network",
+    "coingecko_id": "celer-network",
+    "nomics_id": "CELR",
+    "nodes": [
+      "https://arb1.arbitrum.io/rpc"
+    ],
+    "explorer_url": [
+      "https://arbiscan.io/"
+    ],
+    "type": "Arbitrum",
+    "active": false,
+    "currently_enabled": false,
+    "wallet_only": true
   },
   "CLC": {
     "coin": "CLC",
     "name": "Collider Coin",
     "coinpaprika_id": "clc-collider-coin",
     "coingecko_id": "test-coin",
+    "nomics_id": "CLC2",
     "electrum": [
       {
         "url": "electrumx.cryptocollider.com:10001"
@@ -1272,7 +1616,23 @@
     "explorer_url": [
       "https://clc.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "COMP-AVX20": {
+    "coin": "COMP-AVX20",
+    "name": "Compound",
+    "coinpaprika_id": "comp-compoundd",
+    "coingecko_id": "compound-governance-token",
+    "nomics_id": "COMP",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
     "active": false,
     "currently_enabled": false
   },
@@ -1281,6 +1641,7 @@
     "name": "Compound",
     "coinpaprika_id": "comp-compoundd",
     "coingecko_id": "compound-governance-token",
+    "nomics_id": "COMP",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -1298,6 +1659,7 @@
     "name": "Compound",
     "coinpaprika_id": "comp-compoundd",
     "coingecko_id": "compound-governance-token",
+    "nomics_id": "COMP",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -1310,11 +1672,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "COMP-KRC20": {
+    "coin": "COMP-KRC20",
+    "name": "Compound",
+    "coinpaprika_id": "comp-compoundd",
+    "coingecko_id": "compound-governance-token",
+    "nomics_id": "COMP",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "COMP-PLG20": {
     "coin": "COMP-PLG20",
     "name": "Compound",
     "coinpaprika_id": "comp-compoundd",
     "coingecko_id": "compound-governance-token",
+    "nomics_id": "COMP",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -1328,7 +1707,7 @@
   "CRYPTO": {
     "coin": "CRYPTO",
     "name": "CRYPTO",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -1351,6 +1730,67 @@
     "active": false,
     "currently_enabled": false,
     "wallet_only": true
+  },
+  "DAI-AVX20": {
+    "coin": "DAI-AVX20",
+    "name": "Dai",
+    "coinpaprika_id": "dai-dai",
+    "coingecko_id": "dai",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "DAI-FTM20": {
+    "coin": "DAI-FTM20",
+    "name": "Dai",
+    "coinpaprika_id": "dai-dai",
+    "coingecko_id": "dai",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "DAI-HCO20": {
+    "coin": "DAI-HCO20",
+    "name": "Dai",
+    "coinpaprika_id": "dai-dai",
+    "coingecko_id": "dai",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "DAI-HRC20": {
+    "coin": "DAI-HRC20",
+    "name": "Dai",
+    "coinpaprika_id": "dai-dai",
+    "coingecko_id": "dai",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "DAI-BEP20": {
     "coin": "DAI-BEP20",
@@ -1386,6 +1826,21 @@
     "active": false,
     "currently_enabled": false
   },
+  "DAI-MVR20": {
+    "coin": "DAI-MVR20",
+    "name": "Dai",
+    "coinpaprika_id": "dai-dai",
+    "coingecko_id": "dai",
+    "nodes": [
+      "https://rpc.moonriver.moonbeam.network"
+    ],
+    "explorer_url": [
+      "https://blockscout.moonriver.moonbeam.network/"
+    ],
+    "type": "Moonriver",
+    "active": false,
+    "currently_enabled": false
+  },
   "DAI-PLG20": {
     "coin": "DAI-PLG20",
     "name": "Dai",
@@ -1407,6 +1862,7 @@
     "name": "Dash",
     "coingecko_id": "dash",
     "coinpaprika_id": "dash-dash",
+    "nomics_id": "DASH",
     "currently_enabled": false,
     "electrum": [
       {
@@ -1428,12 +1884,39 @@
     "explorer_tx_url": "transaction/",
     "type": "UTXO"
   },
+  "DUST": {
+    "coin": "DUST",
+    "name": "Dragonfairy",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "test-coin",
+    "electrum": [
+      {
+        "url": "51.222.85.227:10001",
+        "ws_url": "51.222.85.227:9001"
+      },
+      {
+        "url": "78.141.233.64:10001",
+        "ws_url": "78.141.233.64:9001"
+      },
+      {
+	"url": "192.248.166.207:10001",
+        "ws_url": "192.248.166.207:9001"
+      }
+    ],
+    "explorer_url": [
+      "http://dragonfairy.gives/"
+    ],
+    "type": "Smart Chain",
+    "active": false,
+    "currently_enabled": false
+  },
   "DGB": {
     "active": false,
     "coin": "DGB",
     "name": "DigiByte",
     "coinpaprika_id": "dgb-digibyte",
     "coingecko_id": "digibyte",
+    "nomics_id": "DGB",
     "currently_enabled": false,
     "electrum": [
       {
@@ -1459,6 +1942,7 @@
     "name": "Digitalcoin",
     "coinpaprika_id": "dgc-digitalcoin",
     "coingecko_id": "digitalcoin",
+    "nomics_id": "DGC",
     "electrum": [
       {
         "url": "electrumx.dgc.ewmcx.org:50001",
@@ -1484,6 +1968,7 @@
     "name": "Diminutive Coin",
     "coinpaprika_id": "dimi-diminutive-coin",
     "coingecko_id": "diminutive-coin",
+    "nomics_id": "DIMI",
     "electrum": [
       {
         "url": "electrumx1.diminutivecoin.com:50012",
@@ -1508,6 +1993,7 @@
     "name": "DODO",
     "coinpaprika_id": "dodo-dodo",
     "coingecko_id": "dodo",
+    "nomics_id": "DODO",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -1525,6 +2011,7 @@
     "name": "DODO",
     "coinpaprika_id": "dodo-dodo",
     "coingecko_id": "dodo",
+    "nomics_id": "DODO",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -1534,6 +2021,22 @@
       "https://etherscan.io/"
     ],
     "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "DODO-KRC20": {
+    "coin": "DODO-KRC20",
+    "name": "DODO",
+    "coinpaprika_id": "dodo-dodo",
+    "coingecko_id": "dodo",
+    "nomics_id": "DODO",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -1597,11 +2100,27 @@
     "active": false,
     "currently_enabled": false
   },
+  "DOT-HCO20": {
+    "coin": "DOT-HCO20",
+    "name": "Polkadot",
+    "coinpaprika_id": "dot-polkadot",
+    "coingecko_id": "polkadot",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
   "DP": {
     "coin": "DP",
     "name": "DigitalPrice",
     "coinpaprika_id": "dp-digitalprice",
     "coingecko_id": "digitalprice",
+    "nomics_id": "DP",
     "electrum": [
       {
         "url": "1.eu.dp.electrum.dexstats.info:10021"
@@ -1610,7 +2129,7 @@
     "explorer_url": [
       "https://dp.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -1619,6 +2138,7 @@
     "name": "Electra",
     "coinpaprika_id": "eca-electra",
     "coingecko_id": "electra",
+    "nomics_id": "ECA",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10052",
@@ -1645,6 +2165,7 @@
     "name": "e-Gulden",
     "coinpaprika_id": "efl-e-gulden",
     "coingecko_id": "electronicgulden",
+    "nomics_id": "EFL",
     "electrum": [
       {
         "url": "holland.ecoincore.com:11017",
@@ -1658,11 +2179,6 @@
       },
       {
         "url": "electrum1.egulden.org:50002",
-        "protocol": "SSL",
-        "disable_cert_verification": true
-      },
-      {
-        "url": "electrum2.egulden.org:50002",
         "protocol": "SSL",
         "disable_cert_verification": true
       },
@@ -1742,6 +2258,7 @@
     "name": "Einsteinium",
     "coinpaprika_id": "emc2-einsteinium",
     "coingecko_id": "einsteinium",
+    "nomics_id": "EMC2",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10062",
@@ -1782,6 +2299,21 @@
     "active": false,
     "currently_enabled": false
   },
+  "ETC": {
+    "coin": "ETC",
+    "name": "Ethereum Classic",
+    "coinpaprika_id": "etc-ethereum-classic",
+    "coingecko_id": "ethereum-classic",
+    "nodes": [
+      "https://www.ethercluster.com/etc"
+    ],
+    "explorer_url": [
+      "https://blockscout.com/etc/mainnet/"
+    ],
+    "type": "Ethereum Classic",
+    "active": false,
+    "currently_enabled": false
+  },
   "ETC-BEP20": {
     "coin": "ETC-BEP20",
     "name": "Ethereum Classic",
@@ -1796,6 +2328,55 @@
       "https://bscscan.com/"
     ],
     "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FET-ERC20": {
+    "coin": "FET-ERC20",
+    "name": "Fetch.ai",
+    "coinpaprika_id": "fetch-ai",
+    "coingecko_id": "fetch-ai",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FET-BEP20": {
+    "coin": "FET-BEP20",
+    "name": "Fetch.ai",
+    "coinpaprika_id": "fetch-ai",
+    "coingecko_id": "fetch-ai",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FET-PLG20": {
+    "coin": "FET-PLG20",
+    "name": "Fetch.ai",
+    "coinpaprika_id": "fetch-ai",
+    "coingecko_id": "fetch-ai",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
     "active": false,
     "currently_enabled": false
   },
@@ -1816,11 +2397,89 @@
     "active": false,
     "currently_enabled": false
   },
+  "FIL-HCO20": {
+    "coin": "FIL-HCO20",
+    "name": "Filecoin",
+    "coinpaprika_id": "fil-filecoin",
+    "coingecko_id": "filecoin",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FLUX": {
+    "coin": "FLUX",
+    "name": "Flux",
+    "coinpaprika_id": "zel-zelcash",
+    "coingecko_id": "zelcash",
+    "nomics_id": "ZEL",
+    "electrum": [
+      {
+        "url": "electrumx.runonflux.io:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": true,
+        "ws_url": "electrumx.runonflux.io:50004"
+      },
+      {
+        "url": "electrumx2.runonflux.io:50001",
+        "protocol": "TCP",
+        "ws_url": "electrumx2.runonflux.io:50004"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.runonflux.io/"
+    ],
+    "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FLUX-ERC20": {
+    "coin": "FLUX-ERC20",
+    "name": "Flux",
+    "coinpaprika_id": "zel-zelcash",
+    "coingecko_id": "zelcash",
+    "nomics_id": "ZEL",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "FLUX-BEP20": {
+    "coin": "FLUX-BEP20",
+    "name": "Flux",
+    "coinpaprika_id": "zel-zelcash",
+    "coingecko_id": "zelcash",
+    "nomics_id": "ZEL",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "FIRO": {
     "coin": "FIRO",
     "name": "Firo",
     "coinpaprika_id": "firo-firo",
     "coingecko_id": "zcoin",
+    "nomics_id": "FIRO",
     "electrum": [
       {
         "url": "electrumx01.firo.org:50001"
@@ -1844,6 +2503,7 @@
     "name": "Firo",
     "coinpaprika_id": "firo-firo",
     "coingecko_id": "zcoin",
+    "nomics_id": "FIRO",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -1861,6 +2521,7 @@
     "name": "Fujicoin",
     "coinpaprika_id": "fjc-fujicoin",
     "coingecko_id": "fujicoin",
+    "nomics_id": "FJC",
     "electrum": [
       {
         "url": "electrumx1.fujicoin.org:50001",
@@ -1885,6 +2546,7 @@
     "name": "Fujicoin",
     "coinpaprika_id": "fjc-fujicoin",
     "coingecko_id": "fujicoin",
+    "nomics_id": "FJC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -1902,6 +2564,7 @@
     "name": "FJCB Fujicoin",
     "coinpaprika_id": "test-coin",
     "coingecko_id": "test-coin",
+    "nomics_id": "FJCB",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -1936,6 +2599,7 @@
     "name": "Feathercoin",
     "coinpaprika_id": "ftc-feathercoin",
     "coingecko_id": "feathercoin",
+    "nomics_id": "FTC",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10054",
@@ -2027,6 +2691,7 @@
     "name": "Gleec",
     "coinpaprika_id": "gleec-gleec-coin",
     "coingecko_id": "gleec-coin",
+    "nomics_id": "GLEEC",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10022",
@@ -2044,7 +2709,7 @@
     "explorer_url": [
       "https://gleec.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -2053,6 +2718,7 @@
     "name": "Gleec",
     "coinpaprika_id": "gleec-gleec-coin",
     "coingecko_id": "gleec-coin",
+    "nomics_id": "GLEEC",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10069",
@@ -2099,6 +2765,7 @@
     "name": "Groestlcoin",
     "coinpaprika_id": "grs-groestlcoin",
     "coingecko_id": "groestlcoin",
+    "nomics_id": "GRS",
     "electrum": [
       {
         "url": "electrum10.groestlcoin.org:50001"
@@ -2122,37 +2789,71 @@
     "active": false,
     "currently_enabled": false
   },
+  "GRT-AVX20": {
+    "coin": "GRT-AVX20",
+    "name": "The Graph",
+    "coinpaprika_id": "grt-the-graph",
+    "coingecko_id": "the-graph",
+    "nomics_id": "GRT",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "GRT-ERC20": {
-      "coin": "GRT-ERC20",
-      "name": "The Graph",
-      "coinpaprika_id": "grt-the-graph",
-      "coingecko_id": "the-graph",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "GRT-ERC20",
+    "name": "The Graph",
+    "coinpaprika_id": "grt-the-graph",
+    "coingecko_id": "the-graph",
+    "nomics_id": "GRT",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "GRT-KRC20": {
+    "coin": "GRT-KRC20",
+    "name": "The Graph",
+    "coinpaprika_id": "grt-the-graph",
+    "coingecko_id": "the-graph",
+    "nomics_id": "GRT",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "GRT-PLG20": {
-      "coin": "GRT-PLG20",
-      "name": "The Graph",
-      "coinpaprika_id": "grt-the-graph",
-      "coingecko_id": "the-graph",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "GRT-PLG20",
+    "name": "The Graph",
+    "coinpaprika_id": "grt-the-graph",
+    "coingecko_id": "the-graph",
+    "nomics_id": "GRT",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "HODL": {
     "coin": "HODL",
@@ -2176,7 +2877,7 @@
     "explorer_url": [
       "https://hodl.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false,
     "wallet_only": true
@@ -2264,37 +2965,175 @@
     "active": false,
     "currently_enabled": false
   },
+  "JCHF-ERC20": {
+    "coin": "JCHF-ERC20",
+    "name": "Jarvis Swiss Franc",
+    "forex_id": "CHF",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-swiss-franc",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JCHF-PLG20": {
+    "coin": "JCHF-PLG20",
+    "name": "Jarvis Swiss Franc",
+    "forex_id": "CHF",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-swiss-franc",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JEUR-ERC20": {
+    "coin": "JEUR-ERC20",
+    "name": "Jarvis Euro",
+    "forex_id": "EUR",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-euro",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JEUR-PLG20": {
+    "coin": "JEUR-PLG20",
+    "name": "Jarvis Euro",
+    "forex_id": "EUR",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-euro",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JGBP-ERC20": {
+    "coin": "JGBP-ERC20",
+    "name": "Jarvis British Pound",
+    "forex_id": "GBP",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-british-pound",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JGBP-PLG20": {
+    "coin": "JGBP-PLG20",
+    "name": "Jarvis British Pound",
+    "forex_id": "GBP",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jarvis-synthetic-british-pound",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
   "JPYC-ERC20": {
-      "coin": "JPYC-ERC20",
-      "name": "JPY Coin",
-      "coinpaprika_id": "test-coin",
-      "coingecko_id": "jpyc",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "JPYC-ERC20",
+    "name": "JPY Coin",
+    "forex_id": "JPY",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jpyc",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "JPYC-PLG20": {
-      "coin": "JPYC-PLG20",
-      "name": "JPY Coin",
-      "coinpaprika_id": "test-coin",
-      "coingecko_id": "jpyc",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "JPYC-PLG20",
+    "name": "JPY Coin",
+    "forex_id": "JPY",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "jpyc",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JRT-ERC20": {
+    "coin": "JRT-ERC20",
+    "name": "Jarvis Reward Token",
+    "coinpaprika_id": "jrt-jarvis-reward-token",
+    "coingecko_id": "jarvis-reward-token",
+    "nomics_id": "JRT",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "JRT-PLG20": {
+    "coin": "JRT-PLG20",
+    "name": "Jarvis Reward Token",
+    "coinpaprika_id": "jrt-jarvis-reward-token",
+    "coingecko_id": "jarvis-reward-token",
+    "nomics_id": "JRT",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "JSTR": {
     "coin": "JSTR",
@@ -2315,7 +3154,7 @@
   "JUMBLR": {
     "coin": "JUMBLR",
     "name": "JUMBLR",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -2378,6 +3217,7 @@
     "name": "Koinon",
     "coinpaprika_id": "koin-koinon",
     "coingecko_id": "koinon",
+    "nomics_id": "KOIN",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10024",
@@ -2395,7 +3235,7 @@
     "explorer_url": [
       "https://koin.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -2404,6 +3244,7 @@
     "name": "LBRY Credits",
     "coinpaprika_id": "lbc-lbry-credits",
     "coingecko_id": "lbry-credits",
+    "nomics_id": "LBC",
     "electrum": [
       {
         "url": "spv1.lbry.com:50001"
@@ -2433,6 +3274,7 @@
     "name": "Litecoin Cash",
     "coinpaprika_id": "lcc-litecoin-cash",
     "coingecko_id": "litecoin-cash",
+    "nomics_id": "LCC",
     "electrum": [
       {
         "url": "188.166.117.139:50001"
@@ -2452,6 +3294,7 @@
     "coin": "LTC",
     "coingecko_id": "litecoin",
     "coinpaprika_id": "ltc-litecoin",
+    "nomics_id": "LTC",
     "currently_enabled": false,
     "electrum": [
       {
@@ -2474,21 +3317,97 @@
     "name": "Litecoin",
     "is_segwit_on": false
   },
+  "LUNA-ERC20": {
+    "coin": "LUNA-ERC20",
+    "name": "Terra",
+    "coinpaprika_id": "luna-terra",
+    "coingecko_id": "terra-luna",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LUNA-BEP20": {
+    "coin": "LUNA-BEP20",
+    "name": "Terra",
+    "coinpaprika_id": "luna-terra",
+    "coingecko_id": "terra-luna",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LUNA-HRC20": {
+    "coin": "LUNA-HRC20",
+    "name": "Terra",
+    "coinpaprika_id": "luna-terra",
+    "coingecko_id": "terra-luna",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LUNA-PLG20": {
+    "coin": "LUNA-PLG20",
+    "name": "Terra",
+    "coinpaprika_id": "luna-terra",
+    "coingecko_id": "terra-luna",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
   "LYNX": {
     "coin": "LYNX",
     "name": "Lynx",
     "coinpaprika_id": "lynx-lynx",
     "coingecko_id": "lynx",
+    "nomics_id": "LYNX",
     "electrum": [
       {
-        "url": "electrum1.logware.net:50002",
+        "url": "electrum.getlynx.io:50002",
         "protocol": "SSL",
         "disable_cert_verification": false
       },
       {
-        "url": "electrum2.logware.us:50002",
+        "url": "electrum.logware.us:50002",
         "protocol": "SSL",
         "disable_cert_verification": false
+      },
+      {
+        "url": "electrum.logware.club:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": false
+      },
+      {
+        "url": "electrum.logware.io:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": true
       }
     ],
     "explorer_url": [
@@ -2505,6 +3424,7 @@
     "name": "Litecoin Finance",
     "coinpaprika_id": "test-coin",
     "coingecko_id": "litecoin-finance",
+    "nomics_id": "LTFN",
     "electrum": [
       {
         "url": "eltfnx.scalaris.info:30001"
@@ -2546,6 +3466,7 @@
     "name": "Polygon",
     "coinpaprika_id": "matic-matic-network",
     "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -2561,6 +3482,7 @@
     "name": "Polygon",
     "coinpaprika_id": "matic-matic-network",
     "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -2578,6 +3500,7 @@
     "name": "Polygon",
     "coinpaprika_id": "matic-matic-network",
     "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -2590,12 +3513,61 @@
     "active": false,
     "currently_enabled": false
   },
-  "MCL": {
+  "MATIC-HCO20": {
+    "coin": "MATIC-HCO20",
+    "name": "Polygon",
+    "coinpaprika_id": "matic-matic-network",
+    "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
     "active": false,
+    "currently_enabled": false
+  },
+  "MATIC-HRC20": {
+    "coin": "MATIC-HRC20",
+    "name": "Polygon",
+    "coinpaprika_id": "matic-matic-network",
+    "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MATIC-KRC20": {
+    "coin": "MATIC-KRC20",
+    "name": "Polygon",
+    "coinpaprika_id": "matic-matic-network",
+    "coingecko_id": "matic-network",
+    "nomics_id": "MATIC",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MCL": {
     "coin": "MCL",
+    "name": "Marmara Credit Loops",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "mcl-marmara-credit-loops",
-    "currently_enabled": false,
+    "nomics_id": "MCL",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10023",
@@ -2613,14 +3585,39 @@
     "explorer_url": [
       "http://explorer.marmara.io/"
     ],
-    "type": "Komodo Chain",
-    "name": "MCL"
+    "type": "Smart Chain",
+    "active": false,
+    "currently_enabled": false
   },
-  "MM-ERC20": {
-    "coin": "MM-ERC20",
-    "name": "Million",
+  "GMS": {
+    "coin": "GMS",
+    "type": "Smart Chain",
+    "name": "GMSmining",
+    "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
-    "coingecko_id": "million",
+    "electrum": [
+      {
+        "url": "electrum.gmsmining.pw:17485"
+      },
+	  {
+        "url": "electrum1.gmsmining.pw:17485"
+      },
+      {
+        "url": "electrum2.gmsmining.pw:17485"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.gmsmining.pw/"
+    ],
+    "active": false,
+    "currently_enabled": false
+  },
+  "MIR-ERC20": {
+    "coin": "MIR-ERC20",
+    "name": "Mirror Protocol",
+    "coinpaprika_id": "mir-mirror-protocol",
+    "coingecko_id": "mirror-protocol",
+    "nomics_id": "MIRROR",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -2630,6 +3627,108 @@
       "https://etherscan.io/"
     ],
     "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MIR-BEP20": {
+    "coin": "MIR-BEP20",
+    "name": "Mirror Protocol",
+    "coinpaprika_id": "mir-mirror-protocol",
+    "coingecko_id": "mirror-protocol",
+    "nomics_id": "MIRROR",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-ERC20": {
+    "coin": "MM-ERC20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-AVX20": {
+    "coin": "MM-AVX20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-BEP20": {
+    "coin": "MM-BEP20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-MVR20": {
+    "coin": "MM-MVR20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://rpc.moonriver.moonbeam.network"
+    ],
+    "explorer_url": [
+      "https://blockscout.moonriver.moonbeam.network/"
+    ],
+    "type": "Moonriver",
+    "active": false,
+    "currently_enabled": false
+  },
+  "MM-PLG20": {
+    "coin": "MM-PLG20",
+    "name": "Million",
+    "coinpaprika_id": "mm-million",
+    "coingecko_id": "million",
+    "nomics_id": "MM4",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
     "active": false,
     "currently_enabled": false
   },
@@ -2655,7 +3754,7 @@
     "explorer_url": [
       "https://mshark.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false,
     "wallet_only": true
@@ -2712,19 +3811,19 @@
     "currently_enabled": false
   },
   "OCEAN-PLG20": {
-      "coin": "OCEAN-PLG20",
-      "name": "Ocean Protocol",
-      "coinpaprika_id": "ocean-ocean-protocol",
-      "coingecko_id": "ocean-protocol",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "OCEAN-PLG20",
+    "name": "Ocean Protocol",
+    "coinpaprika_id": "ocean-ocean-protocol",
+    "coingecko_id": "ocean-protocol",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "ONE": {
     "active": false,
@@ -2733,10 +3832,11 @@
     "coinpaprika_id": "one-harmony",
     "currently_enabled": false,
     "nodes": [
-      "https://api.harmony.one"
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
     ],
     "explorer_url": [
-      "https://explorer.harmony.one"
+      "https://explorer.harmony.one/"
     ],
     "type": "HRC-20",
     "name": "Harmony"
@@ -2792,6 +3892,21 @@
     "active": false,
     "currently_enabled": false
   },
+  "PAX-KRC20": {
+    "coin": "PAX-KRC20",
+    "name": "Paxos Standard",
+    "coinpaprika_id": "pax-paxos-standard-token",
+    "coingecko_id": "paxos-standard",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "PAX-PLG20": {
     "coin": "PAX-PLG20",
     "name": "Paxos Standard",
@@ -2839,7 +3954,8 @@
     ],
     "type": "ERC-20",
     "active": false,
-    "currently_enabled": false
+    "currently_enabled": false,
+    "wallet_only": true
   },
   "PAXG-PLG20": {
     "coin": "PAXG-PLG20",
@@ -2861,6 +3977,7 @@
     "coin": "KCS",
     "coingecko_id": "kucoin-shares",
     "coinpaprika_id": "kcs-kucoin-token",
+    "nomics_id": "KCS",
     "currently_enabled": false,
     "nodes": [
       "https://rpc-mainnet.kcc.network"
@@ -2875,7 +3992,8 @@
     "active": false,
     "coin": "MOVR",
     "coingecko_id": "moonriver",
-    "coinpaprika_id": "test-coin",
+    "coinpaprika_id": "movr-moonriver",
+    "nomics_id": "MOVR",
     "currently_enabled": false,
     "nodes": [
       "https://rpc.moonriver.moonbeam.network"
@@ -2887,10 +4005,11 @@
     "name": "Moonriver"
   },
   "ETH": {
-    "active": true,
+    "active": false,
     "coin": "ETH",
     "coingecko_id": "ethereum",
     "coinpaprika_id": "eth-ethereum",
+    "nomics_id": "ETH",
     "currently_enabled": false,
     "nodes": [
       "http://eth1.cipig.net:8555",
@@ -2908,6 +4027,7 @@
     "name": "Ethereum",
     "coinpaprika_id": "eth-ethereum",
     "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -2922,24 +4042,91 @@
   },
   "ETH-AVX20": {
     "coin": "ETH-AVX20",
-    "name": "Ethereum Avalanche",
+    "name": "Ethereum",
     "coinpaprika_id": "eth-ethereum",
     "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
     "nodes": [
       "https://api.avax.network/ext/bc/C/rpc"
     ],
     "explorer_url": [
-      "https://cchain.explorer.avax.network/"
+      "https://snowtrace.io/"
     ],
     "type": "AVX-20",
     "active": false,
     "currently_enabled": false
   },
-  "ETH-PLG20": {
-    "coin": "ETH-PLG20",
-    "name": "Ethereum Polygon",
+  "ETH-FTM20": {
+    "coin": "ETH-FTM20",
+    "name": "Ethereum",
     "coinpaprika_id": "eth-ethereum",
     "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ETH-HCO20": {
+    "coin": "ETH-HCO20",
+    "name": "Ethereum",
+    "coinpaprika_id": "eth-ethereum",
+    "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ETH-HRC20": {
+    "coin": "ETH-HRC20",
+    "name": "Ethereum",
+    "coinpaprika_id": "eth-ethereum",
+    "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ETH-KRC20": {
+    "coin": "ETH-KRC20",
+    "name": "Ethereum",
+    "coinpaprika_id": "eth-ethereum",
+    "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ETH-PLG20": {
+    "coin": "ETH-PLG20",
+    "name": "Ethereum",
+    "coinpaprika_id": "eth-ethereum",
+    "coingecko_id": "ethereum",
+    "nomics_id": "ETH",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -2956,6 +4143,7 @@
     "coin": "ETH-ARB20",
     "coingecko_id": "ethereum",
     "coinpaprika_id": "eth-ethereum",
+    "nomics_id": "ETH",
     "currently_enabled": false,
     "nodes": [
       "https://arb1.arbitrum.io/rpc"
@@ -2964,7 +4152,7 @@
       "https://arbiscan.io/"
     ],
     "type": "Arbitrum",
-    "name": "Ethereum Arbitrum"
+    "name": "Ethereum"
   },
   "ETHK-OPT20": {
     "active": false,
@@ -3021,6 +4209,7 @@
     "name": "Unitus",
     "coinpaprika_id": "uis-unitus",
     "coingecko_id": "unitus",
+    "nomics_id": "UIS",
     "electrum": [
       {
         "url": "failover.trc-uis.ewmcx.biz:50002",
@@ -3043,6 +4232,7 @@
     "name": "Unobtanium",
     "coinpaprika_id": "uno-unobtanium",
     "coingecko_id": "unobtanium",
+    "nomics_id": "UNO",
     "electrum": [
       {
         "url": "uno-main.coinmunity.gold:50002",
@@ -3061,6 +4251,21 @@
     "explorer_tx_url": "tx.dws?",
     "explorer_address_url": "address.dws?",
     "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "USDC-AVX20": {
+    "coin": "USDC-AVX20",
+    "name": "USD Coin",
+    "coinpaprika_id": "usdc-usd-coin",
+    "coingecko_id": "usd-coin",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
     "active": false,
     "currently_enabled": false
   },
@@ -3108,7 +4313,7 @@
       "https://bscscan.com/"
     ],
     "type": "BEP-20",
-    "active": true,
+    "active": false,
     "currently_enabled": false
   },
   "USDC-ERC20": {
@@ -3125,7 +4330,7 @@
       "https://etherscan.io/"
     ],
     "type": "ERC-20",
-    "active": true,
+    "active": false,
     "currently_enabled": false
   },
   "USDC-KRC20": {
@@ -3155,6 +4360,22 @@
       "https://hecoinfo.com/"
     ],
     "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "USDC-HRC20": {
+    "coin": "USDC-HRC20",
+    "name": "USD Coin",
+    "coinpaprika_id": "usdc-usd-coin",
+    "coingecko_id": "usd-coin",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -3203,6 +4424,21 @@
     "active": false,
     "currently_enabled": false
   },
+  "USDT-FTM20": {
+    "coin": "USDT-FTM20",
+    "name": "Tether",
+    "coinpaprika_id": "usdt-tether",
+    "coingecko_id": "tether",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "USDT-KRC20": {
     "coin": "USDT-KRC20",
     "name": "Tether",
@@ -3243,7 +4479,7 @@
       "https://api.avax.network/ext/bc/C/rpc"
     ],
     "explorer_url": [
-      "https://cchain.explorer.avax.network/"
+      "https://snowtrace.io/"
     ],
     "type": "AVX-20",
     "active": false,
@@ -3299,6 +4535,22 @@
     "currently_enabled": false,
     "wallet_only": true
   },
+  "USDT-HRC20": {
+    "coin": "USDT-HRC20",
+    "name": "Tether",
+    "coinpaprika_id": "usdt-tether",
+    "coingecko_id": "tether",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "AWC": {
     "active": false,
     "coin": "AWC",
@@ -3316,20 +4568,19 @@
     "type": "ERC-20",
     "name": "Atomic Wallet Coin"
   },
-  "JRT-ERC20": {
-    "coin": "JRT-ERC20",
-    "name": "Jarvis Reward Token",
-    "coinpaprika_id": "jrt-jarvis-reward-token",
-    "coingecko_id": "jarvis-reward-token",
+  "BAT-AVX20": {
+    "coin": "BAT-AVX20",
+    "name": "Basic Attention Token",
+    "coinpaprika_id": "bat-basic-attention-token",
+    "coingecko_id": "basic-attention-token",
+    "nomics_id": "BAT",
     "nodes": [
-      "http://eth1.cipig.net:8555",
-      "http://eth2.cipig.net:8555",
-      "http://eth3.cipig.net:8555"
+      "https://api.avax.network/ext/bc/C/rpc"
     ],
     "explorer_url": [
-      "https://etherscan.io/"
+      "https://snowtrace.io/"
     ],
-    "type": "ERC-20",
+    "type": "AVX-20",
     "active": false,
     "currently_enabled": false
   },
@@ -3338,6 +4589,7 @@
     "name": "Basic Attention Token",
     "coinpaprika_id": "bat-basic-attention-token",
     "coingecko_id": "basic-attention-token",
+    "nomics_id": "BAT",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -3355,6 +4607,7 @@
     "name": "Basic Attention Token",
     "coinpaprika_id": "bat-basic-attention-token",
     "coingecko_id": "basic-attention-token",
+    "nomics_id": "BAT",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -3367,11 +4620,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "BAT-KRC20": {
+    "coin": "BAT-KRC20",
+    "name": "Basic Attention Token",
+    "coinpaprika_id": "bat-basic-attention-token",
+    "coingecko_id": "basic-attention-token",
+    "nomics_id": "BAT",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "BAT-PLG20": {
     "coin": "BAT-PLG20",
     "name": "Basic Attention Token",
     "coinpaprika_id": "bat-basic-attention-token",
     "coingecko_id": "basic-attention-token",
+    "nomics_id": "BAT",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -3385,11 +4655,12 @@
   "KMD": {
     "coin": "KMD",
     "name": "Komodo",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "is_claimable": true,
     "minimal_claim_amount": "10",
     "coingecko_id": "komodo",
     "coinpaprika_id": "kmd-komodo",
+    "nomics_id": "KMD",
     "electrum": [
       {
         "url": "electrum3.cipig.net:10001",
@@ -3415,6 +4686,7 @@
     "name": "Komodo",
     "coinpaprika_id": "kmd-komodo",
     "coingecko_id": "komodo",
+    "nomics_id": "KMD",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -3430,7 +4702,7 @@
   "LABS": {
     "coin": "LABS",
     "name": "Labs",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -3453,11 +4725,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "LINK-AVX20": {
+    "coin": "LINK-AVX20",
+    "name": "Chainlink",
+    "coinpaprika_id": "link-chainlink",
+    "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "LINK-BEP20": {
     "coin": "LINK-BEP20",
     "name": "Chainlink",
     "coinpaprika_id": "link-chainlink",
     "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -3475,6 +4764,7 @@
     "name": "Chainlink",
     "coinpaprika_id": "link-chainlink",
     "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -3487,11 +4777,77 @@
     "active": false,
     "currently_enabled": false
   },
+  "LINK-FTM20": {
+    "coin": "LINK-FTM20",
+    "name": "Chainlink",
+    "coinpaprika_id": "link-chainlink",
+    "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LINK-HCO20": {
+    "coin": "LINK-HCO20",
+    "name": "Chainlink",
+    "coinpaprika_id": "link-chainlink",
+    "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LINK-HRC20": {
+    "coin": "LINK-HRC20",
+    "name": "Chainlink",
+    "coinpaprika_id": "link-chainlink",
+    "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "LINK-KRC20": {
+    "coin": "LINK-KRC20",
+    "name": "Chainlink",
+    "coinpaprika_id": "link-chainlink",
+    "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "LINK-PLG20": {
     "coin": "LINK-PLG20",
     "name": "Chainlink",
     "coinpaprika_id": "link-chainlink",
     "coingecko_id": "chainlink",
+    "nomics_id": "LINK",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -3521,14 +4877,14 @@
     "explorer_url": [
       "https://mesh.kmdexplorer.io/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
   "MGW": {
     "coin": "MGW",
     "name": "MGW",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -3555,7 +4911,7 @@
   "DEX": {
     "coin": "DEX",
     "name": "Dex",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -3582,7 +4938,7 @@
   "RICK": {
     "coin": "RICK",
     "asset": "RICK",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "name": "Rick (TESTCOIN)",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
@@ -3609,7 +4965,7 @@
   "MORTY": {
     "coin": "MORTY",
     "asset": "MORTY",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "name": "Morty (TESTCOIN)",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
@@ -3636,7 +4992,7 @@
   "PANGEA": {
     "coin": "PANGEA",
     "name": "Pangea",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -3680,6 +5036,33 @@
     "active": false,
     "currently_enabled": false
   },
+  "PPC": {
+      "coin": "PPC",
+      "name": "Peercoin",
+      "coinpaprika_id": "ppc-peercoin",
+      "coingecko_id": "peercoin",
+      "nomics_id": "PPC",
+      "electrum": [
+      {
+        "url": "electrum.peercoinexplorer.net:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": false
+      },
+      {
+        "url": "allingas.peercoinexplorer.net:50002",
+        "protocol": "SSL",
+        "disable_cert_verification": false
+      }
+      ],
+      "explorer_url": [
+        "https://chainz.cryptoid.info/ppc/"
+      ],
+      "explorer_tx_url": "tx.dws?",
+      "explorer_address_url": "address.dws?",
+      "type": "UTXO",
+      "active": false,
+      "currently_enabled": false
+  },
   "QIAIR": {
     "coin": "QIAIR",
     "name": "Qi Airdrop Token",
@@ -3697,6 +5080,7 @@
     "name": "QiSwap",
     "coingecko_id": "qiswap",
     "coinpaprika_id": "qi-qiswap",
+    "nomics_id": "QI",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -3704,10 +5088,44 @@
     ],
     "type": "QRC-20"
   },
+  "QNT-ERC20": {
+    "coin": "QNT-ERC20",
+    "name": "Quant",
+    "coinpaprika_id": "qnt-quant",
+    "coingecko_id": "quant-network",
+    "nomics_id": "QNT",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "QNT-KRC20": {
+    "coin": "QNT-KRC20",
+    "name": "Quant",
+    "coinpaprika_id": "qnt-quant",
+    "coingecko_id": "quant-network",
+    "nomics_id": "QNT",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "REVS": {
     "coin": "REVS",
     "name": "REVS",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
     "electrum": [
@@ -3731,9 +5149,26 @@
     "currently_enabled": false,
     "wallet_only": true
   },
-  "SMTF-v2": {
-    "coin": "SMTF-v2",
-    "name": "SmartFi",
+  "SBCH": {
+    "coin": "SBCH",
+    "name": "SmartBCH",
+    "alias_ticker": "BCH",
+    "coinpaprika_id": "bch-bitcoin-cash",
+    "coingecko_id": "bitcoin-cash",
+    "nomics_id": "BCH",
+    "nodes": [
+      "https://smartbch.fountainhead.cash/mainnet"
+    ],
+    "explorer_url": [
+      "https://www.smartscan.cash/"
+    ],
+    "type": "SmartBCH",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SIBM-BEP20": {
+    "coin": "SIBM-BEP20",
+    "name": "SibMining",
     "coinpaprika_id": "test-coin",
     "coingecko_id": "test-coin",
     "nodes": [
@@ -3745,9 +5180,27 @@
       "https://bscscan.com/"
     ],
     "type": "BEP-20",
-    "active": true,
+    "active": false,
     "currently_enabled": false
-  },  
+  },
+  "SMTF-v2": {
+    "coin": "SMTF-v2",
+    "name": "SmartFi",
+    "coinpaprika_id": "smtf-smartfi",
+    "coingecko_id": "test-coin",
+    "nomics_id": "SMTF",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "SOULJA": {
     "coin": "SOULJA",
     "name": "SouljaCoin",
@@ -3770,7 +5223,7 @@
     "explorer_url": [
       "https://explorer.souljacoin.cash/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -3813,6 +5266,7 @@
     "name": "Syscoin",
     "coinpaprika_id": "sys-syscoin",
     "coingecko_id": "syscoin",
+    "nomics_id": "SYS",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10064",
@@ -3858,7 +5312,7 @@
     "explorer_url": [
       "https://wsb.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -3868,6 +5322,7 @@
     "name": "Chips",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "chips-chips",
+    "nomics_id": "CHIPS6",
     "electrum": [
       {
         "url": "electrum3.cipig.net:10053",
@@ -3894,6 +5349,7 @@
     "type": "UTXO",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "sca-scalaris",
+    "nomics_id": "SCA2",
     "electrum": [
       {
         "url": "electrum1.scalaris.info:10001"
@@ -3914,9 +5370,10 @@
   "SUPERNET": {
     "coin": "SUPERNET",
     "name": "Supernet",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "coingecko_id": "test-coin",
-    "coinpaprika_id": "test-coin",
+    "coinpaprika_id": "unity-supernet",
+    "nomics_id": "UNITY",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10005",
@@ -3938,11 +5395,28 @@
     "currently_enabled": false,
     "wallet_only": true
   },
+  "SUSHI-AVX20": {
+    "coin": "SUSHI-AVX20",
+    "name": "Sushi",
+    "coinpaprika_id": "sushi-sushi",
+    "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "SUSHI-BEP20": {
     "coin": "SUSHI-BEP20",
     "name": "Sushi",
     "coinpaprika_id": "sushi-sushi",
     "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -3960,6 +5434,7 @@
     "name": "Sushi",
     "coinpaprika_id": "sushi-sushi",
     "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -3972,11 +5447,77 @@
     "active": false,
     "currently_enabled": false
   },
+  "SUSHI-FTM20": {
+    "coin": "SUSHI-FTM20",
+    "name": "Sushi",
+    "coinpaprika_id": "sushi-sushi",
+    "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SUSHI-HRC20": {
+    "coin": "SUSHI-HRC20",
+    "name": "Sushi",
+    "coinpaprika_id": "sushi-sushi",
+    "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SUSHI-KRC20": {
+    "coin": "SUSHI-KRC20",
+    "name": "Sushi",
+    "coinpaprika_id": "sushi-sushi",
+    "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SUSHI-MVR20": {
+      "coin": "SUSHI-MVR20",
+      "name": "Sushi",
+      "coinpaprika_id": "sushi-sushi",
+      "coingecko_id": "sushi",
+      "nomics_id": "SUSHI",
+      "nodes": [
+        "https://rpc.moonriver.moonbeam.network"
+      ],
+      "explorer_url": [
+        "https://blockscout.moonriver.moonbeam.network/"
+      ],
+      "type": "Moonriver",
+      "active": false,
+      "currently_enabled": false
+  },
   "SUSHI-PLG20": {
     "coin": "SUSHI-PLG20",
     "name": "Sushi",
     "coinpaprika_id": "sushi-sushi",
     "coingecko_id": "sushi",
+    "nomics_id": "SUSHI",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -3992,6 +5533,7 @@
     "name": "Vite",
     "coinpaprika_id": "vite-vite",
     "coingecko_id": "vite",
+    "nomics_id": "VITE",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -4006,10 +5548,11 @@
   },
   "VRSC": {
     "coin": "VRSC",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "name": "Verus Coin",
     "coingecko_id": "verus-coin",
     "coinpaprika_id": "vrsc-verus-coin",
+    "nomics_id": "VRSC",
     "electrum": [
       {
         "url": "el0.verus.io:17486",
@@ -4025,15 +5568,6 @@
         "url": "el2.verus.io:17486",
         "protocol": "SSL",
         "disable_cert_verification": false
-      },
-      {
-        "url": "el0.verus.io:17485"
-      },
-      {
-        "url": "el1.verus.io:17485"
-      },
-      {
-        "url": "el2.verus.io:17485"
       }
     ],
     "explorer_url": [
@@ -4047,6 +5581,7 @@
     "name": "InfiniLooP",
     "coinpaprika_id": "il8p-infiniloop",
     "coingecko_id": "test-coin",
+    "nomics_id": "IL8P",
     "electrum": [
       {
         "url": "il8p.electrumx.transcenders.name:50002",
@@ -4070,7 +5605,7 @@
   },
   "ILN": {
     "coin": "ILN",
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "name": "iLien",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "test-coin",
@@ -4088,11 +5623,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "MKR-AVX20": {
+    "coin": "MKR-AVX20",
+    "name": "Maker",
+    "coinpaprika_id": "mkr-maker",
+    "coingecko_id": "maker",
+    "nomics_id": "MKR",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "MKR-BEP20": {
     "coin": "MKR-BEP20",
     "name": "Maker",
     "coinpaprika_id": "mkr-maker",
     "coingecko_id": "maker",
+    "nomics_id": "MKR",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -4110,6 +5662,7 @@
     "name": "Maker",
     "coinpaprika_id": "mkr-maker",
     "coingecko_id": "maker",
+    "nomics_id": "MKR",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -4122,11 +5675,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "MKR-KRC20": {
+    "coin": "MKR-KRC20",
+    "name": "Maker",
+    "coinpaprika_id": "mkr-maker",
+    "coingecko_id": "maker",
+    "nomics_id": "MKR",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "MONA": {
     "coin": "MONA",
     "name": "MonaCoin",
     "coinpaprika_id": "mona-monacoin",
     "coingecko_id": "monacoin",
+    "nomics_id": "MONA",
     "electrum": [
       {
         "url": "electrumx3.monacoin.nl:50001"
@@ -4150,6 +5720,7 @@
     "name": "NavCoin",
     "coinpaprika_id": "nav-navcoin",
     "coingecko_id": "nav-coin",
+    "nomics_id": "NAV",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10056"
@@ -4169,33 +5740,87 @@
     "currently_enabled": false
   },
   "NAV-BEP20": {
-      "coin": "NAV-BEP20",
-      "name": "Navcoin",
-      "coinpaprika_id": "nav-navcoin",
-      "coingecko_id": "nav-coin",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "NAV-BEP20",
+    "name": "Navcoin",
+    "coinpaprika_id": "nav-navcoin",
+    "coingecko_id": "nav-coin",
+    "nomics_id": "NAV",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "NEXO-ERC20": {
+    "coin": "NEXO-ERC20",
+    "name": "Nexo",
+    "coinpaprika_id": "nexo-nexo",
+    "coingecko_id": "nexo",
+    "nomics_id": "NEXO",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "NEXO-KRC20": {
+    "coin": "NEXO-KRC20",
+    "name": "Nexo",
+    "coinpaprika_id": "nexo-nexo",
+    "coingecko_id": "nexo",
+    "nomics_id": "NEXO",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "NEXO-PLG20": {
+    "coin": "NEXO-PLG20",
+    "name": "Nexo",
+    "coinpaprika_id": "nexo-nexo",
+    "coingecko_id": "nexo",
+    "nomics_id": "NEXO",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "NMC": {
     "coin": "NMC",
     "name": "Namecoin",
     "coinpaprika_id": "nmc-namecoin",
     "coingecko_id": "namecoin",
+    "nomics_id": "NMC",
     "electrum": [
       {
         "url": "82.119.233.36:50001"
       },
       {
-        "url": "nmc.bitcoins.sk:50001"
+        "url": "nmc2.bitcoins.sk:57002",
+        "protocol": "SSL",
+        "disable_cert_verification": true
       },
       {
         "url": "electrumx1.nmc.bitclc.net:50001"
@@ -4222,6 +5847,7 @@
     "name": "Novacoin",
     "coinpaprika_id": "nvc-novacoin",
     "coingecko_id": "novacoin",
+    "nomics_id": "NVC",
     "electrum": [
       {
         "url": "electrumx.nvc.ewmcx.org:50002",
@@ -4247,6 +5873,7 @@
     "name": "Novacoin",
     "coinpaprika_id": "nvc-novacoin",
     "coingecko_id": "novacoin",
+    "nomics_id": "NVC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -4264,6 +5891,7 @@
     "name": "Novacoin",
     "coinpaprika_id": "nvc-novacoin",
     "coingecko_id": "novacoin",
+    "nomics_id": "NVC",
     "explorer_url": [
       "https://explorer.qtum.org/"
     ],
@@ -4271,43 +5899,82 @@
     "active": false,
     "currently_enabled": false
   },
+  "NZDS-ERC20": {
+    "coin": "NZDS-ERC20",
+    "name": "NZD Stablecoin",
+    "forex_id": "NZD",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "nzd-stablecoin",
+    "nomics_id": "NZDS",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "NZDS-PLG20": {
+    "coin": "NZDS-PLG20",
+    "name": "NZD Stablecoin",
+    "forex_id": "NZD",
+    "coinpaprika_id": "test-coin",
+    "coingecko_id": "nzd-stablecoin",
+    "nomics_id": "NZDS",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
   "OMG-ERC20": {
-      "coin": "OMG-ERC20",
-      "name": "OMG Network",
-      "coinpaprika_id": "omg-omg-network",
-      "coingecko_id": "omisego",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "OMG-ERC20",
+    "name": "OMG Network",
+    "coinpaprika_id": "omg-omg-network",
+    "coingecko_id": "omisego",
+    "nomics_id": "OMG",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "OMG-PLG20": {
-      "coin": "OMG-PLG20",
-      "name": "OMG Network",
-      "coinpaprika_id": "omg-omg-network",
-      "coingecko_id": "omisego",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "OMG-PLG20",
+    "name": "OMG Network",
+    "coinpaprika_id": "omg-omg-network",
+    "coingecko_id": "omisego",
+    "nomics_id": "OMG",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "QKC-BEP20": {
     "coin": "QKC-BEP20",
     "name": "QuarkChain",
     "coinpaprika_id": "qkc-quarkchain",
     "coingecko_id": "quark-chain",
+    "nomics_id": "QKC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -4325,6 +5992,7 @@
     "name": "QuarkChain",
     "coinpaprika_id": "qkc-quarkchain",
     "coingecko_id": "quark-chain",
+    "nomics_id": "QKC",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -4343,6 +6011,7 @@
     "name": "Qtum",
     "coinpaprika_id": "qtum-qtum",
     "coingecko_id": "qtum",
+    "nomics_id": "QTUM",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10050",
@@ -4369,6 +6038,7 @@
     "name": "Qtum",
     "coinpaprika_id": "qtum-qtum",
     "coingecko_id": "qtum",
+    "nomics_id": "QTUM",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -4381,11 +6051,83 @@
     "active": false,
     "currently_enabled": false
   },
+  "REN-ERC20": {
+    "coin": "REN-ERC20",
+    "name": "Ren",
+    "coinpaprika_id": "ren-republic-protocol",
+    "coingecko_id": "republic-protocol",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "REN-HRC20": {
+    "coin": "REN-HRC20",
+    "name": "Ren",
+    "coinpaprika_id": "ren-republic-protocol",
+    "coingecko_id": "republic-protocol",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "REN-HCO20": {
+    "coin": "REN-HCO20",
+    "name": "Ren",
+    "coinpaprika_id": "ren-republic-protocol",
+    "coingecko_id": "republic-protocol",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "RTM": {
+    "coin": "RTM",
+    "name": "Raptoreum",
+    "coinpaprika_id": "rtm-raptoreum",
+    "coingecko_id": "raptoreum",
+    "nomics_id": "RTM",
+    "electrum": [
+      {
+        "url": "209.151.151.21:50001",
+        "protocol": "TCP"
+      },
+      {
+        "url": "209.50.52.239:50001",
+        "protocol": "TCP"
+      }
+    ],
+    "explorer_url": [
+      "https://explorer.raptoreum.com/"
+    ],
+    "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
   "RVN": {
     "coin": "RVN",
     "name": "Ravencoin",
     "coinpaprika_id": "rvn-ravencoin",
     "coingecko_id": "ravencoin",
+    "nomics_id": "RVN",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10051",
@@ -4407,11 +6149,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "SNX-AVX20": {
+    "coin": "SNX-AVX20",
+    "name": "Synthetix",
+    "coinpaprika_id": "snx-synthetix-network-token",
+    "coingecko_id": "havven",
+    "nomics_id": "SNX",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "SNX-BEP20": {
     "coin": "SNX-BEP20",
     "name": "Synthetix",
     "coinpaprika_id": "snx-synthetix-network-token",
     "coingecko_id": "havven",
+    "nomics_id": "SNX",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -4429,6 +6188,7 @@
     "name": "Synthetix",
     "coinpaprika_id": "snx-synthetix-network-token",
     "coingecko_id": "havven",
+    "nomics_id": "SNX",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -4441,11 +6201,44 @@
     "active": false,
     "currently_enabled": false
   },
+  "SNX-FTM20": {
+    "coin": "SNX-FTM20",
+    "name": "Synthetix",
+    "coinpaprika_id": "snx-synthetix-network-token",
+    "coingecko_id": "havven",
+    "nomics_id": "SNX",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "SNX-KRC20": {
+    "coin": "SNX-KRC20",
+    "name": "Synthetix",
+    "coinpaprika_id": "snx-synthetix-network-token",
+    "coingecko_id": "havven",
+    "nomics_id": "SNX",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "SNX-PLG20": {
     "coin": "SNX-PLG20",
     "name": "Synthetix",
     "coinpaprika_id": "snx-synthetix-network-token",
     "coingecko_id": "havven",
+    "nomics_id": "SNX",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -4472,7 +6265,57 @@
     "explorer_url": [
       "https://explorer.spaceworks.co/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "TEL-ERC20": {
+    "coin": "TEL-ERC20",
+    "name": "Telcoin",
+    "coinpaprika_id": "tel-telcoin",
+    "coingecko_id": "telcoin",
+    "nomics_id": "TEL",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "TEL-PLG20": {
+    "coin": "TEL-PLG20",
+    "name": "Telcoin",
+    "coinpaprika_id": "tel-telcoin",
+    "coingecko_id": "telcoin",
+    "nomics_id": "TEL",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "TEL-KRC20": {
+    "coin": "TEL-KRC20",
+    "name": "Telcoin",
+    "coinpaprika_id": "tel-telcoin",
+    "coingecko_id": "telcoin",
+    "nomics_id": "TEL",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -4481,6 +6324,7 @@
     "name": "HempCoin",
     "coinpaprika_id": "thc-hempcoin",
     "coingecko_id": "hempcoin-thc",
+    "nomics_id": "THC",
     "electrum": [
       {
         "url": "1.eu.thc.electrum.dexstats.info:10020"
@@ -4492,7 +6336,7 @@
     "explorer_url": [
       "https://thc.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -4501,6 +6345,7 @@
     "name": "Tokel",
     "coinpaprika_id": "tkl-tokel",
     "coingecko_id": "test-coin",
+    "nomics_id": "TKL2",
     "electrum": [
       {
         "url": "1.eu.tokel.electrum.dexstats.info:10077"
@@ -4512,7 +6357,7 @@
     "explorer_url": [
       "https://tokel.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   },
@@ -4521,6 +6366,7 @@
     "name": "Terracoin",
     "coinpaprika_id": "trc-terracoin",
     "coingecko_id": "terracoin",
+    "nomics_id": "TRC",
     "electrum": [
       {
         "url": "failover.trc-uis.ewmcx.biz:50006",
@@ -4561,23 +6407,25 @@
     "currently_enabled": false
   },
   "TRYB-AVX20": {
-      "coin": "TRYB-AVX20",
-      "name": "BiLira",
-      "coinpaprika_id": "tryb-bilira",
-      "coingecko_id": "bilira",
-      "nodes": [
-        "https://api.avax.network/ext/bc/C/rpc"
-      ],
-      "explorer_url": [
-        "https://cchain.explorer.avax.network/"
-      ],
-      "type": "AVX-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "TRYB-AVX20",
+    "name": "BiLira",
+    "forex_id": "TRY",
+    "coinpaprika_id": "tryb-bilira",
+    "coingecko_id": "bilira",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
   },
   "TRYB-BEP20": {
     "coin": "TRYB-BEP20",
     "name": "BiLira",
+    "forex_id": "TRY",
     "coinpaprika_id": "tryb-bilira",
     "coingecko_id": "bilira",
     "nodes": [
@@ -4592,9 +6440,26 @@
     "active": false,
     "currently_enabled": false
   },
+  "TRYB-PLG20": {
+    "coin": "TRYB-PLG20",
+    "name": "BiLira",
+    "forex_id": "TRY",
+    "coinpaprika_id": "tryb-bilira",
+    "coingecko_id": "bilira",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
   "TRYB-ERC20": {
     "coin": "TRYB-ERC20",
     "name": "BiLira",
+    "forex_id": "TRY",
     "coinpaprika_id": "tryb-bilira",
     "coingecko_id": "bilira",
     "nodes": [
@@ -4643,6 +6508,36 @@
     "active": false,
     "currently_enabled": false
   },
+  "TUSD-HCO20": {
+    "coin": "TUSD-HCO20",
+    "name": "TrueUSD",
+    "coinpaprika_id": "tusd-trueusd",
+    "coingecko_id": "true-usd",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "TUSD-KRC20": {
+    "coin": "TUSD-KRC20",
+    "name": "TrueUSD",
+    "coinpaprika_id": "tusd-trueusd",
+    "coingecko_id": "true-usd",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "TUSD-PLG20": {
     "coin": "TUSD-PLG20",
     "name": "TrueUSD",
@@ -4658,11 +6553,77 @@
     "active": false,
     "currently_enabled": false
   },
+  "UST-ERC20": {
+    "coin": "UST-ERC20",
+    "name": "TerraUSD",
+    "coinpaprika_id": "ust-terrausd",
+    "coingecko_id": "terrausd",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UST-BEP20": {
+    "coin": "UST-BEP20",
+    "name": "TerraUSD",
+    "coinpaprika_id": "ust-terrausd",
+    "coingecko_id": "terrausd",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UST-HRC20": {
+    "coin": "UST-HRC20",
+    "name": "TerraUSD",
+    "coinpaprika_id": "ust-terrausd",
+    "coingecko_id": "terrausd",
+    "nodes": [
+      "https://api.harmony.one",
+      "https://api.s0.t.hmny.io"
+    ],
+    "explorer_url": [
+      "https://explorer.harmony.one/"
+    ],
+    "type": "HRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UST-PLG20": {
+    "coin": "UST-PLG20",
+    "name": "TerraUSD",
+    "coinpaprika_id": "ust-terrausd",
+    "coingecko_id": "terrausd",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
   "VAL": {
     "coin": "VAL",
     "name": "Validity",
     "coinpaprika_id": "val-validity",
     "coingecko_id": "radium",
+    "nomics_id": "RADS",
     "electrum": [
       {
         "url": "e1.validitytech.com:11002",
@@ -4711,6 +6672,7 @@
     "name": "Verium Reserve",
     "coingecko_id": "test-coin",
     "coinpaprika_id": "vrm-veriumreserve",
+    "nomics_id": "VRM",
     "electrum": [
       {
         "url": "electrum01-vrm.vericonomy.com:50001"
@@ -4726,11 +6688,47 @@
     "active": false,
     "currently_enabled": false
   },
+  "WBTC-ERC20": {
+      "coin": "WBTC-ERC20",
+      "name": "Wrapped Bitcoin",
+      "coinpaprika_id": "wbtc-wrapped-bitcoin",
+      "coingecko_id": "wrapped-bitcoin",
+      "nomics_id": "WBTC",
+      "nodes": [
+        "http://eth1.cipig.net:8555",
+        "http://eth2.cipig.net:8555",
+        "http://eth3.cipig.net:8555"
+      ],
+      "explorer_url": [
+        "https://etherscan.io/"
+      ],
+      "type": "ERC-20",
+      "active": false,
+      "currently_enabled": false
+  },
+  "WBTC-HRC20": {
+      "coin": "WBTC-HRC20",
+      "name": "Wrapped Bitcoin",
+      "coinpaprika_id": "wbtc-wrapped-bitcoin",
+      "coingecko_id": "wrapped-bitcoin",
+      "nomics_id": "WBTC",
+      "nodes": [
+        "https://api.harmony.one",
+        "https://api.s0.t.hmny.io"
+      ],
+      "explorer_url": [
+        "https://explorer.harmony.one/"
+      ],
+      "type": "HRC-20",
+      "active": false,
+      "currently_enabled": false
+  },
   "WCN": {
     "coin": "WCN",
     "name": "Widecoin",
     "coinpaprika_id": "wcn-widecoin",
     "coingecko_id": "widecoin",
+    "nomics_id": "WCN2",
     "electrum": [
       {
         "url": "electrumx.widecoin.org:50001"
@@ -4751,6 +6749,7 @@
     "name": "Wrapped Widecoin",
     "coinpaprika_id": "wwcn-wrapped-widecoin",
     "coingecko_id": "wrapped-widecoin",
+    "nomics_id": "WWCN",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -4764,11 +6763,11 @@
     "currently_enabled": false
   },
   "XEC": {
-    "active": false,
     "coin": "XEC",
+    "name": "eCash",
     "coingecko_id": "ecash",
     "coinpaprika_id": "xec-ecash",
-    "currently_enabled": false,
+    "nomics_id": "XEC",
     "electrum": [
       {
         "url": "electrum.bitcoinabc.org:50002",
@@ -4779,31 +6778,33 @@
         "url": "fulcrum.pepipierre.fr:50002",
         "protocol": "SSL",
         "disable_cert_verification": true
-      }      
+      }
     ],
     "explorer_url": [
       "https://blockchair.com/ecash/"
     ],
     "explorer_tx_url": "transaction/",
     "type": "UTXO",
-    "name": "eCash"
+    "active": false,
+    "currently_enabled": false
   },
   "XEP-BEP20": {
-      "coin": "XEP-BEP20",
-      "name": "Electra Protocol",
-      "coinpaprika_id": "xep-electra-protocol",
-      "coingecko_id": "electra-protocol",
-      "nodes": [
-        "http://bsc1.cipig.net:8655",
-        "http://bsc2.cipig.net:8655",
-        "http://bsc3.cipig.net:8655"
-      ],
-      "explorer_url": [
-        "https://bscscan.com/"
-      ],
-      "type": "BEP-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "XEP-BEP20",
+    "name": "Electra Protocol",
+    "coinpaprika_id": "xep-electra-protocol",
+    "coingecko_id": "electra-protocol",
+    "nomics_id": "XEP",
+    "nodes": [
+      "http://bsc1.cipig.net:8655",
+      "http://bsc2.cipig.net:8655",
+      "http://bsc3.cipig.net:8655"
+    ],
+    "explorer_url": [
+      "https://bscscan.com/"
+    ],
+    "type": "BEP-20",
+    "active": false,
+    "currently_enabled": false
   },
   "XLM-BEP20": {
     "coin": "XLM-BEP20",
@@ -4827,6 +6828,7 @@
     "name": "Myriad",
     "coinpaprika_id": "xmy-myriad",
     "coingecko_id": "myriadcoin",
+    "nomics_id": "XMY",
     "electrum": [
       {
         "url": "lenoir.ecoincore.com:10892",
@@ -4847,6 +6849,7 @@
     "name": "Primecoin",
     "coinpaprika_id": "xpm-primecoin",
     "coingecko_id": "primecoin",
+    "nomics_id": "XPM",
     "electrum": [
       {
         "url": "electrumx.primecoin.org:50001",
@@ -4886,7 +6889,7 @@
     "active": false,
     "currently_enabled": false
   },
-    "XRG": {
+  "XRG": {
     "coin": "XRG",
     "active": false,
     "coinpaprika_id": "xrg-ergon",
@@ -4910,36 +6913,38 @@
     "name": "Ergon"
   },
   "XSGD-ERC20": {
-      "coin": "XSGD-ERC20",
-      "name": "StraitsX SGD",
-      "coinpaprika_id": "xsgd-xsgd",
-      "coingecko_id": "xsgd",
-      "nodes": [
-        "http://eth1.cipig.net:8555",
-        "http://eth2.cipig.net:8555",
-        "http://eth3.cipig.net:8555"
-      ],
-      "explorer_url": [
-        "https://etherscan.io/"
-      ],
-      "type": "ERC-20",
-      "active": false,
-      "currently_enabled": false
+    "coin": "XSGD-ERC20",
+    "name": "StraitsX SGD",
+    "forex_id": "SGD",
+    "coinpaprika_id": "xsgd-xsgd",
+    "coingecko_id": "xsgd",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
   },
   "XSGD-PLG20": {
-      "coin": "XSGD-PLG20",
-      "name": "StraitsX SGD",
-      "coinpaprika_id": "xsgd-xsgd",
-      "coingecko_id": "xsgd",
-      "nodes": [
-        "https://polygon-rpc.com"
-      ],
-      "explorer_url": [
-        "https://polygonscan.com/"
-      ],
-      "type": "Matic",
-      "active": false,
-      "currently_enabled": false
+    "coin": "XSGD-PLG20",
+    "name": "StraitsX SGD",
+    "forex_id": "SGD",
+    "coinpaprika_id": "xsgd-xsgd",
+    "coingecko_id": "xsgd",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
+    "active": false,
+    "currently_enabled": false
   },
   "XTZ-BEP20": {
     "coin": "XTZ-BEP20",
@@ -4963,6 +6968,7 @@
     "name": "Vanillacash",
     "coinpaprika_id": "xvc-vcash",
     "coingecko_id": "vcash",
+    "nomics_id": "XVC",
     "electrum": [
       {
         "url": "electrumx.xvc.ewmcx.org:50001",
@@ -4986,6 +6992,7 @@
     "name": "Vanillacash",
     "coinpaprika_id": "xvc-vcash",
     "coingecko_id": "vcash",
+    "nomics_id": "XVC",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -5003,6 +7010,7 @@
     "name": "Vanillacash",
     "coinpaprika_id": "xvc-vcash",
     "coingecko_id": "vcash",
+    "nomics_id": "XVC",
     "explorer_url": [
       "https://explorer.qtum.org/"
     ],
@@ -5027,11 +7035,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "YFI-AVX20": {
+    "coin": "YFI-AVX20",
+    "name": "yearn.finance",
+    "coinpaprika_id": "yfi-yearnfinance",
+    "coingecko_id": "yearn-finance",
+    "nomics_id": "YFI",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "YFI-BEP20": {
     "coin": "YFI-BEP20",
     "name": "yearn.finance",
     "coinpaprika_id": "yfi-yearnfinance",
     "coingecko_id": "yearn-finance",
+    "nomics_id": "YFI",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -5049,6 +7074,7 @@
     "name": "yearn.finance",
     "coinpaprika_id": "yfi-yearnfinance",
     "coingecko_id": "yearn-finance",
+    "nomics_id": "YFI",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5058,6 +7084,38 @@
       "https://etherscan.io/"
     ],
     "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "YFI-FTM20": {
+    "coin": "YFI-FTM20",
+    "name": "yearn.finance",
+    "coinpaprika_id": "yfi-yearnfinance",
+    "coingecko_id": "yearn-finance",
+    "nomics_id": "YFI",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "YFI-KRC20": {
+    "coin": "YFI-KRC20",
+    "name": "yearn.finance",
+    "coinpaprika_id": "yfi-yearnfinance",
+    "coingecko_id": "yearn-finance",
+    "nomics_id": "YFI",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -5096,12 +7154,11 @@
     "currently_enabled": false
   },
   "ZEC": {
-    "active": false,
     "coin": "ZEC",
     "name": "Zcash",
     "coinpaprika_id": "zec-zcash",
     "coingecko_id": "zcash",
-    "currently_enabled": false,
+    "nomics_id": "ZEC",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10058",
@@ -5116,17 +7173,20 @@
         "ws_url": "electrum3.cipig.net:30058"
       }
     ],
-    "explorer_tx_url": "transaction/",
+    "explorer_tx_url": "transactions/",
     "explorer_url": [
       "https://explorer.zcha.in/"
     ],
-    "type": "UTXO"
+    "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
   },
   "ZER": {
     "coin": "ZER",
     "name": "Zero",
     "coinpaprika_id": "zer-zero",
     "coingecko_id": "zero",
+    "nomics_id": "ZER",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10065"
@@ -5145,16 +7205,43 @@
     "active": false,
     "currently_enabled": false
   },
-  "ZET": {
-    "coin": "ZET",
-    "name": "Zetacoin",
+  "ZET-OLD": {
+    "coin": "ZET-OLD",
+    "name": "Zetacoin (OLD)",
     "coinpaprika_id": "zet-zetacoin",
     "coingecko_id": "zetacoin",
+    "nomics_id": "ZET",
     "electrum": [
       {
         "url": "failover.zet.ewmci.xyz:50002",
         "protocol": "SSL",
         "disable_cert_verification": true
+      }
+    ],
+    "explorer_url": [
+      "https://chainz.cryptoid.info/zet-old/"
+    ],
+    "explorer_tx_url": "tx.dws?",
+    "explorer_address_url": "address.dws?",
+    "type": "UTXO",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ZET": {
+    "coin": "ZET",
+    "name": "Zetacoin",
+    "coinpaprika_id": "zet-zetacoin",
+    "coingecko_id": "zetacoin",
+    "nomics_id": "ZET",
+    "electrum": [
+      {
+        "url": "207.180.252.200:50011",
+        "protocol": "TCP"
+      },
+      {
+        "url": "zeta-seed-c.zetacoin.tech:50012",
+        "protocol": "SSL",
+        "disable_cert_verification": false
       }
     ],
     "explorer_url": [
@@ -5171,6 +7258,7 @@
     "name": "Zilliqa",
     "coinpaprika_id": "zil-zilliqa",
     "coingecko_id": "zilliqa",
+    "nomics_id": "ZIL",
     "nodes": [
       "http://bsc1.cipig.net:8655",
       "http://bsc2.cipig.net:8655",
@@ -5188,6 +7276,7 @@
     "name": "ChainZilla",
     "coinpaprika_id": "zilla-chainzilla",
     "coingecko_id": "test-coin",
+    "nomics_id": "ZILLA",
     "electrum": [
       {
         "url": "electrum1.cipig.net:10028",
@@ -5205,7 +7294,54 @@
     "explorer_url": [
       "https://zilla.explorer.dexstats.info/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ZRX-AVX20": {
+    "coin": "ZRX-AVX20",
+    "name": "0x",
+    "coinpaprika_id": "zrx-0x",
+    "coingecko_id": "0x",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ZRX-ERC20": {
+    "coin": "ZRX-ERC20",
+    "name": "0x",
+    "coinpaprika_id": "zrx-0x",
+    "coingecko_id": "0x",
+    "nodes": [
+      "http://eth1.cipig.net:8555",
+      "http://eth2.cipig.net:8555",
+      "http://eth3.cipig.net:8555"
+    ],
+    "explorer_url": [
+      "https://etherscan.io/"
+    ],
+    "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "ZRX-PLG20": {
+    "coin": "ZRX-PLG20",
+    "name": "0x",
+    "coinpaprika_id": "zrx-0x",
+    "coingecko_id": "0x",
+    "nodes": [
+      "https://polygon-rpc.com"
+    ],
+    "explorer_url": [
+      "https://polygonscan.com/"
+    ],
+    "type": "Matic",
     "active": false,
     "currently_enabled": false
   },
@@ -5280,6 +7416,7 @@
     "name": "Ink",
     "coingecko_id": "ink",
     "coinpaprika_id": "ink-ink",
+    "nomics_id": "INK",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5290,8 +7427,9 @@
   "SPC": {
     "coin": "SPC",
     "name": "SpaceChain",
-    "coingecko_id": "spacechain",
+    "coingecko_id": "spacechain-erc-20",
     "coinpaprika_id": "spc-spacechain",
+    "nomics_id": "SPC",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5304,6 +7442,7 @@
     "name": "Hyper Pay",
     "coingecko_id": "hyper-pay",
     "coinpaprika_id": "hpy-hyper-pay",
+    "nomics_id": "HPY",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5316,6 +7455,7 @@
     "name": "HalalChain",
     "coingecko_id": "halalchain",
     "coinpaprika_id": "hlc-halalchain",
+    "nomics_id": "HLC",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5328,6 +7468,7 @@
     "name": "Luna Stars",
     "coingecko_id": "meetluna",
     "coinpaprika_id": "lstr-luna-stars",
+    "nomics_id": "LSTR",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5340,6 +7481,7 @@
     "name": "Qbao",
     "coingecko_id": "qbao",
     "coinpaprika_id": "qbt-qbao",
+    "nomics_id": "QBT",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5352,6 +7494,7 @@
     "name": "OceanChain",
     "coingecko_id": "oceanchain",
     "coinpaprika_id": "oc-oceanchain",
+    "nomics_id": "OC",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5364,6 +7507,7 @@
     "name": "Profile Utility Token",
     "coingecko_id": "profile-utility-token",
     "coinpaprika_id": "put-profile-utility-token",
+    "nomics_id": "PUT",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5376,6 +7520,7 @@
     "name": "Energo",
     "coingecko_id": "energo",
     "coinpaprika_id": "tsl-energo",
+    "nomics_id": "TSL",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5386,8 +7531,10 @@
   "QC": {
     "coin": "QC",
     "name": "Qcash",
+    "forex_id": "CNY",
     "coingecko_id": "qcash",
     "coinpaprika_id": "qc-qcash",
+    "nomics_id": "QC",
     "active": false,
     "currently_enabled": false,
     "explorer_url": [
@@ -5398,6 +7545,7 @@
   "SFUSD": {
     "coin": "SFUSD",
     "name": "SmartUSD",
+    "forex_id": "USD",
     "coinpaprika_id": "test-coin",
     "coingecko_id": "test-coin",
     "electrum": [
@@ -5418,7 +7566,7 @@
       "https://explorer.sfusd.kmd.sh/"
     ],
     "type": "UTXO",
-    "active": true,
+    "active": false,
     "currently_enabled": false
   },
   "ANT": {
@@ -5460,6 +7608,7 @@
     "name": "Celsius",
     "coinpaprika_id": "cel-celsius",
     "coingecko_id": "celsius-degree-token",
+    "nomics_id": "CEL",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5477,6 +7626,7 @@
     "name": "Celsius",
     "coinpaprika_id": "cel-celsius",
     "coingecko_id": "celsius-degree-token",
+    "nomics_id": "CEL",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5509,6 +7659,7 @@
     "name": "SwissBorg",
     "coinpaprika_id": "chsb-swissborg",
     "coingecko_id": "swissborg",
+    "nomics_id": "CHSB",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5526,6 +7677,7 @@
     "name": "SwissBorg",
     "coinpaprika_id": "chsb-swissborg",
     "coingecko_id": "swissborg",
+    "nomics_id": "CHSB",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5541,6 +7693,7 @@
     "name": "chiliZ",
     "coinpaprika_id": "chz-chiliz",
     "coingecko_id": "chiliz",
+    "nomics_id": "CHZ",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5553,11 +7706,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "CHZ-KRC20": {
+    "coin": "CHZ-KRC20",
+    "name": "chiliZ",
+    "coinpaprika_id": "chz-chiliz",
+    "coingecko_id": "chiliz",
+    "nomics_id": "CHZ",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "CHZ-PLG20": {
     "coin": "CHZ-PLG20",
     "name": "chiliZ",
     "coinpaprika_id": "chz-chiliz",
     "coingecko_id": "chiliz",
+    "nomics_id": "CHZ",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5573,6 +7743,7 @@
     "name": "Crypto.com",
     "coinpaprika_id": "cro-cryptocom-chain",
     "coingecko_id": "crypto-com-chain",
+    "nomics_id": "CRO",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5585,11 +7756,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "CRO-KRC20": {
+    "coin": "CRO-KRC20",
+    "name": "Crypto.com",
+    "coinpaprika_id": "cro-cryptocom-chain",
+    "coingecko_id": "crypto-com-chain",
+    "nomics_id": "CRO",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "CRO-PLG20": {
     "coin": "CRO-PLG20",
     "name": "Crypto.com",
     "coinpaprika_id": "cro-cryptocom-chain",
     "coingecko_id": "crypto-com-chain",
+    "nomics_id": "CRO",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5605,6 +7793,7 @@
     "name": "Curve DAO Token",
     "coinpaprika_id": "crv-curve-dao-token",
     "coingecko_id": "curve-dao-token",
+    "nomics_id": "CRV",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5617,11 +7806,60 @@
     "active": false,
     "currently_enabled": false
   },
+  "CRV-AVX20": {
+    "coin": "CRV-AVX20",
+    "name": "Curve DAO Token",
+    "coinpaprika_id": "crv-curve-dao-token",
+    "coingecko_id": "curve-dao-token",
+    "nomics_id": "CRV",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "CRV-FTM20": {
+    "coin": "CRV-FTM20",
+    "name": "Curve DAO Token",
+    "coinpaprika_id": "crv-curve-dao-token",
+    "coingecko_id": "curve-dao-token",
+    "nomics_id": "CRV",
+    "nodes": [
+      "https://rpc.ftm.tools/"
+    ],
+    "explorer_url": [
+      "https://ftmscan.com/"
+    ],
+    "type": "FTM-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "CRV-KRC20": {
+    "coin": "CRV-KRC20",
+    "name": "Curve DAO Token",
+    "coinpaprika_id": "crv-curve-dao-token",
+    "coingecko_id": "curve-dao-token",
+    "nomics_id": "CRV",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "CRV-PLG20": {
     "coin": "CRV-PLG20",
     "name": "Curve DAO Token",
     "coinpaprika_id": "crv-curve-dao-token",
     "coingecko_id": "curve-dao-token",
+    "nomics_id": "CRV",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5705,6 +7943,7 @@
     "name": "Enjin Coin",
     "coinpaprika_id": "enj-enjin-coin",
     "coingecko_id": "enjincoin",
+    "nomics_id": "ENJ",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5717,11 +7956,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "ENJ-KRC20": {
+    "coin": "ENJ-KRC20",
+    "name": "Enjin Coin",
+    "coinpaprika_id": "enj-enjin-coin",
+    "coingecko_id": "enjincoin",
+    "nomics_id": "ENJ",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "ENJ-PLG20": {
     "coin": "ENJ-PLG20",
     "name": "Enjin Coin",
     "coinpaprika_id": "enj-enjin-coin",
     "coingecko_id": "enjincoin",
+    "nomics_id": "ENJ",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5735,6 +7991,7 @@
   "EURS-ERC20": {
     "coin": "EURS-ERC20",
     "name": "STASIS EURO",
+    "forex_id": "EUR",
     "coinpaprika_id": "eurs-stasis-eurs",
     "coingecko_id": "stasis-eurs",
     "nodes": [
@@ -5752,6 +8009,7 @@
   "EURS-PLG20": {
     "coin": "EURS-PLG20",
     "name": "STASIS EURO",
+    "forex_id": "EUR",
     "coinpaprika_id": "eurs-stasis-eurs",
     "coingecko_id": "stasis-eurs",
     "nodes": [
@@ -5769,6 +8027,7 @@
     "name": "Gnosis",
     "coinpaprika_id": "gno-gnosis",
     "coingecko_id": "gnosis",
+    "nomics_id": "GNO",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5786,6 +8045,7 @@
     "name": "Gnosis",
     "coinpaprika_id": "gno-gnosis",
     "coingecko_id": "gnosis",
+    "nomics_id": "GNO",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5801,6 +8061,7 @@
     "name": "HEX",
     "coinpaprika_id": "hex-hex",
     "coingecko_id": "hex",
+    "nomics_id": "HEX",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5818,6 +8079,7 @@
     "name": "HEX",
     "coinpaprika_id": "hex-hex",
     "coingecko_id": "hex",
+    "nomics_id": "HEX",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5833,6 +8095,7 @@
     "name": "Holo",
     "coinpaprika_id": "hot-holo",
     "coingecko_id": "holotoken",
+    "nomics_id": "HOT",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5850,6 +8113,7 @@
     "name": "Holo",
     "coinpaprika_id": "hot-holo",
     "coingecko_id": "holotoken",
+    "nomics_id": "HOT",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5865,6 +8129,7 @@
     "coin": "HT",
     "coingecko_id": "huobi-token",
     "coinpaprika_id": "ht-huobi-token",
+    "nomics_id": "HT",
     "currently_enabled": false,
     "nodes": [
       "https://http-mainnet.hecochain.com"
@@ -5877,9 +8142,10 @@
   },
   "HT-ERC20": {
     "coin": "HT-ERC20",
-    "name": "HuobiToken Ethereum",
+    "name": "Huobi Token",
     "coinpaprika_id": "ht-huobi-token",
     "coingecko_id": "huobi-token",
+    "nomics_id": "HT",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5909,6 +8175,36 @@
     "active": false,
     "currently_enabled": false
   },
+  "HUSD-HCO20": {
+    "coin": "HUSD-HCO20",
+    "name": "HUSD",
+    "coinpaprika_id": "husd-husd",
+    "coingecko_id": "husd",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "HUSD-KRC20": {
+    "coin": "HUSD-KRC20",
+    "name": "HUSD",
+    "coinpaprika_id": "husd-husd",
+    "coingecko_id": "husd",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "HUSD-PLG20": {
     "coin": "HUSD-PLG20",
     "name": "HUSD",
@@ -5929,6 +8225,7 @@
     "name": "LEO Token",
     "coinpaprika_id": "leo-leo-token",
     "coingecko_id": "leo-token",
+    "nomics_id": "LEO",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5946,6 +8243,7 @@
     "name": "LEO Token",
     "coinpaprika_id": "leo-leo-token",
     "coingecko_id": "leo-token",
+    "nomics_id": "LEO",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5961,6 +8259,7 @@
     "name": "Loopring",
     "coinpaprika_id": "lrc-loopring",
     "coingecko_id": "loopring",
+    "nomics_id": "LRC",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -5978,6 +8277,7 @@
     "name": "Loopring",
     "coinpaprika_id": "lrc-loopring",
     "coingecko_id": "loopring",
+    "nomics_id": "LRC",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -5993,6 +8293,7 @@
     "name": "Decentraland",
     "coinpaprika_id": "mana-decentraland",
     "coingecko_id": "decentraland",
+    "nomics_id": "MANA",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6005,11 +8306,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "MANA-KRC20": {
+    "coin": "MANA-KRC20",
+    "name": "Decentraland",
+    "coinpaprika_id": "mana-decentraland",
+    "coingecko_id": "decentraland",
+    "nomics_id": "MANA",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "MANA-PLG20": {
     "coin": "MANA-PLG20",
     "name": "Decentraland",
     "coinpaprika_id": "mana-decentraland",
     "coingecko_id": "decentraland",
+    "nomics_id": "MANA",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6076,6 +8394,7 @@
     "name": "Power Ledger",
     "coinpaprika_id": "powr-power-ledger",
     "coingecko_id": "power-ledger",
+    "nomics_id": "POWR",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6093,6 +8412,7 @@
     "name": "Power Ledger",
     "coinpaprika_id": "powr-power-ledger",
     "coingecko_id": "power-ledger",
+    "nomics_id": "POWR",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6100,40 +8420,6 @@
       "https://polygonscan.com/"
     ],
     "type": "Matic",
-    "active": false,
-    "currently_enabled": false
-  },
-  "QNT": {
-    "coin": "QNT",
-    "name": "Quant",
-    "coinpaprika_id": "qnt-quant",
-    "coingecko_id": "quant-network",
-    "nodes": [
-      "http://eth1.cipig.net:8555",
-      "http://eth2.cipig.net:8555",
-      "http://eth3.cipig.net:8555"
-    ],
-    "explorer_url": [
-      "https://etherscan.io/"
-    ],
-    "type": "ERC-20",
-    "active": false,
-    "currently_enabled": false
-  },
-  "REN": {
-    "coin": "REN",
-    "name": "Republic",
-    "coinpaprika_id": "ren-republic-protocol",
-    "coingecko_id": "republic-protocol",
-    "nodes": [
-      "http://eth1.cipig.net:8555",
-      "http://eth2.cipig.net:8555",
-      "http://eth3.cipig.net:8555"
-    ],
-    "explorer_url": [
-      "https://etherscan.io/"
-    ],
-    "type": "ERC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -6176,6 +8462,7 @@
     "name": "iExec RLC",
     "coinpaprika_id": "rlc-iexec-rlc",
     "coingecko_id": "iexec-rlc",
+    "nomics_id": "RLC",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6193,6 +8480,7 @@
     "name": "iExec RLC",
     "coinpaprika_id": "rlc-iexec-rlc",
     "coingecko_id": "iexec-rlc",
+    "nomics_id": "RLC",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6293,6 +8581,7 @@
     "name": "Serum",
     "coinpaprika_id": "srm-serum",
     "coingecko_id": "serum",
+    "nomics_id": "SRM",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6310,6 +8599,7 @@
     "name": "Serum",
     "coinpaprika_id": "srm-serum",
     "coingecko_id": "serum",
+    "nomics_id": "SRM",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6394,7 +8684,7 @@
     "coinpaprika_id": "ubq-ubiq",
     "coingecko_id": "ubiq",
     "nodes": [
-     "https://rpc.octano.dev/"
+      "https://rpc.octano.dev/"
     ],
     "explorer_url": [
       "https://ubiqscan.io/"
@@ -6408,6 +8698,7 @@
     "name": "Unibright",
     "coinpaprika_id": "ubt-unibright",
     "coingecko_id": "unibright",
+    "nomics_id": "UBT",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6425,6 +8716,7 @@
     "name": "Unibright",
     "coinpaprika_id": "ubt-unibright",
     "coingecko_id": "unibright",
+    "nomics_id": "UBT",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6435,11 +8727,28 @@
     "active": false,
     "currently_enabled": false
   },
+  "UMA-AVX20": {
+    "coin": "UMA-AVX20",
+    "name": "UMA",
+    "coinpaprika_id": "uma-uma",
+    "coingecko_id": "uma",
+    "nomics_id": "UMA",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
+    "active": false,
+    "currently_enabled": false
+  },
   "UMA-ERC20": {
     "coin": "UMA-ERC20",
     "name": "UMA",
     "coinpaprika_id": "uma-uma",
     "coingecko_id": "uma",
+    "nomics_id": "UMA",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6457,6 +8766,7 @@
     "name": "UMA",
     "coinpaprika_id": "uma-uma",
     "coingecko_id": "uma",
+    "nomics_id": "UMA",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6464,6 +8774,21 @@
       "https://polygonscan.com/"
     ],
     "type": "Matic",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UNI-AVX20": {
+    "coin": "UNI-AVX20",
+    "name": "Uniswap",
+    "coinpaprika_id": "uni-uniswap",
+    "coingecko_id": "uniswap",
+    "nodes": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorer_url": [
+      "https://snowtrace.io/"
+    ],
+    "type": "AVX-20",
     "active": false,
     "currently_enabled": false
   },
@@ -6498,6 +8823,36 @@
       "https://etherscan.io/"
     ],
     "type": "ERC-20",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UNI-HCO20": {
+    "coin": "UNI-HCO20",
+    "name": "Uniswap",
+    "coinpaprika_id": "uni-uniswap",
+    "coingecko_id": "uniswap",
+    "nodes": [
+      "https://http-mainnet.hecochain.com"
+    ],
+    "explorer_url": [
+      "https://hecoinfo.com/"
+    ],
+    "type": "HecoChain",
+    "active": false,
+    "currently_enabled": false
+  },
+  "UNI-KRC20": {
+    "coin": "UNI-KRC20",
+    "name": "Uniswap",
+    "coinpaprika_id": "uni-uniswap",
+    "coingecko_id": "uniswap",
+    "nodes": [
+      "https://rpc-mainnet.kcc.network"
+    ],
+    "explorer_url": [
+      "https://explorer.kcc.io/en/"
+    ],
+    "type": "KRC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -6596,6 +8951,7 @@
     "name": "Voyager",
     "coinpaprika_id": "ethos-ethos",
     "coingecko_id": "ethos",
+    "nomics_id": "VGX",
     "nodes": [
       "http://eth1.cipig.net:8555",
       "http://eth2.cipig.net:8555",
@@ -6613,6 +8969,7 @@
     "name": "Voyager",
     "coinpaprika_id": "ethos-ethos",
     "coingecko_id": "ethos",
+    "nomics_id": "VGX",
     "nodes": [
       "https://polygon-rpc.com"
     ],
@@ -6620,23 +8977,6 @@
       "https://polygonscan.com/"
     ],
     "type": "Matic",
-    "active": false,
-    "currently_enabled": false
-  },
-  "WBTC": {
-    "coin": "WBTC",
-    "name": "Wrapped BTC",
-    "coinpaprika_id": "wbtc-wrapped-bitcoin",
-    "coingecko_id": "wrapped-bitcoin",
-    "nodes": [
-      "http://eth1.cipig.net:8555",
-      "http://eth2.cipig.net:8555",
-      "http://eth3.cipig.net:8555"
-    ],
-    "explorer_url": [
-      "https://etherscan.io/"
-    ],
-    "type": "ERC-20",
     "active": false,
     "currently_enabled": false
   },
@@ -6657,38 +8997,6 @@
     "active": false,
     "currently_enabled": false
   },
-  "ZRX-ERC20": {
-    "coin": "ZRX-ERC20",
-    "name": "0x",
-    "coinpaprika_id": "zrx-0x",
-    "coingecko_id": "0x",
-    "nodes": [
-      "http://eth1.cipig.net:8555",
-      "http://eth2.cipig.net:8555",
-      "http://eth3.cipig.net:8555"
-    ],
-    "explorer_url": [
-      "https://etherscan.io/"
-    ],
-    "type": "ERC-20",
-    "active": false,
-    "currently_enabled": false
-  },
-  "ZRX-PLG20": {
-    "coin": "ZRX-PLG20",
-    "name": "0x",
-    "coinpaprika_id": "zrx-0x",
-    "coingecko_id": "0x",
-    "nodes": [
-      "https://polygon-rpc.com"
-    ],
-    "explorer_url": [
-      "https://polygonscan.com/"
-    ],
-    "type": "Matic",
-    "active": false,
-    "currently_enabled": false
-  },
   "CIPHS": {
     "coin": "CIPHS",
     "name": "Ciphscoin",
@@ -6705,7 +9013,7 @@
     "explorer_url": [
       "http://152.89.247.97:50604/"
     ],
-    "type": "Komodo Chain",
+    "type": "Smart Chain",
     "active": false,
     "currently_enabled": false
   }
