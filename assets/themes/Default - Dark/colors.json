@@ -3,8 +3,7 @@
     "foregroundColor": "#ffffff",
     "foregroundColor2": "#7A8EA1FF",
     "foregroundColor3": "#ABC0D3FF",
-    "backgroundColor": "#202337",
-    "secondBackgroundColor": "#24273D",
+    "backgroundColor": "#15182a",
     "backgroundColorDeep": "#171a2c",
 
     "buttonColorDisabled": "#28375A",
@@ -56,7 +55,7 @@
 
     "textFieldBackgroundColor": "#313555FF",
     "textFieldPrefixColor": "#8790B2FF",
-    "textFieldSuffixColor": "#456078FF#",
+    "textFieldSuffixColor": "#456078FF",
 
     "chartTradingLineBackgroundColor": "#24283d",
     "chartTradingLineColor": "#74fbee",
@@ -82,8 +81,8 @@
     "tradeSellModeSelectorBackgroundColorEnd": "#E216A9FF",
     "tradeMarketModeSelectorNotSelectedBackgroundColor": "#89B6FF21",
 
-    "okColor": "#00C058",
-    "noColor": "#E52167",
+    "okColor": "#74fbee",
+    "noColor": "#d13990",
 
     "arrowUpColor": "#F85757",
     "arrowDownColor": "#845FEF",

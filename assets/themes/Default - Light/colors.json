@@ -1,22 +1,22 @@
 {
-    "accentColor": "#F0F2FF",
-    "foregroundColor": "#456078",
-    "backgroundColor": "#FCFCFC",
+    "accentColor": "#2b6680",
+    "foregroundColor": "#405366",
+    "backgroundColor": "#f2f2f7",
     "backgroundColorDeep": "#FCFCFC",
 
     "buttonColorDisabled": "#D8E3F8",
-    "buttonColorEnabled": "#F0F6FF",
-    "buttonColorHovered": "#D7E7FF",
+    "buttonColorEnabled": "#EDF3FC",
+    "buttonColorHovered": "#DBE8FC",
     "buttonColorPressed": "#B8D2F9",
-    "buttonTextDisabledColor": "#D1D4DC",
-    "buttonTextEnabledColor": "#456078",
-    "buttonTextHoveredColor": "#2F5678",
+    "buttonTextDisabledColor": "#C5CFD8",
+    "buttonTextEnabledColor": "#8395A8",
+    "buttonTextHoveredColor": "#607990",
     "buttonTextPressedColor": "#3A5B78",
 
     "gradientButtonStartColor": "#5A68E6",
     "gradientButtonEndColor": "#4986EAAB",
-    "gradientButtonDisabledStartColor": "#CDD0F6",
-    "gradientButtonDisabledEndColor": "#DAE5F9",
+    "gradientButtonDisabledStartColor": "#BBB",
+    "gradientButtonDisabledEndColor": "#BBB",
     "gradientButtonHoveredStartColor": "#5A68E6",
     "gradientButtonHoveredEndColor": "#5A68E6",
     "gradientButtonPressedStartColor": "#6A4DE3",
@@ -33,16 +33,13 @@
     "switchGradientEndColor": "#9DD4F3",
     "switchGradientStartColor2": "#FFF",
     "switchGradientEndColor2": "#FFF",
-
+    
     "comboBoxBackgroundColor": "#FFFFFFFF",
     "comboBoxArrowsColor": "#456078FF",
     "comboBoxDropdownItemHighlightedColor": "#456078FF",
 
     "modalPageCounterGradientStartColor": "#9DD4F3",
     "modalPageCounterGradientEndColor": "#9DD4F3",
-
-    "scrollBarIndicatorColor": "#DBE0E4FF",
-    "scrollBarBackgroundColor": "#93A3B1FF",
 
     "tabSelectedColor": "#DCE8FD",
 
@@ -58,9 +55,9 @@
     "chartTradingLineBackgroundColor": "#C5F2EF",
     "chartTradingLineColor": "#53EBD7",
 
-    "innerBackgroundColor": "#edf4ff",
+    "innerBackgroundColor": "#F5F9FF",
 
-    "floatingBackgroundColor": "#edf4ff",
+    "floatingBackgroundColor": "#F5F9FF",
 
     "rangeSliderBackgroundColor": "#5A68E6FF",
     "rangeSliderDistanceColor": "#4986EA3B",
