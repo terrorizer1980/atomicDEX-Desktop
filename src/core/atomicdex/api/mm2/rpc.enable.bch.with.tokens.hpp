@@ -19,6 +19,8 @@ namespace mm2::api
         std::vector<atomic_dex::electrum_server> servers;
     };
 
+    void to_json(nlohmann::json& j, const enable_rpc_data& cfg);
+
     struct enable_mode
     {
         // Native or Electrum
@@ -26,8 +28,11 @@ namespace mm2::api
 
         enable_rpc_data rpc_data;
     };
+
+    void to_json(nlohmann::json& j, const enable_mode& cfg);
+
     //! Only for erc 20
-    struct enable_bch_with_tokens
+    struct enable_bch_with_tokens_request
     {
         // string, mandatory. Ticker of the platform BCH protocol coin.
         std::string ticker;
@@ -69,4 +74,11 @@ namespace mm2::api
         // Useful for active traders as every swap leads to a new UTXO to occur on the address.
         std::optional<utxo_merge_params> utxo_merge_params;
     };
+
+    void to_json(nlohmann::json& j, const enable_bch_with_tokens_request& cfg);
 }
+
+namespace atomic_dex
+{
+    using t_enable_bch_with_tokens_request = ::mm2::api::enable_bch_with_tokens_request;
+} // namespace atomic_dex
