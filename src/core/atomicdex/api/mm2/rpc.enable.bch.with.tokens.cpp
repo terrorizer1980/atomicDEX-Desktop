@@ -60,4 +60,57 @@ namespace mm2::api
             j["params"] = obj;
         }
     }
+
+    void
+    from_json(const nlohmann::json& j, derivation_infos& answer)
+    {
+        answer.type = j.at("type").get<std::string>();
+    }
+
+    void
+    from_json(const nlohmann::json& j, balance_infos& answer)
+    {
+        answer.spendable = j.at("spendable").get<std::string>();
+        answer.unspendable = j.at("unspendable").get<std::string>();
+    }
+
+    void
+    from_json(const nlohmann::json& j, bch_address_infos& answer)
+    {
+        answer.derivation_method = j.at("derivation_method").get<derivation_infos>();
+        answer.pubkey = j.at("pubkey").get<std::string>();
+        answer.balances = j.at("balances").get<balance_infos>();
+    }
+
+    void
+    from_json(const nlohmann::json& j, slp_address_infos& answer)
+    {
+        answer.derivation_method = j.at("derivation_method").get<derivation_infos>();
+        answer.pubkey = j.at("pubkey").get<std::string>();
+        answer.balances = j.at("balances").get<std::unordered_map<std::string, balance_infos>>();
+    }
+
+    void
+    from_json(const nlohmann::json& j, enable_bch_with_tokens_answer_success& answer)
+    {
+        answer.current_block = j.at("current_block").get<std::size_t>();
+        answer.bch_addresses_infos = j.at("bch_addresses_infos").get<bch_addresses_infos_registry>();
+        answer.slp_addresses_infos = j.at("slp_addresses_infos").get<slp_addresses_infos_registry>();
+    }
+
+    void
+    from_json(const nlohmann::json& j, enable_bch_with_tokens_answer& answer)
+    {
+        if (j.count("error") >= 1)
+        {
+            answer.error = j;
+        }
+        else
+        {
+            if (j.contains("result") && j.contains("mmrpc") && j.at("mmrpc").get<std::string>() == "2.0")
+            {
+                answer.result = j.at("result").get<enable_bch_with_tokens_answer_success>();
+            }
+        }
+    }
 }

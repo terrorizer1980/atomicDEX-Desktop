@@ -3,6 +3,7 @@
 #include "atomicdex/config/electrum.cfg.hpp"
 #include "format.address.hpp"
 #include "utxo.merge.params.hpp"
+#include "generic.error.hpp"
 
 namespace mm2::api
 {
@@ -31,7 +32,6 @@ namespace mm2::api
 
     void to_json(nlohmann::json& j, const enable_mode& cfg);
 
-    //! Only for erc 20
     struct enable_bch_with_tokens_request
     {
         // string, mandatory. Ticker of the platform BCH protocol coin.
@@ -76,6 +76,62 @@ namespace mm2::api
     };
 
     void to_json(nlohmann::json& j, const enable_bch_with_tokens_request& cfg);
+
+    struct derivation_infos
+    {
+        std::string type;
+    };
+
+    void from_json(const nlohmann::json& j, derivation_infos& answer);
+
+    struct balance_infos
+    {
+        std::string spendable;
+        std::string unspendable;
+    };
+
+    void from_json(const nlohmann::json& j, balance_infos& answer);
+
+    struct bch_address_infos
+    {
+        derivation_infos derivation_method;
+        std::string pubkey;
+        balance_infos balances;
+    };
+
+    void from_json(const nlohmann::json& j, bch_address_infos& answer);
+
+    using bch_addresses_infos_registry =  std::unordered_map<std::string, bch_address_infos>;
+
+    struct slp_address_infos
+    {
+        derivation_infos derivation_method;
+        std::string pubkey;
+        std::unordered_map<std::string, balance_infos> balances;
+    };
+
+    void from_json(const nlohmann::json& j, slp_address_infos& answer);
+
+    using slp_addresses_infos_registry = std::unordered_map<std::string, slp_address_infos>;
+
+    struct enable_bch_with_tokens_answer_success
+    {
+        std::size_t                  current_block;
+        bch_addresses_infos_registry bch_addresses_infos;
+        slp_addresses_infos_registry slp_addresses_infos;
+    };
+
+    void from_json(const nlohmann::json& j, enable_bch_with_tokens_answer_success& answer);
+
+    struct enable_bch_with_tokens_answer
+    {
+        std::optional<enable_bch_with_tokens_answer_success>     result;
+        std::optional<generic_answer_error> error;
+        std::string                         raw_result;      ///< internal
+        int                                 rpc_result_code; ///< internal
+    };
+
+    void from_json(const nlohmann::json& j, enable_bch_with_tokens_answer& answer);
 }
 
 namespace atomic_dex

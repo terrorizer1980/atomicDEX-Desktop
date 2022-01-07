@@ -200,3 +200,169 @@ TEST_CASE("mm2::api::enable_bch_with_tokens serialisation")
     mm2::api::to_json(j, request);
     CHECK_EQ(j, expected_json);
 }
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization derivation_type")
+{
+    const nlohmann::json json = R"(
+    {
+        "derivation_method":{
+            "type":"Iguana"
+        }
+    })"_json;
+    mm2::api::derivation_infos infos;
+    mm2::api::from_json(json.at("derivation_method"), infos);
+    CHECK_EQ(infos.type, "Iguana");
+}
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization balance_infos")
+{
+    const nlohmann::json json = R"(
+    {
+       "balances":{
+           "spendable":"0.11398301",
+           "unspendable":"0.00001"
+       }
+    })"_json;
+    mm2::api::balance_infos infos;
+    mm2::api::from_json(json.at("balances"), infos);
+    CHECK_EQ(infos.spendable, "0.11398301");
+    CHECK_EQ(infos.unspendable, "0.00001");
+}
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization bch address infos")
+{
+    const nlohmann::json json = R"(
+    {
+     "derivation_method":{
+        "type":"Iguana"
+     },
+     "pubkey":"036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c",
+     "balances":{
+       "spendable":"0.11398301",
+       "unspendable":"0.00001"
+     }
+    })"_json;
+    mm2::api::bch_address_infos infos;
+    mm2::api::from_json(json, infos);
+    CHECK_EQ(infos.derivation_method.type, "Iguana");
+    CHECK_EQ(infos.pubkey, "036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c");
+    CHECK_EQ(infos.balances.spendable, "0.11398301");
+}
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization success answer")
+{
+    const nlohmann::json json = R"(
+    {
+        "current_block":1480481,
+        "bch_addresses_infos":{
+            "bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66":{
+                "derivation_method":{
+                  "type":"Iguana"
+                },
+                "pubkey":"036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c",
+                "balances":{
+                  "spendable":"0.11398301",
+                  "unspendable":"0.00001"
+                }
+            }
+        },
+        "slp_addresses_infos":{
+            "slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8":{
+                "derivation_method":{
+                  "type":"Iguana"
+                },
+                "pubkey":"036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c",
+                "balances":{
+                  "USDF":{
+                    "spendable":"5.2974",
+                    "unspendable":"0"
+                  }
+                }
+            }
+        }
+    })"_json;
+    mm2::api::enable_bch_with_tokens_answer_success infos;
+    mm2::api::from_json(json, infos);
+    CHECK_EQ(infos.current_block, 1480481);
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").derivation_method.type, "Iguana");
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").pubkey, "036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c");
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").balances.spendable, "0.11398301");
+    CHECK_EQ(infos.bch_addresses_infos.size(), 1);
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").derivation_method.type, "Iguana");
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").pubkey, "036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c");
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").balances.at("USDF").spendable, "5.2974");
+    CHECK_EQ(infos.slp_addresses_infos.size(), 1);
+}
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization answer")
+{
+    const nlohmann::json json = R"(
+    {
+        "mmrpc":"2.0",
+        "id":null,
+        "result":{
+            "current_block":1480481,
+            "bch_addresses_infos":{
+                "bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66":{
+                    "derivation_method":{
+                      "type":"Iguana"
+                    },
+                    "pubkey":"036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c",
+                    "balances":{
+                      "spendable":"0.11398301",
+                      "unspendable":"0.00001"
+                    }
+                }
+            },
+            "slp_addresses_infos":{
+                "slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8":{
+                    "derivation_method":{
+                      "type":"Iguana"
+                    },
+                    "pubkey":"036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c",
+                    "balances":{
+                      "USDF":{
+                        "spendable":"5.2974",
+                        "unspendable":"0"
+                      }
+                    }
+                }
+            }
+        }
+    })"_json;
+    mm2::api::enable_bch_with_tokens_answer data;
+    mm2::api::from_json(json, data);
+    mm2::api::enable_bch_with_tokens_answer_success infos = data.result.value();
+    CHECK_EQ(infos.current_block, 1480481);
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").derivation_method.type, "Iguana");
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").pubkey, "036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c");
+    CHECK_EQ(infos.bch_addresses_infos.at("bchtest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsnnczzt66").balances.spendable, "0.11398301");
+    CHECK_EQ(infos.bch_addresses_infos.size(), 1);
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").derivation_method.type, "Iguana");
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").pubkey, "036879df230663db4cd083c8eeb0f293f46abc460ad3c299b0089b72e6d472202c");
+    CHECK_EQ(infos.slp_addresses_infos.at("slptest:qzx0llpyp8gxxsmad25twksqnwd62xm3lsg8lecug8").balances.at("USDF").spendable, "5.2974");
+    CHECK_EQ(infos.slp_addresses_infos.size(), 1);
+}
+
+TEST_CASE("mm2::api::enable_bch_with_tokens deserialization error answer")
+{
+    const nlohmann::json json = R"(
+        {
+            "mmrpc":"2.0",
+            "error":"tBCH",
+            "error_path":"platform_coin_with_tokens",
+            "error_trace":"platform_coin_with_tokens:281]",
+            "error_type":"PlatformIsAlreadyActivated",
+            "error_data":"tBCH",
+            "id":null
+        }
+    )"_json;
+    mm2::api::enable_bch_with_tokens_answer data;
+    mm2::api::from_json(json, data);
+    CHECK_EQ(data.error.has_value(), true);
+    CHECK_EQ(data.result.has_value(), false);
+    CHECK_EQ(data.error.value().error, "tBCH");
+    CHECK_EQ(data.error.value().error_path, "platform_coin_with_tokens");
+    CHECK_EQ(data.error.value().error_trace, "platform_coin_with_tokens:281]");
+    CHECK_EQ(data.error.value().error_type, "PlatformIsAlreadyActivated");
+}
