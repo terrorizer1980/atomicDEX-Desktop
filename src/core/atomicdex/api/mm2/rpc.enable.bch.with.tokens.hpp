@@ -2,14 +2,14 @@
 
 #include "atomicdex/config/electrum.cfg.hpp"
 #include "format.address.hpp"
-#include "utxo.merge.params.hpp"
 #include "generic.error.hpp"
+#include "utxo.merge.params.hpp"
 
 namespace mm2::api
 {
     struct slp_token_request
     {
-        std::string ticker;
+        std::string                ticker;
         std::optional<std::size_t> required_confirmations;
     };
 
@@ -95,18 +95,18 @@ namespace mm2::api
     struct bch_address_infos
     {
         derivation_infos derivation_method;
-        std::string pubkey;
-        balance_infos balances;
+        std::string      pubkey;
+        balance_infos    balances;
     };
 
     void from_json(const nlohmann::json& j, bch_address_infos& answer);
 
-    using bch_addresses_infos_registry =  std::unordered_map<std::string, bch_address_infos>;
+    using bch_addresses_infos_registry = std::unordered_map<std::string, bch_address_infos>;
 
     struct slp_address_infos
     {
-        derivation_infos derivation_method;
-        std::string pubkey;
+        derivation_infos                               derivation_method;
+        std::string                                    pubkey;
         std::unordered_map<std::string, balance_infos> balances;
     };
 
@@ -125,16 +125,18 @@ namespace mm2::api
 
     struct enable_bch_with_tokens_answer
     {
-        std::optional<enable_bch_with_tokens_answer_success>     result;
-        std::optional<generic_answer_error> error;
-        std::string                         raw_result;      ///< internal
-        int                                 rpc_result_code; ///< internal
+        std::optional<enable_bch_with_tokens_answer_success> result;
+        std::optional<generic_answer_error>                  error;
+        std::string                                          raw_result;      ///< internal
+        int                                                  rpc_result_code; ///< internal
     };
 
     void from_json(const nlohmann::json& j, enable_bch_with_tokens_answer& answer);
-}
+} // namespace mm2::api
 
 namespace atomic_dex
 {
-    using t_enable_bch_with_tokens_request = ::mm2::api::enable_bch_with_tokens_request;
+    using t_enable_bch_with_tokens_request        = ::mm2::api::enable_bch_with_tokens_request;
+    using t_enable_bch_with_tokens_answer         = ::mm2::api::enable_bch_with_tokens_answer;
+    using t_enable_bch_with_tokens_answer_success = ::mm2::api::enable_bch_with_tokens_answer_success;
 } // namespace atomic_dex
