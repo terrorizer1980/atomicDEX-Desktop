@@ -106,6 +106,7 @@ add_executable(${PROJECT_NAME}_tests MACOSX_BUNDLE ${ICON}
         tests/api/mm2/mm2.fraction.tests.cpp
         tests/api/mm2/mm2.api.format.address.tests.cpp
         tests/api/mm2/mm2.api.utxo.merge.params.tests.cpp
+        tests/api/mm2/mm2.api.balance.infos.tests.cpp
         #tests/api/github/github.api.tests.cpp
         #tests/api/checksum/checksum.api.tests.cpp
 

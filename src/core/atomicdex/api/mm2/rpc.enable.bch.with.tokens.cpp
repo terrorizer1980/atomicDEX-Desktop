@@ -68,13 +68,6 @@ namespace mm2::api
     }
 
     void
-    from_json(const nlohmann::json& j, balance_infos& answer)
-    {
-        answer.spendable = j.at("spendable").get<std::string>();
-        answer.unspendable = j.at("unspendable").get<std::string>();
-    }
-
-    void
     from_json(const nlohmann::json& j, bch_address_infos& answer)
     {
         answer.derivation_method = j.at("derivation_method").get<derivation_infos>();

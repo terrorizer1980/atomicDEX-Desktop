@@ -214,21 +214,6 @@ TEST_CASE("mm2::api::enable_bch_with_tokens deserialization derivation_type")
     CHECK_EQ(infos.type, "Iguana");
 }
 
-TEST_CASE("mm2::api::enable_bch_with_tokens deserialization balance_infos")
-{
-    const nlohmann::json json = R"(
-    {
-       "balances":{
-           "spendable":"0.11398301",
-           "unspendable":"0.00001"
-       }
-    })"_json;
-    mm2::api::balance_infos infos;
-    mm2::api::from_json(json.at("balances"), infos);
-    CHECK_EQ(infos.spendable, "0.11398301");
-    CHECK_EQ(infos.unspendable, "0.00001");
-}
-
 TEST_CASE("mm2::api::enable_bch_with_tokens deserialization bch address infos")
 {
     const nlohmann::json json = R"(

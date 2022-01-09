@@ -4,6 +4,7 @@
 #include "format.address.hpp"
 #include "generic.error.hpp"
 #include "utxo.merge.params.hpp"
+#include "balance.infos.hpp"
 
 namespace mm2::api
 {
@@ -83,14 +84,6 @@ namespace mm2::api
     };
 
     void from_json(const nlohmann::json& j, derivation_infos& answer);
-
-    struct balance_infos
-    {
-        std::string spendable;
-        std::string unspendable;
-    };
-
-    void from_json(const nlohmann::json& j, balance_infos& answer);
 
     struct bch_address_infos
     {
