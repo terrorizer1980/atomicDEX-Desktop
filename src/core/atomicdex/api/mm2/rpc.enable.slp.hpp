@@ -5,6 +5,7 @@
 
 //! Project Headers
 #include "balance.infos.hpp"
+#include "generic.error.hpp"
 
 namespace mm2::api
 {
