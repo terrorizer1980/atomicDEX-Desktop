@@ -465,9 +465,14 @@ namespace atomic_dex
         const std::size_t                                                     testnet_idx = 0;
         const std::size_t                                                     mainnet_idx = 1;
         std::unordered_set<std::string>                                       visited;
-        for (auto&& coin_info: coins)
+        for (auto&& coin: coins)
         {
-            SPDLOG_INFO("current_coin: {} is a default coin", coin_info.ticker);
+            if (visited.contains(coin.ticker))
+            {
+                SPDLOG_INFO("already visited: {} - skipping", coin.ticker);
+                continue;
+            }
+            auto&      coin_info = coin;
             const bool is_tesnet = coin_info.is_testnet.value_or(false);
             if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
             {
@@ -479,7 +484,9 @@ namespace atomic_dex
                     enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_parent_info);
                 }
             }
-            enable_registry[coin_info.coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            const auto coin_type = (coin_info.ticker == "BCH" || coin_info.ticker == "tBCH") ? CoinType::SLP : coin_info.coin_type;
+            enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            visited.insert(coin_info.ticker);
         }
 
         enable_multiple_coins_v2(enable_registry);
@@ -721,6 +728,10 @@ namespace atomic_dex
                             const bool     is_testnet    = key.find("test") != std::string::npos;
                             std::string    parent_ticker = is_testnet ? "tBCH" : "BCH";
                             nlohmann::json out{{"coin", parent_ticker}, {"balance", value.balances.spendable}, {"address", key}};
+                            {
+                                std::unique_lock lock(m_coin_cfg_mutex);
+                                m_coins_informations[parent_ticker].currently_enabled = true;
+                            }
                             this->process_balance_answer(out);
                             break;
                         }
@@ -730,6 +741,10 @@ namespace atomic_dex
                             for (auto&& [cur_ticker, balance]: values.balances)
                             {
                                 nlohmann::json out{{"coin", cur_ticker}, {"balance", balance.spendable}, {"address", key}};
+                                {
+                                    std::unique_lock lock(m_coin_cfg_mutex);
+                                    m_coins_informations[cur_ticker].currently_enabled = true;
+                                }
                                 this->process_balance_answer(out);
                             }
                             break;
