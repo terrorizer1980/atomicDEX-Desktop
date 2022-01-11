@@ -14,6 +14,8 @@
  *                                                                            *
  ******************************************************************************/
 
+#include <sstream>
+
 //! Deps
 #include <nlohmann/json.hpp>
 
@@ -267,5 +269,17 @@ namespace atomic_dex
             cfg.fees_ticker            = cfg.ticker;
             break;
         }
+    }
+
+    void
+    print_coins(std::vector<coin_config> coins)
+    {
+        std::stringstream ss;
+        ss << "[";
+        for (auto&& coin: coins) {
+            ss << coin.ticker << " ";
+        }
+        ss << "]";
+        SPDLOG_INFO("{}", ss.str());
     }
 } // namespace atomic_dex

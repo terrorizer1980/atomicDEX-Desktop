@@ -142,6 +142,8 @@ namespace atomic_dex
         //!
         void process_electrum_legacy(std::vector<coin_config> coins_to_enable);
         void process_enable_legacy(std::vector<coin_config> coins_to_enable);
+        void process_bch_with_tokens(std::vector<coin_config> coins_to_enable);
+        void process_slp(std::vector<coin_config> coins_to_enable);
         void batch_enable_answer_legacy(web::http::http_response resp, std::vector<std::string> tickers);
 
         //!

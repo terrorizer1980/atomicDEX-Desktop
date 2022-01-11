@@ -80,6 +80,10 @@ namespace atomic_dex
         atomic_dex::mm2_service& mm2 = get_mm2();
         std::unordered_set<std::string> visited;
         for (auto&& coin : coins) {
+            if (visited.contains(coin.toStdString())) {
+                SPDLOG_INFO("already visited: {} - skipping", coin.toStdString());
+                continue;
+            }
             auto coin_info = mm2.get_coin_info(coin.toStdString());
             const bool is_tesnet = coin_info.is_testnet.value_or(false);
             if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
@@ -92,40 +96,12 @@ namespace atomic_dex
                     enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_parent_info);
                 }
             }
-            enable_registry[coin_info.coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            const auto coin_type = (coin_info.ticker == "BCH" || coin_info.ticker == "tBCH") ? CoinType::SLP : coin_info.coin_type;
+            enable_registry[coin_type][is_tesnet ? testnet_idx : mainnet_idx].push_back(coin_info);
+            visited.insert(coin_info.ticker);
         }
 
         mm2.enable_multiple_coins_v2(enable_registry);
-        /*std::vector<std::string> coins_std{};
-        coins_std.reserve(coins.size());
-        atomic_dex::mm2_service& mm2 = get_mm2();
-        std::unordered_set<std::string> extra_coins;
-        for (auto&& coin: coins) {
-            auto coin_info = mm2.get_coin_info(coin.toStdString());
-            if (coin_info.has_parent_fees_ticker && coin_info.ticker != coin_info.fees_ticker)
-            {
-                auto coin_parent_info = mm2.get_coin_info(coin_info.fees_ticker);
-                if (!coin_parent_info.currently_enabled && !coin_parent_info.active && extra_coins.insert(coin_parent_info.ticker).second)
-                {
-                    SPDLOG_INFO("Adding extra coin: {} to enable", coin_parent_info.ticker);
-                }
-            }
-            coins_std.push_back(coin.toStdString());
-        }
-
-        std::vector<std::string> extra_coins_vec{};
-        for (auto&& extra_coin : extra_coins)
-        {
-            extra_coins_vec.push_back(extra_coin);
-            //coins_std.insert(coins_std.begin(), extra_coin);
-            //coins_std.push_back(extra_coin);
-        }
-        if (extra_coins.empty())
-        {
-            mm2.enable_multiple_coins(coins_std, extra_coins_vec);
-        } else {
-            mm2.enable_multiple_coins(extra_coins_vec, coins_std);
-        }*/
 
         return true;
     }
