@@ -137,6 +137,12 @@ namespace atomic_dex
         void process_tx_tokenscan(const std::string& ticker, bool is_a_refresh);
         void fetch_single_balance(const coin_config& cfg_infos);
 
+
+        //!
+        void process_electrum_legacy(std::vector<coin_config> coins_to_enable);
+        void process_enable_legacy(std::vector<coin_config> coins_to_enable);
+        void batch_enable_answer_legacy(web::http::http_response resp, std::vector<std::string> tickers);
+
         //!
         std::pair<bool, std::string>                        process_batch_enable_answer(const nlohmann::json& answer);
         [[nodiscard]] std::pair<t_transactions, t_tx_state> get_tx(t_mm2_ec& ec) const;
@@ -173,12 +179,10 @@ namespace atomic_dex
 
         //! Enable coins
         bool enable_default_coins();
-
-        //! Batch Enable coins
-        void batch_enable_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers, bool first_time = false);
-
-        //! Enable multiple coins
-        void enable_multiple_coins(const std::vector<std::string>& tickers, const std::vector<std::string>& second_tickers = std::vector<std::string>{});
+        using t_array_network = std::array<std::vector<coin_config>, 2>;
+        using t_coins_enable_registry = std::unordered_map<CoinType, t_array_network>;
+        void enable_multiple_coins_v2(const t_coins_enable_registry& coins_to_enable);
+        void batch_enable_coins_v2(CoinType type_to_enable, std::vector<coin_config> coins_to_enable);
 
         //! Add a new coin in the coin_info cfg add_new_coin(normal_cfg, mm2_cfg)
         void               add_new_coin(const nlohmann::json& coin_cfg_json, const nlohmann::json& raw_coin_cfg_json);
