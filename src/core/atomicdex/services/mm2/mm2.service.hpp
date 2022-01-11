@@ -103,9 +103,10 @@ namespace atomic_dex
         t_mm2_time_point m_info_clock;
 
         //! Atomicity / Threads
-        std::atomic_bool m_mm2_running{false};
-        std::atomic_bool m_orderbook_thread_active{false};
-        std::thread      m_mm2_init_thread;
+        std::atomic_bool   m_mm2_running{false};
+        std::atomic_bool   m_orderbook_thread_active{false};
+        std::atomic_size_t m_nb_update_required{0};
+        std::thread        m_mm2_init_thread;
 
         //! Current wallet name
         std::string m_current_wallet_name;
@@ -179,7 +180,7 @@ namespace atomic_dex
 
         //! Enable coins
         bool enable_default_coins();
-        using t_array_network = std::array<std::vector<coin_config>, 2>;
+        using t_array_network         = std::array<std::vector<coin_config>, 2>;
         using t_coins_enable_registry = std::unordered_map<CoinType, t_array_network>;
         void enable_multiple_coins_v2(const t_coins_enable_registry& coins_to_enable);
         void batch_enable_coins_v2(CoinType type_to_enable, std::vector<coin_config> coins_to_enable);

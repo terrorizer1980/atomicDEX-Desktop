@@ -278,6 +278,24 @@ namespace atomic_dex
 
         if (s >= 5s)
         {
+            if (m_nb_update_required > 0)
+            {
+                auto                     coins = this->get_enabled_coins();
+                std::vector<std::string> tickers;
+                for (auto&& coin: coins)
+                {
+                    if (!coin.active)
+                    {
+                        tickers.push_back(coin.ticker);
+                    }
+                }
+                if (!tickers.empty())
+                {
+                    SPDLOG_INFO("coin_status_update required, {}", m_nb_update_required);
+                    update_coin_status(this->m_current_wallet_name, tickers, true, m_coins_informations, m_coin_cfg_mutex);
+                }
+                m_nb_update_required -= 1;
+            }
             fetch_current_orderbook_thread(false);
             batch_fetch_orders_and_swap();
             m_orderbook_clock = std::chrono::high_resolution_clock::now();
@@ -437,12 +455,12 @@ namespace atomic_dex
         std::atomic<std::size_t> result{1};
         auto                     coins = get_active_coins();
 
-        std::vector<std::string>        second_tickers;
-        std::vector<std::string>        tickers;
+        std::vector<std::string>                                              second_tickers;
+        std::vector<std::string>                                              tickers;
         std::unordered_map<CoinType, std::array<std::vector<coin_config>, 2>> enable_registry;
-        const std::size_t testnet_idx = 0;
-        const std::size_t mainnet_idx = 1;
-        std::unordered_set<std::string> visited;
+        const std::size_t                                                     testnet_idx = 0;
+        const std::size_t                                                     mainnet_idx = 1;
+        std::unordered_set<std::string>                                       visited;
         for (auto&& coin_info: coins)
         {
             SPDLOG_INFO("current_coin: {} is a default coin", coin_info.ticker);
@@ -461,7 +479,7 @@ namespace atomic_dex
         }
 
         enable_multiple_coins_v2(enable_registry);
-        //batch_enable_coins(tickers, second_tickers, true);
+        // batch_enable_coins(tickers, second_tickers, true);
 
         batch_fetch_orders_and_swap();
 
@@ -618,12 +636,14 @@ namespace atomic_dex
                 if (res)
                 {
                     this->process_balance_answer(answer);
-                    if (this->get_coin_info(g_primary_dex_coin).currently_enabled && this->get_coin_info(g_second_primary_dex_coin).currently_enabled) {
+                    if (this->get_coin_info(g_primary_dex_coin).currently_enabled && this->get_coin_info(g_second_primary_dex_coin).currently_enabled)
+                    {
                         SPDLOG_INFO("Trigger default_coins_enabled");
                         this->dispatcher_.trigger<default_coins_enabled>();
                         this->batch_balance_and_tx(false, tickers, true);
                     }
                     this->dispatcher_.trigger<coin_fully_initialized>(tickers);
+                    this->m_nb_update_required += 1;
                 }
                 else
                 {
@@ -659,10 +679,7 @@ namespace atomic_dex
 
         auto answer_functor = [this](nlohmann::json batch, std::vector<std::string> tickers)
         {
-            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable
-            {
-                this->batch_enable_answer_legacy(resp, tickers);
-            };
+            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable { this->batch_enable_answer_legacy(resp, tickers); };
 
             auto error_rpc_functor = [this, tickers, batch](pplx::task<void> previous_task)
             { this->handle_exception_pplx_task(previous_task, "batch_enable_coins legacy electrum", batch); };
@@ -705,10 +722,7 @@ namespace atomic_dex
 
         auto answer_functor = [this](nlohmann::json batch, std::vector<std::string> tickers)
         {
-            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable
-            {
-                this->batch_enable_answer_legacy(resp, tickers);
-            };
+            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable { this->batch_enable_answer_legacy(resp, tickers); };
 
             auto error_rpc_functor = [this, tickers, batch](pplx::task<void> previous_task)
             { this->handle_exception_pplx_task(previous_task, "batch_enable_coins legacy electrum", batch); };
@@ -773,14 +787,14 @@ namespace atomic_dex
         for (auto&& [coin_type, networks]: coins_to_enable)
         {
             SPDLOG_INFO("treating: coin_type: {}", coin_type);
-            for (auto&& network: networks) {
+            for (auto&& network: networks)
+            {
                 batch_enable_coins_v2(coin_type, network);
-                std::vector<std::string> tickers;
-                for (auto&& coin: network) {
-                    tickers.push_back(coin.ticker);
-                }
+                // std::vector<std::string> tickers;
+                // for (auto&& coin: network) {
+                //     tickers.push_back(coin.ticker);
+                // }
                 //! todo move it to a thread safe queue.
-                update_coin_status(this->m_current_wallet_name, tickers, true, m_coins_informations, m_coin_cfg_mutex);
             }
         }
     }
