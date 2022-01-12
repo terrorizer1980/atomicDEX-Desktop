@@ -30,6 +30,7 @@
 #include "atomicdex/api/mm2/rpc.electrum.hpp"
 #include "atomicdex/api/mm2/rpc.enable.bch.with.tokens.hpp"
 #include "atomicdex/api/mm2/rpc.enable.hpp"
+#include "atomicdex/api/mm2/rpc.enable.slp.hpp"
 #include "atomicdex/api/mm2/rpc.min.volume.hpp"
 #include "atomicdex/api/mm2/rpc.tx.history.hpp"
 #include "atomicdex/config/mm2.cfg.hpp"
@@ -775,7 +776,68 @@ namespace atomic_dex
     void
     mm2_service::process_slp(std::vector<coin_config> coins_to_enable)
     {
-        SPDLOG_WARN("not implemented yet");
+        SPDLOG_INFO("process_slp");
+        auto request_functor = [coins_to_enable](coin_config coin_info) -> std::pair<nlohmann::json, std::vector<std::string>>
+        {
+            t_enable_slp_request request{.ticker = coin_info.ticker};
+            nlohmann::json       out = ::mm2::api::template_request("enable_slp", true);
+            ::mm2::api::to_json(out, request);
+            nlohmann::json batch = nlohmann::json::array();
+            batch.push_back(out);
+            return {batch, {coin_info.ticker}};
+        };
+
+        auto answer_functor = [this](nlohmann::json batch, std::vector<std::string> tickers)
+        {
+            auto rpc_answer_functor = [this, tickers](web::http::http_response resp) mutable
+            {
+                try
+                {
+                    auto answers    = ::mm2::api::basic_batch_answer(resp);
+                    auto slp_answer = ::mm2::api::rpc_process_answer_batch<t_enable_slp_answer>(answers[0], "enable_slp");
+                    if (slp_answer.error.has_value())
+                    {
+                        auto error = slp_answer.error.value();
+                        this->dispatcher_.trigger<enabling_coin_failed>(tickers[0], error.error);
+                        SPDLOG_ERROR("{} {}", error.error, error.error_data.dump(4));
+                    }
+                    else
+                    {
+                        auto answer_success = slp_answer.result.value();
+
+                        for (auto&& [address, balance_infos]: answer_success.balances)
+                        {
+                            nlohmann::json out{{"coin", tickers[0]}, {"balance", balance_infos.spendable}, {"address", address}};
+                            {
+                                std::unique_lock lock(m_coin_cfg_mutex);
+                                m_coins_informations[tickers[0]].currently_enabled = true;
+                            }
+                            this->process_balance_answer(out);
+                            break;
+                        }
+                        this->dispatcher_.trigger<coin_fully_initialized>(tickers);
+                        this->m_nb_update_required += 1;
+                    }
+                }
+                catch (const std::exception& error)
+                {
+                    SPDLOG_ERROR("Exception caught: {}", error.what());
+                    this->dispatcher_.trigger<enabling_coin_failed>(tickers[0], error.what());
+                }
+            };
+
+            auto error_rpc_functor = [this, tickers, batch](pplx::task<void> previous_task)
+            { this->handle_exception_pplx_task(previous_task, "batch_enable_coins slp", batch); };
+
+            m_mm2_client.async_rpc_batch_standalone(batch).then(rpc_answer_functor).then(error_rpc_functor);
+        };
+
+        for (auto&& coin: coins_to_enable)
+        {
+            auto&& [request, coins] = request_functor(coin);
+            SPDLOG_INFO("{} {}", request.dump(4), coins[0]);
+            answer_functor(request, coins);
+        }
     }
 
     void
@@ -872,7 +934,7 @@ namespace atomic_dex
         {
             auto       bch_functor = [](auto&& coin_cfg) { return coin_cfg.ticker == "tBCH" || coin_cfg.ticker == "BCH"; };
             const bool has_parent  = ranges::any_of(coins_to_enable, bch_functor);
-            // atomic_dex::print_coins(coins_to_enable);
+            atomic_dex::print_coins(coins_to_enable);
             has_parent ? this->process_bch_with_tokens(coins_to_enable) : this->process_slp(coins_to_enable);
             break;
         }

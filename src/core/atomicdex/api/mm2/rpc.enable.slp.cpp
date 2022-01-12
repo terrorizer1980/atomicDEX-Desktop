@@ -27,6 +27,10 @@ namespace mm2::api
         {
             obj["activation_params"] = cfg.activation_params.value();
         }
+        else
+        {
+            obj["activation_params"] = nlohmann::json::object();
+        }
         if (j.contains("mmrpc") && j.at("mmrpc").get<std::string>() == "2.0")
         {
             j["params"] = obj;

@@ -22,6 +22,7 @@
 #include "atomicdex/api/mm2/rpc.best.orders.hpp"
 #include "atomicdex/api/mm2/rpc.convertaddress.hpp"
 #include "atomicdex/api/mm2/rpc.enable.bch.with.tokens.hpp"
+#include "atomicdex/api/mm2/rpc.enable.slp.hpp"
 #include "atomicdex/api/mm2/rpc.min.volume.hpp"
 #include "atomicdex/api/mm2/rpc.orderbook.hpp"
 #include "atomicdex/api/mm2/rpc.recover.funds.hpp"
@@ -713,6 +714,7 @@ namespace mm2::api
     template mm2::api::convert_address_answer        rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
     template mm2::api::recover_funds_of_swap_answer  rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
     template mm2::api::enable_bch_with_tokens_answer rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
+    template mm2::api::enable_slp_answer             rpc_process_answer_batch(nlohmann::json& json_answer, const std::string& rpc_command);
 
     void
     set_system_manager(ag::ecs::system_manager& system_manager)
