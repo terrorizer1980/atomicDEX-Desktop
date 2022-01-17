@@ -113,7 +113,7 @@ BasicModal {
 
             title: "Komodo Chain coins"
             type_title: "Komodo Chain"
-            type: "Komodo Chain"
+            type: "KMD"
 
             model: glbCoinsCfgModel.all_smartchains_proxy
         }

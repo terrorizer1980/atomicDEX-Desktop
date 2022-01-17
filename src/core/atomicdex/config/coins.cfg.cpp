@@ -99,7 +99,12 @@ namespace atomic_dex
         {
             cfg.coin_type = CoinType::UTXO;
         }
-        else if (cfg.type == "Komodo Chain" || cfg.type == "Smart Chain")
+        else if (cfg.type == "Komodo Chain")
+        {
+            cfg.type = "Komodo Chain";
+            cfg.coin_type = CoinType::SmartChain;
+        }
+        else if (cfg.type == "Smart Chain")
         {
             cfg.type = "Smart Chain";
             cfg.coin_type = CoinType::SmartChain;
