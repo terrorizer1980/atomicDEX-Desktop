@@ -176,6 +176,7 @@ jobs:
       - name: Build AtomicDEX (Linux)
         if: runner.os == 'Linux'
         run: |
+          sudo ln -s /bin/tar /usr/local/bin/tar
           export QT_INSTALL_CMAKE_PATH=${{ github.workspace }}/Qt/${{ matrix.qt }}/gcc_64/lib/cmake
           export QT_ROOT=${{ github.workspace }}/Qt/${{ matrix.qt }}
           export PATH=${{ github.workspace }}/Qt/${{ matrix.qt }}/gcc_64/bin:$PATH
