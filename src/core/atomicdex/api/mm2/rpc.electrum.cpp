@@ -33,13 +33,6 @@ namespace mm2::api
             j["servers"] = cfg.servers;
         }
         j["tx_history"] = cfg.with_tx_history;
-
-        if (cfg.coin_type == CoinType::SLP)
-        {
-            SPDLOG_INFO("Disabling coins history because coin type is SLP");
-            j["tx_history"] = false;
-        }
-
         if (cfg.coin_type == CoinType::QRC20)
         {
             j["swap_contract_address"] = cfg.is_testnet ? cfg.testnet_qrc_swap_contract_address : cfg.mainnet_qrc_swap_contract_address;
