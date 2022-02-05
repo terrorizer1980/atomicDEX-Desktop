@@ -215,7 +215,7 @@ BasicModal
 <p><b>Our failure to enforce any right or provision of these Terms will not be considered a waiver of such right or provision. The waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of SmartFi. Except as expressly set forth in these Terms, the exercise by either party of any of its remedies under these Terms will be without prejudice to its other remedies under these Terms or otherwise.</b></p>
 <p><b>These Terms are written in English (U.S.). Any translated version is provided solely for your convenience. To the extent any translated version of our Terms conflicts with the English version, the English version controls.</b></p>
 <h2>Contact Information</h2>
-<p>If you have any questions about these Terms or the Services, please contact us at <a href='mailto:support@smartfi.com'>support@smartfi.com</a></p>"
+<p>If you have any questions about these Terms or the Services, please contact us at <a href='mailto:support@smartfi.zendesk.com'>support@smartfi.zendesk.com</a></p>"
     }
 }
         
