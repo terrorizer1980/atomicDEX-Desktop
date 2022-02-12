@@ -32,6 +32,7 @@ Item
     }
 
     readonly property var transactions_mdl: api_wallet_page.transactions_mdl
+    
 
     Layout.fillHeight: true
     Layout.fillWidth: true
@@ -93,13 +94,6 @@ Item
                             text_value: General.fullCoinName(current_ticker_infos.name, api_wallet_page.ticker)
                             font.pixelSize: headerTitleFont
                             color: headerTextColor
-                            Component.onCompleted: function () {
-                                console.log(Object.keys(api_wallet_page.ticker_infos))
-                                console.log("type:" + api_wallet_page.ticker_infos.type)
-                                console.log(Object.keys(API.app.portfolio_pg.global_cfg_mdl))
-                                console.log(Object.keys(Constants.API.app.enable_coins(["1INCH-AVX20"]).get_coin_info))
-
-                            }
                         }
 
                         DexLabel
@@ -113,7 +107,7 @@ Item
                                 return General.formatPercent((100 * fiat_amount/portfolio_balance).toFixed(2), false)
                                 + " of Portfolio"
                             }
-                            visible: text_value === '-' ? false : true
+                            visible: text_value !== '-'
                             Layout.alignment: Qt.AlignHCenter
                             font.pixelSize: headerTextFont
                             color: headerTextColor
@@ -130,24 +124,22 @@ Item
                                 id: wallet_address
                                 text_value: qsTr("Address: ") + api_wallet_page.ticker_infos.address
                                 font.pixelSize: headerSmallFont
-                                color: headerTextColor
+                                color: headerTitleColor
                             }
                             Qaterial.Icon {
                                 x: wallet_address.implicitWidth + 10
                                 size: headerSmallFont
                                 icon: Qaterial.Icons.contentCopy
-                                color: address_copyArea.containsMouse ? headerTitleColor : headerTextColor
+                                color: address_copyArea.containsMouse ? headerTextColor : headerTitleColor 
                                 DexMouseArea {
                                     id: address_copyArea
                                     anchors.fill: parent
                                     hoverEnabled: true
-                                    onClicked: {
-                                        API.qt_utilities.copy_text_to_clipboard(wallet_address.text_value.replace("Adress: ", ""))
+                                    onClicked:
+                                    {
+                                        API.qt_utilities.copy_text_to_clipboard(api_wallet_page.ticker_infos.address)
                                         app.notifyCopy(qsTr("Address"), qsTr("copied to clipboard"))
-                                        console.log("type:" + api_wallet_page.ticker_infos.type)
-                                        console.log("fiat_amount:" + current_ticker_infos.fiat_amount)
-                                        console.log("current_currency_ticker_price:" + current_ticker_infos.current_currency_ticker_price)
-                                        
+
                                     }
                                 }
                             }
@@ -157,26 +149,28 @@ Item
                             Layout.topMargin: 0
                             Layout.bottomMargin: 0
                             Layout.alignment: Qt.AlignHCenter
-                            visible: api_wallet_page.ticker_infos.type === "BEP-20" 
-                            Layout.preferredHeight: api_wallet_page.ticker_infos.type === "BEP-20" ? headerSmallFont : 0
+
+                            visible: General.coinContractAddress(api_wallet_page.ticker) !== ""
+                            Layout.preferredHeight: coinContractAddress(api_wallet_page.ticker) ? headerSmallFont : 0
                             DexLabel
                             {
                                 id: contract_address
-                                text_value:  api_wallet_page.ticker_infos.type + qsTr(" Contract: 0xR243ljnf09sdfg3qtadvqcaawlk982jds")
+                                text_value:  api_wallet_page.ticker_infos.type + qsTr(" Contract: ") + General.coinContractAddress(api_wallet_page.ticker)
                                 font.pixelSize: headerSmallFont
-                                color: headerTextColor
+                                color: headerTitleColor
                             }
                             Qaterial.Icon {
                                 x: contract_address.implicitWidth + 10
                                 size: headerSmallFont
                                 icon: Qaterial.Icons.contentCopy
-                                color: contract_copyArea.containsMouse ? headerTitleColor : headerTextColor
+                                color: contract_copyArea.containsMouse ? headerTextColor : headerTitleColor
+                                visible: General.coinContractAddress(api_wallet_page.ticker) !== ""
                                 DexMouseArea {
                                     id: contract_copyArea
                                     anchors.fill: parent
                                     hoverEnabled: true
                                     onClicked: {
-                                        API.qt_utilities.copy_text_to_clipboard(contract_address.text_value.replace("Contract: ", ""))
+                                        API.qt_utilities.copy_text_to_clipboard(General.coinContractAddress(api_wallet_page.ticker), "")
                                         app.notifyCopy(qsTr("Contract address"), qsTr("copied to clipboard"))
                                     }
                                 }
@@ -270,7 +264,7 @@ Item
                         DexLabel
                         {
                             text_value:
-                            {
+                            {   
                                 const v = General.formatFiat('', current_ticker_infos.current_currency_ticker_price, API.app.settings_pg.current_currency)
                                 return current_ticker_infos.current_currency_ticker_price == 0 ? 'N/A' : v
                             }
@@ -286,7 +280,7 @@ Item
                                 const v = parseFloat(current_ticker_infos.change_24h)
                                 return v === 0 ? '-' : General.formatPercent(v) + " (24hr)"
                             }
-                            visible: text_value == "-" ? false : true
+                            visible: text_value !== "-"
                             font.pixelSize: headerSmallFont
                             color: DexTheme.getValueColor(current_ticker_infos.change_24h)
                         }
@@ -325,7 +319,7 @@ Item
                             id: fiat_value
                             Layout.alignment: Qt.AlignHCenter
                             text_value: General.formatFiat("", current_ticker_infos.fiat_amount, API.app.settings_pg.current_currency)
-                            visible: current_ticker_infos.fiat_amount == 0 ? false : true
+                            visible: current_ticker_infos.fiat_amount != 0 
                             font.pixelSize: headerTextFont
                             color: headerTextColor
                             privacy: true
@@ -339,7 +333,7 @@ Item
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                         Layout.leftMargin: 10
                         Layout.rightMargin: 10
-                        opacity: 0.75
+                        opacity: 0.7
 
                         source: current_ticker_infos.qrcode_address
 
