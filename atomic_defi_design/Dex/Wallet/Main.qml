@@ -329,7 +329,7 @@ Item
                             {
                                 id: contract_address_title
                                 text_value: General.coinPlatform(api_wallet_page.ticker) + qsTr(" Contract Address")
-                                font.pixelSize: headerTitleFont
+                                font.pixelSize: headerTextFont
                                 color: headerTitleColor
                             }
                         }
@@ -348,7 +348,7 @@ Item
                                 Layout.preferredWidth: contract_title_row_layout.width - 20
                                 font.pixelSize: headerSmallFont
                                 color: headerTextColor
-                                elide: Text.ElideRight
+                                elide: Text.ElideMiddle
                                 wrapMode: Text.NoWrap
                             }
                             Qaterial.Icon {
