@@ -170,7 +170,6 @@ Network fees can vary greatly depending on your selected trading pair.").arg(API
 
             FAQLine {
                 title: qsTr("Compliance Info")
-                
                 text: qsTr("You agree to comply with all applicable U.S. and non-U.S. export control and trade sanctions laws (<b>'Export Laws'</b>). Without limiting the foregoing, you may not download the App or use the Services if 1) you are in, under the control of, or a national or resident of Cuba, Iran, North Korea, Sudan, or Syria or any other country subject to United States embargo, UN Security Council Resolutions ('UNSCR'), HM Treasury's financial sanctions regime, or if you are on the U.S. Treasury Department's Specially Designated Nationals List or the U.S. Commerce Department's Denied Persons List, Unverified List, Entity List HM Treasury's financial sanctions regime; or (2) you intend to supply any Services to Cuba, Iran, North Korea, Sudan or Syria or any other country subject to United States embargo or HM Treasury's financial sanctions regime (or a national or resident of one of these countries), or to a person on the Specially Designated Nationals List, Denied Persons List, Unverified List, Entity List, or HM Treasury's financial sanctions regime.")
             }
         }
