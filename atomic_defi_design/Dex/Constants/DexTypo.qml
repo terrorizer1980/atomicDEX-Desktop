@@ -96,6 +96,12 @@ QtObject {
         family: fontFamily,
         weight: Font.Normal
     })
+    property font monoSmall: Qt.font({
+        pixelSize: 14 * fontDensity,
+        letterSpacing: 0.4,
+        family: "Courier",
+        weight: Font.Normal
+    })
     property font overLine: Qt.font({
         pixelSize: 10 * fontDensity,
         letterSpacing: 1.25,

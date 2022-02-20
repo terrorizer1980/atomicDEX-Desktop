@@ -12,6 +12,9 @@ ComponentWithTitle {
     property alias privacy: text.privacy
 
     property bool   copy: false
+    property bool   link: false
+    property bool   monospace: false
+    property string linkURL: ""
     property string onCopyNotificationTitle: qsTr("Swap ID")
     property string onCopyNotificationMsg: qsTr("copied to clipboard")
 
@@ -27,30 +30,24 @@ ComponentWithTitle {
             Layout.preferredHeight: show_content ? contentHeight : 0
             Behavior on Layout.preferredHeight { SmoothedAnimation { id: expand_animation; duration: Constants.Style.animationDuration * 2; velocity: -1 } }
             color: DexTheme.foregroundColor
-
-            
-
+            monospace: control.monospace
             opacity: show_content ? 1 : 0
             Behavior on opacity { SmoothedAnimation { duration: expand_animation.duration; velocity: -1 } }
 
         }
 
-        Qaterial.Icon {
-            visible: control.copy
-            Layout.alignment: Qt.AlignVCenter
-            x: text.implicitWidth + 10
-            size: 16
-            icon: Qaterial.Icons.contentCopy
-            color: copyArea.containsMouse ? DexTheme.accentColor : DexTheme.foregroundColor
-            DexMouseArea {
-                id: copyArea
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: {
-                    Qaterial.Clipboard.text = control.text
-                    app.notifyCopy(onCopyNotificationTitle, onCopyNotificationMsg)
-                }
-            }
+        DefaultCopyIcon {
+            copyText: control.text
+            notifyTitle: control.onCopyNotificationTitle
+            notifyMsg: control.onCopyNotificationMsg
+            xPos: text.implicitWidth + 10
+            iconSize: 14
+        }
+
+        DefaultLinkIcon {
+            linkURL: control.linkURL
+            xPos: text.implicitWidth + 10
+            iconSize: 14
         }
 
         Item {

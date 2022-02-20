@@ -3,13 +3,14 @@ import QtQuick 2.15
 
 //! Project Imports
 import App 1.0
-import "../Constants" as Dex
-import Dex.Themes 1.0 as Dex
+import "../Constants"
 
 Text
 {
     property string text_value
+    property bool   enabled: true
     property bool   privacy: false
+    property bool   monospace: false
 
     Behavior on color
     {
@@ -19,16 +20,11 @@ Text
         }
     }
 
-    font: Qt.font
-    ({
-        pixelSize: 14,
-        letterSpacing: 0.25,
-        weight: Font.Normal
-    })
+    font: monospace ? DexTypo.monoSmall : DexTypo.body2
 
-    color: enabled ? Dex.CurrentTheme.foregroundColor : Dex.CurrentTheme.textDisabledColor
+    color: enabled || monospace ? DexTheme.foregroundColor : DexTheme.textDisabledColor
 
-    text: privacy && Dex.General.privacy_mode ? Dex.General.privacy_text : text_value
+    text: privacy && General.privacy_mode ? General.privacy_text : text_value
     wrapMode: Text.WordWrap
 
     onLinkActivated: Qt.openUrlExternally(link)

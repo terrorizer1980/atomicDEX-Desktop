@@ -382,9 +382,11 @@
         <file>Dex/Components/DefaultCheckBox.qml</file>
         <file>Dex/Components/DefaultColorOverlay.qml</file>
         <file>Dex/Components/DefaultComboBox.qml</file>
+        <file>Dex/Components/DefaultCopyIcon.qml</file>
         <file>Dex/Components/DefaultFlickable.qml</file>
         <file>Dex/Components/DefaultImage.qml</file>
         <file>Dex/Components/DefaultInnerShadow.qml</file>
+        <file>Dex/Components/DefaultLinkIcon.qml</file>
         <file>Dex/Components/DefaultListView.qml</file>
         <file>Dex/Components/DefaultLoader.qml</file>
         <file>Dex/Components/DefaultModal.qml</file>

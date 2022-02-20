@@ -57,7 +57,7 @@ BasicModal {
         }
 
         OrderContent {
-            Layout.topMargin: 25
+            Layout.topMargin: 15
             Layout.preferredWidth: 500
             Layout.alignment: Qt.AlignHCenter
             Layout.preferredHeight: 66
@@ -67,7 +67,7 @@ BasicModal {
 
         HorizontalLine {
             Layout.fillWidth: true
-            Layout.bottomMargin: 20
+            Layout.bottomMargin: 10
             color: Style.colorWhite8
         }
 
@@ -93,32 +93,40 @@ BasicModal {
         // Date
         TextEditWithTitle {
             title: qsTr("Date")
-            text: !details ? "" : details.date
+            text: !details ? "" : details.date.replace("    ",  " ")
             visible: text !== ''
+            monospace: true
         }
 
         // ID
         TextEditWithTitle {
-            title: qsTr("ID")
+            title: qsTr("Swap ID")
             text: !details ? "" : details.order_id
             visible: text !== ''
+            monospace: true
             copy: true
             privacy: true
         }
 
         // Payment ID
         TextEditWithTitle {
-            title: !details ? "" : details.is_maker ? qsTr("Maker Payment Sent ID") : qsTr("Maker Payment Spent ID")
+            title: !details ? "" : details.is_maker ? qsTr("Maker Payment Sent Transaction ID") : qsTr("Maker Payment Spent Transaction ID")
             text: !details ? "" : details.maker_payment_id
             visible: text !== ''
+            monospace: true
+            link: text !== ''
+            linkURL: text !== '' ? General.getTxExplorerURL(details.is_maker ? details.base_coin : details.rel_coin, details.maker_payment_id) : ''
             privacy: true
         }
 
         // Payment ID
         TextEditWithTitle {
-            title: !details ? "" : details.is_maker ? qsTr("Taker Payment Spent ID") : qsTr("Taker Payment Sent ID")
+            title: !details ? "" : details.is_maker ? qsTr("Taker Payment Spent Transaction ID") : qsTr("Taker Payment Sent Transaction ID")
             text: !details ? "" : details.taker_payment_id
             visible: text !== ''
+            monospace: true
+            link: text !== ''
+            linkURL: text !== '' ? General.getTxExplorerURL(details.is_maker ? details.rel_coin : details.base_coin, details.taker_payment_id) : ''
             privacy: true
         }
 
