@@ -194,11 +194,17 @@ QtObject {
         return JSON.stringify(j_obj, null, 4)
     }
 
-    function viewTxAtExplorer(ticker, id, add_0x=true) {
+    function getTxExplorerURL(ticker, id, add_0x=true) {
         if(id !== '') {
             const coin_info = API.app.portfolio_pg.global_cfg_mdl.get_coin_info(ticker)
             const id_prefix = (add_0x && coin_info.is_erc_family) ? '0x' : ''
-            Qt.openUrlExternally(coin_info.explorer_url + coin_info.tx_uri + id_prefix + id)
+            return coin_info.explorer_url + coin_info.tx_uri + id_prefix + id
+        }
+    }
+
+    function viewTxAtExplorer(ticker, id, add_0x=true) {
+        if(id !== '') {
+            Qt.openUrlExternally(getTxExplorerURL(ticker, id, add_0x))
         }
     }
 
