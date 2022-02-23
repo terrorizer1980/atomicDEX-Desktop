@@ -754,11 +754,11 @@ BasicModal
         }
 
         // Buttons
-        footer: [
-        Item {
-                Layout.fillWidth: true
-            },
-            DexAppButton {
+        footer:
+        [
+            Item { Layout.fillWidth: true },
+            DexAppButton
+            {
                 text: qsTr("Back")
                 leftPadding: 40
                 rightPadding: 40
@@ -766,10 +766,12 @@ BasicModal
                 onClicked: root.currentIndex = 0
                 enabled: !root.is_broadcast_busy
             },
-            Item {
+            Item
+            {
                 Layout.fillWidth: true
             },
-            DexAppOutlineButton {
+            DexAppOutlineButton
+            {
                 text: qsTr("Send")
                 onClicked: sendCoin()
                 leftPadding: 40
@@ -777,7 +779,8 @@ BasicModal
                 radius: 18
                 enabled: !root.is_broadcast_busy
             },
-            Item {
+            Item
+            {
                 Layout.fillWidth: true
             }
         ]

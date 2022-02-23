@@ -8,32 +8,31 @@ import Qaterial 1.0 as Qaterial
 
 import "../../../Components"
 
-BasicModal {
+BasicModal
+{
     id: root
-
     property var details
 
-    onDetailsChanged: {
-        if (!details) root.close()
-    }
-
+    onDetailsChanged: { if (!details) root.close() }
     onOpened: swap_progress.updateSimulatedTime()
-
     onClosed: details = undefined
 
-    ModalContent {
+    ModalContent
+    {
         title: !details ? "" : details.is_swap ? qsTr("Swap Details") : qsTr("Order Details")
         titleAlignment: Qt.AlignHCenter
 
         // Complete image
-        DefaultImage {
+        DefaultImage
+        {
             visible: !details ? false : details.is_swap && details.order_status === "successful"
             Layout.alignment: Qt.AlignHCenter
             source: General.image_path + "exchange-trade-complete.png"
         }
 
         // Loading symbol
-        DefaultBusyIndicator {
+        DefaultBusyIndicator
+        {
             visible: !details ? false : details.is_swap && details.order_status !== "successful"
             running: (!details ? false :
                 details.is_swap &&
@@ -43,7 +42,8 @@ BasicModal {
         }
 
         // Status Text
-        DefaultText {
+        DefaultText
+        {
             Layout.alignment: Qt.AlignHCenter
             Layout.topMargin: 5
             font.pixelSize: Style.textSize1
@@ -56,7 +56,8 @@ BasicModal {
                 visible ? getStatusText(details.order_status) : ''
         }
 
-        OrderContent {
+        OrderContent
+        {
             Layout.topMargin: 15
             Layout.preferredWidth: 500
             Layout.alignment: Qt.AlignHCenter
@@ -65,21 +66,24 @@ BasicModal {
             in_modal: true
         }
 
-        HorizontalLine {
+        HorizontalLine
+        {
             Layout.fillWidth: true
             Layout.bottomMargin: 10
             color: Style.colorWhite8
         }
 
         // Maker/Taker
-        DefaultText {
+        DefaultText
+        {
             text_value: !details ? "" : details.is_maker ? qsTr("Maker Order") : qsTr("Taker Order")
             color: Style.colorThemeDarkLight
             Layout.alignment: Qt.AlignRight
         }
 
         // Refund state
-        TextFieldWithTitle {
+        TextFieldWithTitle
+        {
             Layout.topMargin: -20
 
             title: qsTr("Refund State")
@@ -91,14 +95,16 @@ BasicModal {
         }
 
         // Date
-        TextEditWithTitle {
+        TextEditWithTitle
+        {
             title: qsTr("Date")
             text: !details ? "" : details.date.replace("    ",  " ")
             visible: text !== ''
         }
 
         // ID
-        TextEditWithTitle {
+        TextEditWithTitle
+        {
             title: qsTr("Swap ID")
             text: !details ? "" : details.order_id
             visible: text !== ''
@@ -107,7 +113,8 @@ BasicModal {
         }
 
         // Payment ID
-        TextEditWithTitle {
+        TextEditWithTitle
+        {
             title: !details ? "" : details.is_maker ? qsTr("Maker Payment Sent Transaction ID") : qsTr("Maker Payment Spent Transaction ID")
             text: !details ? "" : details.maker_payment_id
             visible: text !== ''
@@ -116,7 +123,8 @@ BasicModal {
         }
 
         // Payment ID
-        TextEditWithTitle {
+        TextEditWithTitle
+        {
             title: !details ? "" : details.is_maker ? qsTr("Taker Payment Spent Transaction ID") : qsTr("Taker Payment Sent Transaction ID")
             text: !details ? "" : details.taker_payment_id
             visible: text !== ''
@@ -125,14 +133,16 @@ BasicModal {
         }
 
         // Error ID
-        TextEditWithTitle {
+        TextEditWithTitle
+        {
             title: qsTr("Error ID")
             text: !details ? "" : details.order_error_state
             visible: text !== ''
         }
 
         // Error Details
-        TextFieldWithTitle {
+        TextFieldWithTitle
+        {
             title: qsTr("Error Log")
             field.text: !details ? "" : details.order_error_message
             field.readOnly: true
@@ -141,7 +151,8 @@ BasicModal {
             visible: field.text !== ''
         }
 
-        HorizontalLine {
+        HorizontalLine
+        {
             visible: swap_progress.visible
             Layout.fillWidth: true
             Layout.topMargin: 10
@@ -149,7 +160,8 @@ BasicModal {
             color: Style.colorWhite8
         }
 
-        SwapProgress {
+        SwapProgress
+        {
             id: swap_progress
             visible: General.exists(details) && details.order_status !== "matching"
             Layout.fillWidth: true
@@ -157,8 +169,10 @@ BasicModal {
         }
 
         // Buttons
-        footer: [
-            DexAppButton {
+        footer:
+        [
+            DexAppButton
+            {
                 text: qsTr("Close")
                 leftPadding: 20
                 rightPadding: 20
@@ -167,7 +181,8 @@ BasicModal {
             },
 
             // Cancel button
-            DexAppOutlineButton {
+            DexAppOutlineButton
+            {
                 id: cancelOrderButton
                 visible: !details ? false : details.cancellable
                 leftPadding: 20
@@ -177,13 +192,15 @@ BasicModal {
                 onClicked: cancelOrder(details.order_id)
             },
 
-            Item {
+            Item
+            {
                 visible: !cancelOrderButton.visible
                 Layout.fillWidth: true
             },
 
             // Recover Funds button
-            DexAppButton {
+            DexAppButton
+            {
                 id: refundButton
                 leftPadding: 20
                 rightPadding: 20
@@ -195,19 +212,22 @@ BasicModal {
                 onClicked: API.app.orders_mdl.recover_fund(details.order_id)
             },
 
-            Item {
+            Item
+            {
                 visible: !refundButton.visible & !cancelOrderButton.visible
                 Layout.fillWidth: true
             },
 
 
-            DexAppOutlineButton {
+            DexAppOutlineButton
+            {
                 text: qsTr("View on Explorer")
                 leftPadding: 20
                 rightPadding: 20
                 radius: 18
                 visible: !details ? false : details.maker_payment_id !== '' || details.taker_payment_id !== ''
-                onClicked: {
+                onClicked:
+                {
                     if (!details) return
 
                     const maker_id = details.maker_payment_id

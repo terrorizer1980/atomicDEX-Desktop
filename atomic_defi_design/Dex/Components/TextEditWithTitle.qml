@@ -4,7 +4,8 @@ import Qaterial 1.0 as Qaterial
 import "../Constants" as Constants
 import App 1.0
 
-ComponentWithTitle {
+ComponentWithTitle
+{
     id: control
 
     property alias text: text.text_value
@@ -16,25 +17,27 @@ ComponentWithTitle {
     property string onCopyNotificationTitle: ""
     property string onCopyNotificationMsg: qsTr("copied to clipboard")
 
-    RowLayout {
+    RowLayout
+    {
         Layout.fillWidth: true
 
-        DexLabel {
+        DexLabel
+        {
             id: text
-
-            clip: true
-            textFormat: TextEdit.AutoText
             Layout.alignment: Qt.AlignVCenter
             Layout.preferredHeight: show_content ? contentHeight : 0
-            Behavior on Layout.preferredHeight { SmoothedAnimation { id: expand_animation; duration: Constants.Style.animationDuration * 2; velocity: -1 } }
-            color: DexTheme.foregroundColor
-            monospace: control.monospace
-            opacity: show_content ? 1 : 0
-            Behavior on opacity { SmoothedAnimation { duration: expand_animation.duration; velocity: -1 } }
 
+            clip: true
+            opacity: show_content ? 1 : 0
+            color: DexTheme.foregroundColor
+            textFormat: TextEdit.AutoText
+            monospace: control.monospace
+            Behavior on Layout.preferredHeight { SmoothedAnimation { id: expand_animation; duration: Constants.Style.animationDuration * 2; velocity: -1 } }
+            Behavior on opacity { SmoothedAnimation { duration: expand_animation.duration; velocity: -1 } }
         }
 
-        DefaultCopyIcon {
+        DefaultCopyIcon
+        {
             copyText: control.text
             notifyTitle: control.onCopyNotificationTitle
             notifyMsg: control.onCopyNotificationMsg
@@ -42,14 +45,13 @@ ComponentWithTitle {
             iconSize: 14
         }
 
-        DefaultLinkIcon {
+        DefaultLinkIcon
+        {
             linkURL: control.linkURL
             xPos: text.implicitWidth + 10
             iconSize: 14
         }
 
-        Item {
-            Layout.fillWidth: true
-        }
+        Item { Layout.fillWidth: true }
     }
 }

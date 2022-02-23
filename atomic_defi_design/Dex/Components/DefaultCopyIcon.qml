@@ -4,7 +4,8 @@ import Qaterial 1.0 as Qaterial
 import "../Constants" as Constants
 import App 1.0
 
-Qaterial.Icon {
+Qaterial.Icon
+{
 
     property int xPos: 0
     property int iconSize: 14
@@ -12,17 +13,21 @@ Qaterial.Icon {
     property string notifyTitle: ""
     property string notifyMsg: qsTr("copied to clipboard")
 
-    visible: notifyTitle !== ""
     Layout.alignment: Qt.AlignVCenter
+
     x: xPos
     size: iconSize
+    visible: notifyTitle !== ""
     icon: Qaterial.Icons.contentCopy
     color: copyArea.containsMouse ? Style.colorText2 : DexTheme.foregroundColor
-    DexMouseArea {
+
+    DexMouseArea
+    {
         id: copyArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
+        onClicked:
+        {
             Qaterial.Clipboard.text = control.text
             app.notifyCopy(notifyTitle, notifyMsg)
         }

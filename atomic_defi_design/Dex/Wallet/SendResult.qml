@@ -6,7 +6,8 @@ import "../Components"
 import "../Constants"
 import App 1.0
 
-ModalContent {
+ModalContent
+{
     property var result: ({ balance_change:"", fees: "", date: "", explorer_url: "" })
     property alias address: address.text
     property string custom_amount
@@ -17,7 +18,8 @@ ModalContent {
     title: qsTr("Transaction Complete!")
 
     // Address
-    TextEditWithTitle {
+    TextEditWithTitle
+    {
         id: address
         title: qsTr("Recipient's address")
         visible: text !== ""
@@ -25,52 +27,62 @@ ModalContent {
     }
 
     // Amount
-    TextEditWithTitle {
+    TextEditWithTitle
+    {
         title: qsTr("Amount")
         text: General.formatCrypto("", custom_amount !== "" ? custom_amount : result.balance_change, api_wallet_page.ticker)
     }
 
     // Fees
-    TextEditWithTitle {
+    TextEditWithTitle
+    {
         title: qsTr("Fees")
         text: General.formatCrypto("", result.fees, current_ticker_infos.fee_ticker)
     }
 
     // Date
-    TextEditWithTitle {
+    TextEditWithTitle
+    {
         title: qsTr("Date")
         text: result.date
     }
 
     // Transaction Hash
-    TextEditWithTitle {
+    TextEditWithTitle
+    {
         id: tx_hash
         title: qsTr("Transaction Hash")
     }
 
     // Buttons
-    footer: [
-        Item {
+    footer:
+    [
+        Item
+        {
             Layout.fillWidth: true
         },
-        DexButton {
+        DexButton
+        {
             text: qsTr("Close")
             leftPadding: 40
             rightPadding: 40
             radius: 18
             onClicked: onClose()
         },
-        Item {
+        Item
+        {
             Layout.fillWidth: true
         },
-        DexAppOutlineButton {
+        DexAppOutlineButton
+        {
             text: qsTr("View on Explorer")
             leftPadding: 40
             rightPadding: 40
             radius: 18
             onClicked: General.viewTxAtExplorer(api_wallet_page.ticker, tx_hash.text)
         },
-        Item {
+        Item
+        {
             Layout.fillWidth: true
         }
 

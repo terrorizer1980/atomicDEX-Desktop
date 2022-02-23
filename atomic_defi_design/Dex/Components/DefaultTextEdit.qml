@@ -2,7 +2,8 @@ import QtQuick 2.15
 import "../Constants"
 import App 1.0
 
-TextEdit {
+TextEdit
+{
     id: control
     property string text_value
     property bool privacy: false
@@ -25,13 +26,15 @@ TextEdit {
 
     onLinkActivated: Qt.openUrlExternally(link)
 
-    DefaultMouseArea {
+    DefaultMouseArea
+    {
         anchors.fill: parent
         cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
         acceptedButtons: Qt.NoButton
     }
 
-    DefaultCopyIcon {
+    DefaultCopyIcon
+    {
         id: copy_icon
         anchors.verticalCenter: parent.verticalCenter
         copyText: control.text_value
@@ -41,7 +44,8 @@ TextEdit {
         iconSize: 14
     }
 
-    DefaultLinkIcon {
+    DefaultLinkIcon
+    {
         anchors.verticalCenter: parent.verticalCenter
         linkURL: control.linkURL
         xPos: control.onCopyNotificationTitle == '' ? control.implicitWidth + 6 : control.implicitWidth + copy_icon.implicitWidth + 8

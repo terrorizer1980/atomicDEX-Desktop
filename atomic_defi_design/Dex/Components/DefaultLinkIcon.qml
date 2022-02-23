@@ -5,23 +5,25 @@ import "../Constants" as Constants
 import App 1.0
 
 
-Qaterial.Icon {
+Qaterial.Icon
+{
     property int xPos: 0
     property int iconSize: 14
     property string linkURL: ""
 
-    visible: linkURL !== ""
     Layout.alignment: Qt.AlignVCenter
+
     x: xPos
     size: iconSize
+    visible: linkURL !== ""
     icon: Qaterial.Icons.linkVariant
     color: linkArea.containsMouse ? Style.colorText2 : DexTheme.foregroundColor
-    DexMouseArea {
+    
+    DexMouseArea
+    {
         id: linkArea
         anchors.fill: parent
         hoverEnabled: true
-        onClicked: {
-            Qt.openUrlExternally(linkURL)
-        }
+        onClicked: Qt.openUrlExternally(linkURL)
     }
 }
