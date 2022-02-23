@@ -62,10 +62,7 @@ BasicModal {
             text: !details ? "" :
                     details.tx_hash
             privacy: true
-            copy: true
-
-            onCopyNotificationTitle: qsTr("Transactions")
-            onCopyNotificationMsg: qsTr("txid copied to clipboard")
+            onCopyNotificationTitle: qsTr("Transaction ID")
         }
 
         // Confirmations

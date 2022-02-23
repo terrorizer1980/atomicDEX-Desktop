@@ -102,8 +102,8 @@ BasicModal {
             title: qsTr("Swap ID")
             text: !details ? "" : details.order_id
             visible: text !== ''
-            copy: true
             privacy: true
+            onCopyNotificationTitle: qsTr("Swap ID")
         }
 
         // Payment ID

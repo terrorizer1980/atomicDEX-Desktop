@@ -11,11 +11,10 @@ ComponentWithTitle {
     property alias value_color: text.color
     property alias privacy: text.privacy
 
-    property bool   copy: false
     property bool   link: false
     property bool   monospace: false
     property string linkURL: ""
-    property string onCopyNotificationTitle: qsTr("Swap ID")
+    property string onCopyNotificationTitle: ""
     property string onCopyNotificationMsg: qsTr("copied to clipboard")
 
     RowLayout {

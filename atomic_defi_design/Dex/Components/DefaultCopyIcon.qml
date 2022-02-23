@@ -9,10 +9,10 @@ Qaterial.Icon {
     property int xPos: 0
     property int iconSize: 14
     property string copyText: ""
-    property string notifyTitle: qsTr("Swap ID")
+    property string notifyTitle: ""
     property string notifyMsg: qsTr("copied to clipboard")
 
-    visible: copyText !== ""
+    visible: notifyTitle !== ""
     Layout.alignment: Qt.AlignVCenter
     x: xPos
     size: iconSize
