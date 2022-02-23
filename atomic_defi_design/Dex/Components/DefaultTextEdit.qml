@@ -3,8 +3,12 @@ import "../Constants"
 import App 1.0
 
 TextEdit {
+    id: control
     property string text_value
     property bool privacy: false
+    property string linkURL: ""
+    property string onCopyNotificationTitle: ""
+    property string onCopyNotificationMsg: qsTr("copied to clipboard")
 
     font.family: Style.font_family
     font.pixelSize: Style.textSize
@@ -25,5 +29,22 @@ TextEdit {
         anchors.fill: parent
         cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
         acceptedButtons: Qt.NoButton
+    }
+
+    DefaultCopyIcon {
+        id: copy_icon
+        anchors.verticalCenter: parent.verticalCenter
+        copyText: control.text_value
+        notifyTitle: control.onCopyNotificationTitle
+        notifyMsg: control.onCopyNotificationMsg
+        xPos: control.implicitWidth + 6
+        iconSize: 14
+    }
+
+    DefaultLinkIcon {
+        anchors.verticalCenter: parent.verticalCenter
+        linkURL: control.linkURL
+        xPos: control.onCopyNotificationTitle == '' ? control.implicitWidth + 6 : control.implicitWidth + copy_icon.implicitWidth + 8
+        iconSize: 14
     }
 }

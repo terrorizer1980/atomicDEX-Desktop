@@ -11,7 +11,6 @@ ComponentWithTitle {
     property alias value_color: text.color
     property alias privacy: text.privacy
 
-    property bool   link: false
     property bool   monospace: false
     property string linkURL: ""
     property string onCopyNotificationTitle: ""

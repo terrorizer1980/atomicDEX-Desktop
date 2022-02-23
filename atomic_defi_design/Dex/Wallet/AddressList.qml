@@ -7,6 +7,10 @@ import "../Constants"
 import App 1.0
 
 ColumnLayout {
+    id: control
+    property string linkURL: ""
+    property string onCopyNotificationTitle: ""
+
     property alias title: title.text
     property alias model: list.model
 
@@ -30,6 +34,8 @@ ColumnLayout {
             text_value: model.modelData
             color: DexTheme.foregroundColor
             privacy: true
+            linkURL: control.linkURL
+            onCopyNotificationTitle: control.onCopyNotificationTitle
         }
     }
 }

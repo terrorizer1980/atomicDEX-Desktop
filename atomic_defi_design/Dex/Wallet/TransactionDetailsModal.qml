@@ -58,10 +58,11 @@ BasicModal {
         TextEditWithTitle
         {
             id: txHash
-            title: qsTr("Transaction Hash")
+            title: qsTr("Transaction ID")
             text: !details ? "" :
                     details.tx_hash
             privacy: true
+            linkURL: !details ? "" :General.getTxExplorerURL(api_wallet_page.ticker, details.tx_hash, false)
             onCopyNotificationTitle: qsTr("Transaction ID")
         }
 
@@ -92,6 +93,8 @@ BasicModal {
                     title: qsTr("From")
                     model: !details ? [] :
                             details.from
+                    linkURL: !details ? "" :General.getAddressExplorerURL(api_wallet_page.ticker, details.from)
+                    onCopyNotificationTitle: qsTr("From address")
                 }
 
                 AddressList {
@@ -99,6 +102,8 @@ BasicModal {
                     title: qsTr("To")
                     model: !details ? [] :
                             details.to
+                    linkURL: !details ? "" :General.getAddressExplorerURL(api_wallet_page.ticker, details.to)
+                    onCopyNotificationTitle: qsTr("To address")
                 }
             }
         }

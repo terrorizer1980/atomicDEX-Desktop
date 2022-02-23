@@ -111,7 +111,6 @@ BasicModal {
             title: !details ? "" : details.is_maker ? qsTr("Maker Payment Sent Transaction ID") : qsTr("Maker Payment Spent Transaction ID")
             text: !details ? "" : details.maker_payment_id
             visible: text !== ''
-            link: text !== ''
             linkURL: text !== '' ? General.getTxExplorerURL(details.is_maker ? details.base_coin : details.rel_coin, details.maker_payment_id) : ''
             privacy: true
         }
@@ -121,7 +120,6 @@ BasicModal {
             title: !details ? "" : details.is_maker ? qsTr("Taker Payment Spent Transaction ID") : qsTr("Taker Payment Sent Transaction ID")
             text: !details ? "" : details.taker_payment_id
             visible: text !== ''
-            link: text !== ''
             linkURL: text !== '' ? General.getTxExplorerURL(details.is_maker ? details.rel_coin : details.base_coin, details.taker_payment_id) : ''
             privacy: true
         }
