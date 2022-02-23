@@ -202,6 +202,13 @@ QtObject {
         }
     }
 
+    function getAddressExplorerURL(ticker, id) {
+        if(id !== '') {
+            const coin_info = API.app.portfolio_pg.global_cfg_mdl.get_coin_info(ticker)
+            return coin_info.explorer_url + coin_info.address_uri + address
+        }
+    }
+
     function viewTxAtExplorer(ticker, id, add_0x=true) {
         if(id !== '') {
             Qt.openUrlExternally(getTxExplorerURL(ticker, id, add_0x))
@@ -210,8 +217,7 @@ QtObject {
 
     function viewAddressAtExplorer(ticker, address) {
         if(address !== '') {
-            const coin_info = API.app.portfolio_pg.global_cfg_mdl.get_coin_info(ticker)
-            Qt.openUrlExternally(coin_info.explorer_url + coin_info.address_uri + address)
+            Qt.openUrlExternally(getAddressExplorerURL(ticker, id))
         }
     }
 
