@@ -21,6 +21,7 @@ ModalContent {
         id: address
         title: qsTr("Recipient's address")
         visible: text !== ""
+        linkURL: text == "" ? "" :General.getAddressExplorerURL(api_wallet_page.ticker, address.text)
     }
 
     // Amount

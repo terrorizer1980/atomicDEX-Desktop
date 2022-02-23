@@ -722,6 +722,7 @@ BasicModal
         {
             title: qsTr("Recipient's address")
             text: input_address.text
+            linkURL: input_address.text == "" ? "" :General.getAddressExplorerURL(api_wallet_page.ticker, input_address.text)
         }
 
         // Amount
