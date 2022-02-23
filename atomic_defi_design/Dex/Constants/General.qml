@@ -207,6 +207,7 @@ QtObject {
             const coin_info = API.app.portfolio_pg.global_cfg_mdl.get_coin_info(ticker)
             return coin_info.explorer_url + coin_info.address_uri + address
         }
+        return ""
     }
 
     function viewTxAtExplorer(ticker, id, add_0x=true) {
@@ -217,7 +218,7 @@ QtObject {
 
     function viewAddressAtExplorer(ticker, address) {
         if(address !== '') {
-            Qt.openUrlExternally(getAddressExplorerURL(ticker, id))
+            Qt.openUrlExternally(getAddressExplorerURL(ticker, address))
         }
     }
 

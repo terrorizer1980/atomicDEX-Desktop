@@ -20,6 +20,7 @@ Item
 {
     id: root
     property alias send_modal: send_modal
+    property string address_link: General.getAddressExplorerURL(api_wallet_page.ticker, current_ticker_infos.address)
     readonly property int layout_margin: 30
     function loadingPercentage(remaining) {
         return General.formatPercent((100 * (1 - parseFloat(remaining)/parseFloat(current_ticker_infos.current_block))).toFixed(3), false)
@@ -699,6 +700,7 @@ Item
             radius: 22
 
             ClipRRect {
+                id: clip_rect
                 radius: parent.radius
                 width: transactions_bg.width
                 height: transactions_bg.height
@@ -714,17 +716,47 @@ Item
                     }
                 }
 
-                DefaultText {
-                    anchors.centerIn: parent
-                    visible: current_ticker_infos.tx_state !== "InProgress" && transactions_mdl.length === 0
-                    text_value: api_wallet_page.tx_fetching_busy ? (qsTr("Refreshing") + "...") : qsTr("No transactions")
-                    font.pixelSize: Style.textSize
-                }
-
                 Transactions {
                     width: parent.width
                     height: parent.height
                     model: transactions_mdl.proxy_mdl
+                }
+
+                ColumnLayout
+                {
+                    visible: current_ticker_infos.tx_state !== "InProgress" && transactions_mdl.length === 0
+                    anchors.fill: parent
+                    height: parent.height
+                    spacing: 12
+
+                    DefaultText {
+                        Layout.topMargin: 24
+                        Layout.alignment: Qt.AlignHCenter
+                        text_value: api_wallet_page.tx_fetching_busy
+                            ? (qsTr("Refreshing") + "...")
+                            : qsTr('No transactions available. Check the block explorer at:')
+                        font.pixelSize: Style.textSize
+                    }
+
+                    DefaultText
+                    {
+                        id: explorer_link
+                        Layout.alignment: Qt.AlignHCenter
+                        visible: !api_wallet_page.tx_fetching_busy
+                        font.pixelSize: Style.textSize
+                        text_value: General.getAddressExplorerURL(api_wallet_page.ticker, current_ticker_infos.address)
+                        enabled: !explorer_mouseArea.containsMouse
+
+                        MouseArea {
+                            id: explorer_mouseArea
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            hoverEnabled: true
+                            onClicked: Qt.openUrlExternally(root.address_link)
+                        }
+                    }
+
+                    Item { Layout.fillHeight: true }
                 }
             }
         }
